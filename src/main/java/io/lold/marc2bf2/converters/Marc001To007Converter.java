@@ -25,7 +25,21 @@ public class Marc001To007Converter {
                 addProperty(RDF.value, field.getData());
         model.createResource().
                 addProperty(RDF.type, BIB_FRAME.AdminMetadata).
-                addProperty(RDF.value, local);
+                addProperty(BIB_FRAME.identifiedBy, local);
+        return model;
+    }
+
+    public Model convert003(ControlField field) {
+        if (!field.getTag().equals("003")) {
+            return null;
+        }
+        Model model = ModelFactory.createBfModel();
+        Resource source = model.createResource().
+                addProperty(RDF.type, BIB_FRAME.Source).
+                addProperty(BIB_FRAME.code, field.getData());
+        model.createResource().
+                addProperty(RDF.type, BIB_FRAME.AdminMetadata).
+                addProperty(BIB_FRAME.source, source);
         return model;
     }
 }
