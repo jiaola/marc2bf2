@@ -1,6 +1,7 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.converters.Marc001To007Converter;
+import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
 import org.junit.*;
@@ -26,7 +27,7 @@ public class Marc001To007ConverterTest {
     public static Record[] records() {
         InputStream input = Thread.currentThread().getContextClassLoader().getResourceAsStream("ConvSpec-001-007/marc.xml");
         MarcXmlReader reader = new MarcXmlReader(input);
-        ArrayList<Record> records = new ArrayList();
+        ArrayList<Record> records = new ArrayList<>();
         while (reader.hasNext()) {
             Record record = reader.next();
             records.add(record);
@@ -47,22 +48,39 @@ public class Marc001To007ConverterTest {
             if (field.getTag().equals("001")) {
                 Model model = converter.convert001(field);
                 assertNotNull(model);
-                NodeIterator iter = model.listObjectsOfProperty(RDF.value);
-                assertTrue(iter.hasNext());
-                boolean found = false;
-                while (iter.hasNext()) {
-                    RDFNode node = iter.next();
-                    if (node.isLiteral()) {
-                        Literal value = node.asLiteral();
-                        assertEquals(field.getData(), value.getString());
-                        found = true;
-                    }
-                }
-                assertTrue(found);
+                String value = getLiteralString(model, RDF.value);
+                assertEquals(field.getData(), value);
             } else {
                 assertNull(converter.convert001(field));
             }
         }
+    }
+
+    @Test
+    public void testConvert003() {
+        System.out.println("003 should set the AdminMetadata source property for the work");
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("003")) {
+                Model model = converter.convert003(field);
+                assertNotNull(model);
+                String value = getLiteralString(model, BIB_FRAME.code);
+                assertEquals(field.getData(), value);
+            } else {
+                assertNull(converter.convert003(field));
+            }
+        }
+    }
+
+    public String getLiteralString(Model model, Property property) {
+        NodeIterator iter = model.listObjectsOfProperty(property);
+        while (iter.hasNext()) {
+            RDFNode node = iter.next();
+            if (node.isLiteral()) {
+                return node.asLiteral().getString();
+            }
+        }
+        return null;
     }
 
     @After
