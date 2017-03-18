@@ -47,9 +47,10 @@ public class Marc001To007ConverterTest {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
             if (field.getTag().equals("001")) {
-                Resource resource = converter.convert001(field);
+                RDFNode resource = converter.convert001(field);
                 assertNotNull(resource);
-                Statement stmt = resource.getProperty(RDF.value);
+                assertTrue(resource.isResource());
+                Statement stmt = resource.asResource().getProperty(RDF.value);
                 assertNotNull(stmt);
                 String value = stmt.getLiteral().getString();
                 assertEquals(field.getData(), value);
@@ -66,9 +67,10 @@ public class Marc001To007ConverterTest {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
             if (field.getTag().equals("003")) {
-                Resource resource = converter.convert003(field);
+                RDFNode resource = converter.convert003(field);
                 assertNotNull(resource);
-                Statement stmt = resource.getProperty(BIB_FRAME.code);
+                assertTrue(resource.isResource());
+                Statement stmt = resource.asResource().getProperty(BIB_FRAME.code);
                 assertNotNull(stmt);
                 assertEquals(field.getData(), stmt.getLiteral().getString());
                 assertEquals(field.getData(), getLiteralString(model, BIB_FRAME.code));

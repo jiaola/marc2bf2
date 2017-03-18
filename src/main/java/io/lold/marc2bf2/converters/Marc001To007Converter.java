@@ -3,6 +3,7 @@ package io.lold.marc2bf2.converters;
 import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.marc4j.marc.ControlField;
@@ -17,7 +18,7 @@ public class Marc001To007Converter {
         this.model = model;
     }
 
-    public Resource convert001(ControlField field) {
+    public RDFNode convert001(ControlField field) {
         if (!field.getTag().equals("001")) {
             return null;
         }
@@ -26,7 +27,7 @@ public class Marc001To007Converter {
                 addProperty(RDF.value, field.getData());
     }
 
-    public Resource convert003(ControlField field) {
+    public RDFNode convert003(ControlField field) {
         if (!field.getTag().equals("003")) {
             return null;
         }
@@ -35,7 +36,7 @@ public class Marc001To007Converter {
                 addProperty(BIB_FRAME.code, field.getData());
     }
 
-    public Resource convert005(ControlField field) {
+    public RDFNode convert005(ControlField field) {
         if (!field.getTag().equals("005")) {
             return null;
         }
