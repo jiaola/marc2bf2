@@ -46,12 +46,14 @@ public class Marc2BibFrame2Converter {
         List<VariableField> fields = record.getVariableFields();
         for (VariableField field: fields) {
             if (field.getTag().equals("001")) {
-                RDFNode local = new Marc001To007Converter(model).convert001((ControlField)field);
-                amd.addProperty(BIB_FRAME.identifiedBy, local);
+                RDFNode node = new Marc001To007Converter(model).convert001((ControlField)field);
+                amd.addProperty(BIB_FRAME.identifiedBy, node);
             } else if (field.getTag().equals("003")) {
-                RDFNode source = new Marc001To007Converter(model).convert003((ControlField)field);
-                amd.addProperty(BIB_FRAME.source, source);
+                RDFNode node = new Marc001To007Converter(model).convert003((ControlField)field);
+                amd.addProperty(BIB_FRAME.source, node);
             } else if (field.getTag().equals("005")) {
+                RDFNode node = new Marc001To007Converter(model).convert005((ControlField)field);
+                amd.addProperty(BIB_FRAME.changeDate, node);
             }
         }
         return model;
