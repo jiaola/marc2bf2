@@ -18,6 +18,7 @@ public class BIB_FRAME {
     public static final Resource Work;
 
     // ---- properties ----
+    public static final Property adminMetadata;
     public static final Property code;
     public static final Property identifiedBy;
     public static final Property source;
@@ -33,6 +34,7 @@ public class BIB_FRAME {
         Source = m.createResource(BIB_FRAME.NAMESPACE + "Source");
         Work = m.createResource(BIB_FRAME.NAMESPACE + "Work");
 
+        adminMetadata = m.createProperty(BIB_FRAME.NAMESPACE, "adminMetadata");
         code = m.createProperty(BIB_FRAME.NAMESPACE, "code");
         identifiedBy = m.createProperty(BIB_FRAME.NAMESPACE, "identifiedBy");
         source = m.createProperty(BIB_FRAME.NAMESPACE, "source");

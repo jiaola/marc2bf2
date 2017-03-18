@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.converters.Marc001To007Converter;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
@@ -19,6 +18,7 @@ import java.util.List;
 @RunWith(Parameterized.class)
 public class Marc001To007ConverterTest {
     private Marc001To007Converter converter;
+    private Model model;
 
     @Parameterized.Parameter
     public Record record;
@@ -37,7 +37,8 @@ public class Marc001To007ConverterTest {
 
     @Before
     public void init() {
-        converter = new Marc001To007Converter();
+        model = io.lold.marc2bf2.ModelFactory.createBfModel();
+        converter = new Marc001To007Converter(model);
     }
 
     @Test
@@ -46,10 +47,13 @@ public class Marc001To007ConverterTest {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
             if (field.getTag().equals("001")) {
-                Model model = converter.convert001(field);
-                assertNotNull(model);
-                String value = getLiteralString(model, RDF.value);
+                Resource resource = converter.convert001(field);
+                assertNotNull(resource);
+                Statement stmt = resource.getProperty(RDF.value);
+                assertNotNull(stmt);
+                String value = stmt.getLiteral().getString();
                 assertEquals(field.getData(), value);
+                assertEquals(field.getData(), getLiteralString(model, RDF.value));
             } else {
                 assertNull(converter.convert001(field));
             }
@@ -62,10 +66,12 @@ public class Marc001To007ConverterTest {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
             if (field.getTag().equals("003")) {
-                Model model = converter.convert003(field);
-                assertNotNull(model);
-                String value = getLiteralString(model, BIB_FRAME.code);
-                assertEquals(field.getData(), value);
+                Resource resource = converter.convert003(field);
+                assertNotNull(resource);
+                Statement stmt = resource.getProperty(BIB_FRAME.code);
+                assertNotNull(stmt);
+                assertEquals(field.getData(), stmt.getLiteral().getString());
+                assertEquals(field.getData(), getLiteralString(model, BIB_FRAME.code));
             } else {
                 assertNull(converter.convert003(field));
             }

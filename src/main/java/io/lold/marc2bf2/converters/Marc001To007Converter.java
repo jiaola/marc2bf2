@@ -11,35 +11,35 @@ import org.marc4j.marc.ControlField;
  * Conversion Specs for MARC 001-007 fields
  */
 public class Marc001To007Converter {
-    public Marc001To007Converter() {
+    private Model model;
+    public Marc001To007Converter(Model model) {
         super();
+        this.model = model;
     }
 
-    public Model convert001(ControlField field) {
+    public Resource convert001(ControlField field) {
         if (!field.getTag().equals("001")) {
             return null;
         }
-        Model model = ModelFactory.createBfModel();
-        Resource local = model.createResource().
+        return model.createResource().
                 addProperty(RDF.type, BIB_FRAME.Local).
                 addProperty(RDF.value, field.getData());
-        model.createResource().
-                addProperty(RDF.type, BIB_FRAME.AdminMetadata).
-                addProperty(BIB_FRAME.identifiedBy, local);
-        return model;
     }
 
-    public Model convert003(ControlField field) {
+    public Resource convert003(ControlField field) {
         if (!field.getTag().equals("003")) {
             return null;
         }
-        Model model = ModelFactory.createBfModel();
-        Resource source = model.createResource().
+        return model.createResource().
                 addProperty(RDF.type, BIB_FRAME.Source).
                 addProperty(BIB_FRAME.code, field.getData());
-        model.createResource().
-                addProperty(RDF.type, BIB_FRAME.AdminMetadata).
-                addProperty(BIB_FRAME.source, source);
-        return model;
+    }
+
+    public Resource convert005(ControlField field) {
+        if (!field.getTag().equals("005")) {
+            return null;
+        }
+        Model model = ModelFactory.createBfModel();
+        return model.createResource();
     }
 }
