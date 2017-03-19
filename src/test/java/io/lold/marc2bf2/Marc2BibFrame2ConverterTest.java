@@ -41,8 +41,8 @@ public class Marc2BibFrame2ConverterTest {
     }
 
     @Test
-    public void testToWork() throws Exception {
-        Model model = converter.toWork(record);
+    public void testConvert() throws Exception {
+        Model model = converter.convert(record);
         model.write(System.out);
     }
 }
