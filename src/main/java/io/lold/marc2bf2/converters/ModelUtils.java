@@ -11,7 +11,7 @@ public class ModelUtils {
      * @param model
      */
     public static Resource getWork(Model model, Record record) {
-        return model.getResource(getWorkUri(record));
+        return model.getResource(getUri(record, "Work"));
     }
 
     public static Resource getAdminMatadata(Model model, Record record) {
@@ -25,9 +25,9 @@ public class ModelUtils {
      * @param record
      * @return
      */
-    public static String getWorkUri(Record record) {
+    public static String getUri(Record record, String type) {
         //TODO: Set the prefix in a config file
         String prefix = "http://example.org/";
-        return prefix + record.getControlNumber() + "#Work";
+        return prefix + record.getControlNumber() + "#" + type;
     }
 }

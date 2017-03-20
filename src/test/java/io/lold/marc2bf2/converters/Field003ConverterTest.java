@@ -35,7 +35,7 @@ public class Field003ConverterTest {
     public void setUp() {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
-        model.createResource(ModelUtils.getWorkUri(record))
+        model.createResource(ModelUtils.getUri(record, "Work"))
                 .addProperty(RDF.type, BIB_FRAME.Work)
                 .addProperty(BIB_FRAME.adminMetadata, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
@@ -56,7 +56,7 @@ public class Field003ConverterTest {
         for (ControlField field: controlFields) {
             if (field.getTag().equals("003")) {
                 model = converter.convert(field);
-                Resource resource = model.getResource(ModelUtils.getWorkUri(record))
+                Resource resource = model.getResource(ModelUtils.getUri(record, "Work"))
                         .getPropertyResourceValue(BIB_FRAME.adminMetadata)
                         .getPropertyResourceValue(BIB_FRAME.source);
                 Statement stmt = resource.asResource().getProperty(BIB_FRAME.code);

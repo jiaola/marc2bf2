@@ -33,7 +33,7 @@ public class Marc2BibFrame2Converter {
         if (cnf == null) {
             // no identifier
         }
-        String workUri = ModelUtils.getWorkUri(record);
+        String workUri = ModelUtils.getUri(record, "Work");
 
         Resource work = model.createResource(workUri);
 
