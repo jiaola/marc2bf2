@@ -1,9 +1,6 @@
 package io.lold.marc2bf2;
 
-import io.lold.marc2bf2.converters.Field001Converter;
-import io.lold.marc2bf2.converters.Field003Converter;
-import io.lold.marc2bf2.converters.Field005Converter;
-import io.lold.marc2bf2.converters.ModelUtils;
+import io.lold.marc2bf2.converters.*;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
@@ -33,8 +30,7 @@ public class Marc2BibFrame2Converter {
         }
         String workUri = ModelUtils.getWorkUri(record);
 
-        Resource work = model.createResource(workUri)
-                .addProperty(RDF.type, BIB_FRAME.Work);
+        Resource work = model.createResource(workUri);
 
         // Create AdminMetadata resource
         Resource amd = model.createResource()
@@ -50,8 +46,13 @@ public class Marc2BibFrame2Converter {
                 model = new Field003Converter(model, record).convert(field);
             } else if (field.getTag().equals("005")) {
                 model = new Field005Converter(model, record).convert(field);
+            } else if (field.getTag().equals("007")) {
+                model = new Field007Converter(model, record).convert(field);
             }
         }
+
+        // Keep this line at the end; Otherwise Jena won't use bf:Work as the root tag in RDF/XML.
+        work.addProperty(RDF.type, BIB_FRAME.Work);
         return model;
     }
 }

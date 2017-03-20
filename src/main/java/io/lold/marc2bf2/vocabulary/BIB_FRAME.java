@@ -13,6 +13,7 @@ public class BIB_FRAME {
     // ---- classes ----
     public static final Resource AcquisitionSource;
     public static final Resource AdminMetadata;
+    public static final Resource Cartography;
     public static final Resource Local;
     public static final Resource Source;
     public static final Resource Work;
@@ -31,6 +32,7 @@ public class BIB_FRAME {
     static {
         AcquisitionSource = m.createResource(BIB_FRAME.NAMESPACE + "AcquisitionSource");
         AdminMetadata = m.createResource(BIB_FRAME.NAMESPACE + "AdminMetadata");
+        Cartography = m.createResource(BIB_FRAME.NAMESPACE + "Cartography");
         Local = m.createResource(BIB_FRAME.NAMESPACE + "Local");
         Source = m.createResource(BIB_FRAME.NAMESPACE + "Source");
         Work = m.createResource(BIB_FRAME.NAMESPACE + "Work");
