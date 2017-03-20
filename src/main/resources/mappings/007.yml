@@ -84,6 +84,32 @@ mappings:
         p: plt
         v: lea
         w: par
+    - position: 5
+      type: Generation
+      property: generation
+      labels:
+        f: facsimile
+        z: other type of reproduction
+    - positions: 6
+      type: Generation
+      property: generation
+      labels:
+        a: photocopy, blueline print
+        b: photocopy
+        c: pre-production
+        d: film
+    - position: 7
+      type: Polarity
+      property: polarity
+      prefix: mpolarity
+      labels:
+        a: positive
+        b: negative
+        m: mixed polarity
+      uris:
+        a: pos
+        b: neg
+        m: mix
   c:
     - position: 3
       prefix: mcolor
@@ -256,7 +282,7 @@ mappings:
         c: mul
         g: gry
         m: mix
-work:
+Work:
   a:
     type: Cartography
     leader: [e, f]
@@ -316,7 +342,7 @@ work:
         values: [a, b, c, m]
         default: {prefix: genreForms, type: GenreForm, property: genreForm, uri: gf2011026723}
 
-instance:
+Instance:
 
 #
 #work:

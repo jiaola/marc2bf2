@@ -9,11 +9,30 @@ public class ModelUtils {
     /**
      * Get the work node from a model
      * @param model
+     * @param record
+     * @return
      */
     public static Resource getWork(Model model, Record record) {
         return model.getResource(getUri(record, "Work"));
     }
 
+    /**
+     * Get the Instance node from a model
+     *
+     * @param model
+     * @param record
+     * @return
+     */
+    public static Resource getInstance(Model model, Record record) {
+        return model.getResource(getUri(record, "Instance"));
+    }
+
+    /**
+     * Get the AdminMetadata node from a model
+     * @param model
+     * @param record
+     * @return
+     */
     public static Resource getAdminMatadata(Model model, Record record) {
         Resource work = getWork(model, record);
         return work.getPropertyResourceValue(BIB_FRAME.adminMetadata);

@@ -10,6 +10,6 @@ public class MappingsReaderTest {
     public void testReadMappings() throws Exception{
         Map map = MappingsReader.readMappings("007.yml");
         assertTrue(map.containsKey("vocabularies"));
-        assertEquals("Cartography", ((Map)((Map)map.get("work")).get("a")).get("type"));
+        assertEquals("Cartography", ((Map)((Map)map.get("Work")).get("a")).get("type"));
     }
 }
