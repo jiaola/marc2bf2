@@ -12,5 +12,5 @@ public abstract class FieldConverter {
         this.record = record;
     }
 
-    public abstract Model convert(VariableField field);
+    public abstract Model convert(VariableField field) throws Exception;
 }

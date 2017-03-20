@@ -22,114 +22,165 @@ vocabularies:
 
 mappings:
   a:
+    - position: 1
+      prefix: marcgt
+      type: GenreForm
+      property: genreForm
+      labels:
+        d: atlas
+        g: diagram
+        j: map
+        k: profile
+        q: model
+        r: remote-sensing image
+        s: map section
+        y: map view
+      uris:
+        d: atl
+        j: map
+        q: mod
+        r: rem
+    - position: 3
+      prefix: mcolor
+      type: ColorContent
+      property: colorContent
+      labels:
+        a: one color
+        c: multicolored
+      uris:
+        a: one
+        c: mul
+    - position: 4
+      prefix: mmaterial
+      type: BaseMaterial
+      property: baseMaterial
+      labels:
+        a: paper
+        b: wood
+        c: stone
+        d: metal
+        e: synthetic
+        f: skin
+        g: textile
+        i: plastic
+        j: glass
+        l: vinyl
+        n: vellum
+        p: plaster
+        v: leather
+        w: parchment
+      uris:
+        a: pap
+        b: wod
+        c: sto
+        d: mtl
+        e: syn
+        f: ski
+        g: tex
+        i: pla
+        j: gls
+        l: vny
+        n: vel
+        p: plt
+        v: lea
+        w: par
+  c:
+    - position: 3
+      prefix: mcolor
+      type: ColorContent
+      property: colorContent
+      labels:
+        a: one color
+        b: black and white
+        c: multicolored
+        g: gray scale
+        m: mixed
+      uris:
+        a: one
+        b: blw
+        c: mul
+        g: gry
+        m: mix
+
+work:
+  a:
     type: Cartography
+    leader: [e, f]
     positions:
-      - digit: 1
-        prefix: marcgt
-        type: GenreForm
-        labels:
-          d: atlas
-          g: diagram
-          j: map
-          k: profile
-          q: model
-          r: remote-sensing image
-          s: map section
-          y: map view
-        uris:
-          d: atl 
-          j: map 
-          q: mod 
-          r: rem 
-      - digit: 3
-        prefix: mcolor
-        type: ColorContent
-        labels:
-          a: one color
-          c: multicolored
-        uris:
-          a: one
-          c: mul
-      - digit: 4
-        prefix: mmaterial
-        type: BaseMaterial
-        labels:
-          a: paper
-          b: wood
-          c: stone
-          d: metal
-          e: synthetic
-          f: skin
-          g: textile
-          i: plastic
-          j: glass
-          l: vinyl
-          n: vellum
-          p: plaster
-          v: leather
-          w: parchment
-        uris:
-          a: pap
-          b: wod
-          c: sto
-          d: mtl
-          e: syn
-          f: ski
-          g: tex
-          i: pla
-          j: gls
-          l: vny
-          n: vel
-          p: plt
-          v: lea
-          w: par
+      - position: 1
+        values: [d, g, j, k, q, r, s, y]
+      - position: 3
+        values: [a, c]
+      - position: 4
+        values: [a, b, c, d, e, f, g, i, j, l, n, p, v, w]
+  c:
+    positions:
+      - position: 3
+        values: [a, b, c, g, m]
+  d:
+    type: Cartography
+    leader: [e, f]
+  g:
+    type: StillImage
+    leader: [k]
+  k:
+    type: StillImage
+    leader: [k]
+  m:
+    type: MovingImage
+    leader: [g]
+  s:
+    type: Audio
+    leader: [i, j]
+
+
 #
 #work:
 #  a:
 #    type: Cartography
 #    positions:
-#      - digit: 1
+#      - position: 1
 #        mapping: genres
-#      - digit: 3
+#      - position: 3
 #        mapping: colors
-#      - digit: 4
+#      - position: 4
 #        mapping: materials
 #  c:
 #    positions:
-#      - digit: 3
+#      - position: 3
 #        mapping: colors
 #  d:
 #    type: Cartography
 #    positions:
-#      - digit: 1
+#      - position: 1
 #        mapping: genres
-#      - digit: 3
+#      - position: 3
 #        mapping: colors
 #  g:
 #    type: StillImage
 #    positions:
-#      - digit: 3
+#      - position: 3
 #        mapping: colors
 #  h:
 #    positions:
-#      - digit: 9
+#      - position: 9
 #        mapping: colors
 #  k:
 #    type: StillImage
-#      - digit: 1
+#      - position: 1
 #        mappings: genres
-#      - digit: 3
+#      - position: 3
 #        mappings: color
 #  m:
 #    type: MovingImage
-#      - digit: 3
+#      - position: 3
 #        mappings: colors
-#      - digit: 9
+#      - position: 9
 #        mappings: genres
 #  s:
 #    type: Audio
 #  v:
 #    positions:
-#      - digit: 3
+#      - position: 3
 #        mappings: colors
 

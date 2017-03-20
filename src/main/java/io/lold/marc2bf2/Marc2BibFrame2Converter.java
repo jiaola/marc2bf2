@@ -8,10 +8,15 @@ import org.apache.jena.vocabulary.RDF;
 import org.marc4j.marc.ControlField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
 import java.util.List;
 
 public class Marc2BibFrame2Converter {
+    final static Logger logger = LoggerFactory.getLogger(Marc2BibFrame2Converter.class);
+
     public Marc2BibFrame2Converter() {
         super();
     }
@@ -47,7 +52,14 @@ public class Marc2BibFrame2Converter {
             } else if (field.getTag().equals("005")) {
                 model = new Field005Converter(model, record).convert(field);
             } else if (field.getTag().equals("007")) {
-                model = new Field007Converter(model, record).convert(field);
+                Field007Converter converter = null;
+                try {
+                    converter = new Field007Converter(model, record);
+                    model = converter.convert(field);
+                } catch (IOException ex) {
+                    logger.error("Failed to create Field007Converter");
+                }
+
             }
         }
 
