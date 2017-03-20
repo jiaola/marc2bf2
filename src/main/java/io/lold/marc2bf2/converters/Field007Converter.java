@@ -74,6 +74,15 @@ public class Field007Converter extends FieldConverter {
                         continue;
                     }
 
+                    if (position.containsKey("default")) {
+                        Map<String, String> defaultMap = (Map<String, String>) position.get("default");
+                        String uri = mappings.get("vocabularies").get(defaultMap.get("prefix")) + defaultMap.get("uri");
+                        Resource resource = model.createResource(uri);
+                        resource.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + defaultMap.get("type")));
+                        resource.addProperty(RDFS.label, defaultMap.get("label"));
+                        work.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, defaultMap.get("property")), resource);
+                    }
+
                     Resource resource;
                     if (uris != null && uris.containsKey(cpos)) {
                         String uri = mappings.get("vocabularies").get(posMapping.get("prefix")) + uris.get(cpos);

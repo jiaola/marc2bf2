@@ -101,7 +101,25 @@ mappings:
         c: mul
         g: gry
         m: mix
-
+  d:
+    - position: 1
+      type: GenreForm
+      property: genreForm
+      labels:
+        a: celestial globe
+        b: planetary or lunar globe
+        c: terrestrial globe
+        e: earth moon globe
+    - position: 3
+      prefix: mcolor
+      type: ColorContent
+      property: colorContent
+      labels:
+        a: one color
+        c: multicolored
+      uris:
+        a: one
+        c: mul
 work:
   a:
     type: Cartography
@@ -120,6 +138,13 @@ work:
   d:
     type: Cartography
     leader: [e, f]
+    positions:
+      - position: 1
+        default: { prefix: marcgt, type: GenreForm, property: genreForm, label: globe, uri: glo }
+        values: [a, b, c, e]
+      - position: 3
+        values: [a, c]
+
   g:
     type: StillImage
     leader: [k]
