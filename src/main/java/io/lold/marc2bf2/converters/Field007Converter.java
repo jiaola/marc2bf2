@@ -79,13 +79,28 @@ public class Field007Converter extends FieldConverter {
                         String uri = mappings.get("vocabularies").get(defaultMap.get("prefix")) + defaultMap.get("uri");
                         Resource resource = model.createResource(uri);
                         resource.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + defaultMap.get("type")));
-                        resource.addProperty(RDFS.label, defaultMap.get("label"));
+                        if (defaultMap.containsKey("label")) {
+                            resource.addProperty(RDFS.label, defaultMap.get("label"));
+                        }
                         work.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, defaultMap.get("property")), resource);
+                    }
+
+                    // In some special cases, the prefix is different from the default ones.
+                    // See k, pos 01
+                    String prefix = null;
+                    if (workMapping.containsKey("prefixes")) {
+                        Map<String, String> prefixes = (Map<String, String>) workMapping.get("prefixes");
+                        if (prefixes.containsKey(cpos)) {
+                            prefix = prefixes.get("cpos");
+                        }
+                    }
+                    if (prefix == null) {
+                        prefix = (String) posMapping.get("prefix");
                     }
 
                     Resource resource;
                     if (uris != null && uris.containsKey(cpos)) {
-                        String uri = mappings.get("vocabularies").get(posMapping.get("prefix")) + uris.get(cpos);
+                        String uri = mappings.get("vocabularies").get(prefix) + uris.get(cpos);
                         resource = model.createResource(uri);
                     } else {
                         resource = model.createResource();

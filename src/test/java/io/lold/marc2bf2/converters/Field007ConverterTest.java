@@ -3,6 +3,7 @@ package io.lold.marc2bf2.converters;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,9 +35,7 @@ public class Field007ConverterTest {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
         model.createResource(ModelUtils.getWorkUri(record))
-                .addProperty(RDF.type, BIB_FRAME.Work)
-                .addProperty(BIB_FRAME.adminMetadata, model.createResource()
-                        .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
+                .addProperty(RDF.type, BIB_FRAME.Work);
         converter = new Field007Converter(model, record);
     }
 
@@ -99,10 +98,11 @@ public class Field007ConverterTest {
         for (ControlField field: controlFields) {
             if (field.getTag().equals("007")) {
                 String data = field.getData();
-                if (data.startsWith("a") && data.substring(4, 5) == "a") {
+                if (data.startsWith("a") && data.substring(4, 5).equals("a")) {
                     model = converter.convert(field);
                     Resource work = ModelUtils.getWork(model, record);
-                    StmtIterator iter = model.listStatements(work, BIB_FRAME.genreForm, model.createResource("http://id.loc.gov/vocabulary/mmaterial/gls"));
+                    StmtIterator iter = model.listStatements(work, BIB_FRAME.baseMaterial, model.createResource("http://id.loc.gov/vocabulary/mmaterial/pap"));
+                    model.write(System.out);
                     assertTrue(iter.hasNext());
                 }
             } else {
@@ -113,8 +113,8 @@ public class Field007ConverterTest {
 
     /**
      * Field 007 gxxcxxxxx
-     * position 00 = a
-     * position 04 = a
+     * position 00 = g
+     * position 03 = c
      * @throws Exception
      */
     @Test
@@ -123,10 +123,82 @@ public class Field007ConverterTest {
         for (ControlField field: controlFields) {
             if (field.getTag().equals("007")) {
                 String data = field.getData();
-                if (data.startsWith("g") && data.substring(3, 4) == "c") {
+                if (data.startsWith("g") && data.substring(3, 4).equals("c")) {
                     model = converter.convert(field);
                     Resource work = ModelUtils.getWork(model, record);
-                    StmtIterator iter = model.listStatements(work, BIB_FRAME.genreForm, model.createResource("http://id.loc.gov/vocabulary/mcolor/mul"));
+                    StmtIterator iter = model.listStatements(work, BIB_FRAME.colorContent, model.createResource("http://id.loc.gov/vocabulary/mcolor/mul"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    /**
+     * Field 007 khxxxxxxx
+     * position 00 = k
+     * position 01 = h
+     * @throws Exception
+     */
+    @Test
+    public void testConvertWorkK1H() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("k") && data.substring(1, 2).equals("h")) {
+                    model = converter.convert(field);
+                    Resource work = ModelUtils.getWork(model, record);
+                    StmtIterator iter = model.listStatements(work, BIB_FRAME.genreForm, model.createResource("http://id.loc.gov/vocabulary/graphicMaterials/tgm007718"));
+                    assertTrue(iter.hasNext());
+                    model.write(System.out);
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    /**
+     * Field 007 mxxxxxxxxaxxx
+     * position 00 = m
+     * position 09 = a
+     * @throws Exception
+     */
+    @Test
+    public void testConvertWorkM9A() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("m") && data.substring(9, 10).equals("a")) {
+                    model = converter.convert(field);
+                    Resource work = ModelUtils.getWork(model, record);
+                    assertTrue(TestUtils.checkWorkLabel(work, BIB_FRAME.genreForm, "workprint"));
+                    model.write(System.out);
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+    /**
+     * Field 007 vxxcxxxxx
+     * position 00 = v
+     * position 03 = c
+     * @throws Exception
+     */
+    @Test
+    public void testConvertWorkV3C() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("v") && data.substring(3, 4).equals("c")) {
+                    model = converter.convert(field);
+                    Resource work = ModelUtils.getWork(model, record);
+                    StmtIterator iter = model.listStatements(work, BIB_FRAME.colorContent, model.createResource("http://id.loc.gov/vocabulary/mcolor/mul"));
                     assertTrue(iter.hasNext());
                 }
             } else {

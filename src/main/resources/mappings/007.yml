@@ -120,6 +120,142 @@ mappings:
       uris:
         a: one
         c: mul
+  g:
+    - position: 3
+      type: ColorContent
+      property: colorContent
+      prefix: mcolor
+      labels: 
+        a: one color
+        b: black and white
+        c: multicolored
+        h: hand colored
+        m: mixed
+      uris:
+        a: one
+        b: blw
+        c: mul
+        h: hnd
+        m: mix
+  h:
+    - position: 9
+      type: ColorContent
+      property: colorContent
+      prefix: mcolor
+      labels:
+        b: black and white
+        c: multicolored
+        m: mixed
+      uris:
+        b: blw
+        c: mul
+        m: mix
+  k:
+    - position: 1
+      type: GenreForm
+      property: genreForm
+      prefix: graphicMaterials
+      labels:
+        a: activity card
+        c: collage
+        d: drawing
+        e: painting
+        f: photomechanical print
+        g: photonegative
+        h: photoprint
+        i: picture
+        j: print
+        k: poster
+        l: technical drawing
+        n: chart
+        o: flash card
+        p: postcard
+        q: icon
+        r: radiograph
+        s: study print
+      uris:
+        c: tgm002269
+        d: tgm003277
+        e: tgm007391
+        f: tgm007730
+        g: tgm007028
+        h: tgm007718
+        i: tgm007779
+        j: tgm008237
+        k: tgm008104
+        l: ted
+        n: tgm001907
+        o: fla
+        p: tgm008103
+        q: tgm005289
+        r: tgm008530
+        v: tgm007721
+      prefixes:
+        l: marcgt
+        o: marcgt
+    - position: 3
+      type: ColorContent
+      property: colorContent
+      prefix: mcolor
+      labels:
+        a: one color
+        b: black and white
+        c: multicolored
+        h: hand colored
+        m: mixed
+      uris:
+        a: one
+        b: blw
+        c: mul
+        h: hnd
+        m: mix
+  m:
+    - position: 3
+      type: ColorContent
+      property: colorContent
+      prefix: mcolor
+      labels:
+        b: black and white
+        c: multicolored
+        h: hand colored
+        m: mixed
+      uris:
+        b: blw
+        c: mul
+        h: hnd
+        m: mix
+    - position: 9
+      type: GenreForm
+      property: genreForm
+      prefix: genreForms
+      labels:
+        a: workprint
+        b: trims
+        c: outtakes
+        d: rushes
+        e: mixing tracks
+        f: title bands, intertitle rolls
+        g: production rolls
+      uris:
+        c: gf2011026435
+        d: gf2011026551
+  v:
+    - position: 3
+      prefix: mcolor
+      type: ColorContent
+      property: colorContent
+      labels:
+        a: one color
+        b: black and white
+        c: multicolored
+        g: gray scale
+        m: mixed
+      uris:
+        a: one
+        b: blw
+        c: mul
+        g: gry
+        m: mix
 work:
   a:
     type: Cartography
@@ -144,20 +280,43 @@ work:
         values: [a, b, c, e]
       - position: 3
         values: [a, c]
-
   g:
     type: StillImage
     leader: [k]
+    positions:
+      - position: 3
+        values: [a, b, c, h, m]
+  h:
+    positions:
+      - position: 9
+        values: [b, c, m]
   k:
     type: StillImage
     leader: [k]
+    positions:
+      - position: 1
+        values: [a, c, d, e, f, g, h, i, j, k, l, n, o, p, q, r, s]
+      - position: 3
+        values: [a, b, c, h, m]
   m:
     type: MovingImage
     leader: [g]
+    positions:
+      - position: 3
+        values: [b, c, h, m]
+      - position: 9
+        values: [a, b, c, d, e, f, g]
+        default: {prefix: genreForms, type: GenreForm, property: genreForm, uri: mot}
   s:
     type: Audio
     leader: [i, j]
+  v:
+    positions:
+      - position: 3
+        values: [a, b, c, m]
+        default: {prefix: genreForms, type: GenreForm, property: genreForm, uri: gf2011026723}
 
+instance:
 
 #
 #work:
