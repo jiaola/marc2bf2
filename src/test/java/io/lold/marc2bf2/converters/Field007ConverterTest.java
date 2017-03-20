@@ -102,7 +102,6 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     Resource work = ModelUtils.getWork(model, record);
                     StmtIterator iter = model.listStatements(work, BIB_FRAME.baseMaterial, model.createResource("http://id.loc.gov/vocabulary/mmaterial/pap"));
-                    model.write(System.out);
                     assertTrue(iter.hasNext());
                 }
             } else {
@@ -152,7 +151,6 @@ public class Field007ConverterTest {
                     Resource work = ModelUtils.getWork(model, record);
                     StmtIterator iter = model.listStatements(work, BIB_FRAME.genreForm, model.createResource("http://id.loc.gov/vocabulary/graphicMaterials/tgm007718"));
                     assertTrue(iter.hasNext());
-                    model.write(System.out);
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -176,7 +174,6 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     Resource work = ModelUtils.getWork(model, record);
                     assertTrue(TestUtils.checkWorkLabel(work, BIB_FRAME.genreForm, "workprint"));
-                    model.write(System.out);
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
