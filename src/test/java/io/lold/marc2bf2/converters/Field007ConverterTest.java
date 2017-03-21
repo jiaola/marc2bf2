@@ -3,7 +3,6 @@ package io.lold.marc2bf2.converters;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.vocabulary.RDFS;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,6 +35,8 @@ public class Field007ConverterTest {
         // create a mock work and adminmetadata
         model.createResource(ModelUtils.getUri(record, "Work"))
                 .addProperty(RDF.type, BIB_FRAME.Work);
+        model.createResource(ModelUtils.getUri(record, "Instance"))
+                .addProperty(RDF.type, BIB_FRAME.Instance);
         converter = new Field007Converter(model, record);
     }
 
@@ -173,7 +174,7 @@ public class Field007ConverterTest {
                 if (data.startsWith("m") && data.substring(9, 10).equals("a")) {
                     model = converter.convert(field);
                     Resource work = ModelUtils.getWork(model, record);
-                    assertTrue(TestUtils.checkWorkLabel(work, BIB_FRAME.genreForm, "workprint"));
+                    assertTrue(TestUtils.checkResourceLabel(work, BIB_FRAME.genreForm, "workprint"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -213,6 +214,41 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     Resource work = ModelUtils.getWork(model, record);
                     StmtIterator iter = model.listStatements(work, BIB_FRAME.genreForm, model.createResource("http://id.loc.gov/vocabulary/marcgt/glo"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceA5F() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("a") && data.substring(5, 6).equals("f")) {
+                    model = converter.convert(field);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.generation, "facsimile"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceA7M() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("a") && data.substring(7, 8).equals("m")) {
+                    model = converter.convert(field);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.polarity, model.createResource("http://id.loc.gov/vocabulary/mpolarity/mix"));
                     assertTrue(iter.hasNext());
                 }
             } else {

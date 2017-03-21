@@ -35,7 +35,7 @@ public class Field007Converter extends FieldConverter {
             return model;
         }
         model = convertInMode(((ControlField)field).getData(), "Work");
-        //model = convertInMode(((ControlField)field).getData(), "Instance");
+        model = convertInMode(((ControlField)field).getData(), "Instance");
         return model;
     }
 

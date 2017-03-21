@@ -33,15 +33,15 @@ public class TestUtils {
         return false;
     }
 
-    public static boolean checkWorkLabel(Resource work, Property property, String label) {
-        StmtIterator iter = work.listProperties(BIB_FRAME.genreForm);
+    public static boolean checkResourceLabel(Resource resource, Property property, String label) {
+        StmtIterator iter = resource.listProperties(property);
         while (iter.hasNext()) {
             Statement stmt = iter.next();
-            Resource resource = stmt.getResource();
-            if (resource.getURI() != null) {
+            Resource object = stmt.getResource();
+            if (object.getURI() != null) {
                 continue;
             }
-            stmt = resource.getProperty(RDFS.label);
+            stmt = object.getProperty(RDFS.label);
             if (stmt.getLiteral().getString().equals(label)) {
                 return true;
             }

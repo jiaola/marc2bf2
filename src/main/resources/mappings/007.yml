@@ -90,7 +90,7 @@ mappings:
       labels:
         f: facsimile
         z: other type of reproduction
-    - positions: 6
+    - position: 6
       type: Generation
       property: generation
       labels:
@@ -343,54 +343,13 @@ Work:
         default: {prefix: genreForms, type: GenreForm, property: genreForm, uri: gf2011026723}
 
 Instance:
+  a:
+    positions:
+      - position: 5
+        values: [f, z]
+      - position: 6
+        values: [a, b, c, d]
+      - position: 7
+        values: [a, b, m]
 
-#
-#work:
-#  a:
-#    type: Cartography
-#    positions:
-#      - position: 1
-#        mapping: genres
-#      - position: 3
-#        mapping: colors
-#      - position: 4
-#        mapping: materials
-#  c:
-#    positions:
-#      - position: 3
-#        mapping: colors
-#  d:
-#    type: Cartography
-#    positions:
-#      - position: 1
-#        mapping: genres
-#      - position: 3
-#        mapping: colors
-#  g:
-#    type: StillImage
-#    positions:
-#      - position: 3
-#        mapping: colors
-#  h:
-#    positions:
-#      - position: 9
-#        mapping: colors
-#  k:
-#    type: StillImage
-#      - position: 1
-#        mappings: genres
-#      - position: 3
-#        mappings: color
-#  m:
-#    type: MovingImage
-#      - position: 3
-#        mappings: colors
-#      - position: 9
-#        mappings: genres
-#  s:
-#    type: Audio
-#  v:
-#    positions:
-#      - position: 3
-#        mappings: colors
 
