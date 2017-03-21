@@ -1,5 +1,7 @@
 package io.lold.marc2bf2.converters;
 
+import io.lold.marc2bf2.mappers.DefaultLabelUriMapper;
+import io.lold.marc2bf2.mappers.Field007Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
@@ -30,7 +32,7 @@ public class Field007Converter extends FieldConverter {
     }
 
 
-    public Model convert(VariableField field) {
+    public Model convert(VariableField field) throws Exception{
         if (!field.getTag().equals("007")) {
             return model;
         }
@@ -39,9 +41,8 @@ public class Field007Converter extends FieldConverter {
         return model;
     }
 
-    private Model convertInMode(String data, String mode) {
-        char[] chars = data.toCharArray();
-        String c00 = String.valueOf(chars[0]);  // the first character in 007
+    private Model convertInMode(String data, String mode) throws Exception {
+        String c00 = data.substring(0, 1);  // the first character in 007
         Resource resource = mode.equals("Work") ?
                 ModelUtils.getWork(model, record) :
                 ModelUtils.getInstance(model, record);
@@ -51,7 +52,7 @@ public class Field007Converter extends FieldConverter {
         if (nodeMap == null) return model;
 
         // If it's for Work, set the rdf:type of the Work
-        if (mode.equals("Work") && nodeMap.containsKey("type")) {
+        if (nodeMap.containsKey("type")) {
             List<String> checks = (List<String>) nodeMap.getOrDefault("leader", new ArrayList<String>());
             if (!checks.contains(String.valueOf(record.getLeader().getTypeOfRecord()))) {
                 resource.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + nodeMap.get("type")));
@@ -64,17 +65,27 @@ public class Field007Converter extends FieldConverter {
         // Look at each positions, and convert them to nodes
         List<Map> positions = (List<Map>) nodeMap.get("positions");
         for (Map position: positions) {
-            if (!position.containsKey("values")) continue;
+            if (!position.containsKey("values") && !position.containsKey("mapper"))
+                continue;
             int pos = (int) position.get("position"); // the position of the character
 
             Map posMap = getPositionMapping(c00, pos); // Map from position to labels and uris
-            Map<String, String> labels = (Map<String, String>) posMap.get("labels");
-            Map<String, String> uris = (Map<String, String>) posMap.get("uris");
-            if (labels == null && uris == null) continue; // Skip if there's no mappings
+            Field007Mapper mapper;
+            if (position.containsKey("mapper")) {
+                String className = (String) position.get("mapper");
+                Class<?> clazz = Class.forName(className);
+                mapper = (Field007Mapper) clazz.newInstance();
+            } else {
+                Map<String, String> labels = (Map<String, String>) posMap.get("labels");
+                Map<String, String> uris = (Map<String, String>) posMap.get("uris");
+                if (labels == null && uris == null) continue; // Skip if there's no mappings
+                mapper = new DefaultLabelUriMapper(labels, uris);
+            }
 
-            String cpos = String.valueOf(chars[pos]);  // the character at this position
+            int length = (int) posMap.getOrDefault("length", 1);
+            String cpos = data.substring(pos, pos+length); // the character(s) at this position
             List<String> values = (List<String>) position.get("values");  // Values to check
-            if (!values.contains(cpos)) continue; // Skip if no need to process this character
+            if (values != null && !values.contains(cpos)) continue; // Skip if no need to process this character
 
             addDefault(position, resource); // if there's default label, add it.
 
@@ -83,15 +94,17 @@ public class Field007Converter extends FieldConverter {
             String prefix = Optional.ofNullable(getPositionPrefix(nodeMap)).orElse((String) posMap.get("prefix"));
 
             Resource object;
-            if (uris != null && uris.containsKey(cpos)) {
-                String uri = mappings.get("vocabularies").get(prefix) + uris.get(cpos);
+            String uri;
+            if ((uri = mapper.mapToUri(cpos)) != null) {
+                uri = mappings.get("vocabularies").get(prefix) + uri;
                 object = model.createResource(uri);
             } else {
                 object = model.createResource();
             }
             object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + posMap.get("type")));
-            if (labels != null && labels.containsKey(cpos)) {
-                object.addProperty(RDFS.label, labels.get(cpos));
+            String label;
+            if ((label = mapper.mapToLabel(cpos)) != null) {
+                object.addProperty(RDFS.label, label);
             }
             resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) posMap.get("property")), object);
         }

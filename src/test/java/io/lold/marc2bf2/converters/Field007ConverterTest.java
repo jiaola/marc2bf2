@@ -62,25 +62,24 @@ public class Field007ConverterTest {
                     case "a":
                     case "d":
                         if (type != 'e' && type != 'f')
-                            assertTrue(TestUtils.checkWorkType(work, BIB_FRAME.Cartography));
+                            assertTrue(TestUtils.checkResourceType(work, BIB_FRAME.Cartography));
                         break;
                     case "g":
                     case "k":
                         if (type != 'k')
-                            assertTrue(TestUtils.checkWorkType(work, BIB_FRAME.StillImage));
+                            assertTrue(TestUtils.checkResourceType(work, BIB_FRAME.StillImage));
                         break;
                     case "m":
                         if (type != 'g')
-                            assertTrue(TestUtils.checkWorkType(work, BIB_FRAME.MovingImage));
+                            assertTrue(TestUtils.checkResourceType(work, BIB_FRAME.MovingImage));
                         break;
                     case "s":
                         if (type != 'i' && type != 'j')
-                            assertTrue(TestUtils.checkWorkType(work, BIB_FRAME.Audio));
+                            assertTrue(TestUtils.checkResourceType(work, BIB_FRAME.Audio));
                         break;
                     default:
                         break;
                 }
-                model.write(System.out);
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
             }
@@ -222,6 +221,33 @@ public class Field007ConverterTest {
         }
     }
 
+
+    @Test
+    public void testConvertInstanceType() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                model = converter.convert(field);
+                Resource instance = model.getResource(ModelUtils.getUri(record, "Instance"));
+
+                String data = field.getData();
+                String c00 = data.substring(0, 1);
+                char type = record.getLeader().getTypeOfRecord();
+                switch (c00) {
+                    case "c":
+                        if (type != 'm')
+                            assertTrue(TestUtils.checkResourceType(instance, BIB_FRAME.Electronic));
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+
     @Test
     public void testConvertInstanceA5F() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
@@ -230,6 +256,7 @@ public class Field007ConverterTest {
                 String data = field.getData();
                 if (data.startsWith("a") && data.substring(5, 6).equals("f")) {
                     model = converter.convert(field);
+                    model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
                     assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.generation, "facsimile"));
                 }
@@ -249,6 +276,48 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     Resource instance = ModelUtils.getInstance(model, record);
                     StmtIterator iter = model.listStatements(instance, BIB_FRAME.polarity, model.createResource("http://id.loc.gov/vocabulary/mpolarity/mix"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceC5A() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("c") && data.substring(5, 6).equals("a")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.soundContent, "sound on medium"));
+                } else if (data.startsWith("c") && data.substring(5, 6).equals(" ")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.soundContent, "slient"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceC6MMM() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("c") && data.substring(6, 9).equals("mmm")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.digitalCharacteristic, model.createResource("http://id.loc.gov/ontologies/bflc/ImageBitDepth"));
                     assertTrue(iter.hasNext());
                 }
             } else {

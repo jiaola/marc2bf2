@@ -22,8 +22,8 @@ public class TestUtils {
         return records.toArray(new Record[records.size()]);
     }
 
-    public static boolean checkWorkType(Resource work, Resource type) {
-        StmtIterator iter = work.listProperties(RDF.type);
+    public static boolean checkResourceType(Resource resource, Resource type) {
+        StmtIterator iter = resource.listProperties(RDF.type);
         while (iter.hasNext()) {
             Statement stmt = iter.next();
             if (stmt.getResource().equals(type)) {

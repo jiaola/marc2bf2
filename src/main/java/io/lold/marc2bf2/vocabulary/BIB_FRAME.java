@@ -17,12 +17,15 @@ public class BIB_FRAME {
     public static final Resource Audio;
     public static final Resource Cartography;
     public static final Resource ColorContent;
+    public static final Resource DigitalCharacteristic;
+    public static final Resource Electronic;
     public static final Resource Generation;
     public static final Resource GenreForm;
     public static final Resource Instance;
     public static final Resource Local;
     public static final Resource MovingImage;
     public static final Resource Polarity;
+    public static final Resource SoundContent;
     public static final Resource Source;
     public static final Resource StillImage;
     public static final Resource Work;
@@ -33,10 +36,12 @@ public class BIB_FRAME {
     public static final Property changeDate;
     public static final Property code;
     public static final Property colorContent;
+    public static final Property digitalCharacteristic;
     public static final Property generation;
     public static final Property genreForm;
     public static final Property identifiedBy;
     public static final Property polarity;
+    public static final Property soundContent;
     public static final Property source;
 
     public static String getURI() {
@@ -50,12 +55,15 @@ public class BIB_FRAME {
         BaseMaterial = m.createResource(BIB_FRAME.NAMESPACE + "BaseMaterial");
         Cartography = m.createResource(BIB_FRAME.NAMESPACE + "Cartography");
         ColorContent = m.createResource(BIB_FRAME.NAMESPACE + "ColorContent");
+        DigitalCharacteristic = m.createResource(BIB_FRAME.NAMESPACE + "DigitalCharacteristic");
+        Electronic = m.createResource(BIB_FRAME.NAMESPACE + "Electronic");
         Generation = m.createResource(BIB_FRAME.NAMESPACE + "Generation");
         GenreForm = m.createResource(BIB_FRAME.NAMESPACE + "GenreForm");
         Instance = m.createResource(BIB_FRAME.NAMESPACE + "Instance");
         Local = m.createResource(BIB_FRAME.NAMESPACE + "Local");
         MovingImage = m.createResource(BIB_FRAME.NAMESPACE + "MovingImage");
         Polarity = m.createResource(BIB_FRAME.NAMESPACE + "Polarity");
+        SoundContent = m.createResource(BIB_FRAME.NAMESPACE + "SoundContent");
         Source = m.createResource(BIB_FRAME.NAMESPACE + "Source");
         StillImage = m.createResource(BIB_FRAME.NAMESPACE + "StillImage");
         Work = m.createResource(BIB_FRAME.NAMESPACE + "Work");
@@ -65,10 +73,12 @@ public class BIB_FRAME {
         changeDate = m.createProperty(BIB_FRAME.NAMESPACE, "changeDate");
         code = m.createProperty(BIB_FRAME.NAMESPACE, "code");
         colorContent = m.createProperty(BIB_FRAME.NAMESPACE, "colorContent");
+        digitalCharacteristic = m.createProperty(BIB_FRAME.NAMESPACE, "digitalCharacteristic");
         generation = m.createProperty(BIB_FRAME.NAMESPACE, "generation");
         genreForm = m.createProperty(BIB_FRAME.NAMESPACE, "genreForm");
         identifiedBy = m.createProperty(BIB_FRAME.NAMESPACE, "identifiedBy");
         polarity = m.createProperty(BIB_FRAME.NAMESPACE, "polarity");
+        soundContent = m.createProperty(BIB_FRAME.NAMESPACE, "soundContent");
         source = m.createProperty(BIB_FRAME.NAMESPACE, "source");
     }
 }

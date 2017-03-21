@@ -19,6 +19,8 @@ vocabularies:
   marcmuscomp: http://id.loc.gov/vocabulary/marcmuscomp/
   organizations: http://id.loc.gov/vocabulary/organizations/
   relators: http://id.loc.gov/vocabulary/relators/
+  bflc: http://id.loc.gov/ontologies/bflc/
+  bf: http://id.loc.gov/ontologies/bibframe/
 
 mappings:
   a:
@@ -111,6 +113,38 @@ mappings:
         b: neg
         m: mix
   c:
+    - position: 1
+      prefix: carriers
+      type: Carrier
+      property: carrier
+      labels:
+        a: computer tape cartridge
+        b: computer chip cartridge
+        c: computer disc cartridge
+        d: computer disc
+        e: computer disc cartridge
+        f: computer tape cassette
+        h: computer tape reel
+        j: computer disc
+        k: computer card
+        m: computer disc
+        o: computer disc
+        r: online resource
+        z: other electronic carrier
+      uris:
+        a: ca
+        b: cb
+        c: ce
+        d: cd
+        e: ce
+        f: cf
+        h: ch
+        j: ce
+        k: ck
+        m: cd
+        o: cd
+        r: cr
+        z: cz
     - position: 3
       prefix: mcolor
       type: ColorContent
@@ -127,6 +161,36 @@ mappings:
         c: mul
         g: gry
         m: mix
+    - position: 4
+      property: dimensions
+      labels: 
+        a: 3 1/2 in.
+        e: 12 in.
+        g: 4 3/4 in. or 12 cm.
+        i: 1 1/8 x 2 3/8 in.
+        j: 3 7/8 x 2 1/2 in.
+        o: 5 1/4 in.
+        u: unknown
+        v: 8 in.
+    - position: 5
+      property: soundContent
+      type: SoundContent
+      labels:
+        ' ': slient
+        a: sound on medium
+    - position: 6
+      length: 3
+      property: digitalCharacteristic
+      type: DigitalCharacteristic
+      prefix: bflc
+    - position: 9
+      property: digitalCharacteristic
+      type: DigitalCharacteristic
+      prefix: bf
+      labels:
+        a: one file format
+        m: multiple file formats
+
   d:
     - position: 1
       type: GenreForm
@@ -294,6 +358,7 @@ Work:
       - position: 4
         values: [a, b, c, d, e, f, g, i, j, l, n, p, v, w]
   c:
+    type: Carrier
     positions:
       - position: 3
         values: [a, b, c, g, m]
@@ -351,5 +416,19 @@ Instance:
         values: [a, b, c, d]
       - position: 7
         values: [a, b, m]
+  c:
+    type: Electronic
+    leader: [m]
+    positions:
+      - position: 1
+        values: [a, b, c, d, e, f, h, j, k, m, o, r, z]
+      - position: 4
+        values: [a, e, g, i, j, o, u, v]
+      - position: 5
+        values: [' ', a]
+      - position: 6
+        mapper: io.lold.marc2bf2.mappers.ImageBitDepthMapper
+      - position: 9
+        values: [a, m]
 
 

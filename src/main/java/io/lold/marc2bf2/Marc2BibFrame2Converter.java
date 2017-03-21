@@ -58,7 +58,7 @@ public class Marc2BibFrame2Converter {
                 try {
                     converter = new Field007Converter(model, record);
                     model = converter.convert(field);
-                } catch (IOException ex) {
+                } catch (Exception ex) {
                     logger.error("Failed to create Field007Converter");
                 }
 
