@@ -59,7 +59,7 @@ public class Marc2BibFrame2Converter {
                     converter = new Field007Converter(model, record);
                     model = converter.convert(field);
                 } catch (Exception ex) {
-                    logger.error("Failed to create Field007Converter");
+                    logger.error("Failed to create Field007Converter", ex);
                 }
 
             }
@@ -67,6 +67,7 @@ public class Marc2BibFrame2Converter {
 
         // Keep this line at the end; Otherwise Jena won't use bf:Work as the root tag in RDF/XML.
         work.addProperty(RDF.type, BIB_FRAME.Work);
+        instance.addProperty(RDF.type, BIB_FRAME.Instance);
         return model;
     }
 }
