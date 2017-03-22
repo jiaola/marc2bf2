@@ -78,7 +78,6 @@ public class Field007Converter extends FieldConverter {
             }
 
             int pos = (int) position.get("position"); // the position of the character
-
             Map posMap = getPositionMapping(c00, pos); // Map from position to labels and uris
             Field007Mapper mapper;
             if (position.containsKey("mapper")) {
@@ -91,9 +90,12 @@ public class Field007Converter extends FieldConverter {
                 if (labels == null && uris == null) continue; // Skip if there's no mappings
                 mapper = new DefaultLabelUriMapper(labels, uris);
             }
-
             int length = (int) posMap.getOrDefault("length", 1);
+            if (data.length() < pos + length + 1) {
+                continue;
+            }
             String cpos = data.substring(pos, pos+length); // the character(s) at this position
+
             List<String> values = (List<String>) position.get("values");  // Values to check
             if (values != null && !values.contains(cpos)) continue; // Skip if no need to process this character
 
