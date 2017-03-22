@@ -51,7 +51,7 @@ public class Field007Converter extends FieldConverter {
         // If there's no mapping for the character, skip it.
         if (nodeMap == null) return model;
 
-        // If it's for Work, set the rdf:type of the Work
+        // If there is a type, set the rdf:type of the Work/Instance
         if (nodeMap.containsKey("type")) {
             List<String> checks = (List<String>) nodeMap.getOrDefault("leader", new ArrayList<String>());
             if (!checks.contains(String.valueOf(record.getLeader().getTypeOfRecord()))) {
@@ -59,9 +59,10 @@ public class Field007Converter extends FieldConverter {
             }
         }
 
-        if (!nodeMap.containsKey("positions")) {
+        if (!nodeMap.containsKey("positions")) { // nothing else to map
             return model;
         }
+
         // Look at each positions, and convert them to nodes
         List<Map> positions = (List<Map>) nodeMap.get("positions");
         for (Map position: positions) {
@@ -109,6 +110,14 @@ public class Field007Converter extends FieldConverter {
             resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) posMap.get("property")), object);
         }
 
+        if (mode.equals("Instance") && nodeMap.containsKey("media")) {
+            if (record.getVariableFields("337").isEmpty()) {
+                Map<String, String> mediaMap = (Map<String, String>) nodeMap.get("media");
+                Resource media = model.createResource("http://id.loc.gov/vocabulary/mediaTypes/" + mediaMap.get("uri"));
+                media.addProperty(RDF.type, BIB_FRAME.Media).addProperty(RDFS.label, mediaMap.get("label"));
+                resource.addProperty(BIB_FRAME.media, media);
+            }
+        }
         return model;
     }
 

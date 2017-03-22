@@ -325,4 +325,23 @@ public class Field007ConverterTest {
             }
         }
     }
+
+    @Test
+    public void testConvertInstanceCMedia() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("c") && record.getVariableFields("337").isEmpty()) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.media, model.createResource("http://id.loc.gov/vocabulary/mediaTypes/c"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
 }

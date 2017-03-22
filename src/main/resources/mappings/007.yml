@@ -12,6 +12,7 @@ vocabularies:
   marcgt: http://id.loc.gov/vocabulary/marcgt/
   mcolor: http://id.loc.gov/vocabulary/mcolor/
   mediaType: http://id.loc.gov/vocabulary/mediaType/
+  mediaTypes: http://id.loc.gov/vocabulary/mediaTypes/
   mmaterial: http://id.loc.gov/vocabulary/mmaterial/
   mplayback: http://id.loc.gov/vocabulary/mplayback/
   mpolarity: http://id.loc.gov/vocabulary/mpolarity/
@@ -419,6 +420,7 @@ Instance:
   c:
     type: Electronic
     leader: [m]
+    media: { label: computer, uri: c}
     positions:
       - position: 1
         values: [a, b, c, d, e, f, h, j, k, m, o, r, z]
