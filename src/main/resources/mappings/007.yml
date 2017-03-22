@@ -211,6 +211,45 @@ mappings:
       uris:
         a: one
         c: mul
+    - position: 4
+      type: BaseMaterial
+      property: baseMaterial
+      prefix: mmaterial
+      labels:
+        a: paper
+        b: wood
+        c: stone
+        d: metal
+        e: synthetic
+        f: skin
+        g: textile
+        i: plastic
+        j: glass
+        l: vinyl
+        n: vellum
+        p: plaster
+        v: leather
+        w: parchment
+      uris:
+        a: pap
+        b: wod
+        c: sto
+        d: mtl
+        e: syn
+        f: ski
+        g: tex
+        i: pla
+        j: gls
+        l: vny
+        n: vel
+        p: plt
+        v: lea
+        w: par
+    - position: 5
+      type: Generation
+      property: generation
+      labels:
+        f: facsimile
   g:
     - position: 3
       type: ColorContent
@@ -423,6 +462,7 @@ Instance:
     media: { label: computer, uri: c}
     positions:
       - position: 1
+        condition: '338'
         values: [a, b, c, d, e, f, h, j, k, m, o, r, z]
       - position: 4
         values: [a, e, g, i, j, o, u, v]
@@ -432,5 +472,11 @@ Instance:
         mapper: io.lold.marc2bf2.mappers.ImageBitDepthMapper
       - position: 9
         values: [a, m]
+  d:
+    positions:
+      - position: 4
+        values: [a, b, c, d, e, f, g, i, j, l, n, p, v, w]
+      - position: 5
+        values: [f]
 
 

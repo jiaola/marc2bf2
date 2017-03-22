@@ -344,4 +344,24 @@ public class Field007ConverterTest {
             }
         }
     }
+
+
+    @Test
+    public void testConvertInstanceD4E() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("d") && data.substring(4, 5).equals("e")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.baseMaterial, model.createResource("http://id.loc.gov/vocabulary/mmaterial/syn"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
 }

@@ -68,6 +68,15 @@ public class Field007Converter extends FieldConverter {
         for (Map position: positions) {
             if (!position.containsKey("values") && !position.containsKey("mapper"))
                 continue;
+
+            // Sometimes it depends on whether a field exists in the record.
+            // See Instance c, position: 1
+            if (position.containsKey("condition")) {
+                if (!record.getVariableFields((String)position.get("condition")).isEmpty()) {
+                    continue;
+                }
+            }
+
             int pos = (int) position.get("position"); // the position of the character
 
             Map posMap = getPositionMapping(c00, pos); // Map from position to labels and uris
