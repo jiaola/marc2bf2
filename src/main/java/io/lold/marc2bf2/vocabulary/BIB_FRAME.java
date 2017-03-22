@@ -24,6 +24,7 @@ public class BIB_FRAME {
     public static final Resource Instance;
     public static final Resource Local;
     public static final Resource Media;
+    public static final Resource Mount;
     public static final Resource MovingImage;
     public static final Resource Polarity;
     public static final Resource SoundContent;
@@ -42,6 +43,7 @@ public class BIB_FRAME {
     public static final Property genreForm;
     public static final Property identifiedBy;
     public static final Property media;
+    public static final Property mount;
     public static final Property polarity;
     public static final Property soundContent;
     public static final Property source;
@@ -64,6 +66,7 @@ public class BIB_FRAME {
         Instance = m.createResource(BIB_FRAME.NAMESPACE + "Instance");
         Local = m.createResource(BIB_FRAME.NAMESPACE + "Local");
         Media = m.createResource(BIB_FRAME.NAMESPACE + "Media");
+        Mount = m.createResource(BIB_FRAME.NAMESPACE + "Mount");
         MovingImage = m.createResource(BIB_FRAME.NAMESPACE + "MovingImage");
         Polarity = m.createResource(BIB_FRAME.NAMESPACE + "Polarity");
         SoundContent = m.createResource(BIB_FRAME.NAMESPACE + "SoundContent");
@@ -81,6 +84,7 @@ public class BIB_FRAME {
         genreForm = m.createProperty(BIB_FRAME.NAMESPACE, "genreForm");
         identifiedBy = m.createProperty(BIB_FRAME.NAMESPACE, "identifiedBy");
         media = m.createProperty(BIB_FRAME.NAMESPACE, "media");
+        mount = m.createProperty(BIB_FRAME.NAMESPACE, "mount");
         polarity = m.createProperty(BIB_FRAME.NAMESPACE, "polarity");
         soundContent = m.createProperty(BIB_FRAME.NAMESPACE, "soundContent");
         source = m.createProperty(BIB_FRAME.NAMESPACE, "source");

@@ -364,4 +364,25 @@ public class Field007ConverterTest {
             }
         }
     }
+
+    @Test
+    public void testConvertInstanceG8J() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("g") && data.substring(8, 9).equals("j")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.mount, model.createResource("http://id.loc.gov/vocabulary/mmaterial/gls"));
+                    assertTrue(iter.hasNext());
+                    iter = model.listStatements(instance, BIB_FRAME.mount, model.createResource("http://id.loc.gov/vocabulary/mmaterial/mtl"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
 }

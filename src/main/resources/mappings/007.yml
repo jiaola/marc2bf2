@@ -251,6 +251,24 @@ mappings:
       labels:
         f: facsimile
   g:
+    - position: 1
+      type: Carrier
+      property: carrier
+      prefix: carriers
+      labels:
+        c: filmstrip cartridge
+        d: filmslip
+        f: filmstrip
+        o: film roll
+        s: slide
+        t: overhead transparency
+      uris:
+        c: gc
+        d: gd
+        f: gf
+        o: mo
+        s: gs
+        t: gt
     - position: 3
       type: ColorContent
       property: colorContent
@@ -266,6 +284,83 @@ mappings:
         b: blw
         c: mul
         h: hnd
+        m: mix
+    - position: 4
+      type: BaseMaterial
+      property: baseMaterial
+      prefix: mmaterial
+      labels:
+        d: glass
+        e: synthetic
+        j: safety film
+        k: film base (not safety)
+        m: mixed collection
+        o: paper
+      uris:
+        d: gls
+        e: syn
+        j: saf
+        k: nsf
+        m: pap
+        o: pap
+    - position: 5
+      type: SoundContent
+      property: soundContent
+      prefix:
+      labels:
+        ' ': silent
+        a: sound on medium
+        b: sound separate from medium
+    - position: 6
+      type: RecordingMedium
+      property: soundCharacteristic
+      labels:
+        a: optical sound track on motion picture film
+        b: magnetic sound track on motion picture film
+        c: magnetic audio tape in cartridge
+        d: sound disc
+        e: magnetic audio tape on reel
+        f: magnetic audio tape in cassette
+        g: optical and magnetic sound track on motion picture film
+        h: videotape
+        i: videodisc
+    - position: 7
+      property: dimensions
+      labels:
+        a: standard 8 mm.
+        b: super 8 mm., single 8 mm.
+        c: 9.5 mm.
+        d: 16 mm.
+        e: 28 mm.
+        f: 35 mm.
+        g: 70 mm.
+        j: 2x2 in. or 5x5 cm.
+        k: 2 1/4 in. x 2 1/4 in. or 6x6 cm.
+        s: 4x5 in. or 10x13 cm.
+        t: 15x7 in. or 13x18 cm.
+        v: 18x10 in. or 21x26 cm.
+        w: 9x9 in. or 23x23 cm.
+        x: 10x10 in. or 26x26 cm.
+        y: 17x7 in. or 18x18 cm.
+    - position: 8
+      type: Mount
+      property: mount
+      prefix: mmaterial
+      labels:
+        c: cardboard
+        d: glass
+        e: synthetic
+        h: metal
+        j: metal
+        k: synthetic
+        m: mixed collection
+      uris:
+        c: crd
+        d: gls
+        e: syn
+        h: mtl
+        j: mtl
+        k: syn
         m: mix
   h:
     - position: 9
@@ -478,5 +573,24 @@ Instance:
         values: [a, b, c, d, e, f, g, i, j, l, n, p, v, w]
       - position: 5
         values: [f]
+  g:
+    positions:
+      - position: 1
+        values: [c, d, f, o, s, t]
+      - position: 4
+        values: [d, e, j, k, m, o]
+      - position: 5
+        values: [' ', a, b]
+      - position: 6
+        values: [a, b, c, d, e, f, g, h, i]
+      - position: 7
+        values: [a, b, c, d, e, f, g, j, k, s, t, v, w, x, y]
+      - position: 8
+        values: [c, d, e, h, j, k, m]
+        extra:
+          labels: { j: glass, k: glass }
+          uris: {j: gls, k: gls}
+
+
 
 

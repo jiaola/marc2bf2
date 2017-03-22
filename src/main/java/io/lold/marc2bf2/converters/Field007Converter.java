@@ -103,20 +103,21 @@ public class Field007Converter extends FieldConverter {
             // See k, pos 01
             String prefix = Optional.ofNullable(getPositionPrefix(nodeMap)).orElse((String) posMap.get("prefix"));
 
-            Resource object;
-            String uri;
-            if ((uri = mapper.mapToUri(cpos)) != null) {
-                uri = mappings.get("vocabularies").get(prefix) + uri;
-                object = model.createResource(uri);
-            } else {
-                object = model.createResource();
-            }
-            object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + posMap.get("type")));
-            String label;
-            if ((label = mapper.mapToLabel(cpos)) != null) {
-                object.addProperty(RDFS.label, label);
-            }
+            String uri = mapper.mapToUri(cpos);
+            String label = mapper.mapToLabel(cpos);
+            Resource object = createNode(prefix, (String)posMap.get("type"), label, uri);
             resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) posMap.get("property")), object);
+
+            if (position.containsKey("extra")) {
+                Map<String, Map<String, String>> extraMap = (Map<String, Map<String, String>>)position.get("extra");
+                mapper = new DefaultLabelUriMapper(extraMap.get("labels"), extraMap.get("uris"));
+                String extraUri = mapper.mapToUri(cpos);
+                String extraLabel = mapper.mapToLabel(cpos);
+                Resource extraObject = createNode(prefix, (String)posMap.get("type"), extraLabel, extraUri);
+                if (extraObject != null) {
+                    resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) posMap.get("property")), extraObject);
+                }
+            }
         }
 
         if (mode.equals("Instance") && nodeMap.containsKey("media")) {
@@ -128,6 +129,22 @@ public class Field007Converter extends FieldConverter {
             }
         }
         return model;
+    }
+
+    private Resource createNode(String prefix, String type, String label, String uri) {
+        if (label == null && uri == null) return null;
+        Resource object;
+        if (uri != null) {
+            uri = mappings.get("vocabularies").get(prefix) + uri;
+            object = model.createResource(uri);
+        } else {
+            object = model.createResource();
+        }
+        object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + type));
+        if (label != null) {
+            object.addProperty(RDFS.label, label);
+        }
+        return object;
     }
 
     private String getPositionPrefix(Map nodeMap) {
