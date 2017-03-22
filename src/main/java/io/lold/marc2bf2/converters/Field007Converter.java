@@ -91,7 +91,7 @@ public class Field007Converter extends FieldConverter {
                 mapper = new DefaultLabelUriMapper(labels, uris);
             }
             int length = (int) posMap.getOrDefault("length", 1);
-            if (data.length() < pos + length + 1) {
+            if (data.length() < pos + length) {
                 continue;
             }
             String cpos = data.substring(pos, pos+length); // the character(s) at this position
