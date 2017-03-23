@@ -42,7 +42,7 @@ public class ImageBitDepthMapper extends DefaultMapper {
         if (label == null) {
             return list;
         }
-        Resource object = getResource(prefix, label, "ImageBitDepth");
+        RDFNode object = getResource(prefix, label, "ImageBitDepth");
         list.add(object);
         return list;
     }

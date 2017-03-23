@@ -36,7 +36,7 @@ public class DefaultMapper extends Mapper {
             return list;
         }
         if (label instanceof String) {
-            Resource object = getResource(prefix, (String)label, (String)uri);
+            RDFNode object = getResource(prefix, (String)label, (String)uri);
             list.add(object);
         } else { // it's a list
             List<String> labelList = (List<String>) label;
@@ -45,7 +45,7 @@ public class DefaultMapper extends Mapper {
                 logger.error("Invalid label/uri mapping: " + c00 + ", " + value);
             }
             for (int i = 0; i < labelList.size(); i++) {
-                Resource object = getResource(prefix, labelList.get(i), uriList.get(i));
+                RDFNode object = getResource(prefix, labelList.get(i), uriList.get(i));
                 list.add(object);
             }
         }
@@ -63,7 +63,7 @@ public class DefaultMapper extends Mapper {
         return prefixes == null? null : prefixes.get("cpos");
     }
 
-    protected Resource getResource(String prefix, String label, String uri) {
+    protected RDFNode getResource(String prefix, String label, String uri) {
         Resource object;
         if (uri != null) {
             if (prefix == null) {
@@ -74,10 +74,14 @@ public class DefaultMapper extends Mapper {
             object = model.createResource();
         }
         String type = (String) mapping.get("type");
-        object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + type));
-        if (label != null) {
-            object.addProperty(RDFS.label, label);
+        if (type == null) {
+            return model.createLiteral(label);
+        } else {
+            object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + type));
+            if (label != null) {
+                object.addProperty(RDFS.label, label);
+            }
+            return object;
         }
-        return object;
     }
 }

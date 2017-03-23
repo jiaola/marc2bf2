@@ -1,8 +1,8 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.jena.base.Sys;
 import org.apache.jena.rdf.model.*;
+import org.apache.jena.rdf.model.impl.StatementImpl;
 import org.apache.jena.vocabulary.RDF;
 import org.junit.After;
 import org.junit.Before;
@@ -374,12 +374,11 @@ public class Field007ConverterTest {
         for (ControlField field: controlFields) {
             if (field.getTag().equals("007")) {
                 String data = field.getData();
-                if (data.startsWith("c") && data.substring(6, 9).equals("024")) {
+                if (data.startsWith("h") && data.substring(5, 9).equals("b024")) {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.digitalCharacteristic, model.createResource("http://id.loc.gov/ontologies/bflc/ImageBitDepth"));
-                    assertTrue(iter.hasNext());
+                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.reductionRatio, "024"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -399,6 +398,26 @@ public class Field007ConverterTest {
                     Resource instance = ModelUtils.getInstance(model, record);
                     StmtIterator iter = model.listStatements(instance, BIB_FRAME.baseMaterial, model.createResource("http://id.loc.gov/vocabulary/mmaterial/saf"));
                     assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceH4M() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("h") && data.substring(4, 5).equals("m")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = instance.listProperties(BIB_FRAME.dimensions);
+                    assertTrue(iter.hasNext());
+                    assertEquals("4x6 in. or 11x15 cm.", iter.next().getLiteral().getString());
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed

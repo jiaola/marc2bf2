@@ -338,6 +338,55 @@ mappings:
         k: syn
         m: mix
   h:
+    - position: 1
+      type: Carrier
+      preperty: carrier
+      prefix: carriers
+      uri: 
+        a: ha
+        b: hb
+        c: hc
+        d: hd
+        e: he
+        f: hf
+        g: hg
+        h: hh
+        j: hj
+    - position: 3
+      type: Polarity
+      property: polarity
+      prefix: mpolarity
+      labels:
+        a: positive
+        b: negative
+        m: mixed polarity
+      uris:
+        a: pos
+        b: neg
+        m: mix
+    - position: 4
+      property: dimensions
+      labels:
+        a: 8 mm.
+        d: 16 mm.
+        f: 35 mm.
+        g: 70 mm.
+        h: 105 mm.
+        l: 13x5 in. or 8x13 cm.
+        m: 4x6 in. or 11x15 cm.
+        o: 6x9 in. or 16x23 cm.
+        p: 3 1/4 x 7 3/8 in. or 9x19 cm.
+    - position: 5
+      length: 4
+      property: reductionRatio
+      type: ReductionRatio
+      labels:
+        a: low reduction range
+        b: normal reduction range
+        c: high reduction range
+        d: very high reduction range
+        e: ultra high reduction range
+        v: reduction rate varies
     - position: 9
       type: ColorContent
       property: colorContent
@@ -349,6 +398,50 @@ mappings:
       uris:
         b: blw
         c: mul
+        m: mix
+    - position: 10
+      type: Emulsion
+      property: emulsion
+      prefix: mmaterial
+      labels:
+        a: silver halide
+        b: diazo
+        c: vesicular
+        m: mixed emulsion
+      uris:
+        a: slh
+        b: dia
+        c: ves
+        m: mix
+    - position: 11
+      type: Generation
+      property: generation
+      labels:
+        a: first generation (master)
+        b: printing master
+        c: service copy
+        m: mixed generation
+    - position: 12
+      type: BaseMaterial
+      property: baseMaterial
+      prefix: mmaterial
+      labels:
+        a: safety base
+        c: acetate
+        d: diacetate
+        p: polyester
+        r: safety base, mixed
+        t: triacetate
+        i: nitrate base
+        m: mixed nitrate and safety base
+      uris:
+        a: saf
+        c: ace
+        d: dia
+        p: pol
+        r: saf
+        t: tri
+        i: nit
         m: mix
   k:
     - position: 1
@@ -551,6 +644,7 @@ Instance:
   g:
     positions:
       - position: 1
+        condition: '338'
         values: [c, d, f, o, s, t]
       - position: 4
         values: [d, e, j, k, m, o]
@@ -562,6 +656,23 @@ Instance:
         values: [a, b, c, d, e, f, g, j, k, s, t, v, w, x, y]
       - position: 8
         values: [c, d, e, h, j, k, m]
+  h:
+    positions:
+      - position: 1
+        condition: '338'
+        values: [a, b, c, d, e, f, g, h, j]
+      - position: 3
+        values: [a, b, m]
+      - position: 4
+        values: [a, d, f, g, h, l, m, o, p]
+      - position: 5
+        mapper: io.lold.marc2bf2.mappers.ReductionRatioMapper
+      - position: 10
+        values: [a, b, c, m]
+      - position: 11
+        values: [a, b, c, m]
+      - position: 12
+        values: [a, c, d, p, r, t, i, m]
 
 
 
