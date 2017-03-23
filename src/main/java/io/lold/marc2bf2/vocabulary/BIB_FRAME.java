@@ -28,7 +28,9 @@ public class BIB_FRAME {
     public static final Resource Mount;
     public static final Resource MovingImage;
     public static final Resource Note;
+    public static final Resource PlaybackChannels;
     public static final Resource Polarity;
+    public static final Resource ProjectionCharacteristic;
     public static final Resource ReductionRatio;
     public static final Resource SoundContent;
     public static final Resource Source;
@@ -50,9 +52,12 @@ public class BIB_FRAME {
     public static final Property media;
     public static final Property mount;
     public static final Property note;
+    public static final Property noteType;
     public static final Property polarity;
+    public static final Property projectionCharacteristic;
     public static final Property reductionRatio;
     public static final Property soundContent;
+    public static final Property soundCharacteristic;
     public static final Property source;
 
     public static String getURI() {
@@ -77,7 +82,9 @@ public class BIB_FRAME {
         Mount = m.createResource(BIB_FRAME.NAMESPACE + "Mount");
         MovingImage = m.createResource(BIB_FRAME.NAMESPACE + "MovingImage");
         Note = m.createResource(BIB_FRAME.NAMESPACE + "Note");
+        PlaybackChannels = m.createResource(BIB_FRAME.NAMESPACE + "PlaybackChannels");
         Polarity = m.createResource(BIB_FRAME.NAMESPACE + "Polarity");
+        ProjectionCharacteristic = m.createResource(BIB_FRAME.NAMESPACE + "ProjectionCharacteristic");
         ReductionRatio = m.createResource(BIB_FRAME.NAMESPACE + "ReductionRatio");
         SoundContent = m.createResource(BIB_FRAME.NAMESPACE + "SoundContent");
         Source = m.createResource(BIB_FRAME.NAMESPACE + "Source");
@@ -98,9 +105,12 @@ public class BIB_FRAME {
         media = m.createProperty(BIB_FRAME.NAMESPACE, "media");
         mount = m.createProperty(BIB_FRAME.NAMESPACE, "mount");
         note = m.createProperty(BIB_FRAME.NAMESPACE, "note");
+        noteType = m.createProperty(BIB_FRAME.NAMESPACE, "noteType");
         polarity = m.createProperty(BIB_FRAME.NAMESPACE, "polarity");
+        projectionCharacteristic = m.createProperty(BIB_FRAME.NAMESPACE, "projectionCharacteristic");
         reductionRatio = m.createProperty(BIB_FRAME.NAMESPACE, "reductionRatio");
         soundContent = m.createProperty(BIB_FRAME.NAMESPACE, "soundContent");
+        soundCharacteristic = m.createProperty(BIB_FRAME.NAMESPACE, "soundCharacteristic");
         source = m.createProperty(BIB_FRAME.NAMESPACE, "source");
     }
 }

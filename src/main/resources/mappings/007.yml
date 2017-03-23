@@ -502,7 +502,113 @@ mappings:
         c: mul
         h: hnd
         m: mix
+    - position: 4
+      type: BaseMaterial
+      property: baseMaterial
+      prefix: mmaterial
+      labels:
+        a: canvas
+        b: bristol board
+        c: cardboard
+        d: glass
+        e: synthetic
+        f: skin
+        g: textile
+        h: metal
+        i: plastic
+        l: vinyl
+        m: mixed collection
+        n: vellum
+        o: paper
+        p: plaster
+        q: hardboard
+        r: porcelain
+        s: stone
+        t: wood
+        v: leather
+        w: parchment
+      uris:
+        a: can
+        b: brb
+        c: crd
+        d: gla
+        e: syn
+        f: ski
+        g: tex
+        h: mtl
+        i: pla
+        l: vny
+        m: mix
+        n: vel
+        o: pap
+        p: plt
+        q: hdb
+        r: por
+        s: sto
+        t: wod
+        v: lea
+        w: par
+    - position: 5
+      type: Mount
+      property: mount
+      prefix: mmaterial
+      labels:
+        a: canvas
+        b: bristol board
+        c: cardboard
+        d: glass
+        e: synthetic
+        f: skin
+        g: textile
+        h: metal
+        i: plastic
+        l: vinyl
+        m: mixed collection
+        n: vellum
+        o: paper
+        p: plaster
+        q: hardboard
+        r: porcelain
+        s: stone
+        t: wood
+        v: leather
+        w: parchment
+      uris:
+        a: can
+        b: brb
+        c: crd
+        d: gla
+        e: syn
+        f: ski
+        g: tex
+        h: mtl
+        i: pla
+        l: vny
+        m: mix
+        n: vel
+        o: pap
+        p: plt
+        q: hdb
+        r: por
+        s: sto
+        t: wod
+        v: lea
+        w: par      
   m:
+    - position: 1
+      type: Carrier
+      property: carrier
+      prefix: carriers
+      labels:
+        c: film cartridge
+        f: film cassette
+        o: film roll
+        r: film reel
+      uris:
+        c: mc
+        f: mf
+        o: mo
+        r: mr
     - position: 3
       type: ColorContent
       property: colorContent
@@ -517,6 +623,60 @@ mappings:
         c: mul
         h: hnd
         m: mix
+    - position: 4
+      type: ProjectionCharacteristic
+      property: projectionCharacteristic
+      labels:
+        a: standard sound aperture (reduced frame)
+        b: nonanamorphic (wide-screen)
+        c: 3D
+        d: anamorphic (wide-screen)
+        e: other wide-screen
+        f: standard silent aperture (full frame)
+    - position: 5
+      type: SoundContent
+      property: soundContent
+      labels:
+        ' ': silent
+        a: sound on medium
+        b: sound separate from medium
+    - position: 6
+      type: RecordingMedium
+      property: soundCharacteristic
+      labels:
+        a: optical sound track on motion picture film
+        b: magnetic sound track on motion picture film
+        c: magnetic audio tape in cartridge
+        d: sound disc
+        e: magnetic audio tape on reel
+        f: magnetic audio tape in cassette
+        g: optical and magnetic sound track on motion picture film
+        h: videotape
+        i: videodisc
+    - position: 7
+      property: dimensions
+      labels:
+        a: 8 mm.
+        b: super 8 mm., single 8 mm.
+        c: 9.5 mm.
+        d: 16 mm.
+        e: 28 mm.
+        f: 35 mm.
+        g: 70 mm.
+    - position: 8
+      type: PlaybackChannels
+      property: soundCharacteristic
+      prefix: mplayback
+      labels:
+        k: mixed
+        m: monaural
+        q: quadraphonic, multichannel or surround
+        s: stereophonic
+      uri:
+        k: mix
+        m: mon
+        q: mul
+        s: ste
     - position: 9
       type: GenreForm
       property: genreForm
@@ -532,6 +692,56 @@ mappings:
       uris:
         c: gf2011026435
         d: gf2011026551
+    - position: 10
+      type: Polarity
+      property: polarity
+      prefix: mpolarity
+      labels:
+        a: positive
+        b: negative
+      uris:
+        a: pos
+        b: neg
+    - position: 11
+      type: Generation
+      property: generation
+      labels:
+        d: duplicate
+        e: master
+        o: original
+        r: reference print, viewing copy
+    - position: 12
+      type: BaseMaterial
+      property: baseMaterial
+      prefix: mmaterial
+      labels:
+        a: safety base
+        c: acetate
+        d: diacetate
+        p: polyester
+        r: safety base
+        t: triacetate
+        i: nitrate base
+        m: mixed nitrate and safety base
+      uris:
+        a: saf
+        c: ace
+        d: dia
+        p: pol
+        r: saf
+        t: tri
+        i: nit
+        m: mix
+    - position: 16
+      type: Note
+      property: note
+      labels:
+        c: complete
+        i: incomplete
+    - position: 17
+      length: 6
+      type: Note
+      property: note
   v:
     - position: 3
       prefix: mcolor
@@ -642,6 +852,7 @@ Instance:
       - position: 5
         values: [f]
   g:
+    media: { label: projected, uri: g}
     positions:
       - position: 1
         condition: '338'
@@ -657,6 +868,7 @@ Instance:
       - position: 8
         values: [c, d, e, h, j, k, m]
   h:
+    media: { label: microform, uri: h}
     positions:
       - position: 1
         condition: '338'
@@ -673,6 +885,40 @@ Instance:
         values: [a, b, c, m]
       - position: 12
         values: [a, c, d, p, r, t, i, m]
+  k:
+    positions:
+      - position: 4
+        values: [a, b, c, d, e, f, g, h, i, l, m, n, o, p, q, r, s, t, v, w]
+      - position: 5
+        values: [a, b, c, d, e, f, g, h, i, l, m, n, o, p, q, r, s, t, v, w]
+  m:
+    media: { label: projected, uri: g}
+    positions:
+      - position: 1
+        condition: '338'
+        values: [c, f, o, r]
+      - position: 4
+        values: [a, b, c, d, e, f]
+      - position: 5
+        values: [' ', a, b]
+      - position: 6
+        values: [a, b, c, d, e, f, g, h, i]
+      - position: 7
+        values: [a, b, c, d, e, f, g]
+      - position: 8
+        values: [k, m, q, s]
+      - position: 10
+        values: [a, b]
+      - position: 11
+        values: [d, e, o, r]
+      - position: 12
+        values: [a, c, d, p, r, t, i, m]
+      - position: 16
+        values: [c, i]
+        mapper: io.lold.marc2bf2.mappers.CompletenessNoteMapper
+      - position: 17
+        mapper: io.lold.marc2bf2.mappers.InspectionDateNoteMapper
+
 
 
 

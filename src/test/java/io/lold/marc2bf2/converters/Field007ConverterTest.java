@@ -4,6 +4,7 @@ import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.rdf.model.impl.StatementImpl;
 import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +16,7 @@ import org.marc4j.marc.Record;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
@@ -418,6 +420,104 @@ public class Field007ConverterTest {
                     StmtIterator iter = instance.listProperties(BIB_FRAME.dimensions);
                     assertTrue(iter.hasNext());
                     assertEquals("4x6 in. or 11x15 cm.", iter.next().getLiteral().getString());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceK4O() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("k") && data.substring(4, 5).equals("o")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.baseMaterial, model.createResource("http://id.loc.gov/vocabulary/mmaterial/pap"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceM4A() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("m") && data.substring(4, 5).equals("a")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.projectionCharacteristic, "standard sound aperture (reduced frame)"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+
+    // Test the CompletenessNoteMapper
+    @Test
+    public void testConvertInstanceM16C() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("m") && data.substring(16, 17).equals("c")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    NodeIterator iter = model.listObjectsOfProperty(BIB_FRAME.note);
+                    Resource target = null;
+                    while (iter.hasNext()) {
+                        Resource note = (Resource) iter.next();
+                        Statement stmt = note.getProperty(BIB_FRAME.noteType);
+                        if (stmt.getLiteral().getString().equals("completeness")) {
+                            target = note;
+                        }
+                    }
+                    assertNotNull(target);
+                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.note, "complete"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    // Test the InspectionDateNoteMapper
+    @Test
+    public void testConvertInstanceM17C() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("m") && data.substring(17, 23).equals("198606")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    NodeIterator iter = model.listObjectsOfProperty(BIB_FRAME.note);
+                    Resource target = null;
+                    while (iter.hasNext()) {
+                        Resource note = (Resource) iter.next();
+                        Statement stmt = note.getProperty(BIB_FRAME.noteType);
+                        if (stmt.getLiteral().getString().equals("film inspection date")) {
+                            target = note;
+                        }
+                    }
+                    Statement stmt = target.getProperty(RDFS.label);
+                    assertEquals("http://www.w3.org/2001/XMLSchema#gYearMonth", stmt.getLiteral().getDatatypeURI());
+                    assertNotNull(target);
+                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.note, "1986-06"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
