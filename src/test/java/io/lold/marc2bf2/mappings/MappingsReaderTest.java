@@ -8,7 +8,7 @@ import java.util.Map;
 public class MappingsReaderTest {
     @Test
     public void testReadMappings() throws Exception{
-        Map map = MappingsReader.readMappings("007.yml");
+        Map map = MappingsReader.readMappings("007");
         assertTrue(map.containsKey("vocabularies"));
         assertEquals("Cartography", ((Map)((Map)map.get("Work")).get("a")).get("type"));
     }

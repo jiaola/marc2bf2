@@ -19,6 +19,7 @@ public class BIB_FRAME {
     public static final Resource ColorContent;
     public static final Resource DigitalCharacteristic;
     public static final Resource Electronic;
+    public static final Resource Emulsion;
     public static final Resource Generation;
     public static final Resource GenreForm;
     public static final Resource Instance;
@@ -27,6 +28,7 @@ public class BIB_FRAME {
     public static final Resource Mount;
     public static final Resource MovingImage;
     public static final Resource Polarity;
+    public static final Resource ReductionRatio;
     public static final Resource SoundContent;
     public static final Resource Source;
     public static final Resource StillImage;
@@ -39,12 +41,14 @@ public class BIB_FRAME {
     public static final Property code;
     public static final Property colorContent;
     public static final Property digitalCharacteristic;
+    public static final Property emulsion;
     public static final Property generation;
     public static final Property genreForm;
     public static final Property identifiedBy;
     public static final Property media;
     public static final Property mount;
     public static final Property polarity;
+    public static final Property reductionRatio;
     public static final Property soundContent;
     public static final Property source;
 
@@ -61,6 +65,7 @@ public class BIB_FRAME {
         ColorContent = m.createResource(BIB_FRAME.NAMESPACE + "ColorContent");
         DigitalCharacteristic = m.createResource(BIB_FRAME.NAMESPACE + "DigitalCharacteristic");
         Electronic = m.createResource(BIB_FRAME.NAMESPACE + "Electronic");
+        Emulsion = m.createResource(BIB_FRAME.NAMESPACE + "Emulsion");
         Generation = m.createResource(BIB_FRAME.NAMESPACE + "Generation");
         GenreForm = m.createResource(BIB_FRAME.NAMESPACE + "GenreForm");
         Instance = m.createResource(BIB_FRAME.NAMESPACE + "Instance");
@@ -69,6 +74,7 @@ public class BIB_FRAME {
         Mount = m.createResource(BIB_FRAME.NAMESPACE + "Mount");
         MovingImage = m.createResource(BIB_FRAME.NAMESPACE + "MovingImage");
         Polarity = m.createResource(BIB_FRAME.NAMESPACE + "Polarity");
+        ReductionRatio = m.createResource(BIB_FRAME.NAMESPACE + "ReductionRatio");
         SoundContent = m.createResource(BIB_FRAME.NAMESPACE + "SoundContent");
         Source = m.createResource(BIB_FRAME.NAMESPACE + "Source");
         StillImage = m.createResource(BIB_FRAME.NAMESPACE + "StillImage");
@@ -80,12 +86,14 @@ public class BIB_FRAME {
         code = m.createProperty(BIB_FRAME.NAMESPACE, "code");
         colorContent = m.createProperty(BIB_FRAME.NAMESPACE, "colorContent");
         digitalCharacteristic = m.createProperty(BIB_FRAME.NAMESPACE, "digitalCharacteristic");
+        emulsion = m.createProperty(BIB_FRAME.NAMESPACE, "emulsion");
         generation = m.createProperty(BIB_FRAME.NAMESPACE, "generation");
         genreForm = m.createProperty(BIB_FRAME.NAMESPACE, "genreForm");
         identifiedBy = m.createProperty(BIB_FRAME.NAMESPACE, "identifiedBy");
         media = m.createProperty(BIB_FRAME.NAMESPACE, "media");
         mount = m.createProperty(BIB_FRAME.NAMESPACE, "mount");
         polarity = m.createProperty(BIB_FRAME.NAMESPACE, "polarity");
+        reductionRatio = m.createProperty(BIB_FRAME.NAMESPACE, "reductionRatio");
         soundContent = m.createProperty(BIB_FRAME.NAMESPACE, "soundContent");
         source = m.createProperty(BIB_FRAME.NAMESPACE, "source");
     }

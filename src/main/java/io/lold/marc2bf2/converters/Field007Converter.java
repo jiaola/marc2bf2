@@ -1,10 +1,11 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.mappers.DefaultLabelUriMapper;
-import io.lold.marc2bf2.mappers.Field007Mapper;
+import io.lold.marc2bf2.mappers.DefaultMapper;
+import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -15,6 +16,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.util.*;
 
 public class Field007Converter extends FieldConverter {
@@ -24,7 +26,7 @@ public class Field007Converter extends FieldConverter {
     public Field007Converter(Model model, Record record) throws IOException {
         super(model, record);
         try {
-            mappings = (Map<String, Map>) MappingsReader.readMappings("007.yml");
+            mappings = (Map<String, Map>) MappingsReader.readMappings("007");
         } catch (IOException ex) {
             logger.error("Could not load mappings file for 007 field");
             throw ex;
@@ -47,27 +49,41 @@ public class Field007Converter extends FieldConverter {
                 ModelUtils.getWork(model, record) :
                 ModelUtils.getInstance(model, record);
 
-        Map nodeMap = ((Map<String, Map>) mappings.get(mode)).get(c00);
-        // If there's no mapping for the character, skip it.
-        if (nodeMap == null) return model;
+        Map config = ((Map<String, Map>) mappings.get(mode)).get(c00);
+        // If there's no mapping for this type of field, skip it.
+        if (config == null) return model;
 
         // If there is a type, set the rdf:type of the Work/Instance
-        if (nodeMap.containsKey("type")) {
-            List<String> checks = (List<String>) nodeMap.getOrDefault("leader", new ArrayList<String>());
+        if (config.containsKey("type")) {
+            List<String> checks = (List<String>) config.getOrDefault("leader", new ArrayList<String>());
             if (!checks.contains(String.valueOf(record.getLeader().getTypeOfRecord()))) {
-                resource.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + nodeMap.get("type")));
+                resource.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + config.get("type")));
             }
         }
 
-        if (!nodeMap.containsKey("positions")) { // nothing else to map
+        if (!config.containsKey("positions")) { // nothing else to map
             return model;
         }
 
-        // Look at each positions, and convert them to nodes
-        List<Map> positions = (List<Map>) nodeMap.get("positions");
+        // Look at each positions, and map them to nodes
+        List<Map> positions = (List<Map>) config.get("positions");
         for (Map position: positions) {
-            if (!position.containsKey("values") && !position.containsKey("mapper"))
+            int pos = (int) position.get("position"); // the position of the character
+            Map mapping = getPositionMapping(c00, pos); // Map from position to labels and uris
+
+            int length = (int) mapping.getOrDefault("length", 1);
+            if (data.length() < pos + length) {  // field data is too short.
                 continue;
+            }
+
+            String value = data.substring(pos, pos+length);
+
+            if (position.containsKey("values")) { // if values configured, use it to filter
+                List<String> values = (List<String>)position.get("values");
+                if (!values.contains(value)) { // we don't need to map this value
+                    continue;
+                }
+            }
 
             // Sometimes it depends on whether a field exists in the record.
             // See Instance c, position: 1
@@ -77,59 +93,34 @@ public class Field007Converter extends FieldConverter {
                 }
             }
 
-            int pos = (int) position.get("position"); // the position of the character
-            Map posMap = getPositionMapping(c00, pos); // Map from position to labels and uris
-            Field007Mapper mapper;
+            // Create a mapper
+            Mapper mapper;
             if (position.containsKey("mapper")) {
                 String className = (String) position.get("mapper");
                 Class<?> clazz = Class.forName(className);
-                mapper = (Field007Mapper) clazz.newInstance();
+                Constructor<?> cons = clazz.getConstructor(Map.class, Model.class);
+                mapper = (Mapper) cons.newInstance(mapping, model);
             } else {
-                Map<String, String> labels = (Map<String, String>) posMap.get("labels");
-                Map<String, String> uris = (Map<String, String>) posMap.get("uris");
-                if (labels == null && uris == null) continue; // Skip if there's no mappings
-                mapper = new DefaultLabelUriMapper(labels, uris);
+                mapper = new DefaultMapper(mapping, model);
             }
-            int length = (int) posMap.getOrDefault("length", 1);
-            if (data.length() < pos + length) {
-                continue;
+
+            // Map it to nodes
+            List<RDFNode> nodes = mapper.map(c00, value, config);
+
+            // Add the tripples
+            for (RDFNode node: nodes) {
+                resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) mapping.get("property")), node);
             }
-            String cpos = data.substring(pos, pos+length); // the character(s) at this position
 
-            List<String> values = (List<String>) position.get("values");  // Values to check
-            if (values != null && !values.contains(cpos)) continue; // Skip if no need to process this character
+            if (position.containsKey("default")) {
+                addDefault(position, resource); // if there's default label, add it.
+            }
 
-            addDefault(position, resource); // if there's default label, add it.
-
-            // In some special cases, the prefix is different from the default ones.
-            // See k, pos 01
-            String prefix = Optional.ofNullable(getPositionPrefix(nodeMap)).orElse((String) posMap.get("prefix"));
-
-            String uri = mapper.mapToUri(cpos);
-            String label = mapper.mapToLabel(cpos);
-            Resource object = createNode(prefix, (String)posMap.get("type"), label, uri);
-            resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) posMap.get("property")), object);
-
-            if (position.containsKey("extra")) {
-                Map<String, Map<String, String>> extraMap = (Map<String, Map<String, String>>)position.get("extra");
-                mapper = new DefaultLabelUriMapper(extraMap.get("labels"), extraMap.get("uris"));
-                String extraUri = mapper.mapToUri(cpos);
-                String extraLabel = mapper.mapToLabel(cpos);
-                Resource extraObject = createNode(prefix, (String)posMap.get("type"), extraLabel, extraUri);
-                if (extraObject != null) {
-                    resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) posMap.get("property")), extraObject);
-                }
+            if (mode.equals("Instance") && config.containsKey("media")) {
+                addMedia(config, resource);
             }
         }
 
-        if (mode.equals("Instance") && nodeMap.containsKey("media")) {
-            if (record.getVariableFields("337").isEmpty()) {
-                Map<String, String> mediaMap = (Map<String, String>) nodeMap.get("media");
-                Resource media = model.createResource("http://id.loc.gov/vocabulary/mediaTypes/" + mediaMap.get("uri"));
-                media.addProperty(RDF.type, BIB_FRAME.Media).addProperty(RDFS.label, mediaMap.get("label"));
-                resource.addProperty(BIB_FRAME.media, media);
-            }
-        }
         return model;
     }
 
@@ -149,21 +140,24 @@ public class Field007Converter extends FieldConverter {
         return object;
     }
 
-    private String getPositionPrefix(Map nodeMap) {
-        Map<String, String> prefixes = (Map<String, String>) nodeMap.get("prefixes");
-        return prefixes == null? null : prefixes.get("cpos");
+    private void addDefault(Map position, Resource resource) throws Exception {
+        Map<String, String> defaultMap = (Map<String, String>) position.get("default");
+        Map prefixMap = MappingsReader.readMappings("prefixes");
+        String uri =prefixMap.get(defaultMap.get("prefix")) + defaultMap.get("uri");
+        Resource object = model.createResource(uri);
+        object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + defaultMap.get("type")));
+        if (defaultMap.containsKey("label")) {
+            object.addProperty(RDFS.label, defaultMap.get("label"));
+        }
+        resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, defaultMap.get("property")), object);
     }
 
-    private void addDefault(Map position, Resource resource) {
-        if (position.containsKey("default")) {
-            Map<String, String> defaultMap = (Map<String, String>) position.get("default");
-            String uri = mappings.get("vocabularies").get(defaultMap.get("prefix")) + defaultMap.get("uri");
-            Resource object = model.createResource(uri);
-            object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + defaultMap.get("type")));
-            if (defaultMap.containsKey("label")) {
-                object.addProperty(RDFS.label, defaultMap.get("label"));
-            }
-            resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, defaultMap.get("property")), object);
+    private void addMedia(Map config, Resource resource) {
+        if (record.getVariableFields("337").isEmpty()) {
+            Map<String, String> mediaMap = (Map<String, String>) config.get("media");
+            Resource media = model.createResource("http://id.loc.gov/vocabulary/mediaTypes/" + mediaMap.get("uri"));
+            media.addProperty(RDF.type, BIB_FRAME.Media).addProperty(RDFS.label, mediaMap.get("label"));
+            resource.addProperty(BIB_FRAME.media, media);
         }
     }
 

@@ -1,6 +1,7 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import org.apache.jena.base.Sys;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
 import org.junit.After;
@@ -100,6 +101,7 @@ public class Field007ConverterTest {
                 String data = field.getData();
                 if (data.startsWith("a") && data.substring(4, 5).equals("a")) {
                     model = converter.convert(field);
+                    model.write(System.out);
                     Resource work = ModelUtils.getWork(model, record);
                     StmtIterator iter = model.listStatements(work, BIB_FRAME.baseMaterial, model.createResource("http://id.loc.gov/vocabulary/mmaterial/pap"));
                     assertTrue(iter.hasNext());
@@ -274,6 +276,7 @@ public class Field007ConverterTest {
                 String data = field.getData();
                 if (data.startsWith("a") && data.substring(7, 8).equals("m")) {
                     model = converter.convert(field);
+                    model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
                     StmtIterator iter = model.listStatements(instance, BIB_FRAME.polarity, model.createResource("http://id.loc.gov/vocabulary/mpolarity/mix"));
                     assertTrue(iter.hasNext());
@@ -366,18 +369,35 @@ public class Field007ConverterTest {
     }
 
     @Test
-    public void testConvertInstanceG8J() throws Exception {
+    public void testConvertInstanceH6024() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
             if (field.getTag().equals("007")) {
                 String data = field.getData();
-                if (data.startsWith("g") && data.substring(8, 9).equals("j")) {
+                if (data.startsWith("c") && data.substring(6, 9).equals("024")) {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.mount, model.createResource("http://id.loc.gov/vocabulary/mmaterial/gls"));
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.digitalCharacteristic, model.createResource("http://id.loc.gov/ontologies/bflc/ImageBitDepth"));
                     assertTrue(iter.hasNext());
-                    iter = model.listStatements(instance, BIB_FRAME.mount, model.createResource("http://id.loc.gov/vocabulary/mmaterial/mtl"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceH12A() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("h") && data.substring(12, 13).equals("a")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.baseMaterial, model.createResource("http://id.loc.gov/vocabulary/mmaterial/saf"));
                     assertTrue(iter.hasNext());
                 }
             } else {

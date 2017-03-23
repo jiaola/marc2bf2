@@ -1,28 +1,3 @@
-vocabularies:
-  carriers: http://id.loc.gov/vocabulary/carriers/
-  classSchemes: http://id.loc.gov/vocabulary/classSchemes/
-  contentType: http://id.loc.gov/vocabulary/contentType/
-  countries: http://id.loc.gov/vocabulary/countries/
-  descriptionConventions: http://id.loc.gov/vocabulary/descriptionConventions/
-  genreForms: http://id.loc.gov/authorities/genreForms/
-  geographicAreas: http://id.loc.gov/vocabulary/geographicAreas/
-  graphicMaterials: http://id.loc.gov/vocabulary/graphicMaterials/
-  issuance: http://id.loc.gov/vocabulary/issuance/
-  languages: http://id.loc.gov/vocabulary/languages/
-  marcgt: http://id.loc.gov/vocabulary/marcgt/
-  mcolor: http://id.loc.gov/vocabulary/mcolor/
-  mediaType: http://id.loc.gov/vocabulary/mediaType/
-  mediaTypes: http://id.loc.gov/vocabulary/mediaTypes/
-  mmaterial: http://id.loc.gov/vocabulary/mmaterial/
-  mplayback: http://id.loc.gov/vocabulary/mplayback/
-  mpolarity: http://id.loc.gov/vocabulary/mpolarity/
-  marcauthen: http://id.loc.gov/vocabulary/marcauthen/
-  marcmuscomp: http://id.loc.gov/vocabulary/marcmuscomp/
-  organizations: http://id.loc.gov/vocabulary/organizations/
-  relators: http://id.loc.gov/vocabulary/relators/
-  bflc: http://id.loc.gov/ontologies/bflc/
-  bf: http://id.loc.gov/ontologies/bibframe/
-
 mappings:
   a:
     - position: 1
@@ -587,9 +562,6 @@ Instance:
         values: [a, b, c, d, e, f, g, j, k, s, t, v, w, x, y]
       - position: 8
         values: [c, d, e, h, j, k, m]
-        extra:
-          labels: { j: glass, k: glass }
-          uris: {j: gls, k: gls}
 
 
 
