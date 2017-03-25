@@ -319,8 +319,21 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.digitalCharacteristic, model.createResource("http://id.loc.gov/ontologies/bflc/ImageBitDepth"));
-                    assertTrue(iter.hasNext());
+                    StmtIterator iter = instance.listProperties(BIB_FRAME.digitalCharacteristic);
+                    boolean found = false;
+                    while (iter.hasNext()) {
+                        Statement stmt = iter.nextStatement();
+                        Resource object = (Resource) stmt.getObject();
+                        StmtIterator it = object.listProperties(RDF.type);
+                        while (it.hasNext()) {
+                            Statement s = it.nextStatement();
+                            Resource o = (Resource) s.getObject();
+                            if (o.getURI().equals("http://id.loc.gov/ontologies/bflc/ImageBitDepth")) {
+                                found = true;
+                            }
+                        }
+                    }
+                    assertTrue(found);
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -553,6 +566,44 @@ public class Field007ConverterTest {
                     Resource instance = ModelUtils.getInstance(model, record);
                     assertTrue(instance.listProperties(BIB_FRAME.emulsion).hasNext());
                     assertTrue(instance.listProperties(BIB_FRAME.baseMaterial).hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceV8S() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("v") && data.substring(8, 9).equals("s")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.soundCharacteristic, model.createResource("http://id.loc.gov/vocabulary/mplayback/ste"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceVMedia() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("v") && record.getVariableFields("337").isEmpty()) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.media, model.createResource("http://id.loc.gov/vocabulary/mediaTypes/v"));
+                    assertTrue(iter.hasNext());
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed

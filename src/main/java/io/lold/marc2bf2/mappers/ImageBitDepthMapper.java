@@ -1,13 +1,15 @@
 package io.lold.marc2bf2.mappers;
 
+import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public class ImageBitDepthMapper extends DefaultMapper {
     /**
@@ -41,7 +43,10 @@ public class ImageBitDepthMapper extends DefaultMapper {
         if (label == null) {
             return list;
         }
-        RDFNode object = getResource(prefix, label, "ImageBitDepth", getType(mapping));
+        Resource object = model.createResource();
+        object.addProperty(RDF.type, model.createResource("http://id.loc.gov/ontologies/bflc/ImageBitDepth"));
+        object.addProperty(RDF.type, BIB_FRAME.DigitalCharacteristic);
+        object.addProperty(RDFS.label, label);
         list.add(object);
         return list;
     }

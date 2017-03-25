@@ -147,12 +147,16 @@ public class Field007Converter extends FieldConverter {
     }
 
     private void addMedia(Map config, Resource resource) {
-        if (record.getVariableFields("337").isEmpty()) {
-            Map<String, String> mediaMap = (Map<String, String>) config.get("media");
-            Resource media = model.createResource("http://id.loc.gov/vocabulary/mediaTypes/" + mediaMap.get("uri"));
-            media.addProperty(RDF.type, BIB_FRAME.Media).addProperty(RDFS.label, mediaMap.get("label"));
-            resource.addProperty(BIB_FRAME.media, media);
+        if (!record.getVariableFields("337").isEmpty()) {
+            return;
         }
+        Map<String, String> mediaMap = (Map<String, String>) config.get("media");
+        Resource media = model.createResource("http://id.loc.gov/vocabulary/mediaTypes/" + mediaMap.get("uri"));
+        media.addProperty(RDF.type, BIB_FRAME.Media);
+        if (mediaMap.containsKey("label")) {
+            media.addProperty(RDFS.label, mediaMap.get("label"));
+        }
+        resource.addProperty(BIB_FRAME.media, media);
     }
 
     private Map getPositionMapping(String c00, int position) {
