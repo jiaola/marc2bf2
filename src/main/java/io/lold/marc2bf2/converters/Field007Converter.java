@@ -98,18 +98,20 @@ public class Field007Converter extends FieldConverter {
             if (position.containsKey("mapper")) {
                 String className = (String) position.get("mapper");
                 Class<?> clazz = Class.forName(className);
-                Constructor<?> cons = clazz.getConstructor(Map.class, Model.class);
-                mapper = (Mapper) cons.newInstance(mapping, model);
+                Constructor<?> cons = clazz.getConstructor(Model.class);
+                mapper = (Mapper) cons.newInstance(model);
             } else {
-                mapper = new DefaultMapper(mapping, model);
+                mapper = new DefaultMapper(model);
             }
 
-            // Map it to nodes
-            List<RDFNode> nodes = mapper.map(c00, value, config);
-
             // Add the tripples
-            for (RDFNode node: nodes) {
-                resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) mapping.get("property")), node);
+            if (mapping.containsKey("mappings")) {
+                List<Map> mappings = (List<Map>) mapping.get("mappings");
+                for (Map m : mappings) {
+                    addNodes(c00, resource, config, m, value, mapper);
+                }
+            } else {
+                addNodes(c00, resource, config, mapping, value, mapper);
             }
 
             if (position.containsKey("default")) {
@@ -124,21 +126,13 @@ public class Field007Converter extends FieldConverter {
         return model;
     }
 
-    private Resource createNode(String prefix, String type, String label, String uri) {
-        if (label == null && uri == null) return null;
-        Resource object;
-        if (uri != null) {
-            uri = mappings.get("vocabularies").get(prefix) + uri;
-            object = model.createResource(uri);
-        } else {
-            object = model.createResource();
+    private void addNodes(String c00, Resource resource, Map config, Map mapping, String value, Mapper mapper) throws Exception {
+        List<RDFNode> nodes = mapper.map(c00, value, config, mapping);
+        for (RDFNode node : nodes) {
+            resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) mapping.get("property")), node);
         }
-        object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + type));
-        if (label != null) {
-            object.addProperty(RDFS.label, label);
-        }
-        return object;
     }
+
 
     private void addDefault(Map position, Resource resource) throws Exception {
         Map<String, String> defaultMap = (Map<String, String>) position.get("default");

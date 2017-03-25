@@ -2,7 +2,6 @@ package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.*;
-import org.apache.jena.rdf.model.impl.StatementImpl;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.junit.After;
@@ -15,9 +14,7 @@ import org.marc4j.marc.Record;
 
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 @RunWith(Parameterized.class)
 public class Field007ConverterTest {
@@ -518,6 +515,44 @@ public class Field007ConverterTest {
                     assertEquals("http://www.w3.org/2001/XMLSchema#gYearMonth", stmt.getLiteral().getDatatypeURI());
                     assertNotNull(target);
                     assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.note, "1986-06"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceS1T() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("s") && data.substring(1, 2).equals("t")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    StmtIterator iter = model.listStatements(instance, BIB_FRAME.carrier, model.createResource("http://id.loc.gov/vocabulary/carriers/st"));
+                    assertTrue(iter.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstanceS10G() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("007")) {
+                String data = field.getData();
+                if (data.startsWith("s") && data.substring(10, 11).equals("g")) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    Resource instance = ModelUtils.getInstance(model, record);
+                    assertTrue(instance.listProperties(BIB_FRAME.emulsion).hasNext());
+                    assertTrue(instance.listProperties(BIB_FRAME.baseMaterial).hasNext());
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed

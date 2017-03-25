@@ -15,8 +15,8 @@ import java.util.List;
 import java.util.Map;
 
 public class InspectionDateNoteMapper extends DefaultMapper {
-    public InspectionDateNoteMapper(Map<String, Object> mapping, Model model) {
-        super(mapping, model);
+    public InspectionDateNoteMapper(Model model) {
+        super(model);
     }
 
     private String mapToLabel(String value) {
@@ -30,7 +30,7 @@ public class InspectionDateNoteMapper extends DefaultMapper {
     }
 
     @Override
-    public List<RDFNode> map(String c00, String value, Map<String, Object> config) throws Exception {
+    public List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
         List<RDFNode> list = new ArrayList<>();
         String label = mapToLabel(value);
         if (label == null) {

@@ -13,11 +13,10 @@ public class ImageBitDepthMapper extends DefaultMapper {
     /**
      * Create a mapper
      *
-     * @param mapping The mapping of the value at the current position
      * @param model   The Jena Model
      */
-    public ImageBitDepthMapper(Map<String, Object> mapping, Model model) {
-        super(mapping, model);
+    public ImageBitDepthMapper(Model model) {
+        super(model);
     }
 
     private String mapToLabel(String value) {
@@ -34,15 +33,15 @@ public class ImageBitDepthMapper extends DefaultMapper {
     }
 
     @Override
-    public List<RDFNode> map(String c00, String value, Map<String, Object> config) throws Exception {
-        String prefix = getPrefix(config);
+    public List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
+        String prefix = getPrefix(config, mapping);
 
         List<RDFNode> list = new ArrayList<>();
         String label = mapToLabel(value);
         if (label == null) {
             return list;
         }
-        RDFNode object = getResource(prefix, label, "ImageBitDepth");
+        RDFNode object = getResource(prefix, label, "ImageBitDepth", getType(mapping));
         list.add(object);
         return list;
     }

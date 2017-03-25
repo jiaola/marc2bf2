@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.Map;
 
 public abstract class Mapper {
-    protected Map<String, Object> mapping;
     protected Model model;
 
     /**
@@ -16,8 +15,7 @@ public abstract class Mapper {
      * @param mapping The mapping of the value at the current position
      * @param model The Jena Model
      */
-    public Mapper(Map<String, Object> mapping, Model model) {
-        this.mapping = mapping;
+    public Mapper(Model model) {
         this.model = model;
     }
 
@@ -30,5 +28,5 @@ public abstract class Mapper {
      * @return
      * @throws Exception
      */
-    public abstract List<RDFNode> map(String c00, String value, Map<String, Object> config) throws Exception;
+    public abstract List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception;
 }

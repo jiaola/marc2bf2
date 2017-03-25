@@ -18,41 +18,35 @@ import java.util.Optional;
 public class DefaultMapper extends Mapper {
     final static Logger logger = LoggerFactory.getLogger(DefaultMapper.class);
 
-    public DefaultMapper(Map<String, Object> mapping, Model model) {
-        super(mapping, model);
+    public DefaultMapper(Model model) {
+        super(model);
     }
 
     @Override
-    public List<RDFNode> map(String c00, String value, Map<String, Object> config) throws Exception {
-        String prefix = getPrefix(config);
+    public List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
+        String prefix = getPrefix(config, mapping);
 
-        Map<String, Object> labels = (Map<String, Object>) mapping.get("labels");
-        Map<String, Object> uris = (Map<String, Object>) mapping.get("uris");
-        Object label = labels == null? null : labels.get(value);
-        Object uri = uris == null? null : uris.get(value);
+        Map<String, String> labels = (Map<String, String>) mapping.get("labels");
+        Map<String, String> uris = (Map<String, String>) mapping.get("uris");
+        String label = labels == null? null : labels.get(value);
+        String uri = uris == null? null : uris.get(value);
+
+        String type = getType(mapping);
 
         List<RDFNode> list = new ArrayList<>();
         if (label == null && uri == null) {
             return list;
         }
-        if (label instanceof String) {
-            RDFNode object = getResource(prefix, (String)label, (String)uri);
-            list.add(object);
-        } else { // it's a list
-            List<String> labelList = (List<String>) label;
-            List<String> uriList = (List<String>) uri;
-            if (labelList.size() != uriList.size()) {
-                logger.error("Invalid label/uri mapping: " + c00 + ", " + value);
-            }
-            for (int i = 0; i < labelList.size(); i++) {
-                RDFNode object = getResource(prefix, labelList.get(i), uriList.get(i));
-                list.add(object);
-            }
-        }
+        RDFNode object = getResource(prefix, label, uri, type);
+        list.add(object);
         return list;
     }
 
-    protected String getPrefix(Map<String, Object> config) throws Exception {
+    protected String getType(Map<String, Object> mapping) {
+        return (String) mapping.get("type");
+    }
+
+    protected String getPrefix(Map<String, Object> config, Map<String, Object> mapping) throws Exception {
         String ns = Optional.ofNullable(getConfigPrefix(config)).orElse((String) mapping.get("prefix"));
         Map prefixMap = MappingsReader.readMappings("prefixes");
         return (String) prefixMap.get(ns);
@@ -63,7 +57,7 @@ public class DefaultMapper extends Mapper {
         return prefixes == null? null : prefixes.get("cpos");
     }
 
-    protected RDFNode getResource(String prefix, String label, String uri) {
+    protected RDFNode getResource(String prefix, String label, String uri, String type) {
         Resource object;
         if (uri != null) {
             if (prefix == null) {
@@ -73,7 +67,6 @@ public class DefaultMapper extends Mapper {
         } else {
             object = model.createResource();
         }
-        String type = (String) mapping.get("type");
         if (type == null) {
             return model.createLiteral(label);
         } else {

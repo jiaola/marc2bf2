@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.Map;
 
 public class CompletenessNoteMapper extends DefaultMapper {
-    public CompletenessNoteMapper(Map<String, Object> mapping, Model model) {
-        super(mapping, model);
+    public CompletenessNoteMapper(Model model) {
+        super(model);
     }
 
     @Override
-    public List<RDFNode> map(String c00, String value, Map<String, Object> config) throws Exception {
-        List<RDFNode> list = super.map(c00, value, config);
+    public List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
+        List<RDFNode> list = super.map(c00, value, config, mapping);
         list.forEach(node -> ((Resource)node).addProperty(BIB_FRAME.noteType, "completeness"));
         return list;
     }

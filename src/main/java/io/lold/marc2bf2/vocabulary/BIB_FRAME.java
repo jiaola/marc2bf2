@@ -15,6 +15,7 @@ public class BIB_FRAME {
     public static final Resource AdminMetadata;
     public static final Resource BaseMaterial;
     public static final Resource Audio;
+    public static final Resource Carrier;
     public static final Resource Cartography;
     public static final Resource ColorContent;
     public static final Resource DigitalCharacteristic;
@@ -40,6 +41,7 @@ public class BIB_FRAME {
     // ---- properties ----
     public static final Property adminMetadata;
     public static final Property baseMaterial;
+    public static final Property carrier;
     public static final Property changeDate;
     public static final Property code;
     public static final Property colorContent;
@@ -69,6 +71,7 @@ public class BIB_FRAME {
         AdminMetadata = m.createResource(BIB_FRAME.NAMESPACE + "AdminMetadata");
         Audio = m.createResource(BIB_FRAME.NAMESPACE + "Audio");
         BaseMaterial = m.createResource(BIB_FRAME.NAMESPACE + "BaseMaterial");
+        Carrier = m.createResource(BIB_FRAME.NAMESPACE + "Carrier");
         Cartography = m.createResource(BIB_FRAME.NAMESPACE + "Cartography");
         ColorContent = m.createResource(BIB_FRAME.NAMESPACE + "ColorContent");
         DigitalCharacteristic = m.createResource(BIB_FRAME.NAMESPACE + "DigitalCharacteristic");
@@ -93,6 +96,7 @@ public class BIB_FRAME {
 
         adminMetadata = m.createProperty(BIB_FRAME.NAMESPACE, "adminMetadata");
         baseMaterial = m.createProperty(BIB_FRAME.NAMESPACE, "baseMaterial");
+        carrier = m.createProperty(BIB_FRAME.NAMESPACE, "carrier");
         changeDate = m.createProperty(BIB_FRAME.NAMESPACE, "changeDate");
         code = m.createProperty(BIB_FRAME.NAMESPACE, "code");
         colorContent = m.createProperty(BIB_FRAME.NAMESPACE, "colorContent");

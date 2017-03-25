@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Map;
 
 public class ReductionRatioMapper extends DefaultMapper {
-    public ReductionRatioMapper(Map<String, Object> mapping, Model model) {
-        super(mapping, model);
+    public ReductionRatioMapper(Model model) {
+        super(model);
     }
 
     private String mapToLabel(String value) {
@@ -27,7 +27,7 @@ public class ReductionRatioMapper extends DefaultMapper {
     }
 
     @Override
-    public List<RDFNode> map(String c00, String value, Map<String, Object> config) throws Exception {
+    public List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
         String first = value.substring(0, 1);
 
         Map<String, Object> labels = (Map<String, Object>) mapping.get("labels");

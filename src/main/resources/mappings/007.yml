@@ -166,7 +166,6 @@ mappings:
       labels:
         a: one file format
         m: multiple file formats
-
   d:
     - position: 1
       type: GenreForm
@@ -742,7 +741,184 @@ mappings:
       length: 6
       type: Note
       property: note
+  s:
+    - position: 1
+      type: Carrier
+      property: carrier
+      prefix: carriers
+      labels:
+       d: sound disc
+       e: cylinder
+       g: sound cartridge
+       i: sound-track film
+       q: roll
+       r: remote
+       s: sound cassette
+       t: sound-tape reel
+       w: wire recording
+      uris:
+       d: sd
+       e: se
+       g: sg
+       i: si
+       q: sq
+       r: cr
+       s: sg
+       t: st
+       w: sw
+    - position: 3
+      type: PlayingSpeed
+      property: soundCharacteristic
+      labels:
+        a: 16 rpm
+        b: 13 1/3 rpm
+        c: 45 rpm
+        d: 78 rpm
+        e: 8 rpm
+        f: 1.4 m. per sec.
+        h: 120 rpm
+        i: 160 rpm
+        k: 15/16 ips
+        l: 1 7/8 ips
+        m: 3 3/4 ips
+        o: 7 1/2 ips
+        p: 15 ips
+        r: 30 ips
+    - position: 4
+      type: PlaybackChannels
+      property: soundCharacteristic
+      prefix: mplayback
+      labels:
+        m: monaural
+        q: quadraphonic, multichannel or surround
+        s: stereophonic
+      uris:
+        m: mon
+        q: mul
+        s: ste
+    - position: 5
+      type: GrooveCharacteristic
+      property: soundCharacteristic
+      labels:
+        m: microgroove/fine
+        s: coarse/standard
+    - position: 6
+      property: dimensions
+      labels:
+        a: 3 in.
+        b: 5 in.
+        c: 7 in.
+        d: 10 in.
+        e: 12 in.
+        f: 16 in.
+        g: 4 3/4 in. or 12 cm.
+        j: 3 7/8 x 2 1/2 in.
+        o: 5 1/4 x 3 7/8 in.
+        s: 2 3/4 x 4 in.
+    - position: 7
+      property: dimensions
+      labels:
+        l: 1/8 in. tape width
+        m: 1/4 in. tape width
+        o: 1/2 in. tape width
+        p: 1 in. tape width
+    - position: 8
+      property: soundCharacteristic
+      type: TapeConfig
+      labels:
+        a: full (1)
+        b: half (2)
+        c: quarter (4)
+        d: 8
+        e: 12
+        f: 16
+    - position: 9
+      property: generation
+      type: Generation
+      labels:
+        a: master tape
+        b: tape duplication master
+        d: disc master (negative)
+        i: instantaneous (recorded on the spot)
+        m: mass produced
+        r: mother (positive)
+        s: stamper (negative)
+        t: test pressing
+    - position: 10
+      mappings:
+        - property: baseMaterial
+          type: BaseMaterial
+          prefix: mmaterial
+          labels:
+            b: cellulose nitrate
+            c: acetate tape
+            g: glass
+            i: luminum
+            r: paper
+            l: metal
+            m: plastic
+            p: plastic
+            s: shellac
+            w: wax
+          uris:
+            b: lac
+            c: ace
+            g: gla
+            i: alu
+            r: pap
+            l: mtl
+            m: pla
+            p: pla
+            s: she
+            w: wax
+        - property: emulsion
+          type: emulsion
+          prefix: mmaterial
+          labels:
+            a: lacquer coating
+            c: ferrous oxide
+            g: lacquer
+            i: lacquer
+            m: metal
+          uris:
+            a: lac
+            c: fer
+            g: lac
+            i: lac
+            m: mtl
+    - position: 11
+      property: soundCharacteristic
+      type: GrooveCharacteristic
+      labels:
+        h: hill-and-dale cutting
+        l: lateral or combined cutting
+    - position: 12
+      property: soundCharacteristic
+      type: PlaybackCharacteristic
+      labels:
+        a: NAB standard
+        b: CCIR standard
+        c: Dolby-B encoded
+        d: dbx encoded
+        e: digital recording
+        f: Dolby-A encoded
+        g: Dolby-C encoded
+        h: CX encoded
   v:
+    - position: 1
+      prefix: carriers
+      type: Carrier
+      property: carrier
+      labels:
+        c: videocartridge
+        d: videodisc
+        f: videocassette
+        r: videotape reel
+      uris:
+        c: vc
+        d: vd
+        f: vf
+        r: vr
     - position: 3
       prefix: mcolor
       type: ColorContent
@@ -759,6 +935,69 @@ mappings:
         c: mul
         g: gry
         m: mix
+    - position: 4
+      type: VideoFormat
+      property: videoCharacteristic
+      labels:
+        a: Beta (1/2 in.videocassette)
+        b: VHS (1/2 in.videocassette)
+        c: U-matic  (3/4 in.videocassette)
+        d: EIAJ (1/2 in.reel)
+        e: Type C  (1 in.reel)
+        f: Quadruplex (1 in.or 2 in. reel)
+        g: Laserdisc
+        h: CED (Capacitance Electronic Disc)
+        i: Betacam (1/2 in., videocassette)
+        j: Betacam SP (1/2 in., videocassette)
+        k: Super-VHS (1/2 in. videocassette)
+        m: M-II (1/2 in., videocassette)
+        o: D-2 (3/4 in., videocassette)
+        p: 8 mm.
+        q: Hi-8 mm.
+        s: Blu-ray disc
+        v: DVD
+    - position: 5
+      type: SoundContent
+      property: soundContent
+      labels: 
+        a: sound on medium
+        b: sound separate from medium
+    - position: 6
+      type: RecordingMedium
+      property: soundCharacteristic
+      labels:
+        a: optical sound track on motion picture film
+        b: magnetic sound track on motion picture film
+        c: magnetic audio tape in cartridge
+        d: sound disc
+        e: magnetic audio tape on reel
+        f: magnetic audio tape in cassette
+        g: optical and magnetic sound track on motion picture film
+        h: videotape
+        i: videodisc
+    - position: 7
+      property: dimensions
+      labels:
+        a: 8 mm.
+        m: 1/4 in.
+        o: 1/2 in.
+        p: 1 in.
+        q: 2 in.
+        r: 3/4 in.
+    - position: 8
+      type: PlaybackChannels
+      property: soundCharacteristic
+      prefix: mplayback
+      labels:
+        k: mixed
+        m: monaural
+        q: quadraphonic, multichannel or surround
+        s: stereophonic
+      uris:
+        k: mix
+        m: mon
+        q: mul
+        s: ste
 Work:
   a:
     type: Cartography
@@ -819,7 +1058,6 @@ Work:
       - position: 3
         values: [a, b, c, m]
         default: {prefix: genreForms, type: GenreForm, property: genreForm, uri: gf2011026723}
-
 Instance:
   a:
     positions:
@@ -918,6 +1156,32 @@ Instance:
         mapper: io.lold.marc2bf2.mappers.CompletenessNoteMapper
       - position: 17
         mapper: io.lold.marc2bf2.mappers.InspectionDateNoteMapper
+  s:
+    media: { label: audio, uri: s}
+    positions:
+      - position: 1
+        condition: '338'
+        values: [d, e, g, i, q, r, s, t, w]
+      - position: 3
+        values: [a, b, c, d, e, f, h, i, k, l, m, o, p, r]
+      - position: 4
+        values: [m, q, s]
+      - position: 5
+        values: [m, s]
+      - position: 6
+        values: [a, b, c, d, e, f, g, j, o, s]
+      - position: 7
+        values: [l, m, o, p]
+      - position: 8
+        values: [a, b, c, d, e, f]
+      - position: 9
+        values: [a, b, d, i, m, r, s, t]
+      - position: 10
+        values: [a, b, c, g, i, r, l, m, p, s, w]
+      - position: 11
+        values: [h, l]
+      - position: 12
+        values: [a, b, c, d, e, f, g, h]
 
 
 
