@@ -15,6 +15,7 @@ public class MappingsReader {
         mappingFiles = new HashMap<>();
         // Should make this configuraable
         mappingFiles.put("007", "mappings/007.yml");
+        mappingFiles.put("leader", "mappings/leader.yml");
         mappingFiles.put("prefixes", "mappings/prefixes.yml");
     }
 

@@ -35,7 +35,7 @@ public class ImageBitDepthMapper extends DefaultMapper {
     }
 
     @Override
-    public List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
+    public List<RDFNode> map(String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
         String prefix = getPrefix(config, mapping);
 
         List<RDFNode> list = new ArrayList<>();

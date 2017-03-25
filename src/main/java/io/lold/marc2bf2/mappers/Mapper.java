@@ -21,12 +21,11 @@ public abstract class Mapper {
     /**
      * Maps value with 00=c00 in field 007 to a list of RDFNode
      *
-     * @param c00 category value (first char in 007)
      * @param value the value of the current position
      * @param config local config
      * @param mapping The mapping of the value at the current position
      * @return
      * @throws Exception
      */
-    public abstract List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception;
+    public abstract List<RDFNode> map(String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception;
 }

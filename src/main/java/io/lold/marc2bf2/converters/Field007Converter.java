@@ -108,10 +108,10 @@ public class Field007Converter extends FieldConverter {
             if (mapping.containsKey("mappings")) {
                 List<Map> mappings = (List<Map>) mapping.get("mappings");
                 for (Map m : mappings) {
-                    addNodes(c00, resource, config, m, value, mapper);
+                    addNodes(resource, config, m, value, mapper);
                 }
             } else {
-                addNodes(c00, resource, config, mapping, value, mapper);
+                addNodes(resource, config, mapping, value, mapper);
             }
 
             if (position.containsKey("default")) {
@@ -126,8 +126,8 @@ public class Field007Converter extends FieldConverter {
         return model;
     }
 
-    private void addNodes(String c00, Resource resource, Map config, Map mapping, String value, Mapper mapper) throws Exception {
-        List<RDFNode> nodes = mapper.map(c00, value, config, mapping);
+    private void addNodes(Resource resource, Map config, Map mapping, String value, Mapper mapper) throws Exception {
+        List<RDFNode> nodes = mapper.map(value, config, mapping);
         for (RDFNode node : nodes) {
             resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) mapping.get("property")), node);
         }

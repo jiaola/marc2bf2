@@ -3,6 +3,7 @@ package io.lold.marc2bf2.mappers;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -23,7 +24,7 @@ public class DefaultMapper extends Mapper {
     }
 
     @Override
-    public List<RDFNode> map(String c00, String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
+    public List<RDFNode> map(String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
         String prefix = getPrefix(config, mapping);
 
         Map<String, String> labels = (Map<String, String>) mapping.get("labels");
@@ -40,6 +41,15 @@ public class DefaultMapper extends Mapper {
         RDFNode object = getResource(prefix, label, uri, type);
         list.add(object);
         return list;
+    }
+
+    /**
+     * Returns the label proeprty. Override it if the property is different
+     *
+     * @return
+     */
+    protected Property getLabelProeprty() {
+        return RDFS.label;
     }
 
     protected String getType(Map<String, Object> mapping) {
@@ -72,7 +82,7 @@ public class DefaultMapper extends Mapper {
         } else {
             object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + type));
             if (label != null) {
-                object.addProperty(RDFS.label, label);
+                object.addProperty(getLabelProeprty(), label);
             }
             return object;
         }

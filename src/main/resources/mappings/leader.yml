@@ -1,0 +1,83 @@
+positions:
+  - position: 5
+    type: Status
+    property: status
+    scope: AdminMetadata
+    labels:
+      a: c
+      c: c
+      n: n
+      p: p
+  - position: 7
+    type: Issuance
+    property: issuance
+    scope: Instance
+    prefix: issuance
+    uris:
+      a: mono
+      b: serl
+      i: intg
+      m: mono
+      s: serl
+  - position: 17
+    type: EncodingLevel
+    property: encodingLevel
+    scope: AdminMetadata
+    labels:
+      ' ': f
+      '1': '1'
+      '2': '7'
+      '3': '3'
+      '4': '4'
+      '5': '5'
+      '7': '7'
+      '8': '8'
+      defautl: u
+  - position: 18
+    type: DescriptionConventions
+    property: descriptionConventions
+    scope: AdminMetadata
+    labels:
+      a: aacr
+      c: isbd
+      i: isbd
+      p: aacr
+      r: aacr
+      default: unknown
+
+Work:
+  - position: 6
+    prefix: bf
+    uris:
+      a: Text
+      c: NotatedMusic
+      d: NotatedMusic
+      e: Cartography
+      f: Cartography
+      g: MovingImage
+      i: Audio
+      j: Audio
+      k: StillImage
+      o: MixedMaterial
+      p: MixedMaterial
+      r: Object
+      t: Text
+
+Instance:
+  - position: 6
+    prefix: bf
+    uris:
+      d: Manuscript
+      f: Manuscript
+      m: Electronic
+      t: Manuscript
+  - position: 7
+    prefix: bf
+    uris:
+      c: Collection
+      d: Collection
+  - position: 8
+    prefix: bf
+    uris:
+      a: Archival
+
