@@ -12,7 +12,6 @@ public abstract class Mapper {
     /**
      * Create a mapper
      *
-     * @param mapping The mapping of the value at the current position
      * @param model The Jena Model
      */
     public Mapper(Model model) {
@@ -25,6 +24,7 @@ public abstract class Mapper {
      * @param c00 category value (first char in 007)
      * @param value the value of the current position
      * @param config local config
+     * @param mapping The mapping of the value at the current position
      * @return
      * @throws Exception
      */
