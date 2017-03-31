@@ -14,8 +14,8 @@ public class CompletenessNoteMapper extends DefaultMapper {
     }
 
     @Override
-    public List<RDFNode> map(String value, String prefix, Map<String, Object> mapping) throws Exception {
-        List<RDFNode> list = super.map(value, prefix, mapping);
+    public List<RDFNode> map(String value, Map<String, Object> mapping) throws Exception {
+        List<RDFNode> list = super.map(value, mapping);
         list.forEach(node -> ((Resource)node).addProperty(BIB_FRAME.noteType, "completeness"));
         return list;
     }

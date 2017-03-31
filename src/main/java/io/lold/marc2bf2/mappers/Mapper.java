@@ -22,10 +22,9 @@ public abstract class Mapper {
      * Maps value with 00=c00 in field 007 to a list of RDFNode
      *
      * @param value the value of the current position
-     * @param prefix the prefix
      * @param mapping The mapping of the value at the current position
      * @return
      * @throws Exception
      */
-    public abstract List<RDFNode> map(String value, String prefix, Map<String, Object> mapping) throws Exception;
+    public abstract List<RDFNode> map(String value, Map<String, Object> mapping) throws Exception;
 }

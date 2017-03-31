@@ -4,8 +4,6 @@ import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
 
-import java.util.Map;
-
 public class LeaderMapper extends DefaultMapper {
     public LeaderMapper(Model model) {
         super(model);

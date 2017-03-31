@@ -14,7 +14,6 @@ import org.slf4j.LoggerFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 
 public class DefaultMapper extends Mapper {
     final static Logger logger = LoggerFactory.getLogger(DefaultMapper.class);
@@ -24,7 +23,8 @@ public class DefaultMapper extends Mapper {
     }
 
     @Override
-    public List<RDFNode> map(String value, String prefix, Map<String, Object> mapping) throws Exception {
+    public List<RDFNode> map(String value, Map<String, Object> mapping) throws Exception {
+        String prefix = (String) mapping.get("prefix");
         Map<String, String> labels = (Map<String, String>) mapping.get("labels");
         Map<String, String> uris = (Map<String, String>) mapping.get("uris");
         String label = labels == null? null : labels.get(value);
@@ -54,13 +54,18 @@ public class DefaultMapper extends Mapper {
         return (String) mapping.get("type");
     }
 
-    protected RDFNode getResource(String prefix, String label, String uri, String type) {
+    protected RDFNode getResource(String prefix, String label, String uri, String type) throws Exception {
         Resource object;
         if (uri != null) {
+            int index = uri.indexOf(':');
+            if (index > 0) {
+                prefix = uri.substring(0, index);
+                uri = uri.substring(index+1);
+            }
             if (prefix == null) {
                 logger.warn("Prefix is null. This will create invalid URIs");
             }
-            object = model.createResource(prefix + uri);
+            object = model.createResource(mapPrefix(prefix) + uri);
         } else {
             object = model.createResource();
         }
@@ -73,5 +78,10 @@ public class DefaultMapper extends Mapper {
             }
             return object;
         }
+    }
+
+    protected String mapPrefix(String prefix) throws Exception {
+        Map prefixMap = MappingsReader.readMappings("prefixes");
+        return (String) prefixMap.get(prefix);
     }
 }

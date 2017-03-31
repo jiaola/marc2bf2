@@ -2,7 +2,6 @@ package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.mappers.LeaderMapper;
 import io.lold.marc2bf2.mappers.Mapper;
-import io.lold.marc2bf2.mappers.MapperUtils;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
@@ -15,7 +14,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -62,9 +60,8 @@ public class LeaderConverter {
             int pos = (int) position.get("position"); // the position of the character
             String value = data.substring(pos, pos+1);
 
-            String prefix = MapperUtils.getPrefix(null, position);
             Mapper mapper = new LeaderMapper(model);
-            List<RDFNode> nodes = (List<RDFNode>) mapper.map(value, prefix, position);
+            List<RDFNode> nodes = (List<RDFNode>) mapper.map(value, position);
             for (RDFNode node : nodes) {
                 am.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) position.get("property")), node);
             }
@@ -84,8 +81,7 @@ public class LeaderConverter {
             String value = data.substring(pos, pos+1);
 
             Mapper mapper = new LeaderMapper(model);
-            String prefix = MapperUtils.getPrefix(null, position);
-            List<RDFNode> nodes = (List<RDFNode>) mapper.map(value, prefix, position);
+            List<RDFNode> nodes = (List<RDFNode>) mapper.map(value, position);
             for (RDFNode node : nodes) {
                 instance.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) position.get("property")), node);
             }

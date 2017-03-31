@@ -30,7 +30,7 @@ public class InspectionDateNoteMapper extends DefaultMapper {
     }
 
     @Override
-    public List<RDFNode> map(String value, String prefix, Map<String, Object> mapping) throws Exception {
+    public List<RDFNode> map(String value, Map<String, Object> mapping) throws Exception {
         List<RDFNode> list = new ArrayList<>();
         String label = mapToLabel(value);
         if (label == null) {
