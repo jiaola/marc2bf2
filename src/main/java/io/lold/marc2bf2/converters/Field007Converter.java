@@ -2,6 +2,7 @@ package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.mappers.DefaultMapper;
 import io.lold.marc2bf2.mappers.Mapper;
+import io.lold.marc2bf2.mappers.MapperUtils;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
@@ -108,10 +109,12 @@ public class Field007Converter extends FieldConverter {
             if (mapping.containsKey("mappings")) {
                 List<Map> mappings = (List<Map>) mapping.get("mappings");
                 for (Map m : mappings) {
-                    addNodes(resource, config, m, value, mapper);
+                    String prefix = MapperUtils.getPrefix(config, m);
+                    addNodes(resource, prefix, m, value, mapper);
                 }
             } else {
-                addNodes(resource, config, mapping, value, mapper);
+                String prefix = MapperUtils.getPrefix(config, mapping);
+                addNodes(resource, prefix, mapping, value, mapper);
             }
 
             if (position.containsKey("default")) {
@@ -126,8 +129,8 @@ public class Field007Converter extends FieldConverter {
         return model;
     }
 
-    private void addNodes(Resource resource, Map config, Map mapping, String value, Mapper mapper) throws Exception {
-        List<RDFNode> nodes = mapper.map(value, config, mapping);
+    private void addNodes(Resource resource, String prefix, Map mapping, String value, Mapper mapper) throws Exception {
+        List<RDFNode> nodes = mapper.map(value, prefix, mapping);
         for (RDFNode node : nodes) {
             resource.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) mapping.get("property")), node);
         }

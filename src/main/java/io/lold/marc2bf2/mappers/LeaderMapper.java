@@ -16,8 +16,4 @@ public class LeaderMapper extends DefaultMapper {
         return BIB_FRAME.code;
     }
 
-    @Override
-    protected String getConfigPrefix(Map config) {
-        return null;
-    }
 }

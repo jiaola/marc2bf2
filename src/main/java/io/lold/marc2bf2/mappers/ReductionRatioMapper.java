@@ -27,7 +27,7 @@ public class ReductionRatioMapper extends DefaultMapper {
     }
 
     @Override
-    public List<RDFNode> map(String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
+    public List<RDFNode> map(String value, String prefix, Map<String, Object> mapping) throws Exception {
         String first = value.substring(0, 1);
 
         Map<String, Object> labels = (Map<String, Object>) mapping.get("labels");

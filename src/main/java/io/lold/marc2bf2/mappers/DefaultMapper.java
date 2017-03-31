@@ -24,9 +24,7 @@ public class DefaultMapper extends Mapper {
     }
 
     @Override
-    public List<RDFNode> map(String value, Map<String, Object> config, Map<String, Object> mapping) throws Exception {
-        String prefix = getPrefix(config, mapping);
-
+    public List<RDFNode> map(String value, String prefix, Map<String, Object> mapping) throws Exception {
         Map<String, String> labels = (Map<String, String>) mapping.get("labels");
         Map<String, String> uris = (Map<String, String>) mapping.get("uris");
         String label = labels == null? null : labels.get(value);
@@ -54,17 +52,6 @@ public class DefaultMapper extends Mapper {
 
     protected String getType(Map<String, Object> mapping) {
         return (String) mapping.get("type");
-    }
-
-    protected String getPrefix(Map<String, Object> config, Map<String, Object> mapping) throws Exception {
-        String ns = Optional.ofNullable(getConfigPrefix(config)).orElse((String) mapping.get("prefix"));
-        Map prefixMap = MappingsReader.readMappings("prefixes");
-        return (String) prefixMap.get(ns);
-    }
-
-    protected String getConfigPrefix(Map config) {
-        Map<String, String> prefixes = (Map<String, String>) config.get("prefixes");
-        return prefixes == null? null : prefixes.get("cpos");
     }
 
     protected RDFNode getResource(String prefix, String label, String uri, String type) {
