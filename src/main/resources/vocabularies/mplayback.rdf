@@ -1,0 +1,111 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <madsrdf:MADSScheme rdf:about="http://id.loc.gov/vocabulary/mplayback" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mplayback/mix" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">mixed</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">mixed</rdfs:label>
+	<madsrdf:code>mix</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mplayback/mon" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">monaural</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">monaural</rdfs:label>
+	<madsrdf:code>mon</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mplayback/mul" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">multichannel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">multichannel</rdfs:label>
+	<madsrdf:code>mul</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mplayback/ste" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">stereophonic</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereophonic</rdfs:label>
+	<madsrdf:code>ste</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">MARC Play Back List</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+      <xhtml:div class="schemeAbout" title="About MARC Play Back List:" property="rdfs:comment" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <xhtml:p> Configuration of sound channels used to make a recording. </xhtml:p>
+      </xhtml:div>
+    </rdfs:comment>
+    
+    
+    
+    
+    
+    
+  <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-13T00:00:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-03T12:29:49.438349-05:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mplayback/mix">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">mixed</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">mixed</rdfs:label>
+	<skos:notation>mix</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mplayback/mon">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">monaural</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">monaural</rdfs:label>
+	<skos:notation>mon</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mplayback/mul">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">multichannel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">multichannel</rdfs:label>
+	<skos:notation>mul</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mplayback/ste">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">stereophonic</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereophonic</rdfs:label>
+	<skos:notation>ste</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/mplayback"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-13T00:00:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/mplayback"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-03T12:29:49.438349-05:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:MADSScheme>
+</rdf:RDF>

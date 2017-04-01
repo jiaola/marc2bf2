@@ -1,0 +1,76 @@
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MADSScheme> . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mplayback/mix> . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.w3.org/2000/01/rdf-schema#label> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.loc.gov/mads/rdf/v1#code> "mix" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mplayback/mon> . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "monaural"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.w3.org/2000/01/rdf-schema#label> "monaural"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.loc.gov/mads/rdf/v1#code> "mon" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mplayback/mul> . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "multichannel"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.w3.org/2000/01/rdf-schema#label> "multichannel"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.loc.gov/mads/rdf/v1#code> "mul" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mplayback/ste> . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "stereophonic"@en . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.w3.org/2000/01/rdf-schema#label> "stereophonic"@en . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.loc.gov/mads/rdf/v1#code> "ste" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2000/01/rdf-schema#label> "MARC Play Back List"@en . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2000/01/rdf-schema#comment> "
+      
+<xhtml:div class=\"schemeAbout\" title=\"About MARC Play Back List:\" property=\"rdfs:comment\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:madsrdf=\"http://www.loc.gov/mads/rdf/v1#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">
+        <xhtml:p> Configuration of sound channels used to make a recording. </xhtml:p>
+      </xhtml:div>
+
+    "^^<http://www.w3.org/2000/01/rdf-schema#Literal> . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode54vocabularymplayback . 
+_:bnode54vocabularymplayback <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> . 
+_:bnode54vocabularymplayback <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> . 
+_:bnode54vocabularymplayback <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-12-13T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode54vocabularymplayback <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode67vocabularymplayback . 
+_:bnode67vocabularymplayback <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> . 
+_:bnode67vocabularymplayback <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "modified"^^<http://www.w3.org/2001/XMLSchema#string> . 
+_:bnode67vocabularymplayback <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2017-03-03T12:29:49.438349-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode67vocabularymplayback <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mplayback/mix> . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.w3.org/2004/02/skos/core#prefLabel> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.w3.org/2000/01/rdf-schema#label> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mix> <http://www.w3.org/2004/02/skos/core#notation> "mix" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mplayback/mon> . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.w3.org/2004/02/skos/core#prefLabel> "monaural"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.w3.org/2000/01/rdf-schema#label> "monaural"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mon> <http://www.w3.org/2004/02/skos/core#notation> "mon" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mplayback/mul> . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.w3.org/2004/02/skos/core#prefLabel> "multichannel"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.w3.org/2000/01/rdf-schema#label> "multichannel"@en . 
+<http://id.loc.gov/vocabulary/mplayback/mul> <http://www.w3.org/2004/02/skos/core#notation> "mul" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mplayback/ste> . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.w3.org/2004/02/skos/core#prefLabel> "stereophonic"@en . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.w3.org/2000/01/rdf-schema#label> "stereophonic"@en . 
+<http://id.loc.gov/vocabulary/mplayback/ste> <http://www.w3.org/2004/02/skos/core#notation> "ste" . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode116vocabularymplayback . 
+_:bnode116vocabularymplayback <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> . 
+_:bnode116vocabularymplayback <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/mplayback> . 
+_:bnode116vocabularymplayback <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+_:bnode116vocabularymplayback <http://purl.org/vocab/changeset/schema#createdDate> "2016-12-13T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode116vocabularymplayback <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> . 
+<http://id.loc.gov/vocabulary/mplayback> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode124vocabularymplayback . 
+_:bnode124vocabularymplayback <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> . 
+_:bnode124vocabularymplayback <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/mplayback> . 
+_:bnode124vocabularymplayback <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+_:bnode124vocabularymplayback <http://purl.org/vocab/changeset/schema#createdDate> "2017-03-03T12:29:49.438349-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode124vocabularymplayback <http://purl.org/vocab/changeset/schema#changeReason> "modified"^^<http://www.w3.org/2001/XMLSchema#string> . 

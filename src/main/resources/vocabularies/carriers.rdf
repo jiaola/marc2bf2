@@ -1,0 +1,1034 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <madsrdf:MADSScheme rdf:about="http://id.loc.gov/vocabulary/carriers" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/ca" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer tape cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer tape cartridge</rdfs:label>
+	<madsrdf:code>ca</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/cb" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer chip cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer chip cartridge</rdfs:label>
+	<madsrdf:code>cb</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/cd" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer disc</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer disc</rdfs:label>
+	<madsrdf:code>cd</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/ce" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer disc cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer disc cartridge</rdfs:label>
+	<madsrdf:code>ce</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/cf" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer tape cassette</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer tape cassette</rdfs:label>
+	<madsrdf:code>cf</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/ch" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer tape reel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer tape reel</rdfs:label>
+	<madsrdf:code>ch</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/ck" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer card</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer card</rdfs:label>
+	<madsrdf:code>ck</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/cr" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">online resource</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">online resource</rdfs:label>
+	<madsrdf:code>cr</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/cz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other computer carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other computer carrier</rdfs:label>
+	<madsrdf:code>cz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/eh" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">stereograph card</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereograph card</rdfs:label>
+	<madsrdf:code>eh</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/es" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">stereograph disc</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereograph disc</rdfs:label>
+	<madsrdf:code>es</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/ez" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other stereographic carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other stereographic carrier</rdfs:label>
+	<madsrdf:code>ez</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/gc" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">filmstrip cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmstrip cartridge</rdfs:label>
+	<madsrdf:code>gc</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/gd" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">filmslip</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmslip</rdfs:label>
+	<madsrdf:code>gd</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/gf" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">filmstrip</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmstrip</rdfs:label>
+	<madsrdf:code>gf</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/gs" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">slide</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">slide</rdfs:label>
+	<madsrdf:code>gs</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/gt" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">overhead transparency</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">overhead transparency</rdfs:label>
+	<madsrdf:code>gt</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/ha" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">aperture card</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">aperture card</rdfs:label>
+	<madsrdf:code>ha</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hb" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microfilm cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm cartridge</rdfs:label>
+	<madsrdf:code>hb</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hc" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microfilm cassette</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm cassette</rdfs:label>
+	<madsrdf:code>hc</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hd" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microfilm reel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm reel</rdfs:label>
+	<madsrdf:code>hd</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/he" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microfiche</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfiche</rdfs:label>
+	<madsrdf:code>he</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hf" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microfiche cassette</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfiche cassette</rdfs:label>
+	<madsrdf:code>hf</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hg" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microopaque</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microopaque</rdfs:label>
+	<madsrdf:code>hg</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hh" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microfilm slip</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm slip</rdfs:label>
+	<madsrdf:code>hh</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hj" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microfilm roll</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm roll</rdfs:label>
+	<madsrdf:code>hj</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/hz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other microform carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other microform carrier</rdfs:label>
+	<madsrdf:code>hz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/mc" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">film cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film cartridge</rdfs:label>
+	<madsrdf:code>mc</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/mf" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">film cassette</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film cassette</rdfs:label>
+	<madsrdf:code>mf</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/mo" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">film roll</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film roll</rdfs:label>
+	<madsrdf:code>mo</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/mr" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">film reel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film reel</rdfs:label>
+	<madsrdf:code>mr</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/mz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other projected carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other projected carrier</rdfs:label>
+	<madsrdf:code>mz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/na" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">roll</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">roll</rdfs:label>
+	<madsrdf:code>na</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/nb" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">sheet</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">sheet</rdfs:label>
+	<madsrdf:code>nb</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/nc" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">volume</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">volume</rdfs:label>
+	<madsrdf:code>nc</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/nn" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">flipchart</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">flipchart</rdfs:label>
+	<madsrdf:code>nn</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/no" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">card</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">card</rdfs:label>
+	<madsrdf:code>no</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/nr" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">object</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">object</rdfs:label>
+	<madsrdf:code>nr</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/nz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other unmediated carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other unmediated carrier</rdfs:label>
+	<madsrdf:code>nz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/pp" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microscope slide</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microscope slide</rdfs:label>
+	<madsrdf:code>pp</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/pz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other microscopic carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other microscopic carrier</rdfs:label>
+	<madsrdf:code>pz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/sd" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">audio disc</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio disc</rdfs:label>
+	<madsrdf:code>sd</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/se" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">audio cylinder</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio cylinder</rdfs:label>
+	<madsrdf:code>se</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/sg" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">audio cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio cartridge</rdfs:label>
+	<madsrdf:code>sg</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/si" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">sound track reel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">sound track reel</rdfs:label>
+	<madsrdf:code>si</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/sq" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">audio roll</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio roll</rdfs:label>
+	<madsrdf:code>sq</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/ss" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">audiocassette</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audiocassette</rdfs:label>
+	<madsrdf:code>ss</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/st" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">audiotape reel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audiotape reel</rdfs:label>
+	<madsrdf:code>st</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/sz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other audio carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other audio carrier</rdfs:label>
+	<madsrdf:code>sz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/vc" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">video cartridge</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">video cartridge</rdfs:label>
+	<madsrdf:code>vc</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/vd" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">videodisc</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videodisc</rdfs:label>
+	<madsrdf:code>vd</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/vf" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">videocassette</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videocassette</rdfs:label>
+	<madsrdf:code>vf</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/vr" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">videotape reel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videotape reel</rdfs:label>
+	<madsrdf:code>vr</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/vz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other video carrier</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other video carrier</rdfs:label>
+	<madsrdf:code>vz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/carriers/zu" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">unspecified</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">unspecified</rdfs:label>
+	<madsrdf:code>zu</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">Carriers Scheme</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+      <xhtml:div class="schemeAbout" title="About Carriers Scheme:" property="rdfs:comment" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <xhtml:p>
+          <xhtml:em>Carriers Scheme</xhtml:em> is derived from a controlled list of values representing the format of the storage medium and its media type, which is principally used in RDA cataloging. </xhtml:p>
+      </xhtml:div>
+    </rdfs:comment>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-18T10:22:20.233296-05:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/ca">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer tape cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer tape cartridge</rdfs:label>
+	<skos:notation>ca</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/cb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer chip cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer chip cartridge</rdfs:label>
+	<skos:notation>cb</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/cd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer disc</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer disc</rdfs:label>
+	<skos:notation>cd</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/ce">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer disc cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer disc cartridge</rdfs:label>
+	<skos:notation>ce</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/cf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer tape cassette</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer tape cassette</rdfs:label>
+	<skos:notation>cf</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/ch">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer tape reel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer tape reel</rdfs:label>
+	<skos:notation>ch</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/ck">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer card</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer card</rdfs:label>
+	<skos:notation>ck</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/cr">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">online resource</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">online resource</rdfs:label>
+	<skos:notation>cr</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/cz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other computer carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other computer carrier</rdfs:label>
+	<skos:notation>cz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/eh">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">stereograph card</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereograph card</rdfs:label>
+	<skos:notation>eh</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/es">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">stereograph disc</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereograph disc</rdfs:label>
+	<skos:notation>es</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/ez">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other stereographic carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other stereographic carrier</rdfs:label>
+	<skos:notation>ez</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/gc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">filmstrip cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmstrip cartridge</rdfs:label>
+	<skos:notation>gc</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/gd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">filmslip</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmslip</rdfs:label>
+	<skos:notation>gd</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/gf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">filmstrip</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmstrip</rdfs:label>
+	<skos:notation>gf</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/gs">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">slide</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">slide</rdfs:label>
+	<skos:notation>gs</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/gt">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">overhead transparency</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">overhead transparency</rdfs:label>
+	<skos:notation>gt</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/ha">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">aperture card</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">aperture card</rdfs:label>
+	<skos:notation>ha</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microfilm cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm cartridge</rdfs:label>
+	<skos:notation>hb</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microfilm cassette</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm cassette</rdfs:label>
+	<skos:notation>hc</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microfilm reel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm reel</rdfs:label>
+	<skos:notation>hd</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/he">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microfiche</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfiche</rdfs:label>
+	<skos:notation>he</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microfiche cassette</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfiche cassette</rdfs:label>
+	<skos:notation>hf</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hg">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microopaque</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microopaque</rdfs:label>
+	<skos:notation>hg</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hh">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microfilm slip</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm slip</rdfs:label>
+	<skos:notation>hh</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hj">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microfilm roll</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microfilm roll</rdfs:label>
+	<skos:notation>hj</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/hz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other microform carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other microform carrier</rdfs:label>
+	<skos:notation>hz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/mc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">film cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film cartridge</rdfs:label>
+	<skos:notation>mc</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/mf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">film cassette</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film cassette</rdfs:label>
+	<skos:notation>mf</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/mo">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">film roll</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film roll</rdfs:label>
+	<skos:notation>mo</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/mr">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">film reel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">film reel</rdfs:label>
+	<skos:notation>mr</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/mz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other projected carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other projected carrier</rdfs:label>
+	<skos:notation>mz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/na">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">roll</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">roll</rdfs:label>
+	<skos:notation>na</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/nb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">sheet</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">sheet</rdfs:label>
+	<skos:notation>nb</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/nc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">volume</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">volume</rdfs:label>
+	<skos:notation>nc</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/nn">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">flipchart</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">flipchart</rdfs:label>
+	<skos:notation>nn</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/no">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">card</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">card</rdfs:label>
+	<skos:notation>no</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/nr">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">object</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">object</rdfs:label>
+	<skos:notation>nr</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/nz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other unmediated carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other unmediated carrier</rdfs:label>
+	<skos:notation>nz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/pp">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microscope slide</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microscope slide</rdfs:label>
+	<skos:notation>pp</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/pz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other microscopic carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other microscopic carrier</rdfs:label>
+	<skos:notation>pz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/sd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">audio disc</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio disc</rdfs:label>
+	<skos:notation>sd</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/se">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">audio cylinder</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio cylinder</rdfs:label>
+	<skos:notation>se</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/sg">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">audio cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio cartridge</rdfs:label>
+	<skos:notation>sg</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/si">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">sound track reel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">sound track reel</rdfs:label>
+	<skos:notation>si</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/sq">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">audio roll</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio roll</rdfs:label>
+	<skos:notation>sq</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/ss">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">audiocassette</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audiocassette</rdfs:label>
+	<skos:notation>ss</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/st">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">audiotape reel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audiotape reel</rdfs:label>
+	<skos:notation>st</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/sz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other audio carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other audio carrier</rdfs:label>
+	<skos:notation>sz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/vc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">video cartridge</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">video cartridge</rdfs:label>
+	<skos:notation>vc</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/vd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">videodisc</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videodisc</rdfs:label>
+	<skos:notation>vd</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/vf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">videocassette</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videocassette</rdfs:label>
+	<skos:notation>vf</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/vr">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">videotape reel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videotape reel</rdfs:label>
+	<skos:notation>vr</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/vz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other video carrier</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other video carrier</rdfs:label>
+	<skos:notation>vz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/carriers/zu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">unspecified</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">unspecified</rdfs:label>
+	<skos:notation>zu</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/carriers"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/carriers"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-18T10:22:20.233296-05:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:MADSScheme>
+</rdf:RDF>

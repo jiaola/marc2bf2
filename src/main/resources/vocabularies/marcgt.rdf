@@ -1,0 +1,1744 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <madsrdf:MADSScheme rdf:about="http://id.loc.gov/vocabulary/marcgt" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">sound</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">sound</rdfs:label>
+	<madsrdf:code/>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/abs" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">abstract or summary</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">abstract or summary</rdfs:label>
+	<madsrdf:code>abs</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/aro" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">art original</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">art original</rdfs:label>
+	<madsrdf:code>aro</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/arr" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">art reproduction</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">art reproduction</rdfs:label>
+	<madsrdf:code>arr</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/art" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">article</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">article</rdfs:label>
+	<madsrdf:code>art</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/atl" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">atlas</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">atlas</rdfs:label>
+	<madsrdf:code>atl</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/aut" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">autobiography</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">autobiography</rdfs:label>
+	<madsrdf:code>aut</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/bda" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">bibliographic data</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">bibliographic data</rdfs:label>
+	<madsrdf:code>bda</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/bib" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">bibliography</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">bibliography</rdfs:label>
+	<madsrdf:code>bib</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/bio" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">biography</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">biography</rdfs:label>
+	<madsrdf:code>bio</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/boo" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">book</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">book</rdfs:label>
+	<madsrdf:code>boo</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/cal" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">calendar</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">calendar</rdfs:label>
+	<madsrdf:code>cal</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/cat" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">catalog</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">catalog</rdfs:label>
+	<madsrdf:code>cat</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/cgn" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">comic or graphic novel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">comic or graphic novel</rdfs:label>
+	<madsrdf:code>cgn</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/cha" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">chart</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">chart</rdfs:label>
+	<madsrdf:code>cha</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/cod" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">comedy</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">comedy</rdfs:label>
+	<madsrdf:code>cod</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/com" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer program</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer program</rdfs:label>
+	<madsrdf:code>com</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">conference publication</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">conference publication</rdfs:label>
+	<madsrdf:code>cpb</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/dic" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">dictionary</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">dictionary</rdfs:label>
+	<madsrdf:code>dic</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/dio" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">diorama</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">diorama</rdfs:label>
+	<madsrdf:code>dio</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/dir" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">directory</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">directory</rdfs:label>
+	<madsrdf:code>dir</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/dis" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">discography</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">discography</rdfs:label>
+	<madsrdf:code>dis</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/doc" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">document (computer)</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">document (computer)</rdfs:label>
+	<madsrdf:code>doc</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/dra" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">drama</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">drama</rdfs:label>
+	<madsrdf:code>dra</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/dtb" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">database</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">database</rdfs:label>
+	<madsrdf:code>dtb</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/enc" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">encyclopedia</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">encyclopedia</rdfs:label>
+	<madsrdf:code>enc</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/ess" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">essay</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">essay</rdfs:label>
+	<madsrdf:code>ess</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fes" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">festschrift</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">festschrift</rdfs:label>
+	<madsrdf:code>fes</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fic" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">fiction</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">fiction</rdfs:label>
+	<madsrdf:code>fic</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fil" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">filmography</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmography</rdfs:label>
+	<madsrdf:code>fil</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fin" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">finding aid</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">finding aid</rdfs:label>
+	<madsrdf:code>fin</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fla" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">flash card</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">flash card</rdfs:label>
+	<madsrdf:code>fla</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fls" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">filmstrip</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmstrip</rdfs:label>
+	<madsrdf:code>fls</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fol" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">folktale</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">folktale</rdfs:label>
+	<madsrdf:code>fol</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/fon" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">font</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">font</rdfs:label>
+	<madsrdf:code>fon</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/gam" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">game</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">game</rdfs:label>
+	<madsrdf:code>gam</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/glo" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">globe</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">globe</rdfs:label>
+	<madsrdf:code>glo</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/gov" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">government publication</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">government publication</rdfs:label>
+	<madsrdf:code>gov</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/gra" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">graphic</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">graphic</rdfs:label>
+	<madsrdf:code>gra</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/han" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">handbook</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">handbook</rdfs:label>
+	<madsrdf:code>han</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/his" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">history</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">history</rdfs:label>
+	<madsrdf:code>his</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/hum" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">humor, satire</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">humor, satire</rdfs:label>
+	<madsrdf:code>hum</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/ind" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">index</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">index</rdfs:label>
+	<madsrdf:code>ind</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/inm" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">interactive multimedia</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">interactive multimedia</rdfs:label>
+	<madsrdf:code>inm</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/ins" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">instruction</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">instruction</rdfs:label>
+	<madsrdf:code>ins</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/int" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">interview</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">interview</rdfs:label>
+	<madsrdf:code>int</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/iss" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">issue</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">issue</rdfs:label>
+	<madsrdf:code>iss</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/jou" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">journal</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">journal</rdfs:label>
+	<madsrdf:code>jou</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/kit" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">kit</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">kit</rdfs:label>
+	<madsrdf:code>kit</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/lan" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">language instruction</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">language instruction</rdfs:label>
+	<madsrdf:code>lan</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/law" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">law report or digest</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">law report or digest</rdfs:label>
+	<madsrdf:code>law</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/lea" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">legal article</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">legal article</rdfs:label>
+	<madsrdf:code>lea</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/lec" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">legal case and case notes</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">legal case and case notes</rdfs:label>
+	<madsrdf:code>lec</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/leg" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">legislation</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">legislation</rdfs:label>
+	<madsrdf:code>leg</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/let" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">letter</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">letter</rdfs:label>
+	<madsrdf:code>let</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/loo" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">loose-leaf</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">loose-leaf</rdfs:label>
+	<madsrdf:code>loo</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/man" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">manuscript</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">manuscript</rdfs:label>
+	<madsrdf:code>man</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/map" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">map</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">map</rdfs:label>
+	<madsrdf:code>map</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/mem" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">memoir</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">memoir</rdfs:label>
+	<madsrdf:code>mem</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/mic" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microscope slide</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microscope slide</rdfs:label>
+	<madsrdf:code>mic</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/mod" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">model</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">model</rdfs:label>
+	<madsrdf:code>mod</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/mot" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">motion picture</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">motion picture</rdfs:label>
+	<madsrdf:code>mot</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/new" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">newspaper</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">newspaper</rdfs:label>
+	<madsrdf:code>new</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/nos" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">nonmusical sound</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">nonmusical sound</rdfs:label>
+	<madsrdf:code>nos</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/nov" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">novel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">novel</rdfs:label>
+	<madsrdf:code>nov</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/num" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">numeric data</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">numeric data</rdfs:label>
+	<madsrdf:code>num</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/off" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">offprint</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">offprint</rdfs:label>
+	<madsrdf:code>off</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/ons" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">online system or service</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">online system or service</rdfs:label>
+	<madsrdf:code>ons</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/pat" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">patent</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">patent</rdfs:label>
+	<madsrdf:code>pat</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/per" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">periodical</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">periodical</rdfs:label>
+	<madsrdf:code>per</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/pic" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">picture</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">picture</rdfs:label>
+	<madsrdf:code>pic</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/pla" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">playing cards</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">playing cards</rdfs:label>
+	<madsrdf:code>pla</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/poe" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">poetry</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">poetry</rdfs:label>
+	<madsrdf:code>poe</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/pos" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">postcard</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">postcard</rdfs:label>
+	<madsrdf:code>pos</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/pro" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">programmed text</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">programmed text</rdfs:label>
+	<madsrdf:code>pro</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/puz" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">puzzle</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">puzzle</rdfs:label>
+	<madsrdf:code>puz</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/rea" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">realia</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">realia</rdfs:label>
+	<madsrdf:code>rea</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/reh" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">rehearsal</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">rehearsal</rdfs:label>
+	<madsrdf:code>reh</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/rem" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">remote sensing image</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">remote sensing image</rdfs:label>
+	<madsrdf:code>rem</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/rep" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">representational</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">representational</rdfs:label>
+	<madsrdf:code>rep</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/rev" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">review</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">review</rdfs:label>
+	<madsrdf:code>rev</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/rpt" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">reporting</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">reporting</rdfs:label>
+	<madsrdf:code>rpt</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/scr" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">script</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">script</rdfs:label>
+	<madsrdf:code>scr</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/ser" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">series</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">series</rdfs:label>
+	<madsrdf:code>ser</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/sho" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">short story</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">short story</rdfs:label>
+	<madsrdf:code>sho</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/sli" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">slide</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">slide</rdfs:label>
+	<madsrdf:code>sli</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/spe" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">speech</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">speech</rdfs:label>
+	<madsrdf:code>spe</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/sta" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">statistics</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">statistics</rdfs:label>
+	<madsrdf:code>sta</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/stp" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">standard or specification</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">standard or specification</rdfs:label>
+	<madsrdf:code>stp</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/sur" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">survey of literature</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">survey of literature</rdfs:label>
+	<madsrdf:code>sur</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/ted" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">technical drawing</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">technical drawing</rdfs:label>
+	<madsrdf:code>ted</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/ter" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">technical report</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">technical report</rdfs:label>
+	<madsrdf:code>ter</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/the" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">thesis</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">thesis</rdfs:label>
+	<madsrdf:code>the</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/toy" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">toy</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">toy</rdfs:label>
+	<madsrdf:code>toy</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/tra" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">transparency</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">transparency</rdfs:label>
+	<madsrdf:code>tra</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/tre" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">treaty</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">treaty</rdfs:label>
+	<madsrdf:code>tre</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/vid" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">videorecording</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videorecording</rdfs:label>
+	<madsrdf:code>vid</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/wal" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">wall map</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">wall map</rdfs:label>
+	<madsrdf:code>wal</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/web" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">web site</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">web site</rdfs:label>
+	<madsrdf:code>web</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/marcgt/yea" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">yearbook</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">yearbook</rdfs:label>
+	<madsrdf:code>yea</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">MARC Genre Terms List</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+      <xhtml:div class="schemeAbout" title="About MARC Genre Terms List:" property="rdfs:comment" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <xhtml:p>
+          <xhtml:em>MARC Genre Terms List</xhtml:em> is derived from a controlled list of coded values representing MARC Genre Terms. </xhtml:p>
+      </xhtml:div>
+    </rdfs:comment>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-21T00:00:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-31T08:32:02.177829-04:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">sound</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">sound</rdfs:label>
+	<skos:notation/>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/abs">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">abstract or summary</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">abstract or summary</rdfs:label>
+	<skos:notation>abs</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/aro">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">art original</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">art original</rdfs:label>
+	<skos:notation>aro</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/arr">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">art reproduction</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">art reproduction</rdfs:label>
+	<skos:notation>arr</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/art">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">article</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">article</rdfs:label>
+	<skos:notation>art</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/atl">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">atlas</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">atlas</rdfs:label>
+	<skos:notation>atl</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/aut">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">autobiography</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">autobiography</rdfs:label>
+	<skos:notation>aut</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/bda">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">bibliographic data</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">bibliographic data</rdfs:label>
+	<skos:notation>bda</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/bib">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">bibliography</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">bibliography</rdfs:label>
+	<skos:notation>bib</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/bio">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">biography</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">biography</rdfs:label>
+	<skos:notation>bio</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/boo">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">book</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">book</rdfs:label>
+	<skos:notation>boo</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/cal">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">calendar</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">calendar</rdfs:label>
+	<skos:notation>cal</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/cat">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">catalog</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">catalog</rdfs:label>
+	<skos:notation>cat</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/cgn">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">comic or graphic novel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">comic or graphic novel</rdfs:label>
+	<skos:notation>cgn</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/cha">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">chart</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">chart</rdfs:label>
+	<skos:notation>cha</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/cod">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">comedy</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">comedy</rdfs:label>
+	<skos:notation>cod</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/com">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer program</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer program</rdfs:label>
+	<skos:notation>com</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/cpb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">conference publication</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">conference publication</rdfs:label>
+	<skos:notation>cpb</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/dic">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">dictionary</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">dictionary</rdfs:label>
+	<skos:notation>dic</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/dio">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">diorama</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">diorama</rdfs:label>
+	<skos:notation>dio</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/dir">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">directory</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">directory</rdfs:label>
+	<skos:notation>dir</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/dis">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">discography</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">discography</rdfs:label>
+	<skos:notation>dis</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/doc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">document (computer)</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">document (computer)</rdfs:label>
+	<skos:notation>doc</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/dra">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">drama</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">drama</rdfs:label>
+	<skos:notation>dra</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/dtb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">database</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">database</rdfs:label>
+	<skos:notation>dtb</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/enc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">encyclopedia</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">encyclopedia</rdfs:label>
+	<skos:notation>enc</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/ess">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">essay</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">essay</rdfs:label>
+	<skos:notation>ess</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fes">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">festschrift</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">festschrift</rdfs:label>
+	<skos:notation>fes</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fic">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">fiction</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">fiction</rdfs:label>
+	<skos:notation>fic</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fil">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">filmography</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmography</rdfs:label>
+	<skos:notation>fil</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fin">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">finding aid</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">finding aid</rdfs:label>
+	<skos:notation>fin</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fla">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">flash card</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">flash card</rdfs:label>
+	<skos:notation>fla</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fls">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">filmstrip</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">filmstrip</rdfs:label>
+	<skos:notation>fls</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fol">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">folktale</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">folktale</rdfs:label>
+	<skos:notation>fol</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/fon">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">font</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">font</rdfs:label>
+	<skos:notation>fon</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/gam">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">game</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">game</rdfs:label>
+	<skos:notation>gam</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/glo">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">globe</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">globe</rdfs:label>
+	<skos:notation>glo</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/gov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">government publication</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">government publication</rdfs:label>
+	<skos:notation>gov</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/gra">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">graphic</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">graphic</rdfs:label>
+	<skos:notation>gra</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/han">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">handbook</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">handbook</rdfs:label>
+	<skos:notation>han</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/his">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">history</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">history</rdfs:label>
+	<skos:notation>his</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/hum">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">humor, satire</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">humor, satire</rdfs:label>
+	<skos:notation>hum</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/ind">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">index</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">index</rdfs:label>
+	<skos:notation>ind</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/inm">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">interactive multimedia</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">interactive multimedia</rdfs:label>
+	<skos:notation>inm</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/ins">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">instruction</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">instruction</rdfs:label>
+	<skos:notation>ins</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/int">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">interview</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">interview</rdfs:label>
+	<skos:notation>int</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/iss">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">issue</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">issue</rdfs:label>
+	<skos:notation>iss</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/jou">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">journal</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">journal</rdfs:label>
+	<skos:notation>jou</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/kit">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">kit</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">kit</rdfs:label>
+	<skos:notation>kit</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/lan">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">language instruction</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">language instruction</rdfs:label>
+	<skos:notation>lan</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/law">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">law report or digest</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">law report or digest</rdfs:label>
+	<skos:notation>law</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/lea">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">legal article</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">legal article</rdfs:label>
+	<skos:notation>lea</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/lec">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">legal case and case notes</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">legal case and case notes</rdfs:label>
+	<skos:notation>lec</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/leg">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">legislation</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">legislation</rdfs:label>
+	<skos:notation>leg</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/let">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">letter</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">letter</rdfs:label>
+	<skos:notation>let</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/loo">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">loose-leaf</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">loose-leaf</rdfs:label>
+	<skos:notation>loo</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/man">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">manuscript</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">manuscript</rdfs:label>
+	<skos:notation>man</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/map">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">map</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">map</rdfs:label>
+	<skos:notation>map</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/mem">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">memoir</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">memoir</rdfs:label>
+	<skos:notation>mem</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/mic">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microscope slide</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microscope slide</rdfs:label>
+	<skos:notation>mic</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/mod">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">model</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">model</rdfs:label>
+	<skos:notation>mod</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/mot">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">motion picture</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">motion picture</rdfs:label>
+	<skos:notation>mot</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/new">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">newspaper</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">newspaper</rdfs:label>
+	<skos:notation>new</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/nos">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">nonmusical sound</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">nonmusical sound</rdfs:label>
+	<skos:notation>nos</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/nov">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">novel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">novel</rdfs:label>
+	<skos:notation>nov</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/num">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">numeric data</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">numeric data</rdfs:label>
+	<skos:notation>num</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/off">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">offprint</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">offprint</rdfs:label>
+	<skos:notation>off</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/ons">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">online system or service</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">online system or service</rdfs:label>
+	<skos:notation>ons</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/pat">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">patent</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">patent</rdfs:label>
+	<skos:notation>pat</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/per">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">periodical</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">periodical</rdfs:label>
+	<skos:notation>per</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/pic">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">picture</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">picture</rdfs:label>
+	<skos:notation>pic</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/pla">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">playing cards</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">playing cards</rdfs:label>
+	<skos:notation>pla</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/poe">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">poetry</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">poetry</rdfs:label>
+	<skos:notation>poe</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/pos">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">postcard</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">postcard</rdfs:label>
+	<skos:notation>pos</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/pro">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">programmed text</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">programmed text</rdfs:label>
+	<skos:notation>pro</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/puz">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">puzzle</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">puzzle</rdfs:label>
+	<skos:notation>puz</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/rea">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">realia</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">realia</rdfs:label>
+	<skos:notation>rea</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/reh">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">rehearsal</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">rehearsal</rdfs:label>
+	<skos:notation>reh</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/rem">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">remote sensing image</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">remote sensing image</rdfs:label>
+	<skos:notation>rem</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/rep">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">representational</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">representational</rdfs:label>
+	<skos:notation>rep</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/rev">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">review</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">review</rdfs:label>
+	<skos:notation>rev</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/rpt">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">reporting</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">reporting</rdfs:label>
+	<skos:notation>rpt</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/scr">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">script</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">script</rdfs:label>
+	<skos:notation>scr</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/ser">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">series</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">series</rdfs:label>
+	<skos:notation>ser</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/sho">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">short story</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">short story</rdfs:label>
+	<skos:notation>sho</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/sli">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">slide</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">slide</rdfs:label>
+	<skos:notation>sli</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/spe">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">speech</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">speech</rdfs:label>
+	<skos:notation>spe</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/sta">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">statistics</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">statistics</rdfs:label>
+	<skos:notation>sta</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/stp">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">standard or specification</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">standard or specification</rdfs:label>
+	<skos:notation>stp</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/sur">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">survey of literature</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">survey of literature</rdfs:label>
+	<skos:notation>sur</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/ted">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">technical drawing</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">technical drawing</rdfs:label>
+	<skos:notation>ted</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/ter">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">technical report</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">technical report</rdfs:label>
+	<skos:notation>ter</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/the">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">thesis</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">thesis</rdfs:label>
+	<skos:notation>the</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/toy">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">toy</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">toy</rdfs:label>
+	<skos:notation>toy</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/tra">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">transparency</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">transparency</rdfs:label>
+	<skos:notation>tra</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/tre">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">treaty</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">treaty</rdfs:label>
+	<skos:notation>tre</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/vid">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">videorecording</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">videorecording</rdfs:label>
+	<skos:notation>vid</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/wal">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">wall map</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">wall map</rdfs:label>
+	<skos:notation>wal</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/web">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">web site</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">web site</rdfs:label>
+	<skos:notation>web</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/marcgt/yea">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">yearbook</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">yearbook</rdfs:label>
+	<skos:notation>yea</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/marcgt"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-21T00:00:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/marcgt"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-31T08:32:02.177829-04:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:MADSScheme>
+</rdf:RDF>

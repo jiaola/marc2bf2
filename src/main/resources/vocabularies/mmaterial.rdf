@@ -1,0 +1,859 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <madsrdf:MADSScheme rdf:about="http://id.loc.gov/vocabulary/mmaterial" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/can" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">canvas</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">canvas</rdfs:label>
+	<madsrdf:code>can</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/brb" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">bristol board</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">bristol board</rdfs:label>
+	<madsrdf:code>brb</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/crd" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">cardboard</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">cardboard</rdfs:label>
+	<madsrdf:code>crd</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/gls" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">glass</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">glass</rdfs:label>
+	<madsrdf:code>gls</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/syn" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">synthetic</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">synthetic</rdfs:label>
+	<madsrdf:code>syn</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/ski" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">skin</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">skin</rdfs:label>
+	<madsrdf:code>ski</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/tex" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">textile</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">textile</rdfs:label>
+	<madsrdf:code>tex</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/mtl" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">metal</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">metal</rdfs:label>
+	<madsrdf:code>mtl</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/pla" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">plastic</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">plastic</rdfs:label>
+	<madsrdf:code>pla</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/vny" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">vinyl</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">vinyl</rdfs:label>
+	<madsrdf:code>vny</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/mix" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">mixed material</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">mixed material</rdfs:label>
+	<madsrdf:code>mix</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/vel" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">vellum</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">vellum</rdfs:label>
+	<madsrdf:code>vel</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/pap" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">paper</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">paper</rdfs:label>
+	<madsrdf:code>pap</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/plt" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">plaster</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">plaster</rdfs:label>
+	<madsrdf:code>plt</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/hdb" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">hardboard</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">hardboard</rdfs:label>
+	<madsrdf:code>hdb</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/por" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">porcelain</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">porcelain</rdfs:label>
+	<madsrdf:code>por</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/sto" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">stone</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stone</rdfs:label>
+	<madsrdf:code>sto</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/wod" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">wood</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">wood</rdfs:label>
+	<madsrdf:code>wod</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/lea" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">leather</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">leather</rdfs:label>
+	<madsrdf:code>lea</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/par" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">parchment</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">parchment</rdfs:label>
+	<madsrdf:code>par</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/cer" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">ceramic</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">ceramic</rdfs:label>
+	<madsrdf:code>cer</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/rub" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">rubber</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">rubber</rdfs:label>
+	<madsrdf:code>rub</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/she" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">shellac</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">shellac</rdfs:label>
+	<madsrdf:code>she</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/wax" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">wax</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">wax</rdfs:label>
+	<madsrdf:code>wax</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/ivo" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">ivory</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">ivory</rdfs:label>
+	<madsrdf:code>ivo</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/alu" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">aluminum</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">aluminum</rdfs:label>
+	<madsrdf:code>alu</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/dia" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">diazo</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">diazo</rdfs:label>
+	<madsrdf:code>dia</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/pol" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">polyester</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">polyester</rdfs:label>
+	<madsrdf:code>pol</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/saf" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">safety base</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">safety base</rdfs:label>
+	<madsrdf:code>saf</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/nsf" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">non-safety base</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">non-safety base</rdfs:label>
+	<madsrdf:code>nsf</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/tri" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">triacetate</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">triacetate</rdfs:label>
+	<madsrdf:code>tri</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/ace" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">acetate</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">acetate</rdfs:label>
+	<madsrdf:code>ace</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/nit" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">nitrate</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">nitrate</rdfs:label>
+	<madsrdf:code>nit</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/slh" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">silver halide</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">silver halide</rdfs:label>
+	<madsrdf:code>slh</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/dia" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">diazo</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">diazo</rdfs:label>
+	<madsrdf:code>dia</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/ves" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">vesicular</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">vesicular</rdfs:label>
+	<madsrdf:code>ves</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/lac" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">lacquer</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">lacquer</rdfs:label>
+	<madsrdf:code>lac</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/fer" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">magnetic particles</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">magnetic particles</rdfs:label>
+	<madsrdf:code>fer</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/acp" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">acrylic paint</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">acrylic paint</rdfs:label>
+	<madsrdf:code>acp</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/chk" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">chalk</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">chalk</rdfs:label>
+	<madsrdf:code>chk</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/chr" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">charcoal</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">charcoal</rdfs:label>
+	<madsrdf:code>chr</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/dye" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">dye</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">dye</rdfs:label>
+	<madsrdf:code>dye</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/gou" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">gouache</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">gouache</rdfs:label>
+	<madsrdf:code>gou</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/gra" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">graphite</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">graphite</rdfs:label>
+	<madsrdf:code>gra</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/ink" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">ink</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">ink</rdfs:label>
+	<madsrdf:code>ink</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/oip" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">oil paint</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">oil paint</rdfs:label>
+	<madsrdf:code>oip</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/pas" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">pastel</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">pastel</rdfs:label>
+	<madsrdf:code>pas</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mmaterial/tem" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<madsrdf:authoritativeLabel xml:lang="en">tempura</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">tempura</rdfs:label>
+	<madsrdf:code>tem</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">MARC Support Material List</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+      <xhtml:div class="schemeAbout" title="About MARC Support Material List:" property="rdfs:comment" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <xhtml:p> Underlying physical material of a resource: primary, secondary, coating, applied. </xhtml:p>
+      </xhtml:div>
+    </rdfs:comment>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-13T00:00:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-20T08:26:04.349026-05:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/can">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">canvas</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">canvas</rdfs:label>
+	<skos:notation>can</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/brb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">bristol board</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">bristol board</rdfs:label>
+	<skos:notation>brb</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/crd">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">cardboard</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">cardboard</rdfs:label>
+	<skos:notation>crd</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/gls">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">glass</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">glass</rdfs:label>
+	<skos:notation>gls</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/syn">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">synthetic</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">synthetic</rdfs:label>
+	<skos:notation>syn</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/ski">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">skin</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">skin</rdfs:label>
+	<skos:notation>ski</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/tex">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">textile</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">textile</rdfs:label>
+	<skos:notation>tex</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/mtl">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">metal</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">metal</rdfs:label>
+	<skos:notation>mtl</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/pla">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">plastic</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">plastic</rdfs:label>
+	<skos:notation>pla</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/vny">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">vinyl</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">vinyl</rdfs:label>
+	<skos:notation>vny</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/mix">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">mixed material</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">mixed material</rdfs:label>
+	<skos:notation>mix</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/vel">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">vellum</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">vellum</rdfs:label>
+	<skos:notation>vel</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/pap">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">paper</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">paper</rdfs:label>
+	<skos:notation>pap</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/plt">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">plaster</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">plaster</rdfs:label>
+	<skos:notation>plt</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/hdb">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">hardboard</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">hardboard</rdfs:label>
+	<skos:notation>hdb</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/por">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">porcelain</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">porcelain</rdfs:label>
+	<skos:notation>por</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/sto">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">stone</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stone</rdfs:label>
+	<skos:notation>sto</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/wod">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">wood</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">wood</rdfs:label>
+	<skos:notation>wod</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/lea">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">leather</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">leather</rdfs:label>
+	<skos:notation>lea</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/par">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">parchment</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">parchment</rdfs:label>
+	<skos:notation>par</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/cer">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">ceramic</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">ceramic</rdfs:label>
+	<skos:notation>cer</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/rub">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">rubber</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">rubber</rdfs:label>
+	<skos:notation>rub</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/she">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">shellac</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">shellac</rdfs:label>
+	<skos:notation>she</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/wax">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">wax</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">wax</rdfs:label>
+	<skos:notation>wax</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/ivo">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">ivory</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">ivory</rdfs:label>
+	<skos:notation>ivo</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/alu">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">aluminum</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">aluminum</rdfs:label>
+	<skos:notation>alu</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/dia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">diazo</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">diazo</rdfs:label>
+	<skos:notation>dia</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/pol">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">polyester</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">polyester</rdfs:label>
+	<skos:notation>pol</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/saf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">safety base</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">safety base</rdfs:label>
+	<skos:notation>saf</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/nsf">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">non-safety base</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">non-safety base</rdfs:label>
+	<skos:notation>nsf</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/tri">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">triacetate</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">triacetate</rdfs:label>
+	<skos:notation>tri</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/ace">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">acetate</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">acetate</rdfs:label>
+	<skos:notation>ace</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/nit">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">nitrate</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">nitrate</rdfs:label>
+	<skos:notation>nit</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/slh">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">silver halide</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">silver halide</rdfs:label>
+	<skos:notation>slh</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/dia">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">diazo</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">diazo</rdfs:label>
+	<skos:notation>dia</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/ves">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">vesicular</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">vesicular</rdfs:label>
+	<skos:notation>ves</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/lac">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">lacquer</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">lacquer</rdfs:label>
+	<skos:notation>lac</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/fer">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">magnetic particles</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">magnetic particles</rdfs:label>
+	<skos:notation>fer</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/acp">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">acrylic paint</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">acrylic paint</rdfs:label>
+	<skos:notation>acp</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/chk">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">chalk</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">chalk</rdfs:label>
+	<skos:notation>chk</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/chr">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">charcoal</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">charcoal</rdfs:label>
+	<skos:notation>chr</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/dye">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">dye</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">dye</rdfs:label>
+	<skos:notation>dye</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/gou">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">gouache</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">gouache</rdfs:label>
+	<skos:notation>gou</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/gra">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">graphite</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">graphite</rdfs:label>
+	<skos:notation>gra</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/ink">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">ink</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">ink</rdfs:label>
+	<skos:notation>ink</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/oip">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">oil paint</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">oil paint</rdfs:label>
+	<skos:notation>oip</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/pas">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">pastel</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">pastel</rdfs:label>
+	<skos:notation>pas</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mmaterial/tem">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">tempura</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">tempura</rdfs:label>
+	<skos:notation>tem</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/mmaterial"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-13T00:00:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/mmaterial"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-20T08:26:04.349026-05:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:MADSScheme>
+</rdf:RDF>

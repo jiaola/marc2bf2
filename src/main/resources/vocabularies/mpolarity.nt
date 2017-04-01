@@ -1,0 +1,65 @@
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MADSScheme> . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mpolarity/pos> . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "positive"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.w3.org/2000/01/rdf-schema#label> "positive"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.loc.gov/mads/rdf/v1#code> "pos" . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mpolarity/neg> . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "negative"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.w3.org/2000/01/rdf-schema#label> "negative"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.loc.gov/mads/rdf/v1#code> "neg" . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mpolarity/mix> . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.w3.org/2000/01/rdf-schema#label> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.loc.gov/mads/rdf/v1#code> "mix" . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/2000/01/rdf-schema#label> "MARC Polarity List"@en . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/2000/01/rdf-schema#comment> "
+      
+<xhtml:div class=\"schemeAbout\" title=\"About MARC Polarity List:\" property=\"rdfs:comment\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:madsrdf=\"http://www.loc.gov/mads/rdf/v1#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">
+        <xhtml:p> Relationship of the colors and tones in an image to the colors and tones of the object reproduced. </xhtml:p>
+      </xhtml:div>
+
+    "^^<http://www.w3.org/2000/01/rdf-schema#Literal> . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode45vocabularympolarity . 
+_:bnode45vocabularympolarity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> . 
+_:bnode45vocabularympolarity <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> . 
+_:bnode45vocabularympolarity <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-12-13T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode45vocabularympolarity <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode58vocabularympolarity . 
+_:bnode58vocabularympolarity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> . 
+_:bnode58vocabularympolarity <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "modified"^^<http://www.w3.org/2001/XMLSchema#string> . 
+_:bnode58vocabularympolarity <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-12-19T13:47:27.710559-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode58vocabularympolarity <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mpolarity/pos> . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.w3.org/2004/02/skos/core#prefLabel> "positive"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.w3.org/2000/01/rdf-schema#label> "positive"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/pos> <http://www.w3.org/2004/02/skos/core#notation> "pos" . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mpolarity/neg> . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.w3.org/2004/02/skos/core#prefLabel> "negative"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.w3.org/2000/01/rdf-schema#label> "negative"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/neg> <http://www.w3.org/2004/02/skos/core#notation> "neg" . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mpolarity/mix> . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.w3.org/2004/02/skos/core#prefLabel> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.w3.org/2000/01/rdf-schema#label> "mixed"@en . 
+<http://id.loc.gov/vocabulary/mpolarity/mix> <http://www.w3.org/2004/02/skos/core#notation> "mix" . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode98vocabularympolarity . 
+_:bnode98vocabularympolarity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> . 
+_:bnode98vocabularympolarity <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/mpolarity> . 
+_:bnode98vocabularympolarity <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+_:bnode98vocabularympolarity <http://purl.org/vocab/changeset/schema#createdDate> "2016-12-13T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode98vocabularympolarity <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> . 
+<http://id.loc.gov/vocabulary/mpolarity> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode106vocabularympolarity . 
+_:bnode106vocabularympolarity <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> . 
+_:bnode106vocabularympolarity <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/mpolarity> . 
+_:bnode106vocabularympolarity <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+_:bnode106vocabularympolarity <http://purl.org/vocab/changeset/schema#createdDate> "2016-12-19T13:47:27.710559-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode106vocabularympolarity <http://purl.org/vocab/changeset/schema#changeReason> "modified"^^<http://www.w3.org/2001/XMLSchema#string> . 

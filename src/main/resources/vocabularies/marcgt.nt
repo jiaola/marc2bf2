@@ -1,0 +1,1133 @@
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MADSScheme> .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/> .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.w3.org/2000/01/rdf-schema#label> "sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.loc.gov/mads/rdf/v1#code> "" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/abs> .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "abstract or summary"@en .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.w3.org/2000/01/rdf-schema#label> "abstract or summary"@en .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.loc.gov/mads/rdf/v1#code> "abs" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/aro> .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "art original"@en .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.w3.org/2000/01/rdf-schema#label> "art original"@en .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.loc.gov/mads/rdf/v1#code> "aro" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/arr> .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "art reproduction"@en .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.w3.org/2000/01/rdf-schema#label> "art reproduction"@en .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.loc.gov/mads/rdf/v1#code> "arr" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/art> .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "article"@en .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.w3.org/2000/01/rdf-schema#label> "article"@en .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.loc.gov/mads/rdf/v1#code> "art" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/atl> .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "atlas"@en .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.w3.org/2000/01/rdf-schema#label> "atlas"@en .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.loc.gov/mads/rdf/v1#code> "atl" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/aut> .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "autobiography"@en .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.w3.org/2000/01/rdf-schema#label> "autobiography"@en .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.loc.gov/mads/rdf/v1#code> "aut" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/bda> .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "bibliographic data"@en .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.w3.org/2000/01/rdf-schema#label> "bibliographic data"@en .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.loc.gov/mads/rdf/v1#code> "bda" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/bib> .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "bibliography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.w3.org/2000/01/rdf-schema#label> "bibliography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.loc.gov/mads/rdf/v1#code> "bib" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/bio> .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "biography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.w3.org/2000/01/rdf-schema#label> "biography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.loc.gov/mads/rdf/v1#code> "bio" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/boo> .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "book"@en .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.w3.org/2000/01/rdf-schema#label> "book"@en .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.loc.gov/mads/rdf/v1#code> "boo" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/cal> .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "calendar"@en .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.w3.org/2000/01/rdf-schema#label> "calendar"@en .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.loc.gov/mads/rdf/v1#code> "cal" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/cat> .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "catalog"@en .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.w3.org/2000/01/rdf-schema#label> "catalog"@en .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.loc.gov/mads/rdf/v1#code> "cat" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/cgn> .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "comic or graphic novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.w3.org/2000/01/rdf-schema#label> "comic or graphic novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.loc.gov/mads/rdf/v1#code> "cgn" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/cha> .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "chart"@en .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.w3.org/2000/01/rdf-schema#label> "chart"@en .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.loc.gov/mads/rdf/v1#code> "cha" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/cod> .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "comedy"@en .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.w3.org/2000/01/rdf-schema#label> "comedy"@en .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.loc.gov/mads/rdf/v1#code> "cod" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/com> .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "computer program"@en .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.w3.org/2000/01/rdf-schema#label> "computer program"@en .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.loc.gov/mads/rdf/v1#code> "com" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/cpb> .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "conference publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.w3.org/2000/01/rdf-schema#label> "conference publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.loc.gov/mads/rdf/v1#code> "cpb" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/dic> .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "dictionary"@en .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.w3.org/2000/01/rdf-schema#label> "dictionary"@en .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.loc.gov/mads/rdf/v1#code> "dic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/dio> .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "diorama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.w3.org/2000/01/rdf-schema#label> "diorama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.loc.gov/mads/rdf/v1#code> "dio" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/dir> .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "directory"@en .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.w3.org/2000/01/rdf-schema#label> "directory"@en .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.loc.gov/mads/rdf/v1#code> "dir" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/dis> .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "discography"@en .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.w3.org/2000/01/rdf-schema#label> "discography"@en .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.loc.gov/mads/rdf/v1#code> "dis" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/doc> .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "document (computer)"@en .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.w3.org/2000/01/rdf-schema#label> "document (computer)"@en .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.loc.gov/mads/rdf/v1#code> "doc" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/dra> .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "drama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.w3.org/2000/01/rdf-schema#label> "drama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.loc.gov/mads/rdf/v1#code> "dra" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/dtb> .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "database"@en .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.w3.org/2000/01/rdf-schema#label> "database"@en .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.loc.gov/mads/rdf/v1#code> "dtb" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/enc> .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "encyclopedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.w3.org/2000/01/rdf-schema#label> "encyclopedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.loc.gov/mads/rdf/v1#code> "enc" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/ess> .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "essay"@en .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.w3.org/2000/01/rdf-schema#label> "essay"@en .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.loc.gov/mads/rdf/v1#code> "ess" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fes> .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "festschrift"@en .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.w3.org/2000/01/rdf-schema#label> "festschrift"@en .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.loc.gov/mads/rdf/v1#code> "fes" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fic> .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "fiction"@en .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.w3.org/2000/01/rdf-schema#label> "fiction"@en .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.loc.gov/mads/rdf/v1#code> "fic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fil> .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "filmography"@en .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.w3.org/2000/01/rdf-schema#label> "filmography"@en .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.loc.gov/mads/rdf/v1#code> "fil" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fin> .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "finding aid"@en .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.w3.org/2000/01/rdf-schema#label> "finding aid"@en .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.loc.gov/mads/rdf/v1#code> "fin" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fla> .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "flash card"@en .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.w3.org/2000/01/rdf-schema#label> "flash card"@en .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.loc.gov/mads/rdf/v1#code> "fla" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fls> .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "filmstrip"@en .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.w3.org/2000/01/rdf-schema#label> "filmstrip"@en .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.loc.gov/mads/rdf/v1#code> "fls" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fol> .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "folktale"@en .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.w3.org/2000/01/rdf-schema#label> "folktale"@en .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.loc.gov/mads/rdf/v1#code> "fol" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/fon> .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "font"@en .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.w3.org/2000/01/rdf-schema#label> "font"@en .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.loc.gov/mads/rdf/v1#code> "fon" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/gam> .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "game"@en .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.w3.org/2000/01/rdf-schema#label> "game"@en .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.loc.gov/mads/rdf/v1#code> "gam" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/glo> .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "globe"@en .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.w3.org/2000/01/rdf-schema#label> "globe"@en .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.loc.gov/mads/rdf/v1#code> "glo" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/gov> .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "government publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.w3.org/2000/01/rdf-schema#label> "government publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.loc.gov/mads/rdf/v1#code> "gov" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/gra> .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "graphic"@en .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.w3.org/2000/01/rdf-schema#label> "graphic"@en .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.loc.gov/mads/rdf/v1#code> "gra" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/han> .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "handbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.w3.org/2000/01/rdf-schema#label> "handbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.loc.gov/mads/rdf/v1#code> "han" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/his> .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "history"@en .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.w3.org/2000/01/rdf-schema#label> "history"@en .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.loc.gov/mads/rdf/v1#code> "his" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/hum> .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "humor, satire"@en .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.w3.org/2000/01/rdf-schema#label> "humor, satire"@en .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.loc.gov/mads/rdf/v1#code> "hum" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/ind> .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "index"@en .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.w3.org/2000/01/rdf-schema#label> "index"@en .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.loc.gov/mads/rdf/v1#code> "ind" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/inm> .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "interactive multimedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.w3.org/2000/01/rdf-schema#label> "interactive multimedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.loc.gov/mads/rdf/v1#code> "inm" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/ins> .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.w3.org/2000/01/rdf-schema#label> "instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.loc.gov/mads/rdf/v1#code> "ins" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/int> .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "interview"@en .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.w3.org/2000/01/rdf-schema#label> "interview"@en .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.loc.gov/mads/rdf/v1#code> "int" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/iss> .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "issue"@en .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.w3.org/2000/01/rdf-schema#label> "issue"@en .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.loc.gov/mads/rdf/v1#code> "iss" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/jou> .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "journal"@en .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.w3.org/2000/01/rdf-schema#label> "journal"@en .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.loc.gov/mads/rdf/v1#code> "jou" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/kit> .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "kit"@en .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.w3.org/2000/01/rdf-schema#label> "kit"@en .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.loc.gov/mads/rdf/v1#code> "kit" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/lan> .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "language instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.w3.org/2000/01/rdf-schema#label> "language instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.loc.gov/mads/rdf/v1#code> "lan" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/law> .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "law report or digest"@en .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.w3.org/2000/01/rdf-schema#label> "law report or digest"@en .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.loc.gov/mads/rdf/v1#code> "law" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/lea> .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "legal article"@en .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.w3.org/2000/01/rdf-schema#label> "legal article"@en .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.loc.gov/mads/rdf/v1#code> "lea" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/lec> .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "legal case and case notes"@en .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.w3.org/2000/01/rdf-schema#label> "legal case and case notes"@en .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.loc.gov/mads/rdf/v1#code> "lec" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/leg> .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "legislation"@en .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.w3.org/2000/01/rdf-schema#label> "legislation"@en .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.loc.gov/mads/rdf/v1#code> "leg" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/let> .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "letter"@en .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.w3.org/2000/01/rdf-schema#label> "letter"@en .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.loc.gov/mads/rdf/v1#code> "let" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/loo> .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "loose-leaf"@en .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.w3.org/2000/01/rdf-schema#label> "loose-leaf"@en .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.loc.gov/mads/rdf/v1#code> "loo" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/man> .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "manuscript"@en .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.w3.org/2000/01/rdf-schema#label> "manuscript"@en .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.loc.gov/mads/rdf/v1#code> "man" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/map> .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "map"@en .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.w3.org/2000/01/rdf-schema#label> "map"@en .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.loc.gov/mads/rdf/v1#code> "map" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/mem> .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "memoir"@en .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.w3.org/2000/01/rdf-schema#label> "memoir"@en .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.loc.gov/mads/rdf/v1#code> "mem" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/mic> .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "microscope slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.w3.org/2000/01/rdf-schema#label> "microscope slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.loc.gov/mads/rdf/v1#code> "mic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/mod> .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "model"@en .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.w3.org/2000/01/rdf-schema#label> "model"@en .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.loc.gov/mads/rdf/v1#code> "mod" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/mot> .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "motion picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.w3.org/2000/01/rdf-schema#label> "motion picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.loc.gov/mads/rdf/v1#code> "mot" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/new> .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "newspaper"@en .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.w3.org/2000/01/rdf-schema#label> "newspaper"@en .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.loc.gov/mads/rdf/v1#code> "new" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/nos> .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "nonmusical sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.w3.org/2000/01/rdf-schema#label> "nonmusical sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.loc.gov/mads/rdf/v1#code> "nos" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/nov> .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.w3.org/2000/01/rdf-schema#label> "novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.loc.gov/mads/rdf/v1#code> "nov" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/num> .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "numeric data"@en .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.w3.org/2000/01/rdf-schema#label> "numeric data"@en .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.loc.gov/mads/rdf/v1#code> "num" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/off> .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "offprint"@en .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.w3.org/2000/01/rdf-schema#label> "offprint"@en .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.loc.gov/mads/rdf/v1#code> "off" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/ons> .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "online system or service"@en .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.w3.org/2000/01/rdf-schema#label> "online system or service"@en .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.loc.gov/mads/rdf/v1#code> "ons" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/pat> .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "patent"@en .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.w3.org/2000/01/rdf-schema#label> "patent"@en .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.loc.gov/mads/rdf/v1#code> "pat" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/per> .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "periodical"@en .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.w3.org/2000/01/rdf-schema#label> "periodical"@en .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.loc.gov/mads/rdf/v1#code> "per" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/pic> .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.w3.org/2000/01/rdf-schema#label> "picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.loc.gov/mads/rdf/v1#code> "pic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/pla> .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "playing cards"@en .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.w3.org/2000/01/rdf-schema#label> "playing cards"@en .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.loc.gov/mads/rdf/v1#code> "pla" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/poe> .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "poetry"@en .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.w3.org/2000/01/rdf-schema#label> "poetry"@en .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.loc.gov/mads/rdf/v1#code> "poe" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/pos> .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "postcard"@en .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.w3.org/2000/01/rdf-schema#label> "postcard"@en .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.loc.gov/mads/rdf/v1#code> "pos" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/pro> .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "programmed text"@en .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.w3.org/2000/01/rdf-schema#label> "programmed text"@en .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.loc.gov/mads/rdf/v1#code> "pro" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/puz> .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "puzzle"@en .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.w3.org/2000/01/rdf-schema#label> "puzzle"@en .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.loc.gov/mads/rdf/v1#code> "puz" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/rea> .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "realia"@en .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.w3.org/2000/01/rdf-schema#label> "realia"@en .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.loc.gov/mads/rdf/v1#code> "rea" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/reh> .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "rehearsal"@en .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.w3.org/2000/01/rdf-schema#label> "rehearsal"@en .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.loc.gov/mads/rdf/v1#code> "reh" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/rem> .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "remote sensing image"@en .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.w3.org/2000/01/rdf-schema#label> "remote sensing image"@en .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.loc.gov/mads/rdf/v1#code> "rem" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/rep> .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "representational"@en .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.w3.org/2000/01/rdf-schema#label> "representational"@en .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.loc.gov/mads/rdf/v1#code> "rep" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/rev> .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "review"@en .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.w3.org/2000/01/rdf-schema#label> "review"@en .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.loc.gov/mads/rdf/v1#code> "rev" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/rpt> .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "reporting"@en .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.w3.org/2000/01/rdf-schema#label> "reporting"@en .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.loc.gov/mads/rdf/v1#code> "rpt" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/scr> .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "script"@en .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.w3.org/2000/01/rdf-schema#label> "script"@en .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.loc.gov/mads/rdf/v1#code> "scr" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/ser> .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "series"@en .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.w3.org/2000/01/rdf-schema#label> "series"@en .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.loc.gov/mads/rdf/v1#code> "ser" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/sho> .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "short story"@en .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.w3.org/2000/01/rdf-schema#label> "short story"@en .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.loc.gov/mads/rdf/v1#code> "sho" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/sli> .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.w3.org/2000/01/rdf-schema#label> "slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.loc.gov/mads/rdf/v1#code> "sli" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/spe> .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "speech"@en .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.w3.org/2000/01/rdf-schema#label> "speech"@en .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.loc.gov/mads/rdf/v1#code> "spe" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/sta> .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "statistics"@en .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.w3.org/2000/01/rdf-schema#label> "statistics"@en .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.loc.gov/mads/rdf/v1#code> "sta" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/stp> .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "standard or specification"@en .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.w3.org/2000/01/rdf-schema#label> "standard or specification"@en .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.loc.gov/mads/rdf/v1#code> "stp" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/sur> .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "survey of literature"@en .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.w3.org/2000/01/rdf-schema#label> "survey of literature"@en .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.loc.gov/mads/rdf/v1#code> "sur" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/ted> .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "technical drawing"@en .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.w3.org/2000/01/rdf-schema#label> "technical drawing"@en .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.loc.gov/mads/rdf/v1#code> "ted" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/ter> .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "technical report"@en .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.w3.org/2000/01/rdf-schema#label> "technical report"@en .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.loc.gov/mads/rdf/v1#code> "ter" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/the> .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "thesis"@en .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.w3.org/2000/01/rdf-schema#label> "thesis"@en .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.loc.gov/mads/rdf/v1#code> "the" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/toy> .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "toy"@en .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.w3.org/2000/01/rdf-schema#label> "toy"@en .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.loc.gov/mads/rdf/v1#code> "toy" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/tra> .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "transparency"@en .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.w3.org/2000/01/rdf-schema#label> "transparency"@en .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.loc.gov/mads/rdf/v1#code> "tra" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/tre> .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "treaty"@en .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.w3.org/2000/01/rdf-schema#label> "treaty"@en .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.loc.gov/mads/rdf/v1#code> "tre" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/vid> .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "videorecording"@en .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.w3.org/2000/01/rdf-schema#label> "videorecording"@en .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.loc.gov/mads/rdf/v1#code> "vid" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/wal> .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "wall map"@en .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.w3.org/2000/01/rdf-schema#label> "wall map"@en .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.loc.gov/mads/rdf/v1#code> "wal" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/web> .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "web site"@en .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.w3.org/2000/01/rdf-schema#label> "web site"@en .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.loc.gov/mads/rdf/v1#code> "web" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/marcgt/yea> .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "yearbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.w3.org/2000/01/rdf-schema#label> "yearbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.loc.gov/mads/rdf/v1#code> "yea" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2000/01/rdf-schema#label> "MARC Genre Terms List"@en .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2000/01/rdf-schema#comment> "
+
+<xhtml:div class=\"schemeAbout\" title=\"About MARC Genre Terms List:\" property=\"rdfs:comment\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:madsrdf=\"http://www.loc.gov/mads/rdf/v1#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">
+        <xhtml:p>
+          <xhtml:em>MARC Genre Terms List</xhtml:em> is derived from a controlled list of coded values representing MARC Genre Terms. </xhtml:p>
+      </xhtml:div>
+
+    "^^<http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode920vocabularymarcgt .
+_:bnode920vocabularymarcgt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:bnode920vocabularymarcgt <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:bnode920vocabularymarcgt <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-01-21T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:bnode920vocabularymarcgt <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode933vocabularymarcgt .
+_:bnode933vocabularymarcgt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> .
+_:bnode933vocabularymarcgt <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "modified"^^<http://www.w3.org/2001/XMLSchema#string> .
+_:bnode933vocabularymarcgt <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-10-31T08:32:02.177829-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:bnode933vocabularymarcgt <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/> .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.w3.org/2004/02/skos/core#prefLabel> "sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.w3.org/2000/01/rdf-schema#label> "sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/> <http://www.w3.org/2004/02/skos/core#notation> "" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/abs> .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.w3.org/2004/02/skos/core#prefLabel> "abstract or summary"@en .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.w3.org/2000/01/rdf-schema#label> "abstract or summary"@en .
+<http://id.loc.gov/vocabulary/marcgt/abs> <http://www.w3.org/2004/02/skos/core#notation> "abs" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/aro> .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.w3.org/2004/02/skos/core#prefLabel> "art original"@en .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.w3.org/2000/01/rdf-schema#label> "art original"@en .
+<http://id.loc.gov/vocabulary/marcgt/aro> <http://www.w3.org/2004/02/skos/core#notation> "aro" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/arr> .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.w3.org/2004/02/skos/core#prefLabel> "art reproduction"@en .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.w3.org/2000/01/rdf-schema#label> "art reproduction"@en .
+<http://id.loc.gov/vocabulary/marcgt/arr> <http://www.w3.org/2004/02/skos/core#notation> "arr" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/art> .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.w3.org/2004/02/skos/core#prefLabel> "article"@en .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.w3.org/2000/01/rdf-schema#label> "article"@en .
+<http://id.loc.gov/vocabulary/marcgt/art> <http://www.w3.org/2004/02/skos/core#notation> "art" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/atl> .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.w3.org/2004/02/skos/core#prefLabel> "atlas"@en .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.w3.org/2000/01/rdf-schema#label> "atlas"@en .
+<http://id.loc.gov/vocabulary/marcgt/atl> <http://www.w3.org/2004/02/skos/core#notation> "atl" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/aut> .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.w3.org/2004/02/skos/core#prefLabel> "autobiography"@en .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.w3.org/2000/01/rdf-schema#label> "autobiography"@en .
+<http://id.loc.gov/vocabulary/marcgt/aut> <http://www.w3.org/2004/02/skos/core#notation> "aut" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/bda> .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.w3.org/2004/02/skos/core#prefLabel> "bibliographic data"@en .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.w3.org/2000/01/rdf-schema#label> "bibliographic data"@en .
+<http://id.loc.gov/vocabulary/marcgt/bda> <http://www.w3.org/2004/02/skos/core#notation> "bda" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/bib> .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.w3.org/2004/02/skos/core#prefLabel> "bibliography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.w3.org/2000/01/rdf-schema#label> "bibliography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bib> <http://www.w3.org/2004/02/skos/core#notation> "bib" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/bio> .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.w3.org/2004/02/skos/core#prefLabel> "biography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.w3.org/2000/01/rdf-schema#label> "biography"@en .
+<http://id.loc.gov/vocabulary/marcgt/bio> <http://www.w3.org/2004/02/skos/core#notation> "bio" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/boo> .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.w3.org/2004/02/skos/core#prefLabel> "book"@en .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.w3.org/2000/01/rdf-schema#label> "book"@en .
+<http://id.loc.gov/vocabulary/marcgt/boo> <http://www.w3.org/2004/02/skos/core#notation> "boo" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/cal> .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.w3.org/2004/02/skos/core#prefLabel> "calendar"@en .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.w3.org/2000/01/rdf-schema#label> "calendar"@en .
+<http://id.loc.gov/vocabulary/marcgt/cal> <http://www.w3.org/2004/02/skos/core#notation> "cal" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/cat> .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.w3.org/2004/02/skos/core#prefLabel> "catalog"@en .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.w3.org/2000/01/rdf-schema#label> "catalog"@en .
+<http://id.loc.gov/vocabulary/marcgt/cat> <http://www.w3.org/2004/02/skos/core#notation> "cat" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/cgn> .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.w3.org/2004/02/skos/core#prefLabel> "comic or graphic novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.w3.org/2000/01/rdf-schema#label> "comic or graphic novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/cgn> <http://www.w3.org/2004/02/skos/core#notation> "cgn" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/cha> .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.w3.org/2004/02/skos/core#prefLabel> "chart"@en .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.w3.org/2000/01/rdf-schema#label> "chart"@en .
+<http://id.loc.gov/vocabulary/marcgt/cha> <http://www.w3.org/2004/02/skos/core#notation> "cha" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/cod> .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.w3.org/2004/02/skos/core#prefLabel> "comedy"@en .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.w3.org/2000/01/rdf-schema#label> "comedy"@en .
+<http://id.loc.gov/vocabulary/marcgt/cod> <http://www.w3.org/2004/02/skos/core#notation> "cod" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/com> .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.w3.org/2004/02/skos/core#prefLabel> "computer program"@en .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.w3.org/2000/01/rdf-schema#label> "computer program"@en .
+<http://id.loc.gov/vocabulary/marcgt/com> <http://www.w3.org/2004/02/skos/core#notation> "com" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/cpb> .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.w3.org/2004/02/skos/core#prefLabel> "conference publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.w3.org/2000/01/rdf-schema#label> "conference publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/cpb> <http://www.w3.org/2004/02/skos/core#notation> "cpb" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/dic> .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.w3.org/2004/02/skos/core#prefLabel> "dictionary"@en .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.w3.org/2000/01/rdf-schema#label> "dictionary"@en .
+<http://id.loc.gov/vocabulary/marcgt/dic> <http://www.w3.org/2004/02/skos/core#notation> "dic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/dio> .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.w3.org/2004/02/skos/core#prefLabel> "diorama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.w3.org/2000/01/rdf-schema#label> "diorama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dio> <http://www.w3.org/2004/02/skos/core#notation> "dio" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/dir> .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.w3.org/2004/02/skos/core#prefLabel> "directory"@en .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.w3.org/2000/01/rdf-schema#label> "directory"@en .
+<http://id.loc.gov/vocabulary/marcgt/dir> <http://www.w3.org/2004/02/skos/core#notation> "dir" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/dis> .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.w3.org/2004/02/skos/core#prefLabel> "discography"@en .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.w3.org/2000/01/rdf-schema#label> "discography"@en .
+<http://id.loc.gov/vocabulary/marcgt/dis> <http://www.w3.org/2004/02/skos/core#notation> "dis" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/doc> .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.w3.org/2004/02/skos/core#prefLabel> "document (computer)"@en .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.w3.org/2000/01/rdf-schema#label> "document (computer)"@en .
+<http://id.loc.gov/vocabulary/marcgt/doc> <http://www.w3.org/2004/02/skos/core#notation> "doc" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/dra> .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.w3.org/2004/02/skos/core#prefLabel> "drama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.w3.org/2000/01/rdf-schema#label> "drama"@en .
+<http://id.loc.gov/vocabulary/marcgt/dra> <http://www.w3.org/2004/02/skos/core#notation> "dra" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/dtb> .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.w3.org/2004/02/skos/core#prefLabel> "database"@en .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.w3.org/2000/01/rdf-schema#label> "database"@en .
+<http://id.loc.gov/vocabulary/marcgt/dtb> <http://www.w3.org/2004/02/skos/core#notation> "dtb" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/enc> .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.w3.org/2004/02/skos/core#prefLabel> "encyclopedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.w3.org/2000/01/rdf-schema#label> "encyclopedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/enc> <http://www.w3.org/2004/02/skos/core#notation> "enc" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/ess> .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.w3.org/2004/02/skos/core#prefLabel> "essay"@en .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.w3.org/2000/01/rdf-schema#label> "essay"@en .
+<http://id.loc.gov/vocabulary/marcgt/ess> <http://www.w3.org/2004/02/skos/core#notation> "ess" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fes> .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.w3.org/2004/02/skos/core#prefLabel> "festschrift"@en .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.w3.org/2000/01/rdf-schema#label> "festschrift"@en .
+<http://id.loc.gov/vocabulary/marcgt/fes> <http://www.w3.org/2004/02/skos/core#notation> "fes" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fic> .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.w3.org/2004/02/skos/core#prefLabel> "fiction"@en .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.w3.org/2000/01/rdf-schema#label> "fiction"@en .
+<http://id.loc.gov/vocabulary/marcgt/fic> <http://www.w3.org/2004/02/skos/core#notation> "fic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fil> .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.w3.org/2004/02/skos/core#prefLabel> "filmography"@en .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.w3.org/2000/01/rdf-schema#label> "filmography"@en .
+<http://id.loc.gov/vocabulary/marcgt/fil> <http://www.w3.org/2004/02/skos/core#notation> "fil" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fin> .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.w3.org/2004/02/skos/core#prefLabel> "finding aid"@en .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.w3.org/2000/01/rdf-schema#label> "finding aid"@en .
+<http://id.loc.gov/vocabulary/marcgt/fin> <http://www.w3.org/2004/02/skos/core#notation> "fin" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fla> .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.w3.org/2004/02/skos/core#prefLabel> "flash card"@en .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.w3.org/2000/01/rdf-schema#label> "flash card"@en .
+<http://id.loc.gov/vocabulary/marcgt/fla> <http://www.w3.org/2004/02/skos/core#notation> "fla" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fls> .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.w3.org/2004/02/skos/core#prefLabel> "filmstrip"@en .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.w3.org/2000/01/rdf-schema#label> "filmstrip"@en .
+<http://id.loc.gov/vocabulary/marcgt/fls> <http://www.w3.org/2004/02/skos/core#notation> "fls" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fol> .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.w3.org/2004/02/skos/core#prefLabel> "folktale"@en .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.w3.org/2000/01/rdf-schema#label> "folktale"@en .
+<http://id.loc.gov/vocabulary/marcgt/fol> <http://www.w3.org/2004/02/skos/core#notation> "fol" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/fon> .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.w3.org/2004/02/skos/core#prefLabel> "font"@en .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.w3.org/2000/01/rdf-schema#label> "font"@en .
+<http://id.loc.gov/vocabulary/marcgt/fon> <http://www.w3.org/2004/02/skos/core#notation> "fon" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/gam> .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.w3.org/2004/02/skos/core#prefLabel> "game"@en .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.w3.org/2000/01/rdf-schema#label> "game"@en .
+<http://id.loc.gov/vocabulary/marcgt/gam> <http://www.w3.org/2004/02/skos/core#notation> "gam" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/glo> .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.w3.org/2004/02/skos/core#prefLabel> "globe"@en .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.w3.org/2000/01/rdf-schema#label> "globe"@en .
+<http://id.loc.gov/vocabulary/marcgt/glo> <http://www.w3.org/2004/02/skos/core#notation> "glo" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/gov> .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.w3.org/2004/02/skos/core#prefLabel> "government publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.w3.org/2000/01/rdf-schema#label> "government publication"@en .
+<http://id.loc.gov/vocabulary/marcgt/gov> <http://www.w3.org/2004/02/skos/core#notation> "gov" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/gra> .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.w3.org/2004/02/skos/core#prefLabel> "graphic"@en .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.w3.org/2000/01/rdf-schema#label> "graphic"@en .
+<http://id.loc.gov/vocabulary/marcgt/gra> <http://www.w3.org/2004/02/skos/core#notation> "gra" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/han> .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.w3.org/2004/02/skos/core#prefLabel> "handbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.w3.org/2000/01/rdf-schema#label> "handbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/han> <http://www.w3.org/2004/02/skos/core#notation> "han" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/his> .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.w3.org/2004/02/skos/core#prefLabel> "history"@en .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.w3.org/2000/01/rdf-schema#label> "history"@en .
+<http://id.loc.gov/vocabulary/marcgt/his> <http://www.w3.org/2004/02/skos/core#notation> "his" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/hum> .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.w3.org/2004/02/skos/core#prefLabel> "humor, satire"@en .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.w3.org/2000/01/rdf-schema#label> "humor, satire"@en .
+<http://id.loc.gov/vocabulary/marcgt/hum> <http://www.w3.org/2004/02/skos/core#notation> "hum" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/ind> .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.w3.org/2004/02/skos/core#prefLabel> "index"@en .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.w3.org/2000/01/rdf-schema#label> "index"@en .
+<http://id.loc.gov/vocabulary/marcgt/ind> <http://www.w3.org/2004/02/skos/core#notation> "ind" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/inm> .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.w3.org/2004/02/skos/core#prefLabel> "interactive multimedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.w3.org/2000/01/rdf-schema#label> "interactive multimedia"@en .
+<http://id.loc.gov/vocabulary/marcgt/inm> <http://www.w3.org/2004/02/skos/core#notation> "inm" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/ins> .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.w3.org/2004/02/skos/core#prefLabel> "instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.w3.org/2000/01/rdf-schema#label> "instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/ins> <http://www.w3.org/2004/02/skos/core#notation> "ins" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/int> .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.w3.org/2004/02/skos/core#prefLabel> "interview"@en .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.w3.org/2000/01/rdf-schema#label> "interview"@en .
+<http://id.loc.gov/vocabulary/marcgt/int> <http://www.w3.org/2004/02/skos/core#notation> "int" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/iss> .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.w3.org/2004/02/skos/core#prefLabel> "issue"@en .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.w3.org/2000/01/rdf-schema#label> "issue"@en .
+<http://id.loc.gov/vocabulary/marcgt/iss> <http://www.w3.org/2004/02/skos/core#notation> "iss" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/jou> .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.w3.org/2004/02/skos/core#prefLabel> "journal"@en .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.w3.org/2000/01/rdf-schema#label> "journal"@en .
+<http://id.loc.gov/vocabulary/marcgt/jou> <http://www.w3.org/2004/02/skos/core#notation> "jou" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/kit> .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.w3.org/2004/02/skos/core#prefLabel> "kit"@en .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.w3.org/2000/01/rdf-schema#label> "kit"@en .
+<http://id.loc.gov/vocabulary/marcgt/kit> <http://www.w3.org/2004/02/skos/core#notation> "kit" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/lan> .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.w3.org/2004/02/skos/core#prefLabel> "language instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.w3.org/2000/01/rdf-schema#label> "language instruction"@en .
+<http://id.loc.gov/vocabulary/marcgt/lan> <http://www.w3.org/2004/02/skos/core#notation> "lan" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/law> .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.w3.org/2004/02/skos/core#prefLabel> "law report or digest"@en .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.w3.org/2000/01/rdf-schema#label> "law report or digest"@en .
+<http://id.loc.gov/vocabulary/marcgt/law> <http://www.w3.org/2004/02/skos/core#notation> "law" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/lea> .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.w3.org/2004/02/skos/core#prefLabel> "legal article"@en .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.w3.org/2000/01/rdf-schema#label> "legal article"@en .
+<http://id.loc.gov/vocabulary/marcgt/lea> <http://www.w3.org/2004/02/skos/core#notation> "lea" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/lec> .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.w3.org/2004/02/skos/core#prefLabel> "legal case and case notes"@en .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.w3.org/2000/01/rdf-schema#label> "legal case and case notes"@en .
+<http://id.loc.gov/vocabulary/marcgt/lec> <http://www.w3.org/2004/02/skos/core#notation> "lec" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/leg> .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.w3.org/2004/02/skos/core#prefLabel> "legislation"@en .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.w3.org/2000/01/rdf-schema#label> "legislation"@en .
+<http://id.loc.gov/vocabulary/marcgt/leg> <http://www.w3.org/2004/02/skos/core#notation> "leg" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/let> .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.w3.org/2004/02/skos/core#prefLabel> "letter"@en .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.w3.org/2000/01/rdf-schema#label> "letter"@en .
+<http://id.loc.gov/vocabulary/marcgt/let> <http://www.w3.org/2004/02/skos/core#notation> "let" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/loo> .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.w3.org/2004/02/skos/core#prefLabel> "loose-leaf"@en .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.w3.org/2000/01/rdf-schema#label> "loose-leaf"@en .
+<http://id.loc.gov/vocabulary/marcgt/loo> <http://www.w3.org/2004/02/skos/core#notation> "loo" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/man> .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.w3.org/2004/02/skos/core#prefLabel> "manuscript"@en .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.w3.org/2000/01/rdf-schema#label> "manuscript"@en .
+<http://id.loc.gov/vocabulary/marcgt/man> <http://www.w3.org/2004/02/skos/core#notation> "man" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/map> .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.w3.org/2004/02/skos/core#prefLabel> "map"@en .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.w3.org/2000/01/rdf-schema#label> "map"@en .
+<http://id.loc.gov/vocabulary/marcgt/map> <http://www.w3.org/2004/02/skos/core#notation> "map" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/mem> .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.w3.org/2004/02/skos/core#prefLabel> "memoir"@en .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.w3.org/2000/01/rdf-schema#label> "memoir"@en .
+<http://id.loc.gov/vocabulary/marcgt/mem> <http://www.w3.org/2004/02/skos/core#notation> "mem" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/mic> .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.w3.org/2004/02/skos/core#prefLabel> "microscope slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.w3.org/2000/01/rdf-schema#label> "microscope slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/mic> <http://www.w3.org/2004/02/skos/core#notation> "mic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/mod> .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.w3.org/2004/02/skos/core#prefLabel> "model"@en .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.w3.org/2000/01/rdf-schema#label> "model"@en .
+<http://id.loc.gov/vocabulary/marcgt/mod> <http://www.w3.org/2004/02/skos/core#notation> "mod" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/mot> .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.w3.org/2004/02/skos/core#prefLabel> "motion picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.w3.org/2000/01/rdf-schema#label> "motion picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/mot> <http://www.w3.org/2004/02/skos/core#notation> "mot" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/new> .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.w3.org/2004/02/skos/core#prefLabel> "newspaper"@en .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.w3.org/2000/01/rdf-schema#label> "newspaper"@en .
+<http://id.loc.gov/vocabulary/marcgt/new> <http://www.w3.org/2004/02/skos/core#notation> "new" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/nos> .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.w3.org/2004/02/skos/core#prefLabel> "nonmusical sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.w3.org/2000/01/rdf-schema#label> "nonmusical sound"@en .
+<http://id.loc.gov/vocabulary/marcgt/nos> <http://www.w3.org/2004/02/skos/core#notation> "nos" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/nov> .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.w3.org/2004/02/skos/core#prefLabel> "novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.w3.org/2000/01/rdf-schema#label> "novel"@en .
+<http://id.loc.gov/vocabulary/marcgt/nov> <http://www.w3.org/2004/02/skos/core#notation> "nov" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/num> .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.w3.org/2004/02/skos/core#prefLabel> "numeric data"@en .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.w3.org/2000/01/rdf-schema#label> "numeric data"@en .
+<http://id.loc.gov/vocabulary/marcgt/num> <http://www.w3.org/2004/02/skos/core#notation> "num" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/off> .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.w3.org/2004/02/skos/core#prefLabel> "offprint"@en .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.w3.org/2000/01/rdf-schema#label> "offprint"@en .
+<http://id.loc.gov/vocabulary/marcgt/off> <http://www.w3.org/2004/02/skos/core#notation> "off" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/ons> .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.w3.org/2004/02/skos/core#prefLabel> "online system or service"@en .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.w3.org/2000/01/rdf-schema#label> "online system or service"@en .
+<http://id.loc.gov/vocabulary/marcgt/ons> <http://www.w3.org/2004/02/skos/core#notation> "ons" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/pat> .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.w3.org/2004/02/skos/core#prefLabel> "patent"@en .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.w3.org/2000/01/rdf-schema#label> "patent"@en .
+<http://id.loc.gov/vocabulary/marcgt/pat> <http://www.w3.org/2004/02/skos/core#notation> "pat" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/per> .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.w3.org/2004/02/skos/core#prefLabel> "periodical"@en .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.w3.org/2000/01/rdf-schema#label> "periodical"@en .
+<http://id.loc.gov/vocabulary/marcgt/per> <http://www.w3.org/2004/02/skos/core#notation> "per" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/pic> .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.w3.org/2004/02/skos/core#prefLabel> "picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.w3.org/2000/01/rdf-schema#label> "picture"@en .
+<http://id.loc.gov/vocabulary/marcgt/pic> <http://www.w3.org/2004/02/skos/core#notation> "pic" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/pla> .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.w3.org/2004/02/skos/core#prefLabel> "playing cards"@en .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.w3.org/2000/01/rdf-schema#label> "playing cards"@en .
+<http://id.loc.gov/vocabulary/marcgt/pla> <http://www.w3.org/2004/02/skos/core#notation> "pla" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/poe> .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.w3.org/2004/02/skos/core#prefLabel> "poetry"@en .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.w3.org/2000/01/rdf-schema#label> "poetry"@en .
+<http://id.loc.gov/vocabulary/marcgt/poe> <http://www.w3.org/2004/02/skos/core#notation> "poe" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/pos> .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.w3.org/2004/02/skos/core#prefLabel> "postcard"@en .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.w3.org/2000/01/rdf-schema#label> "postcard"@en .
+<http://id.loc.gov/vocabulary/marcgt/pos> <http://www.w3.org/2004/02/skos/core#notation> "pos" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/pro> .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.w3.org/2004/02/skos/core#prefLabel> "programmed text"@en .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.w3.org/2000/01/rdf-schema#label> "programmed text"@en .
+<http://id.loc.gov/vocabulary/marcgt/pro> <http://www.w3.org/2004/02/skos/core#notation> "pro" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/puz> .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.w3.org/2004/02/skos/core#prefLabel> "puzzle"@en .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.w3.org/2000/01/rdf-schema#label> "puzzle"@en .
+<http://id.loc.gov/vocabulary/marcgt/puz> <http://www.w3.org/2004/02/skos/core#notation> "puz" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/rea> .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.w3.org/2004/02/skos/core#prefLabel> "realia"@en .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.w3.org/2000/01/rdf-schema#label> "realia"@en .
+<http://id.loc.gov/vocabulary/marcgt/rea> <http://www.w3.org/2004/02/skos/core#notation> "rea" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/reh> .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.w3.org/2004/02/skos/core#prefLabel> "rehearsal"@en .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.w3.org/2000/01/rdf-schema#label> "rehearsal"@en .
+<http://id.loc.gov/vocabulary/marcgt/reh> <http://www.w3.org/2004/02/skos/core#notation> "reh" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/rem> .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.w3.org/2004/02/skos/core#prefLabel> "remote sensing image"@en .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.w3.org/2000/01/rdf-schema#label> "remote sensing image"@en .
+<http://id.loc.gov/vocabulary/marcgt/rem> <http://www.w3.org/2004/02/skos/core#notation> "rem" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/rep> .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.w3.org/2004/02/skos/core#prefLabel> "representational"@en .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.w3.org/2000/01/rdf-schema#label> "representational"@en .
+<http://id.loc.gov/vocabulary/marcgt/rep> <http://www.w3.org/2004/02/skos/core#notation> "rep" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/rev> .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.w3.org/2004/02/skos/core#prefLabel> "review"@en .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.w3.org/2000/01/rdf-schema#label> "review"@en .
+<http://id.loc.gov/vocabulary/marcgt/rev> <http://www.w3.org/2004/02/skos/core#notation> "rev" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/rpt> .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.w3.org/2004/02/skos/core#prefLabel> "reporting"@en .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.w3.org/2000/01/rdf-schema#label> "reporting"@en .
+<http://id.loc.gov/vocabulary/marcgt/rpt> <http://www.w3.org/2004/02/skos/core#notation> "rpt" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/scr> .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.w3.org/2004/02/skos/core#prefLabel> "script"@en .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.w3.org/2000/01/rdf-schema#label> "script"@en .
+<http://id.loc.gov/vocabulary/marcgt/scr> <http://www.w3.org/2004/02/skos/core#notation> "scr" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/ser> .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.w3.org/2004/02/skos/core#prefLabel> "series"@en .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.w3.org/2000/01/rdf-schema#label> "series"@en .
+<http://id.loc.gov/vocabulary/marcgt/ser> <http://www.w3.org/2004/02/skos/core#notation> "ser" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/sho> .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.w3.org/2004/02/skos/core#prefLabel> "short story"@en .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.w3.org/2000/01/rdf-schema#label> "short story"@en .
+<http://id.loc.gov/vocabulary/marcgt/sho> <http://www.w3.org/2004/02/skos/core#notation> "sho" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/sli> .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.w3.org/2004/02/skos/core#prefLabel> "slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.w3.org/2000/01/rdf-schema#label> "slide"@en .
+<http://id.loc.gov/vocabulary/marcgt/sli> <http://www.w3.org/2004/02/skos/core#notation> "sli" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/spe> .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.w3.org/2004/02/skos/core#prefLabel> "speech"@en .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.w3.org/2000/01/rdf-schema#label> "speech"@en .
+<http://id.loc.gov/vocabulary/marcgt/spe> <http://www.w3.org/2004/02/skos/core#notation> "spe" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/sta> .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.w3.org/2004/02/skos/core#prefLabel> "statistics"@en .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.w3.org/2000/01/rdf-schema#label> "statistics"@en .
+<http://id.loc.gov/vocabulary/marcgt/sta> <http://www.w3.org/2004/02/skos/core#notation> "sta" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/stp> .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.w3.org/2004/02/skos/core#prefLabel> "standard or specification"@en .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.w3.org/2000/01/rdf-schema#label> "standard or specification"@en .
+<http://id.loc.gov/vocabulary/marcgt/stp> <http://www.w3.org/2004/02/skos/core#notation> "stp" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/sur> .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.w3.org/2004/02/skos/core#prefLabel> "survey of literature"@en .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.w3.org/2000/01/rdf-schema#label> "survey of literature"@en .
+<http://id.loc.gov/vocabulary/marcgt/sur> <http://www.w3.org/2004/02/skos/core#notation> "sur" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/ted> .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.w3.org/2004/02/skos/core#prefLabel> "technical drawing"@en .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.w3.org/2000/01/rdf-schema#label> "technical drawing"@en .
+<http://id.loc.gov/vocabulary/marcgt/ted> <http://www.w3.org/2004/02/skos/core#notation> "ted" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/ter> .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.w3.org/2004/02/skos/core#prefLabel> "technical report"@en .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.w3.org/2000/01/rdf-schema#label> "technical report"@en .
+<http://id.loc.gov/vocabulary/marcgt/ter> <http://www.w3.org/2004/02/skos/core#notation> "ter" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/the> .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.w3.org/2004/02/skos/core#prefLabel> "thesis"@en .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.w3.org/2000/01/rdf-schema#label> "thesis"@en .
+<http://id.loc.gov/vocabulary/marcgt/the> <http://www.w3.org/2004/02/skos/core#notation> "the" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/toy> .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.w3.org/2004/02/skos/core#prefLabel> "toy"@en .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.w3.org/2000/01/rdf-schema#label> "toy"@en .
+<http://id.loc.gov/vocabulary/marcgt/toy> <http://www.w3.org/2004/02/skos/core#notation> "toy" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/tra> .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.w3.org/2004/02/skos/core#prefLabel> "transparency"@en .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.w3.org/2000/01/rdf-schema#label> "transparency"@en .
+<http://id.loc.gov/vocabulary/marcgt/tra> <http://www.w3.org/2004/02/skos/core#notation> "tra" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/tre> .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.w3.org/2004/02/skos/core#prefLabel> "treaty"@en .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.w3.org/2000/01/rdf-schema#label> "treaty"@en .
+<http://id.loc.gov/vocabulary/marcgt/tre> <http://www.w3.org/2004/02/skos/core#notation> "tre" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/vid> .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.w3.org/2004/02/skos/core#prefLabel> "videorecording"@en .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.w3.org/2000/01/rdf-schema#label> "videorecording"@en .
+<http://id.loc.gov/vocabulary/marcgt/vid> <http://www.w3.org/2004/02/skos/core#notation> "vid" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/wal> .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.w3.org/2004/02/skos/core#prefLabel> "wall map"@en .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.w3.org/2000/01/rdf-schema#label> "wall map"@en .
+<http://id.loc.gov/vocabulary/marcgt/wal> <http://www.w3.org/2004/02/skos/core#notation> "wal" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/web> .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.w3.org/2004/02/skos/core#prefLabel> "web site"@en .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.w3.org/2000/01/rdf-schema#label> "web site"@en .
+<http://id.loc.gov/vocabulary/marcgt/web> <http://www.w3.org/2004/02/skos/core#notation> "web" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/marcgt/yea> .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.w3.org/2004/02/skos/core#prefLabel> "yearbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.w3.org/2000/01/rdf-schema#label> "yearbook"@en .
+<http://id.loc.gov/vocabulary/marcgt/yea> <http://www.w3.org/2004/02/skos/core#notation> "yea" .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode1845vocabularymarcgt .
+_:bnode1845vocabularymarcgt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:bnode1845vocabularymarcgt <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/marcgt> .
+_:bnode1845vocabularymarcgt <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+_:bnode1845vocabularymarcgt <http://purl.org/vocab/changeset/schema#createdDate> "2016-01-21T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:bnode1845vocabularymarcgt <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://id.loc.gov/vocabulary/marcgt> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode1853vocabularymarcgt .
+_:bnode1853vocabularymarcgt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> .
+_:bnode1853vocabularymarcgt <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/marcgt> .
+_:bnode1853vocabularymarcgt <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> .
+_:bnode1853vocabularymarcgt <http://purl.org/vocab/changeset/schema#createdDate> "2016-10-31T08:32:02.177829-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+_:bnode1853vocabularymarcgt <http://purl.org/vocab/changeset/schema#changeReason> "modified"^^<http://www.w3.org/2001/XMLSchema#string> .

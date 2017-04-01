@@ -1,0 +1,224 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <madsrdf:MADSScheme rdf:about="http://id.loc.gov/vocabulary/mediaTypes" xmlns:madsrdf="http://www.loc.gov/mads/rdf/v1#">
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/c" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">computer</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer</rdfs:label>
+	<madsrdf:code>c</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/e" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">stereographic</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereographic</rdfs:label>
+	<madsrdf:code>e</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/g" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">projected</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">projected</rdfs:label>
+	<madsrdf:code>g</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/h" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microform</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microform</rdfs:label>
+	<madsrdf:code>h</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/n" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">unmediated</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">unmediated</rdfs:label>
+	<madsrdf:code>n</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/p" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">microscopic</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microscopic</rdfs:label>
+	<madsrdf:code>p</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/s" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">audio</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio</rdfs:label>
+	<madsrdf:code>s</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/v" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">video</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">video</rdfs:label>
+	<madsrdf:code>v</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/x" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">other</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other</rdfs:label>
+	<madsrdf:code>x</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <madsrdf:hasTopMemberOfMADSScheme>
+      <owl:Class rdf:about="http://id.loc.gov/vocabulary/mediaTypes/z" xmlns:owl="http://www.w3.org/2002/07/owl#">
+	<rdf:type rdf:resource="http://www.loc.gov/mads/rdf/v1#Authority"/>
+	<rdf:type rdf:resource="http://bibframe.org/vocab/Category"/>
+	<madsrdf:authoritativeLabel xml:lang="en">unspecified</madsrdf:authoritativeLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">unspecified</rdfs:label>
+	<madsrdf:code>z</madsrdf:code>
+      </owl:Class>
+    </madsrdf:hasTopMemberOfMADSScheme>
+    <rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">Media Types Scheme</rdfs:label>
+    <rdfs:comment xml:lang="en" rdf:parseType="Literal" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+      <xhtml:div class="schemeAbout" title="About Media Types Scheme:" property="rdfs:comment" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        <xhtml:p>
+          <xhtml:em>Media Types Scheme</xhtml:em> is derived from a controlled list of values reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource, which is principally used in RDA cataloging. </xhtml:p>
+      </xhtml:div>
+    </rdfs:comment>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <madsrdf:adminMetadata>
+      <ri:RecordInfo xmlns:ri="http://id.loc.gov/ontologies/RecordInfo#">
+        <ri:recordStatus rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</ri:recordStatus>
+        <ri:recordChangeDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-18T10:24:14.302739-05:00</ri:recordChangeDate>
+        <ri:recordContentSource rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+      </ri:RecordInfo>
+    </madsrdf:adminMetadata>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/c">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">computer</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">computer</rdfs:label>
+	<skos:notation>c</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/e">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">stereographic</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">stereographic</rdfs:label>
+	<skos:notation>e</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/g">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">projected</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">projected</rdfs:label>
+	<skos:notation>g</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/h">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microform</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microform</rdfs:label>
+	<skos:notation>h</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/n">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">unmediated</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">unmediated</rdfs:label>
+	<skos:notation>n</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/p">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">microscopic</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">microscopic</rdfs:label>
+	<skos:notation>p</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/s">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">audio</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">audio</rdfs:label>
+	<skos:notation>s</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/v">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">video</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">video</rdfs:label>
+	<skos:notation>v</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/x">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">other</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">other</rdfs:label>
+	<skos:notation>x</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:hasTopConcept xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <rdf:Description rdf:about="http://id.loc.gov/vocabulary/mediaTypes/z">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:prefLabel xml:lang="en">unspecified</skos:prefLabel>
+	<rdfs:label xml:lang="en" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">unspecified</rdfs:label>
+	<skos:notation>z</skos:notation>
+      </rdf:Description>
+    </skos:hasTopConcept>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/mediaTypes"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-23T00:00:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+    <skos:changeNote xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+      <cs:ChangeSet xmlns:cs="http://purl.org/vocab/changeset/schema#">
+	<cs:subjectOfChange rdf:resource="http://id.loc.gov/vocabulary/mediaTypes"/>
+	<cs:creatorName rdf:resource="http://id.loc.gov/vocabulary/organizations/dlcmrc"/>
+	<cs:createdDate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-18T10:24:14.302739-05:00</cs:createdDate>
+	<cs:changeReason rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modified</cs:changeReason>
+      </cs:ChangeSet>
+    </skos:changeNote>
+  </madsrdf:MADSScheme>
+</rdf:RDF>

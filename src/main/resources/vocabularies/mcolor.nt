@@ -1,0 +1,98 @@
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MADSScheme> . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mcolor/one> . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "one color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.w3.org/2000/01/rdf-schema#label> "one color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.loc.gov/mads/rdf/v1#code> "one" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mcolor/blw> . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "black and white"@en . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.w3.org/2000/01/rdf-schema#label> "black and white"@en . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.loc.gov/mads/rdf/v1#code> "blw" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mcolor/mul> . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "multicolored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.w3.org/2000/01/rdf-schema#label> "multicolored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.loc.gov/mads/rdf/v1#code> "mul" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mcolor/gry> . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "gray scale"@en . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.w3.org/2000/01/rdf-schema#label> "gray scale"@en . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.loc.gov/mads/rdf/v1#code> "gry" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mcolor/mix> . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "mixed color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.w3.org/2000/01/rdf-schema#label> "mixed color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.loc.gov/mads/rdf/v1#code> "mix" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#hasTopMemberOfMADSScheme> <http://id.loc.gov/vocabulary/mcolor/hnd> . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "hand colored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.w3.org/2000/01/rdf-schema#label> "hand colored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.loc.gov/mads/rdf/v1#code> "hnd" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2000/01/rdf-schema#label> "MARC Color Content List"@en . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2000/01/rdf-schema#comment> "
+      
+<xhtml:div class=\"schemeAbout\" title=\"About MARC Color Content List:\" property=\"rdfs:comment\" xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:madsrdf=\"http://www.loc.gov/mads/rdf/v1#\" xmlns:rdfs=\"http://www.w3.org/2000/01/rdf-schema#\" xmlns:xhtml=\"http://www.w3.org/1999/xhtml\">
+        <xhtml:p> Presence of color, tone, etc., in the content of a resource. </xhtml:p>
+      </xhtml:div>
+
+    "^^<http://www.w3.org/2000/01/rdf-schema#Literal> . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode72vocabularymcolor . 
+_:bnode72vocabularymcolor <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> . 
+_:bnode72vocabularymcolor <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "new"^^<http://www.w3.org/2001/XMLSchema#string> . 
+_:bnode72vocabularymcolor <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-12-13T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode72vocabularymcolor <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.loc.gov/mads/rdf/v1#adminMetadata> _:bnode85vocabularymcolor . 
+_:bnode85vocabularymcolor <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> . 
+_:bnode85vocabularymcolor <http://id.loc.gov/ontologies/RecordInfo#recordStatus> "modified"^^<http://www.w3.org/2001/XMLSchema#string> . 
+_:bnode85vocabularymcolor <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> "2016-12-14T12:30:51.543198-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode85vocabularymcolor <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mcolor/one> . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.w3.org/2004/02/skos/core#prefLabel> "one color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.w3.org/2000/01/rdf-schema#label> "one color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/one> <http://www.w3.org/2004/02/skos/core#notation> "one" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mcolor/blw> . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.w3.org/2004/02/skos/core#prefLabel> "black and white"@en . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.w3.org/2000/01/rdf-schema#label> "black and white"@en . 
+<http://id.loc.gov/vocabulary/mcolor/blw> <http://www.w3.org/2004/02/skos/core#notation> "blw" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mcolor/mul> . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.w3.org/2004/02/skos/core#prefLabel> "multicolored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.w3.org/2000/01/rdf-schema#label> "multicolored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mul> <http://www.w3.org/2004/02/skos/core#notation> "mul" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mcolor/gry> . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.w3.org/2004/02/skos/core#prefLabel> "gray scale"@en . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.w3.org/2000/01/rdf-schema#label> "gray scale"@en . 
+<http://id.loc.gov/vocabulary/mcolor/gry> <http://www.w3.org/2004/02/skos/core#notation> "gry" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mcolor/mix> . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.w3.org/2004/02/skos/core#prefLabel> "mixed color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.w3.org/2000/01/rdf-schema#label> "mixed color"@en . 
+<http://id.loc.gov/vocabulary/mcolor/mix> <http://www.w3.org/2004/02/skos/core#notation> "mix" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://id.loc.gov/vocabulary/mcolor/hnd> . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.w3.org/2004/02/skos/core#prefLabel> "hand colored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.w3.org/2000/01/rdf-schema#label> "hand colored"@en . 
+<http://id.loc.gov/vocabulary/mcolor/hnd> <http://www.w3.org/2004/02/skos/core#notation> "hnd" . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode152vocabularymcolor . 
+_:bnode152vocabularymcolor <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> . 
+_:bnode152vocabularymcolor <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/mcolor> . 
+_:bnode152vocabularymcolor <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+_:bnode152vocabularymcolor <http://purl.org/vocab/changeset/schema#createdDate> "2016-12-13T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode152vocabularymcolor <http://purl.org/vocab/changeset/schema#changeReason> "new"^^<http://www.w3.org/2001/XMLSchema#string> . 
+<http://id.loc.gov/vocabulary/mcolor> <http://www.w3.org/2004/02/skos/core#changeNote> _:bnode160vocabularymcolor . 
+_:bnode160vocabularymcolor <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/changeset/schema#ChangeSet> . 
+_:bnode160vocabularymcolor <http://purl.org/vocab/changeset/schema#subjectOfChange> <http://id.loc.gov/vocabulary/mcolor> . 
+_:bnode160vocabularymcolor <http://purl.org/vocab/changeset/schema#creatorName> <http://id.loc.gov/vocabulary/organizations/dlcmrc> . 
+_:bnode160vocabularymcolor <http://purl.org/vocab/changeset/schema#createdDate> "2016-12-14T12:30:51.543198-05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> . 
+_:bnode160vocabularymcolor <http://purl.org/vocab/changeset/schema#changeReason> "modified"^^<http://www.w3.org/2001/XMLSchema#string> . 
