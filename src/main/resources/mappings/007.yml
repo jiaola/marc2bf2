@@ -475,16 +475,13 @@ mappings:
         i: tgm007779
         j: tgm008237
         k: tgm008104
-        l: ted
+        l: marcgt:ted
         n: tgm001907
-        o: fla
+        o: marcgt:fla
         p: tgm008103
         q: tgm005289
         r: tgm008530
         v: tgm007721
-      prefixes:
-        l: marcgt
-        o: marcgt
     - position: 3
       type: ColorContent
       property: colorContent

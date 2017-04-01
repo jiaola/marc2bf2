@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.mappers.DefaultMapper;
 import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
@@ -16,7 +15,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.lang.reflect.Constructor;
 import java.util.*;
 
 public class Field007Converter extends FieldConverter {
@@ -94,15 +92,7 @@ public class Field007Converter extends FieldConverter {
             }
 
             // Create a mapper
-            Mapper mapper;
-            if (position.containsKey("mapper")) {
-                String className = (String) position.get("mapper");
-                Class<?> clazz = Class.forName(className);
-                Constructor<?> cons = clazz.getConstructor(Model.class);
-                mapper = (Mapper) cons.newInstance(model);
-            } else {
-                mapper = new DefaultMapper(model);
-            }
+            Mapper mapper = Mapper.createMapper((String)position.get("mapper"), model);
 
             // Add the tripples
             if (mapping.containsKey("mappings")) {

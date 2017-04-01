@@ -173,8 +173,9 @@ public class Field007ConverterTest {
                 String data = field.getData();
                 if (data.startsWith("m") && data.substring(9, 10).equals("a")) {
                     model = converter.convert(field);
+                    model.write(System.out);
                     Resource work = ModelUtils.getWork(model, record);
-                    assertTrue(TestUtils.checkResourceLabel(work, BIB_FRAME.genreForm, "workprint"));
+                    assertTrue(TestUtils.checkPropertyLabel(work, BIB_FRAME.genreForm, "workprint"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -259,7 +260,7 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.generation, "facsimile"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.generation, "facsimile"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -296,12 +297,12 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.soundContent, "sound on medium"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.soundContent, "sound on medium"));
                 } else if (data.startsWith("c") && data.substring(5, 6).equals(" ")) {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.soundContent, "slient"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.soundContent, "slient"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -390,7 +391,7 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.reductionRatio, "024"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.reductionRatio, "024"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -466,7 +467,7 @@ public class Field007ConverterTest {
                     model = converter.convert(field);
                     model.write(System.out);
                     Resource instance = ModelUtils.getInstance(model, record);
-                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.projectionCharacteristic, "standard sound aperture (reduced frame)"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.projectionCharacteristic, "standard sound aperture (reduced frame)"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -496,7 +497,7 @@ public class Field007ConverterTest {
                         }
                     }
                     assertNotNull(target);
-                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.note, "complete"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.note, "complete"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
@@ -527,7 +528,7 @@ public class Field007ConverterTest {
                     Statement stmt = target.getProperty(RDFS.label);
                     assertEquals("http://www.w3.org/2001/XMLSchema#gYearMonth", stmt.getLiteral().getDatatypeURI());
                     assertNotNull(target);
-                    assertTrue(TestUtils.checkResourceLabel(instance, BIB_FRAME.note, "1986-06"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.note, "1986-06"));
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed

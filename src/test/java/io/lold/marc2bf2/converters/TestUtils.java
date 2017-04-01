@@ -33,15 +33,25 @@ public class TestUtils {
         return false;
     }
 
-    public static boolean checkResourceLabel(Resource resource, Property property, String label) {
+    public static boolean checkPropertyResourceURI(Resource resource, Property property, String type) {
         StmtIterator iter = resource.listProperties(property);
         while (iter.hasNext()) {
             Statement stmt = iter.next();
             Resource object = stmt.getResource();
-            if (object.getURI() != null) {
-                continue;
+            if (object.isURIResource() && object.getURI().equals(type)) {
+                return true;
             }
+        }
+        return false;
+    }
+
+    public static boolean checkPropertyLabel(Resource resource, Property property, String label) {
+        StmtIterator iter = resource.listProperties(property);
+        while (iter.hasNext()) {
+            Statement stmt = iter.next();
+            Resource object = stmt.getResource();
             stmt = object.getProperty(RDFS.label);
+            if (stmt == null)  continue;
             if (stmt.getLiteral().getString().equals(label)) {
                 return true;
             }

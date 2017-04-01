@@ -30,6 +30,7 @@ public class BIB_FRAME {
     public static final Resource Generation;
     public static final Resource GenreForm;
     public static final Resource Instance;
+    public static final Resource IntendedAudience;
     public static final Resource Issuance;
     public static final Resource Local;
     public static final Resource Manuscript;
@@ -37,6 +38,7 @@ public class BIB_FRAME {
     public static final Resource MixedMaterial;
     public static final Resource Mount;
     public static final Resource MovingImage;
+    public static final Resource MusicFormat;
     public static final Resource NotatedMusic;
     public static final Resource Note;
     public static final Resource Object;
@@ -48,6 +50,7 @@ public class BIB_FRAME {
     public static final Resource Source;
     public static final Resource Status;
     public static final Resource StillImage;
+    public static final Resource SupplementaryContent;
     public static final Resource Text;
     public static final Resource Work;
 
@@ -67,9 +70,11 @@ public class BIB_FRAME {
     public static final Property genreForm;
     public static final Property identifiedBy;
     public static final Property instanceOf;
+    public static final Property intendedAudience;
     public static final Property issuance;
     public static final Property media;
     public static final Property mount;
+    public static final Property musicFormat;
     public static final Property note;
     public static final Property noteType;
     public static final Property polarity;
@@ -79,6 +84,7 @@ public class BIB_FRAME {
     public static final Property soundCharacteristic;
     public static final Property source;
     public static final Property status;
+    public static final Property supplementaryContent;
 
     public static String getURI() {
         return NAMESPACE;
@@ -102,6 +108,7 @@ public class BIB_FRAME {
         Generation = m.createResource(BIB_FRAME.NAMESPACE + "Generation");
         GenreForm = m.createResource(BIB_FRAME.NAMESPACE + "GenreForm");
         Instance = m.createResource(BIB_FRAME.NAMESPACE + "Instance");
+        IntendedAudience = m.createResource(BIB_FRAME.NAMESPACE + "IntendedAudience");
         Issuance = m.createResource(BIB_FRAME.NAMESPACE + "Issuance");
         Local = m.createResource(BIB_FRAME.NAMESPACE + "Local");
         Manuscript = m.createResource(BIB_FRAME.NAMESPACE + "Manuscript");
@@ -109,6 +116,7 @@ public class BIB_FRAME {
         MixedMaterial = m.createResource(BIB_FRAME.NAMESPACE + "MixedMaterial");
         Mount = m.createResource(BIB_FRAME.NAMESPACE + "Mount");
         MovingImage = m.createResource(BIB_FRAME.NAMESPACE + "MovingImage");
+        MusicFormat = m.createResource(BIB_FRAME.NAMESPACE + "MusicFormat");
         NotatedMusic = m.createResource(BIB_FRAME.NAMESPACE + "NotatedMusic");
         Note = m.createResource(BIB_FRAME.NAMESPACE + "Note");
         Object = m.createResource(BIB_FRAME.NAMESPACE + "Object");
@@ -120,6 +128,7 @@ public class BIB_FRAME {
         Source = m.createResource(BIB_FRAME.NAMESPACE + "Source");
         Status = m.createResource(BIB_FRAME.NAMESPACE + "Status");
         StillImage = m.createResource(BIB_FRAME.NAMESPACE + "StillImage");
+        SupplementaryContent = m.createResource(BIB_FRAME.NAMESPACE + "SupplementaryContent");
         Text = m.createResource(BIB_FRAME.NAMESPACE + "Text");
         Work = m.createResource(BIB_FRAME.NAMESPACE + "Work");
 
@@ -138,9 +147,11 @@ public class BIB_FRAME {
         genreForm = m.createProperty(BIB_FRAME.NAMESPACE, "genreForm");
         identifiedBy = m.createProperty(BIB_FRAME.NAMESPACE, "identifiedBy");
         instanceOf = m.createProperty(BIB_FRAME.NAMESPACE, "instanceOf");
+        intendedAudience = m.createProperty(BIB_FRAME.NAMESPACE, "intendedAudience");
         issuance = m.createProperty(BIB_FRAME.NAMESPACE, "issuance");
         media = m.createProperty(BIB_FRAME.NAMESPACE, "media");
         mount = m.createProperty(BIB_FRAME.NAMESPACE, "mount");
+        musicFormat = m.createProperty(BIB_FRAME.NAMESPACE, "musicFormat");
         note = m.createProperty(BIB_FRAME.NAMESPACE, "note");
         noteType = m.createProperty(BIB_FRAME.NAMESPACE, "noteType");
         polarity = m.createProperty(BIB_FRAME.NAMESPACE, "polarity");
@@ -150,5 +161,6 @@ public class BIB_FRAME {
         soundCharacteristic = m.createProperty(BIB_FRAME.NAMESPACE, "soundCharacteristic");
         source = m.createProperty(BIB_FRAME.NAMESPACE, "source");
         status = m.createProperty(BIB_FRAME.NAMESPACE, "status");
+        supplementaryContent = m.createProperty(BIB_FRAME.NAMESPACE, "supplementaryContent");
     }
 }

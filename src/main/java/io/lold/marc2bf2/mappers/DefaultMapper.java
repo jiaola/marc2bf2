@@ -2,6 +2,7 @@ package io.lold.marc2bf2.mappers;
 
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import io.lold.marc2bf2.vocabulary.VocabularyReader;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.RDFNode;
@@ -24,19 +25,57 @@ public class DefaultMapper extends Mapper {
 
     @Override
     public List<RDFNode> map(String value, Map<String, Object> mapping) throws Exception {
-        String prefix = (String) mapping.get("prefix");
-        Map<String, String> labels = (Map<String, String>) mapping.get("labels");
-        Map<String, String> uris = (Map<String, String>) mapping.get("uris");
-        String label = labels == null? null : labels.get(value);
-        String uri = uris == null? null : uris.get(value);
+        List<RDFNode> list = new ArrayList<>();
+
+        String label = null, uri = null;
+
+        // if there's code but no label, use the code to get the label
+        if (mapping.containsKey("codes")) {  // Use vocabulary to pull data
+            String vocName = (String) mapping.get("vocabulary");
+            Map<String, String> codeMapping = (Map<String, String>) mapping.get("codes");
+            String code = codeMapping.get(value);
+            if (code != null) {
+                int index = code.indexOf(':');
+                if (index > 0) {
+                    vocName = code.substring(0, index);
+                    code = uri.substring(index + 1);
+                }
+                Map vocabulary = VocabularyReader.getVocabulary(vocName);
+                Map<String, String> vocMap = (Map<String, String>) vocabulary.get(code);
+                if (vocMap == null) {
+                    logger.warn("No vocabulary mapping found in " + vocName + ", for code " + code);
+                    return list;
+                }
+                uri = vocMap.get("uri");
+                label = vocMap.get("label");
+            }
+        } else if (mapping.containsKey("uris")) { // use uris to build uri
+            String prefix = (String) mapping.get("prefix");
+            Map<String, String> uris = (Map<String, String>) mapping.get("uris");
+            uri = uris == null? null : uris.get(value);
+            if (uri != null) {
+                int index = uri.indexOf(':');
+                if (index > 0) {
+                    prefix = uri.substring(0, index);
+                    uri = uri.substring(index + 1);
+                }
+                if (prefix == null) {
+                    logger.warn("Prefix is null. This will create invalid URIs");
+                }
+                uri = mapPrefix(prefix) + uri;
+            }
+        }
+        if (mapping.containsKey("labels")) {
+            Map<String, String> labels = (Map<String, String>) mapping.get("labels");
+            label = labels.getOrDefault(value, label);
+        }
 
         String type = getType(mapping);
 
-        List<RDFNode> list = new ArrayList<>();
         if (label == null && uri == null) {
             return list;
         }
-        RDFNode object = getResource(prefix, label, uri, type);
+        RDFNode object = getResource(label, uri, type);
         list.add(object);
         return list;
     }
@@ -54,18 +93,10 @@ public class DefaultMapper extends Mapper {
         return (String) mapping.get("type");
     }
 
-    protected RDFNode getResource(String prefix, String label, String uri, String type) throws Exception {
+    protected RDFNode getResource(String label, String uri, String type) throws Exception {
         Resource object;
         if (uri != null) {
-            int index = uri.indexOf(':');
-            if (index > 0) {
-                prefix = uri.substring(0, index);
-                uri = uri.substring(index+1);
-            }
-            if (prefix == null) {
-                logger.warn("Prefix is null. This will create invalid URIs");
-            }
-            object = model.createResource(mapPrefix(prefix) + uri);
+            object = model.createResource(uri);
         } else {
             object = model.createResource();
         }

@@ -1,0 +1,29 @@
+millus:
+  uri: http://id.loc.gov/vocabulary/millus
+  ids:
+    ill: illustrations
+    map: maps
+    por: portraits
+    chr: charts
+    pln: plans
+    plt: plates
+    mus: music
+    fac: facsimiles
+    coa: coats of arms
+    gnt: geneological tables
+    for: forms
+    sam: samples
+    pho: phonodisc, phonowire
+    pht: photographs
+    ilm: illuminations
+maudience:
+  uri: http://id.loc.gov/vocabulary/maudience
+  ids:
+    pre: preschool
+    pri: primary
+    pad: pre-adolescent
+    ado: adolescent
+    adu: adult
+    spe: specialized
+    gen: general
+    juv: juvenile
