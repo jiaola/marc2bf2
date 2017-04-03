@@ -8,15 +8,19 @@ import org.apache.jena.rdf.model.Resource;
 import java.util.List;
 import java.util.Map;
 
-public class CompletenessNoteMapper extends DefaultMapper {
-    public CompletenessNoteMapper(Model model) {
+public class NoteTypeMapper extends DefaultMapper {
+    public NoteTypeMapper(Model model) {
         super(model);
     }
 
     @Override
     public List<RDFNode> map(String value, Map<String, Object> mapping) throws Exception {
         List<RDFNode> list = super.map(value, mapping);
-        list.forEach(node -> ((Resource)node).addProperty(BIB_FRAME.noteType, "completeness"));
+        if (params.containsKey("noteType")) {
+            list.forEach(node ->
+                    ((Resource) node).addProperty(BIB_FRAME.noteType, (String) params.get("noteType"))
+            );
+        }
         return list;
     }
 }

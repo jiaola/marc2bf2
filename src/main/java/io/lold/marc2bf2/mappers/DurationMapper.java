@@ -1,25 +1,24 @@
 package io.lold.marc2bf2.mappers;
 
-import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.jena.datatypes.xsd.impl.XSDDurationType;
+import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.vocabulary.RDFS;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class ImageBitDepthMapper extends DefaultMapper {
-    public ImageBitDepthMapper(Model model) {
+public class DurationMapper extends DefaultMapper {
+    public DurationMapper(Model model) {
         super(model);
     }
 
     protected String mapToLabel(String value) {
         switch (value) {
-            case "mmm":
-                return "multiple";
+            case "000":
+                return "more than 999 minutes";
             case "nnn":
             case "---":
             case "|||":
@@ -36,11 +35,10 @@ public class ImageBitDepthMapper extends DefaultMapper {
         if (label == null) {
             return list;
         }
-        Resource object = model.createResource();
-        object.addProperty(RDF.type, model.createResource("http://id.loc.gov/ontologies/bflc/ImageBitDepth"));
-        object.addProperty(RDF.type, BIB_FRAME.DigitalCharacteristic);
-        object.addProperty(RDFS.label, label);
-        list.add(object);
+        Literal literal = StringUtils.isNumeric(value) ?
+                model.createTypedLiteral(label, new XSDDurationType()) :
+                model.createLiteral(value);
+        list.add(literal);
         return list;
     }
 }

@@ -9,6 +9,7 @@ import java.util.Map;
 
 public abstract class Mapper {
     protected Model model;
+    protected Map params;
 
     /**
      * Create a mapper
@@ -28,6 +29,10 @@ public abstract class Mapper {
      * @throws Exception
      */
     public abstract List<RDFNode> map(String value, Map<String, Object> mapping) throws Exception;
+
+    public void setParams(Map params) {
+        this.params = params;
+    }
 
     public static Mapper createMapper(String className, Model model) throws Exception {
         if (className == null) {

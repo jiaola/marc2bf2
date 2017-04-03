@@ -1,8 +1,7 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
 import org.junit.After;
 import org.junit.Before;
@@ -15,11 +14,12 @@ import org.marc4j.marc.Record;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class Field008ConverterTest {
-    private Field008Converter converter;
+public class Field006008ConverterTest {
+    private Field006008Converter converter;
     private Model model;
 
     @Parameterized.Parameter
@@ -35,10 +35,13 @@ public class Field008ConverterTest {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
         model.createResource(ModelUtils.getUri(record, "Work"))
-                .addProperty(RDF.type, BIB_FRAME.Work);
+                .addProperty(RDF.type, BIB_FRAME.Work)
+                .addProperty(BIB_FRAME.adminMetadata, model.createResource()
+                        .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
         model.createResource(ModelUtils.getUri(record, "Instance"))
                 .addProperty(RDF.type, BIB_FRAME.Instance);
-        converter = new Field008Converter(model, record);
+
+        converter = new Field006008Converter(model, record);
     }
 
 
@@ -50,13 +53,53 @@ public class Field008ConverterTest {
     }
 
     @Test
-    public void testWorkIntendedAudience() throws Exception {
+    public void testWorkCreationDate() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
             if (field.getTag().equals("008")) {
-                if (!RecordUtils.isBook(record)) {
-                    continue;
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource adm = ModelUtils.getAdminMatadata(model, record);
+                Statement stmt = adm.getProperty(BIB_FRAME.creationDate);
+                Literal literal = stmt.getLiteral();
+                if (data.substring(0, 6).equals("040520")) {
+                    assertEquals("http://www.w3.org/2001/XMLSchema#date", literal.getDatatypeURI());
+                    assertEquals("2004-05-20", literal.getString());
+                } else if (data.substring(0, 6).equals("830317")) {
+                    assertEquals("http://www.w3.org/2001/XMLSchema#date", literal.getDatatypeURI());
+                    assertEquals("1983-03-17", literal.getString());
                 }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    // Test the NoteTypeMapper
+    @Test
+    public void testAdminMetadataEntryConvention() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isContinuingResourceByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                if (data.substring(34, 35).equals("0")) {
+                    Resource adm = ModelUtils.getAdminMatadata(model, record);
+                    assertTrue(TestUtils.checkPropertyLabel(adm, BIB_FRAME.note, "0 - successive"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testWorkIntendedAudience() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
                 String data = field.getData();
                 if (data.substring(22, 23).equals("j")) {
                     model = converter.convert(field);
@@ -74,10 +117,7 @@ public class Field008ConverterTest {
     public void testWorkBookGovdoc() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
-            if (field.getTag().equals("008")) {
-                if (!RecordUtils.isBook(record)) {
-                    continue;
-                }
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
                 String data = field.getData();
                 if (data.substring(28, 29).equals("a")) {
                     model = converter.convert(field);
@@ -96,10 +136,7 @@ public class Field008ConverterTest {
     public void testWorkBookGenreForm() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
-            if (field.getTag().equals("008")) {
-                if (!RecordUtils.isBook(record)) {
-                    continue;
-                }
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
                 String data = field.getData();
                 if (data.substring(24, 25).equals("6")) {
                     model = converter.convert(field);
@@ -118,10 +155,7 @@ public class Field008ConverterTest {
     public void testWorkBookConference() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
-            if (field.getTag().equals("008")) {
-                if (!RecordUtils.isBook(record)) {
-                    continue;
-                }
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
                 String data = field.getData();
                 if (data.substring(29, 30).equals("1")) {
                     model = converter.convert(field);
@@ -140,10 +174,7 @@ public class Field008ConverterTest {
     public void testWorkBookLitForm() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
-            if (field.getTag().equals("008")) {
-                if (!RecordUtils.isBook(record)) {
-                    continue;
-                }
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
                 String data = field.getData();
                 model = converter.convert(field);
                 model.write(System.out);
@@ -165,10 +196,7 @@ public class Field008ConverterTest {
     public void testWorkComputerFileType() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
-            if (field.getTag().equals("008")) {
-                if (!RecordUtils.isComputerFile(record)) {
-                    continue;
-                }
+            if (field.getTag().equals("008") && RecordUtils.isComputerFileByLeader(record)) {
                 String data = field.getData();
                 model = converter.convert(field);
                 model.write(System.out);
@@ -186,10 +214,7 @@ public class Field008ConverterTest {
     public void testWorkMusicSuppContent() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
-            if (field.getTag().equals("008")) {
-                if (!RecordUtils.isMusic(record)) {
-                    continue;
-                }
+            if (field.getTag().equals("008") && RecordUtils.isMusicByLeader(record)) {
                 String data = field.getData();
                 model = converter.convert(field);
                 model.write(System.out);
@@ -210,16 +235,52 @@ public class Field008ConverterTest {
     public void testWorkMusicCompform() throws Exception {
         List<ControlField> controlFields = record.getControlFields();
         for (ControlField field: controlFields) {
-            if (field.getTag().equals("008")) {
-                if (!RecordUtils.isMusic(record)) {
-                    continue;
-                }
+            if (field.getTag().equals("008") && RecordUtils.isMusicByLeader(record)) {
                 String data = field.getData();
                 model = converter.convert(field);
                 model.write(System.out);
                 Resource work = ModelUtils.getWork(model, record);
                 if (data.substring(18, 20).equals("hy")) {
                     assertTrue(TestUtils.checkPropertyLabel(work, BIB_FRAME.genreForm, "hymns"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testWorkContinuingResourceScript() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isContinuingResourceByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource work = ModelUtils.getWork(model, record);
+                if (data.substring(33, 34).equals("a")) {
+                    assertTrue(TestUtils.checkPropertyLabel(work, BIB_FRAME.notation, "basic roman"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testWorkVisualMaterialDuration() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isVisualMaterialByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource work = ModelUtils.getWork(model, record);
+                if (data.substring(18, 21).equals("161")) {
+                    Statement stmt = work.getProperty(BIB_FRAME.duration);
+                    Literal literal = stmt.getLiteral();
+                    assertEquals("http://www.w3.org/2001/XMLSchema#duration", literal.getDatatypeURI());
+                    assertEquals("161", literal.getString());
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed

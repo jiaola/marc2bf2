@@ -34,7 +34,9 @@ public class Field007ConverterTest {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
         model.createResource(ModelUtils.getUri(record, "Work"))
-                .addProperty(RDF.type, BIB_FRAME.Work);
+                .addProperty(RDF.type, BIB_FRAME.Work)
+                .addProperty(BIB_FRAME.adminMetadata, model.createResource()
+                        .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
         model.createResource(ModelUtils.getUri(record, "Instance"))
                 .addProperty(RDF.type, BIB_FRAME.Instance);
         converter = new Field007Converter(model, record);
@@ -476,7 +478,7 @@ public class Field007ConverterTest {
     }
 
 
-    // Test the CompletenessNoteMapper
+    // Test the NoteTypeMapper
     @Test
     public void testConvertInstanceM16C() throws Exception {
         List<ControlField> controlFields = record.getControlFields();

@@ -93,6 +93,7 @@ public class Field007Converter extends FieldConverter {
 
             // Create a mapper
             Mapper mapper = Mapper.createMapper((String)position.get("mapper"), model);
+            mapper.setParams((Map)position.get("params"));
 
             // Add the tripples
             if (mapping.containsKey("mappings")) {

@@ -1150,7 +1150,8 @@ Instance:
         values: [a, c, d, p, r, t, i, m]
       - position: 16
         values: [c, i]
-        mapper: io.lold.marc2bf2.mappers.CompletenessNoteMapper
+        mapper: io.lold.marc2bf2.mappers.NoteTypeMapper
+        params: { noteType: "completeness" }
       - position: 17
         mapper: io.lold.marc2bf2.mappers.InspectionDateNoteMapper
   s:

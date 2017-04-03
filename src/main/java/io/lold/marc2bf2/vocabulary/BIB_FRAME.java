@@ -46,6 +46,7 @@ public class BIB_FRAME {
     public static final Resource Polarity;
     public static final Resource ProjectionCharacteristic;
     public static final Resource ReductionRatio;
+    public static final Resource Script;
     public static final Resource SoundContent;
     public static final Resource Source;
     public static final Resource Status;
@@ -61,9 +62,11 @@ public class BIB_FRAME {
     public static final Property changeDate;
     public static final Property code;
     public static final Property colorContent;
+    public static final Property creationDate;
     public static final Property descriptionConventions;
     public static final Property digitalCharacteristic;
     public static final Property dimensions;
+    public static final Property duration;
     public static final Property emulsion;
     public static final Property encodingLevel;
     public static final Property generation;
@@ -75,6 +78,7 @@ public class BIB_FRAME {
     public static final Property media;
     public static final Property mount;
     public static final Property musicFormat;
+    public static final Property notation;
     public static final Property note;
     public static final Property noteType;
     public static final Property polarity;
@@ -124,6 +128,7 @@ public class BIB_FRAME {
         Polarity = m.createResource(BIB_FRAME.NAMESPACE + "Polarity");
         ProjectionCharacteristic = m.createResource(BIB_FRAME.NAMESPACE + "ProjectionCharacteristic");
         ReductionRatio = m.createResource(BIB_FRAME.NAMESPACE + "ReductionRatio");
+        Script = m.createResource(BIB_FRAME.NAMESPACE + "Script");
         SoundContent = m.createResource(BIB_FRAME.NAMESPACE + "SoundContent");
         Source = m.createResource(BIB_FRAME.NAMESPACE + "Source");
         Status = m.createResource(BIB_FRAME.NAMESPACE + "Status");
@@ -138,9 +143,11 @@ public class BIB_FRAME {
         changeDate = m.createProperty(BIB_FRAME.NAMESPACE, "changeDate");
         code = m.createProperty(BIB_FRAME.NAMESPACE, "code");
         colorContent = m.createProperty(BIB_FRAME.NAMESPACE, "colorContent");
+        creationDate = m.createProperty(BIB_FRAME.NAMESPACE, "creationDate");
         descriptionConventions = m.createProperty(BIB_FRAME.NAMESPACE, "descriptionConventions");
         digitalCharacteristic = m.createProperty(BIB_FRAME.NAMESPACE, "digitalCharacteristic");
         dimensions = m.createProperty(BIB_FRAME.NAMESPACE, "dimensions");
+        duration = m.createProperty(BIB_FRAME.NAMESPACE, "duration");
         emulsion = m.createProperty(BIB_FRAME.NAMESPACE, "emulsion");
         encodingLevel = m.createProperty(BIB_FRAME.NAMESPACE, "encodingLevel");
         generation = m.createProperty(BIB_FRAME.NAMESPACE, "generation");
@@ -152,6 +159,7 @@ public class BIB_FRAME {
         media = m.createProperty(BIB_FRAME.NAMESPACE, "media");
         mount = m.createProperty(BIB_FRAME.NAMESPACE, "mount");
         musicFormat = m.createProperty(BIB_FRAME.NAMESPACE, "musicFormat");
+        notation = m.createProperty(BIB_FRAME.NAMESPACE, "notation");
         note = m.createProperty(BIB_FRAME.NAMESPACE, "note");
         noteType = m.createProperty(BIB_FRAME.NAMESPACE, "noteType");
         polarity = m.createProperty(BIB_FRAME.NAMESPACE, "polarity");
