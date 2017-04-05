@@ -1,5 +1,6 @@
 package io.lold.marc2bf2.mappers;
 
+import io.lold.marc2bf2.converters.ModelUtils;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.VocabularyReader;
@@ -103,7 +104,7 @@ public class DefaultMapper extends Mapper {
         if (type == null) {
             return model.createLiteral(label);
         } else {
-            object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + type));
+            object.addProperty(RDF.type, ModelUtils.getResource(type, model));
             if (label != null) {
                 object.addProperty(getLabelProeprty(), label);
             }

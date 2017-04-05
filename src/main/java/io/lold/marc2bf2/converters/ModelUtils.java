@@ -2,6 +2,7 @@ package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -41,7 +42,8 @@ public class ModelUtils {
     }
 
     /**
-     * Returns a URI for a work given a record
+     * Returns a URI for a work given a record.
+     * TODO: Override this
      *
      * @param record
      * @return
@@ -56,5 +58,44 @@ public class ModelUtils {
         return model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Note)
                 .addProperty(RDFS.label, label);
+    }
+
+    /**
+     * Get a full URI given the abbreviated form. For example,
+     * given bflc:encodingLevel, it returns
+     * http://id.loc.gov/ontologies/bflc/encodingLevel
+     *
+     * @param value
+     * @param model
+     * @return
+     */
+    public static String getUri(String value, Model model) {
+        String[] values = value.trim().split(":");
+        if (values.length == 1) {
+            return BIB_FRAME.NAMESPACE + values[0].trim();
+        } else {
+            String nsUri = model.getNsPrefixURI(values[0].trim());
+            return nsUri + values[1].trim();
+        }
+    }
+
+    public static Resource getResource(String type, Model model) {
+        String[] values = type.trim().split(":");
+        if (values.length == 1) {
+            return model.createResource(BIB_FRAME.getURI() + values[0].trim());
+        } else {
+            String nsUri = model.getNsPrefixURI(values[0].trim());
+            return model.createResource(nsUri + values[1].trim());
+        }
+    }
+
+    public static Property getProperty(String property, Model model) {
+        String[] values = property.trim().split(":");
+        if (values.length == 1) {
+            return model.createProperty(BIB_FRAME.getURI() + values[0].trim());
+        } else {
+            String nsUri = model.getNsPrefixURI(values[0].trim());
+            return model.createProperty(nsUri + values[1].trim());
+        }
     }
 }

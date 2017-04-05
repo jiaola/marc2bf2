@@ -1,11 +1,11 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.rdf.model.Statement;
-import org.apache.jena.rdf.model.StmtIterator;
+import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
+import org.apache.jena.query.*;
+import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -112,5 +112,35 @@ public class LeaderConverterTest {
             assertTrue(iter.hasNext());
         }
 
+    }
+
+    /**
+     * Encoding level is in a different namespace (bflc)
+     * @throws Exception
+     */
+    @Test
+    public void testEncodingLevel() throws Exception {
+        String q = String.join("\n"
+                , "PREFIX bf: <" + BIB_FRAME.getURI() + ">"
+                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                , "PREFIX rdfs: <" + RDFS.getURI() + ">"
+                , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
+                , "SELECT ?prov  ?date "
+                , "WHERE { "
+                , "  ?adm rdf:type bf:AdminMetadata ."
+                , "  ?adm bflc:encodingLevel ?el ."
+                , "  ?el rdf:type bflc:EncodingLevel ."
+                , "  ?el bf:code \"%1s\" ."
+                , "}");
+        Leader leader = record.getLeader();
+        String data = leader.marshal();
+        if (data.substring(17, 18).equals(" ")) {
+            model = converter.convert(leader);
+            model.write(System.out);
+            Query query = QueryFactory.create(String.format(q, "f"));
+            QueryExecution qexec = QueryExecutionFactory.create(query, model);
+            ResultSet results = qexec.execSelect() ;
+            assertTrue(results.hasNext());
+        }
     }
 }

@@ -11,6 +11,8 @@ import org.apache.jena.shared.PrefixMapping;
 public class ModelFactory {
     public static Model createBfModel() {
         Model model = org.apache.jena.rdf.model.ModelFactory.createDefaultModel();
+
+        // Register the namespace prefixes
         PrefixMapping map = PrefixMapping.Factory.create()
                 .setNsPrefix(BIB_FRAME.PREFIX, BIB_FRAME.getURI())
                 .setNsPrefix(BIB_FRAME_LC.PREFIX, BIB_FRAME_LC.getURI());

@@ -63,7 +63,7 @@ public class LeaderConverter {
             Mapper mapper = new LeaderMapper(model);
             List<RDFNode> nodes = (List<RDFNode>) mapper.map(value, position);
             for (RDFNode node : nodes) {
-                am.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) position.get("property")), node);
+                am.addProperty(ModelUtils.getProperty((String) position.get("property"), model), node);
             }
         }
         return model;
@@ -83,7 +83,7 @@ public class LeaderConverter {
             Mapper mapper = new LeaderMapper(model);
             List<RDFNode> nodes = (List<RDFNode>) mapper.map(value, position);
             for (RDFNode node : nodes) {
-                instance.addProperty(model.createProperty(BIB_FRAME.NAMESPACE, (String) position.get("property")), node);
+                instance.addProperty(ModelUtils.getProperty((String) position.get("property"), model), node);
             }
         }
         return model;

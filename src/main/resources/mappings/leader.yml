@@ -20,8 +20,8 @@ positions:
       m: mono
       s: serl
   - position: 17
-    type: EncodingLevel
-    property: encodingLevel
+    type: bflc:EncodingLevel
+    property: bflc:encodingLevel
     scope: AdminMetadata
     labels:
       ' ': f
