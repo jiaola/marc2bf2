@@ -85,6 +85,8 @@ public class RecordUtils {
             case 'o':
             case 'r':
                 return Material.VisualMaterial;
+            case 'p':
+                return Material.MixedMaterial;
             default:
                 return null;
         }

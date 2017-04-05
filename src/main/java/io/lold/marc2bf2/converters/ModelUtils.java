@@ -3,6 +3,8 @@ package io.lold.marc2bf2.converters;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.Record;
 
 public class ModelUtils {
@@ -48,5 +50,11 @@ public class ModelUtils {
         //TODO: Set the prefix in a config file
         String prefix = "http://example.org/";
         return prefix + record.getControlNumber() + "#" + type;
+    }
+
+    public static Resource createNote(Model model, String label) {
+        return model.createResource()
+                .addProperty(RDF.type, BIB_FRAME.Note)
+                .addProperty(RDFS.label, label);
     }
 }

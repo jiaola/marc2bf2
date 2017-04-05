@@ -1,8 +1,10 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -281,6 +283,208 @@ public class Field006008ConverterTest {
                     Literal literal = stmt.getLiteral();
                     assertEquals("http://www.w3.org/2001/XMLSchema#duration", literal.getDatatypeURI());
                     assertEquals("161", literal.getString());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testInstanceBookIllustrativeContent() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource instance = ModelUtils.getInstance(model, record);
+                if (data.substring(18, 19).equals("a")) {
+                    assertTrue(TestUtils.checkPropertyResourceURI(instance, BIB_FRAME.illustrativeContent, "http://id.loc.gov/vocabulary/millus/ill"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.illustrativeContent, "Illustrations"));
+                }
+                if (data.substring(19, 20).equals("b")) {
+                    assertTrue(TestUtils.checkPropertyResourceURI(instance, BIB_FRAME.illustrativeContent, "http://id.loc.gov/vocabulary/millus/map"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.illustrativeContent, "Maps"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testInstanceBookCarrierPrintNotation() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource instance = ModelUtils.getInstance(model, record);
+                if (data.substring(23, 24).equals("o")) {
+                    assertTrue(TestUtils.checkPropertyResourceURI(instance, BIB_FRAME.carrier, "http://id.loc.gov/vocabulary/carriers/cr"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.carrier, "online resource"));
+                }
+                if (data.substring(23, 24).equals("s")) {
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.carrier, "electronic"));
+                }
+                if (data.substring(23, 24).equals("d")) {
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.fontSize, "large print"));
+                }
+                if (data.substring(23, 24).equals("f")) {
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.notation, "braille"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testInstanceSupplementaryContent() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isBookByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource instance = ModelUtils.getInstance(model, record);
+                if (data.substring(31, 32).equals("1")) {
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.supplementaryContent, "Index present"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testInstanceComputerFileCarrier() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isComputerFileByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource instance = ModelUtils.getInstance(model, record);
+                if (data.substring(23, 24).equals("o")) {
+                    assertTrue(TestUtils.checkPropertyResourceURI(instance, BIB_FRAME.carrier, "http://id.loc.gov/vocabulary/carriers/cr"));
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.carrier, "online resource"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testInstanceMapCartographic() throws Exception {
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isMapByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                Resource instance = ModelUtils.getInstance(model, record);
+                if (data.substring(22, 24).equals("bk")) {
+                    assertTrue(TestUtils.checkPropertyLabel(instance, BIB_FRAME.projection, "Krovak"));
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testInstanceMapCartographicAttributes() throws Exception {
+        String q = String.join("\n"
+                , "PREFIX bf: <" + BIB_FRAME.NAMESPACE + ">"
+                , "PREFIX rdfs: <" + RDFS.getURI() + ">"
+                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                , "SELECT ?note "
+                , "WHERE { "
+                , "  ?instance rdf:type bf:Instance ."
+                , "  ?instance bf:cartographicAttributes ?carto ."
+                , "  ?carto bf:note ?note ."
+                , "  ?note rdfs:label \"%1s\" ."
+                , "  ?x rdf:type bf:Note ."
+                , "}");
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isMapByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                if (data.substring(18, 19).equals("a")) {
+                    Query query = QueryFactory.create(String.format(q, "contours"));
+                    QueryExecution qexec = QueryExecutionFactory.create(query, model);
+                    ResultSet results = qexec.execSelect() ;
+                    assertTrue(results.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+
+    @Test
+    public void testInstanceContinuingResourceRegulatory() throws Exception {
+        String q = String.join("\n"
+                , "PREFIX bf: <" + BIB_FRAME.NAMESPACE + ">"
+                , "PREFIX rdfs: <" + RDFS.getURI() + ">"
+                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                , "SELECT ?freq "
+                , "WHERE { "
+                , "  ?instance rdf:type bf:Instance ."
+                , "  ?instance bf:frequency ?freq ."
+                , "  ?freq rdfs:label \"%1s\" ."
+                , "  ?x rdf:type bf:Frequency ."
+                , "}");
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008") && RecordUtils.isContinuingResourceByLeader(record)) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                if (data.substring(19, 20).equals("n")) {
+                    Query query = QueryFactory.create(String.format(q, "normalized irregular"));
+                    QueryExecution qexec = QueryExecutionFactory.create(query, model);
+                    ResultSet results = qexec.execSelect() ;
+                    assertTrue(results.hasNext());
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testInstanceProvision() throws Exception {
+        String q = String.join("\n"
+                , "PREFIX bf: <" + BIB_FRAME.NAMESPACE + ">"
+                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                , "SELECT ?prov  ?date "
+                , "WHERE { "
+                , "  ?instance rdf:type bf:Instance ."
+                , "  ?instance bf:provisionActivity ?prov ."
+                , "  ?prov bf:date ?date ."
+                , "}");
+        List<ControlField> controlFields = record.getControlFields();
+        for (ControlField field: controlFields) {
+            if (field.getTag().equals("008")) {
+                String data = field.getData();
+                model = converter.convert(field);
+                model.write(System.out);
+                if (data.substring(6, 7).equals("m") && data.substring(7, 15).equals("19949999")) {
+                    Query query = QueryFactory.create(q);
+                    QueryExecution qexec = QueryExecutionFactory.create(query, model);
+                    ResultSet results = qexec.execSelect() ;
+                    assertTrue(results.hasNext());
+                    QuerySolution soln = results.nextSolution();
+                    Literal l = soln.getLiteral("date");
+                    assertEquals("1994/9999^^http://id.loc.gov/datatypes/edtf", l.toString());
                 }
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed

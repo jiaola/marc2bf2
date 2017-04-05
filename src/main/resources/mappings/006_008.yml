@@ -39,7 +39,10 @@ mappings:
       "2": off
       "5": cal
       "6": cgn
-  millus:
+  illustrativeContent:
+    vocabulary: millus
+    type: Illustration
+    property: illustrativeContent
     codes:
       a: ill
       b: map
@@ -142,7 +145,7 @@ mappings:
     property: genreForm
     codes: { a: aut, b: bio, c: cpl, d: dra, e: ess, f: fic, g: rpt, h: his, i: ins, j: lan, k: cod, l: spe, m: mem, o: fol, p: poe, r: reh, s: sou, t: int }
   frequency:
-    vocabulary: frequency
+    vocabulary: frequencies
     type: Frequency
     property: frequency
     codes: { a: ann, b: bmn, c: swk, d: dyl, e: bwk, f: san, g: bin, h: ten, i: ttw, j: ttm, k: con, m: mon, q: grt, s: smn, t: tty, w: wkl }
@@ -271,7 +274,142 @@ mappings:
       "0": 0 - successive
       "1": 1 - latest
       "2": 2 - integrated
-
+  carrier:
+    vocabulary: carriers
+    property: carrier
+    type: Carrier
+    codes:
+      a: mediaTypes:h
+      b: he
+      c: hg
+      o: cr
+    labels:
+      q: direct electronic
+      r: regular print reproduction
+      s: electronic
+  carrierNote:
+    vocabulary: carriers
+    property: note
+    type: Note
+    codes:
+      a: mediaTypes:h
+      b: he
+      c: hg
+      o: cr
+    labels:
+      q: direct electronic
+      r: regular print reproduction
+      s: electronic
+  supplementaryContent:
+    property: supplementaryContent
+    type: SupplementaryContent
+    labels:
+      "1": Index present
+  print:
+    property: fontSize
+    type: FontSize
+    labels:
+      d: large print
+  notation:
+    property: notation
+    type: TactileNotation
+    labels:
+      f: braille
+  projection:
+    property: projection
+    type: Cartographic
+    labels:
+      aa: Aitoff
+      ab: Gnomic
+      ac: Lambert's azimuthal equal area
+      ad: Orthographic
+      ae: Azimuthal equidistant
+      af: Stereographic
+      ag: General vertical near-sided
+      am: Modified stereographic for Alaska
+      an: Chamberlin trimetric
+      ap: polar stereographic
+      au: Azimuthal, specific type unknown
+      az: Azimuthal, other
+      ba: Gali
+      bb: Goode's homiographic
+      bc: Lambert's cylindrical equal area
+      bd: Mercator
+      be: Miller
+      bf: Mollweide
+      bg: Sinusoidal
+      bh: Transverse Mercator
+      bi: Gauss-Kruger
+      bj: Equirectangular
+      bk: Krovak
+      bl: Cassini-Soldner
+      bo: Oblique Mercator
+      br: Robinson
+      bs: Space oblique Mercator
+      bu: Cylindrical, specific type unknown
+      bz: Cylindrical, other
+      ca: Alber's equal area
+      cb: Bonne
+      cc: Lambert's conformal conic
+      ce: Equidistant conic
+      cp: Polyconic
+      cu: Conic, specific type unknown
+      cz: Conic, other
+      da: Armadillo
+      db: Butterfly
+      dc: Eckert
+      dd: Goode's homolosine
+      de: Miller's bipolar oblique conformal conic
+      df: Van Der Grinten
+      dg: Dimaxion
+      dh: Cordiform
+      dl: Lambert conformal
+  cartographicAttributes:
+    type: Cartographic
+    property: cartographicAttributes
+    labels:
+      a: contours
+      b: shading
+      c: gradient and bathymetric tints
+      d: hachures
+      e: bathymetry/soundings
+      f: form lines
+      g: spot heights
+      i: pictorially
+      j: land forms
+      k: bathymetry/isolines
+      m: rock drawings
+  cartTypeIssuance:
+    type: Issuance
+    property: issuance
+    labels:
+      a: single map
+      b: map series
+      c: map serial
+      f: map supplement to another work
+      g: map bound as part of another work
+  cartTypeGenreForm:
+    vocabulary: marcgt
+    type: GenreForm
+    property: genreForm
+    codes:
+      d: glo
+      e: atl
+  regularity:
+    type: Frequency
+    property: frequency
+    labels:
+      n: normalized irregular
+      r: regular
+      x: completely irregular
+  technique:
+    type: Note
+    property: note
+    labels:
+      a: animation
+      c: animation and live action
+      l: live action
+  
 "008":
   AdminMetadata:
     Default:
@@ -377,6 +515,85 @@ mappings:
         mapping: govdoc
       - position: 33
         mapping: visualType
+  Instance:
+    Book:
+      - position: 18
+        mapping: illustrativeContent
+      - position: 19
+        mapping: illustrativeContent
+      - position: 20
+        mapping: illustrativeContent
+      - position: 21
+        mapping: illustrativeContent
+      - position: 23
+        mapping: carrier
+      - position: 23
+        mapping: print
+      - position: 23
+        mapping: notation
+      - position: 31
+        mapping: supplementaryContent
+    ComputerFile:
+      - position: 23
+        mapping: carrier
+        values: [o, q]
+    Map:
+      - position: 18
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 19
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 20
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 21
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 22
+        length: 2
+        mapping: projection
+        mapper: io.lold.marc2bf2.mappers.BibFrameCodeMapper
+      - position: 25
+        mapping: cartTypeIssuance
+      - position: 25
+        mapping: cartTypeGenreForm
+      - position: 29
+        mapping: carrier
+      - position: 31
+        mapping: supplementaryContent
+    Music:
+      - position: 23
+        mapping: carrier
+    ContinuingResource:
+      - position: 18
+        mapping: frequency
+      - position: 19
+        mapping: regularity
+      - position: 21
+        mapping: crtype
+      - position: 22
+        mapping: carrierNote
+        mapper: io.lold.marc2bf2.mappers.NoteTypeMapper
+        params: { noteType: "form of original item" }
+      - position: 23
+        mapping: carrier
+    VisualMaterial:
+      - position: 29
+        mapping: carrier
+      - position: 34
+        mapping: technique
+        mapper: io.lold.marc2bf2.mappers.NoteTypeMapper
+        params: { noteType: "technique" }
+    MixedMateiral:
+      - position: 23
+        mapping: carrier
+
+
 
 "006":
   AdminMetadata:
@@ -478,7 +695,83 @@ mappings:
         mapping: govdoc
       - position: 16
         mapping: visualType
-
+  Instance:
+    Book:
+      - position: 1
+        mapping: illustrativeContent
+      - position: 2
+        mapping: illustrativeContent
+      - position: 3
+        mapping: illustrativeContent
+      - position: 4
+        mapping: illustrativeContent
+      - position: 6
+        mapping: carrier
+      - position: 6
+        mapping: print
+      - position: 6
+        mapping: notation
+      - position: 14
+        mapping: supplementaryContent
+    ComputerFile:
+      - position: 6
+        mapping: carrier
+        values: [o, q]
+    Map:
+      - position: 1
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 2
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 3
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 4
+        mapping: cartographicAttributes
+        mapper: io.lold.marc2bf2.mappers.NestedNoteMapper
+        params: { noteType: relief }
+      - position: 5
+        length: 2
+        mapping: projection
+        mapper: io.lold.marc2bf2.mappers.BibFrameCodeMapper
+      - position: 8
+        mapping: cartTypeIssuance
+      - position: 8
+        mapping: cartTypeGenreForm
+      - position: 12
+        mapping: carrier
+      - position: 14
+        mapping: supplementaryContent
+    Music:
+      - position: 6
+        mapping: carrier
+    ContinuingResource:
+      - position: 1
+        mapping: frequency
+      - position: 2
+        mapping: regularity
+      - position: 4
+        mapping: crtype
+      - position: 5
+        mapping: carrierNote
+        mapper: io.lold.marc2bf2.mappers.NoteTypeMapper
+        params: { noteType: "form of original item" }
+      - position: 6
+        mapping: carrier
+    VisualMaterial:
+      - position: 12
+        mapping: carrier
+      - position: 17
+        mapping: technique
+        mapper: io.lold.marc2bf2.mappers.NoteTypeMapper
+        params: { noteType: "technique" }
+    MixedMateiral:
+      - position: 6
+        mapping: carrier
 
 
 
