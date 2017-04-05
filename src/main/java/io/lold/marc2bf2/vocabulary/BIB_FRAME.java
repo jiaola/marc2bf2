@@ -9,8 +9,12 @@ import java.util.Collection;
 
 public class BIB_FRAME {
     private static final Model m = ModelFactory.createDefaultModel();
-    public static final java.lang.String NAMESPACE = "http://id.loc.gov/ontologies/bibframe/";
-    public static final java.lang.String PREFIX = "bf";
+    public static final String NAMESPACE = "http://id.loc.gov/ontologies/bibframe/";
+    public static final String PREFIX = "bf";
+
+    public static String getURI() {
+        return NAMESPACE;
+    }
 
     // ---- classes ----
     public static final Resource AcquisitionSource;
@@ -105,10 +109,6 @@ public class BIB_FRAME {
     public static final Property source;
     public static final Property status;
     public static final Property supplementaryContent;
-
-    public static String getURI() {
-        return NAMESPACE;
-    }
 
     static {
         AcquisitionSource = m.createResource(BIB_FRAME.NAMESPACE + "AcquisitionSource");
