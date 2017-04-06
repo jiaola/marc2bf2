@@ -11,4 +11,11 @@ public class MappingsReaderTest {
         Map map = MappingsReader.readMappings("007");
         assertEquals("Cartography", ((Map)((Map)map.get("Work")).get("a")).get("type"));
     }
+
+    @Test
+    public void testGetLanguageMapping() throws Exception {
+        Map<String, String> map = MappingsReader.getLanguageMapping();
+        assertEquals("af", map.get("afr"));
+        assertEquals("sq", map.get("sqi"));
+    }
 }

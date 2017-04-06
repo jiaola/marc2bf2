@@ -1,8 +1,7 @@
 package io.lold.marc2bf2.converters;
 
-import org.marc4j.marc.ControlField;
-import org.marc4j.marc.Leader;
-import org.marc4j.marc.Record;
+import io.lold.marc2bf2.mappings.MappingsReader;
+import org.marc4j.marc.*;
 
 public class RecordUtils {
     public enum Material {
@@ -118,5 +117,27 @@ public class RecordUtils {
 
     public static boolean isMixedMaterialBy006(Record record) {
         return Material.MixedMaterial.equals(getMaterialTypeFrom006(record));
+    }
+
+    public static String getXmlLang(DataField field, Record record) {
+        Subfield sf = field.getSubfield('6');
+        if (sf == null) {
+            return null;
+        }
+        ControlField f008 = (ControlField) record.getVariableField("008");
+        String lang008 = f008.getData().substring(35, 38);
+        String lang = MappingsReader.getLanguageMapping().get(lang008);
+        String[] vscript = sf.getData().split("/");
+        if (vscript.length < 1) return null;
+
+        if (vscript[1].equals("(3")) return lang + "-arab";
+        else if (vscript[1].equals("(B")) return lang + "-latn";
+        else if (vscript[1].equals("$1") && lang008.equals("kor")) return lang + "-hang";
+        else if (vscript[1].equals("$1") && lang008.equals("chi")) return lang + "-hani";
+        else if (vscript[1].equals("$1") && lang008.equals("jpn")) return lang + "-jpan";
+        else if (vscript[1].equals("(N")) return lang + "-cyrl";
+        else if (vscript[1].equals("(S")) return lang + "-grek";
+        else if (vscript[1].equals("(2")) return lang + "-hebr";
+        else return null;
     }
 }
