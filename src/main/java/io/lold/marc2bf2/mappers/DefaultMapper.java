@@ -1,5 +1,6 @@
 package io.lold.marc2bf2.mappers;
 
+import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.converters.ModelUtils;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
@@ -113,7 +114,6 @@ public class DefaultMapper extends Mapper {
     }
 
     protected String mapPrefix(String prefix) throws Exception {
-        Map prefixMap = MappingsReader.readMappings("prefixes");
-        return (String) prefixMap.get(prefix);
+        return ModelFactory.prefixMapping().getNsPrefixURI(prefix);
     }
 }

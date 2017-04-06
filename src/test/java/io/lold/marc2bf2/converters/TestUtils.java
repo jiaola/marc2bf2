@@ -1,6 +1,7 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -9,6 +10,8 @@ import org.marc4j.marc.Record;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+
+import static org.junit.Assert.assertTrue;
 
 public class TestUtils {
     public static Record[] readTestRecords(String file) {
@@ -57,6 +60,13 @@ public class TestUtils {
             }
         }
         return false;
+    }
+
+    public static ResultSet sparql(String q, Model model) {;
+        Query query = QueryFactory.create(q);
+        QueryExecution qexec = QueryExecutionFactory.create(query, model);
+        ResultSet results = qexec.execSelect() ;
+        return results;
     }
 
 }

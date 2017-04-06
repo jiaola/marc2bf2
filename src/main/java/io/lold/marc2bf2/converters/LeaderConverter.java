@@ -1,5 +1,6 @@
 package io.lold.marc2bf2.converters;
 
+import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.mappers.LeaderMapper;
 import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
@@ -30,7 +31,6 @@ public class LeaderConverter {
         this.record = record;
         try {
             mappings = (Map<String, Map>) MappingsReader.readMappings("leader");
-            prefixMap = MappingsReader.readMappings("prefixes");
         } catch (IOException ex) {
             logger.error("Could not load mappings file for leader");
             throw ex;
@@ -97,7 +97,7 @@ public class LeaderConverter {
             String value = data.substring(pos, pos+1);
             Map<String, String> uris = (Map<String, String>) position.get("uris");
             if (uris.containsKey(value)) {
-                String uri = prefixMap.get(position.get("prefix")) + uris.get(value);
+                String uri = ModelFactory.prefixMapping().getNsPrefixURI((String) position.get("prefix")) + uris.get(value);
                 resource.addProperty(RDF.type, model.createResource(uri));
             }
         }

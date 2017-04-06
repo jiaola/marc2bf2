@@ -1,5 +1,6 @@
 package io.lold.marc2bf2.converters;
 
+import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
@@ -127,8 +128,7 @@ public class Field007Converter extends FieldConverter {
 
     private void addDefault(Map position, Resource resource) throws Exception {
         Map<String, String> defaultMap = (Map<String, String>) position.get("default");
-        Map prefixMap = MappingsReader.readMappings("prefixes");
-        String uri =prefixMap.get(defaultMap.get("prefix")) + defaultMap.get("uri");
+        String uri = ModelFactory.prefixMapping().getNsPrefixURI(defaultMap.get("prefix")) + defaultMap.get("uri");
         Resource object = model.createResource(uri);
         object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + defaultMap.get("type")));
         if (defaultMap.containsKey("label")) {

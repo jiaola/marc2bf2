@@ -70,9 +70,7 @@ public class Field040ConverterTest {
                 model.write(System.out);
                 List<Subfield> subfields = field.getSubfields('a');
                 for (Subfield sf : subfields) {
-                    Query query = QueryFactory.create(String.format(q, sf.getData()));
-                    QueryExecution qexec = QueryExecutionFactory.create(query, model);
-                    ResultSet results = qexec.execSelect() ;
+                    ResultSet results = TestUtils.sparql(String.format(q, sf.getData()), model);
                     assertTrue(results.hasNext());
                 }
             }
@@ -101,9 +99,7 @@ public class Field040ConverterTest {
                                     , "  ?x bf:descriptionConventions ?y ."
                                     , "  ?y rdfs:label \"%1s\" ."
                                     , "}");
-                            Query query = QueryFactory.create(String.format(q, sf.getData()));
-                            QueryExecution qexec = QueryExecutionFactory.create(query, model);
-                            ResultSet results = qexec.execSelect() ;
+                            ResultSet results = TestUtils.sparql(String.format(q, sf.getData()), model);
                             assertTrue(results.hasNext());
                         } else {
                             q = String.join("\n"
@@ -111,13 +107,11 @@ public class Field040ConverterTest {
                                     , "PREFIX rdf: <" + RDF.getURI() + ">"
                                     , "PREFIX rdfs: <" + RDFS.getURI() + ">"
                                     , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
-                                    , "SELECT ?x  ?y "
+                                    , "SELECT ?x "
                                     , "WHERE { "
                                     , "  ?x bf:descriptionConventions <http://id.loc.gov/vocabulary/descriptionConventions/%1s> ."
                                     , "}");
-                            Query query = QueryFactory.create(String.format(q, sf.getData()));
-                            QueryExecution qexec = QueryExecutionFactory.create(query, model);
-                            ResultSet results = qexec.execSelect() ;
+                            ResultSet results = TestUtils.sparql(String.format(q, sf.getData()), model);
                             assertTrue(results.hasNext());
                         }
 
