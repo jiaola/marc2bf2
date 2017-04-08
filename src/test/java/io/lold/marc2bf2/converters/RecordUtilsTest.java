@@ -25,4 +25,10 @@ public class RecordUtilsTest {
         String xmllang = RecordUtils.getXmlLang(field, record);
         assertEquals("da-arab", xmllang);
     }
+
+    @Test
+    public void testFormatEDTF() throws Exception {
+        String date = "197809102000-0400";
+        assertEquals("1978-09-10T20:00:00-04:00", RecordUtils.formatEDTF(date));
+    }
 }
