@@ -53,6 +53,14 @@ public class Field043Converter extends FieldConverter {
                             .addProperty(RDFS.label, "ISO 3166"));
                 }
                 work.addProperty(BIB_FRAME.geographicCoverage, gc);
+            } else if (sf.getCode() == '0') {
+                Resource r = SubfieldUtils.mapSubfield0(model, sf.getData());
+                if (r == null) continue;
+                if (r.hasProperty(BIB_FRAME.source)) {
+                    work.addProperty(BIB_FRAME.identifiedBy, r);
+                } else {
+                    work.addProperty(BIB_FRAME.agent, r);
+                }
             }
         }
         return model;

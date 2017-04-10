@@ -81,4 +81,34 @@ public class Field043ConverterTest {
             }
         }
     }
+
+    @Test
+    public void testConvertSubfield0() throws Exception {
+        String q = String.join("\n"
+                , "PREFIX bf: <" + BIB_FRAME.getURI() + ">"
+                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                , "PREFIX rdfs: <" + RDFS.getURI() + ">"
+                , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
+                , "SELECT ?x  "
+                , "WHERE { "
+                , "  ?x bf:identifiedBy ?y ."
+                , "  ?y rdf:value \"310008891\" ."
+                , "}");
+        List<DataField> fields = record.getDataFields();
+        for (DataField field: fields) {
+            if (field.getTag().equals("043")) {
+                if (!field.getSubfields('a').isEmpty()) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    List<Subfield> subfields = field.getSubfields('0');
+                    for (Subfield sf: subfields) {
+                        ResultSet results = TestUtils.sparql(q, model);
+                        assertTrue(results.hasNext());
+                    }
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
 }

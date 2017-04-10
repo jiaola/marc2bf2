@@ -60,6 +60,12 @@ public class ModelUtils {
                 .addProperty(RDFS.label, label);
     }
 
+    public static Resource createSource(Model model, String label) {
+        return model.createResource()
+                .addProperty(RDF.type, BIB_FRAME.Source)
+                .addProperty(RDFS.label, label);
+    }
+
     /**
      * Get a full URI given the abbreviated form. For example,
      * given bflc:encodingLevel, it returns
