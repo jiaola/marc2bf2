@@ -5,6 +5,7 @@ import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import io.lold.marc2bf2.vocabulary.DataTypes;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.datatypes.BaseDatatype;
 import org.apache.jena.rdf.model.Model;
@@ -133,7 +134,7 @@ public class Field006008Converter extends FieldConverter {
                 prov.addProperty(RDF.type, BIB_FRAME.Distribution);
             }
             prov.addProperty(BIB_FRAME.date,
-                    model.createTypedLiteral(date, new BaseDatatype("http://id.loc.gov/datatypes/edtf")));
+                    model.createTypedLiteral(date, DataTypes.EDTF));
             if (country != null) {
                 prov.addProperty(BIB_FRAME.place, country);
             }
@@ -151,12 +152,12 @@ public class Field006008Converter extends FieldConverter {
                         .addProperty(RDF.type, BIB_FRAME.Production);
                 String date2 = data.substring(11, 15).replace('u', 'x').replace('U', 'X');
                 p.addProperty(BIB_FRAME.date,
-                        model.createTypedLiteral(date2, new BaseDatatype("http://id.loc.gov/datatypes/edtf")));
+                        model.createTypedLiteral(date2, DataTypes.EDTF));
                 instance.addProperty(BIB_FRAME.provisionActivity, p);
             } else if (char6.equals("t")) {
                 String date2 = data.substring(11, 15).replace('u', 'x').replace('U', 'X');
                 instance.addProperty(BIB_FRAME.copyrightDate,
-                        model.createTypedLiteral(date2, new BaseDatatype("http://id.loc.gov/datatypes/edtf")));
+                        model.createTypedLiteral(date2, DataTypes.EDTF));
             }
         }
     }

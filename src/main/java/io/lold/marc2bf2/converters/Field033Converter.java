@@ -5,6 +5,7 @@ import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
+import io.lold.marc2bf2.vocabulary.DataTypes;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.datatypes.BaseDatatype;
 import org.apache.jena.rdf.model.Model;
@@ -44,11 +45,10 @@ public class Field033Converter extends FieldConverter {
             capture.addProperty(BIB_FRAME.note, ModelUtils.createNote(model, "finding"));
         }
 
-        String edtf = "http://id.loc.gov/datatypes/edtf";
         if (df.getIndicator1() == '0') {
             String vdate = FormatUtils.formatEDTF(df.getSubfield('a').getData());
             capture.addProperty(BIB_FRAME.date,
-                    model.createTypedLiteral(vdate, new BaseDatatype(edtf)));
+                    model.createTypedLiteral(vdate, DataTypes.EDTF));
         } else if (df.getIndicator1() == '2') {
             List<Subfield> sfs = df.getSubfields('a');
             List<String> dates = sfs.stream().
@@ -56,13 +56,13 @@ public class Field033Converter extends FieldConverter {
                     .collect(Collectors.toList());
             String vdate = StringUtils.join(dates, '/');
             capture.addProperty(BIB_FRAME.date,
-                    model.createTypedLiteral(vdate, new BaseDatatype(edtf)));
+                    model.createTypedLiteral(vdate, DataTypes.EDTF));
         } else if (df.getIndicator1() == '1') {
             List<Subfield> sfs = df.getSubfields('a');
             for (Subfield sf: sfs) {
                 String vdate = FormatUtils.formatEDTF(sf.getData());
                 capture.addProperty(BIB_FRAME.date,
-                        model.createTypedLiteral(vdate, new BaseDatatype(edtf)));
+                        model.createTypedLiteral(vdate, DataTypes.EDTF));
             }
         }
 
