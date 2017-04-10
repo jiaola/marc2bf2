@@ -23,8 +23,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class Field034ConverterTest {
-    Field034Converter converter;
+public class Field043ConverterTest {
+    Field043Converter converter;
     private Model model;
 
     @Parameterized.Parameter
@@ -43,7 +43,7 @@ public class Field034ConverterTest {
                 .addProperty(RDF.type, BIB_FRAME.Work)
                 .addProperty(BIB_FRAME.adminMetadata, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
-        converter = new Field034Converter(model, record);
+        converter = new Field043Converter(model, record);
     }
 
     @After
@@ -54,29 +54,26 @@ public class Field034ConverterTest {
     }
 
     @Test
-    public void testConvertSFA() throws Exception {
+    public void testConvert() throws Exception {
         String q = String.join("\n"
                 , "PREFIX bf: <" + BIB_FRAME.getURI() + ">"
                 , "PREFIX rdf: <" + RDF.getURI() + ">"
                 , "PREFIX rdfs: <" + RDFS.getURI() + ">"
                 , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
-                , "SELECT ?w  "
+                , "SELECT ?x  "
                 , "WHERE { "
-                , "  ?x bf:note ?y ."
-                , "  ?y rdfs:label \"%1s\" ."
+                , "  ?x bf:geographicCoverage <http://id.loc.gov/vocabulary/geographicAreas/s-bl> ."
                 , "}");
         List<DataField> fields = record.getDataFields();
         for (DataField field: fields) {
-            if (field.getTag().equals("034")) {
-                model = converter.convert(field);
-                model.write(System.out);
-                List<Subfield> sfs = field.getSubfields('a');
-                if (field.getSubfields('b').isEmpty() && field.getSubfields('c').isEmpty()) {
-                    for (Subfield a: sfs) {
-                        if ("a".equals(a.getData())) {
-                            ResultSet rs = TestUtils.sparql(String.format(q, "linear scale"), model);
-                            assertTrue(rs.hasNext());
-                        }
+            if (field.getTag().equals("043")) {
+                if (!field.getSubfields('a').isEmpty()) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    List<Subfield> subfields = field.getSubfields('a');
+                    for (Subfield sf: subfields) {
+                        ResultSet results = TestUtils.sparql(q, model);
+                        assertTrue(results.hasNext());
                     }
                 }
             } else {

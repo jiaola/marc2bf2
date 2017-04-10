@@ -1,5 +1,6 @@
-package io.lold.marc2bf2.converters;
+package io.lold.marc2bf2.utils;
 
+import io.lold.marc2bf2.TestUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -29,6 +30,12 @@ public class RecordUtilsTest {
     @Test
     public void testFormatEDTF() throws Exception {
         String date = "197809102000-0400";
-        assertEquals("1978-09-10T20:00:00-04:00", RecordUtils.formatEDTF(date));
+        assertEquals("1978-09-10T20:00:00-04:00", FormatUtils.formatEDTF(date));
+    }
+
+    @Test
+    public void testChopPunctuation() throws Exception {
+        String s = "s-bl----";
+        assertEquals("s-bl", FormatUtils.chopPunctuation(s, "[-\\s]+$"));
     }
 }

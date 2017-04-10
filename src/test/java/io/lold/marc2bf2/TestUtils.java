@@ -1,4 +1,4 @@
-package io.lold.marc2bf2.converters;
+package io.lold.marc2bf2;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.query.*;

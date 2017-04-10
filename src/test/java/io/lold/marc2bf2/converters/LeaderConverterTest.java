@@ -1,5 +1,7 @@
 package io.lold.marc2bf2.converters;
 
+import io.lold.marc2bf2.TestUtils;
+import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.jena.query.*;
@@ -11,11 +13,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.marc4j.marc.ControlField;
 import org.marc4j.marc.Leader;
 import org.marc4j.marc.Record;
-
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
