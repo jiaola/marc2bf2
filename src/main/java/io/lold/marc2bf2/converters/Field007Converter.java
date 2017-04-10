@@ -3,6 +3,7 @@ package io.lold.marc2bf2.converters;
 import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
+import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;

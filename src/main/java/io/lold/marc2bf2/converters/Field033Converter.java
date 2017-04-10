@@ -1,6 +1,8 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.mappers.SubfieldMapper;
+import io.lold.marc2bf2.utils.FormatUtils;
+import io.lold.marc2bf2.utils.SubfieldUtils;
+import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.commons.lang3.StringUtils;
@@ -44,13 +46,13 @@ public class Field033Converter extends FieldConverter {
 
         String edtf = "http://id.loc.gov/datatypes/edtf";
         if (df.getIndicator1() == '0') {
-            String vdate = RecordUtils.formatEDTF(df.getSubfield('a').getData());
+            String vdate = FormatUtils.formatEDTF(df.getSubfield('a').getData());
             capture.addProperty(BIB_FRAME.date,
                     model.createTypedLiteral(vdate, new BaseDatatype(edtf)));
         } else if (df.getIndicator1() == '2') {
             List<Subfield> sfs = df.getSubfields('a');
             List<String> dates = sfs.stream().
-                    map(sf -> RecordUtils.formatEDTF(sf.getData()))
+                    map(sf -> FormatUtils.formatEDTF(sf.getData()))
                     .collect(Collectors.toList());
             String vdate = StringUtils.join(dates, '/');
             capture.addProperty(BIB_FRAME.date,
@@ -58,7 +60,7 @@ public class Field033Converter extends FieldConverter {
         } else if (df.getIndicator1() == '1') {
             List<Subfield> sfs = df.getSubfields('a');
             for (Subfield sf: sfs) {
-                String vdate = RecordUtils.formatEDTF(sf.getData());
+                String vdate = FormatUtils.formatEDTF(sf.getData());
                 capture.addProperty(BIB_FRAME.date,
                         model.createTypedLiteral(vdate, new BaseDatatype(edtf)));
             }
@@ -97,13 +99,13 @@ public class Field033Converter extends FieldConverter {
             Resource place = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Place)
                     .addProperty(RDF.value, p.getData())
-                    .addProperty(BIB_FRAME.source, SubfieldMapper.mapSubfield2(model, two.getData()));
+                    .addProperty(BIB_FRAME.source, SubfieldUtils.mapSubfield2(model, two.getData()));
             capture.addProperty(BIB_FRAME.place, place);
         }
 
         List<Subfield> sf3s = df.getSubfields('3');
         for (Subfield three: sf3s) {
-            capture.addProperty(BIB_FRAME_LC.appliesTo, SubfieldMapper.mapSubfield3(model, three.getData()));
+            capture.addProperty(BIB_FRAME_LC.appliesTo, SubfieldUtils.mapSubfield3(model, three.getData()));
         }
 
         return model;

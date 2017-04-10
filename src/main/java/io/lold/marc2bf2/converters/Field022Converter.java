@@ -1,8 +1,8 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.mappers.SubfieldMapper;
+import io.lold.marc2bf2.utils.SubfieldUtils;
+import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -32,7 +32,7 @@ public class Field022Converter extends FieldConverter {
                     .addProperty(RDF.type, BIB_FRAME.IssnL)
                     .addProperty(RDF.value, sf.getData());
             Subfield sf2 = df.getSubfield('2');
-            Resource source = SubfieldMapper.mapSubfield2(model, sf2.getData());
+            Resource source = SubfieldUtils.mapSubfield2(model, sf2.getData());
             r.addProperty(BIB_FRAME.source, source);
             work.addProperty(BIB_FRAME.identifiedBy, r);
         }
@@ -46,7 +46,7 @@ public class Field022Converter extends FieldConverter {
                             .addProperty(RDF.type, BIB_FRAME.Status)
                             .addProperty(RDFS.label, "canceled"));
             Subfield sf2 = df.getSubfield('2');
-            Resource source = SubfieldMapper.mapSubfield2(model, sf2.getData());
+            Resource source = SubfieldUtils.mapSubfield2(model, sf2.getData());
             r.addProperty(BIB_FRAME.source, source);
             work.addProperty(BIB_FRAME.identifiedBy, r);
         }

@@ -1,8 +1,10 @@
-package io.lold.marc2bf2.converters;
+package io.lold.marc2bf2.utils;
 
 import io.lold.marc2bf2.mappings.MappingsReader;
 import org.apache.commons.lang3.StringUtils;
 import org.marc4j.marc.*;
+
+import java.util.List;
 
 public class RecordUtils {
     public enum Material {
@@ -142,24 +144,23 @@ public class RecordUtils {
         else return null;
     }
 
-    public static String formatEDTF(String date) {
-        if (date.substring(0, 12).contains("-")) {
-            date = date.replaceFirst("-", "X");
+    /**
+     * From the current index, look ahead for n more subfields
+     * to find a subfield with certain code
+     * @param field
+     * @param i
+     * @param code
+     * @return
+     */
+    public static Subfield lookAhead(DataField field, int i, int n, char code) {
+        List<Subfield> subfieldList = field.getSubfields();
+        int j = 1;
+        while (j <= n && i+j < subfieldList.size()) {
+            Subfield sf = subfieldList.get(i+j);
+            if (sf.getCode() == code) return sf;
+            j++;
         }
-        String ymd = date.substring(0, 4) + "-" + date.substring(4, 6);
-        if (!StringUtils.isBlank(date.substring(6, 8))) {
-            ymd += "-" + date.substring(6, 8);
-        }
-        if (!StringUtils.isBlank(date.substring(8, 12))) {
-            ymd += "T" + date.substring(8, 10) + ":" + date.substring(10, 12) + ":00";
-        }
-        if (!StringUtils.isBlank(date.substring(12, 17))) {
-            ymd += date.substring(12, 15) + ":" + date.substring(15, 17);
-        }
-        return ymd;
+        return null;
     }
 
-    public static String chopPunctuation(String str) {
-        return str.replaceAll("[.;:/\\s]+$", "");
-    }
 }

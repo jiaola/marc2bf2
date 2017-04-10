@@ -1,4 +1,4 @@
-package io.lold.marc2bf2.converters;
+package io.lold.marc2bf2.utils;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;

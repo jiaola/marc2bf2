@@ -4,7 +4,7 @@ import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.mappers.LeaderMapper;
 import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
-import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import io.lold.marc2bf2.utils.ModelUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;

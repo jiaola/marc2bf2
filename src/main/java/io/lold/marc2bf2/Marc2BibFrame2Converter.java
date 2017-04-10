@@ -1,6 +1,7 @@
 package io.lold.marc2bf2;
 
 import io.lold.marc2bf2.converters.*;
+import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
@@ -11,7 +12,6 @@ import org.marc4j.marc.VariableField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
 import java.util.List;
 
 public class Marc2BibFrame2Converter {

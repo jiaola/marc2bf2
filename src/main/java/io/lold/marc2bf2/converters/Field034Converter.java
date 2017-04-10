@@ -1,6 +1,7 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.mappers.SubfieldMapper;
+import io.lold.marc2bf2.utils.SubfieldUtils;
+import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.commons.lang3.StringUtils;
@@ -46,7 +47,7 @@ public class Field034Converter extends FieldConverter {
                     .addProperty(BIB_FRAME.coordinates, StringUtils.join(cList, " "));
             List<Subfield> sf3s = df.getSubfields('3');
             for (Subfield three: sf3s) {
-                cart.addProperty(BIB_FRAME_LC.appliesTo, SubfieldMapper.mapSubfield3(model, three.getData()));
+                cart.addProperty(BIB_FRAME_LC.appliesTo, SubfieldUtils.mapSubfield3(model, three.getData()));
             }
             work.addProperty(BIB_FRAME.cartographicAttributes, cart);
         }
@@ -83,7 +84,7 @@ public class Field034Converter extends FieldConverter {
                 .addProperty(BIB_FRAME.note, ModelUtils.createNote(model, label))
                 .addProperty(RDFS.label, data);
         for (Subfield three: sf3s) {
-            scale.addProperty(BIB_FRAME_LC.appliesTo, SubfieldMapper.mapSubfield3(model, three.getData()));
+            scale.addProperty(BIB_FRAME_LC.appliesTo, SubfieldUtils.mapSubfield3(model, three.getData()));
         }
         return scale;
     }
