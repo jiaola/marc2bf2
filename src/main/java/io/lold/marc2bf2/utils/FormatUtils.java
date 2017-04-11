@@ -105,21 +105,41 @@ public class FormatUtils {
             throw new MarcDataException(data + " is too short. Need to be longer than 4.");
         }
         String date1;
-        if ("abced".contains(data.substring(0, 1))) {
-            date1 = marcTimeMap.get(data.substring(0, 2));
+        if ("abced".contains(StringUtils.substring(data, 0, 1))) {
+            date1 = marcTimeMap.get(StringUtils.substring(data, 0, 2));
         } else {
-            date1 = marcTimeMap.get(data.substring(0, 1)) + data.substring(1, 2) + "X";
+            date1 = marcTimeMap.get(StringUtils.substring(data, 0, 1)) + StringUtils.substring(data, 1, 2) + "X";
         }
         String date2;
-        if ("abced".contains(data.substring(2, 3))) {
-            date2 = marcTimeMap.get(data.substring(2, 4));
+        if ("abced".contains(StringUtils.substring(data, 2, 3))) {
+            date2 = marcTimeMap.get(StringUtils.substring(data, 2, 4));
         } else {
-            date2 = marcTimeMap.get(data.substring(2, 3)) + data.substring(3, 4) + "X";
+            date2 = marcTimeMap.get(StringUtils.substring(data, 2, 3)) + StringUtils.substring(data, 3, 4) + "X";
         }
         if (date1.equals(date2)) {
             return date1;
         } else {
             return date1 + "/" + date2;
         }
+    }
+
+    public static String format045b(String data) {
+        String date = StringUtils.substring(data, 1, 5);
+        if (data.startsWith("c")) {
+            date = "-" + date;
+        }
+        String month = StringUtils.substring(data, 5, 7);
+        if (StringUtils.isNotBlank(month)) {
+            date = date + "-" + month;
+        }
+        String day = StringUtils.substring(data, 7, 9);
+        if (StringUtils.isNotBlank(day)) {
+            date = date + "-" + day;
+        }
+        String hour = StringUtils.substring(data, 9, 11);
+        if (StringUtils.isNotBlank(hour)) {
+            date = date + "%" + hour;
+        }
+        return date;
     }
 }
