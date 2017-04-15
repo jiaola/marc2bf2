@@ -1,0 +1,97 @@
+ba: { property: instrument, type: MusicInstrument, props: { instrumentType: brass, "rdfs:label": horn } }
+bb: { property: instrument, type: MusicInstrument, props: { instrumentType: brass, "rdfs:label": trumpet } }
+bc: { property: instrument, type: MusicInstrument, props: { instrumentType: brass, "rdfs:label": coronet } }
+bd: { property: instrument, type: MusicInstrument, props: { instrumentType: brass, "rdfs:label": trombone } }
+be: { property: instrument, type: MusicInstrument, props: { instrumentType: brass, "rdfs:label": tuba } }
+bf: { property: instrument, type: MusicInstrument, props: { instrumentType: brass, "rdfs:label": baritone } }
+bn: { property: instrument, type: MusicInstrument, props: { instrumentType: brass } }
+bu: { property: instrument, type: MusicInstrument, props: { instrumentType: brass } }
+by: { property: instrument, type: MusicInstrument, props: { instrumentType: "brass, ethnic" } }
+bz: { property: instrument, type: MusicInstrument, props: { instrumentType: brass } }
+ea: { property: instrument, type: MusicInstrument, props: { instrumentType: electronic, "rdfs:label": electronic synthesizer } }
+eb: { property: instrument, type: MusicInstrument, props: { instrumentType: electronic, "rdfs:label": electronic tape } }
+ec: { property: instrument, type: MusicInstrument, props: { instrumentType: electronic, "rdfs:label": computer } }
+ed: { property: instrument, type: MusicInstrument, props: { instrumentType: electronic, "rdfs:label": ondes martinot } }
+en: { property: instrument, type: MusicInstrument, props: { instrumentType: electronic } }
+eu: { property: instrument, type: MusicInstrument, props: { instrumentType: electronic } }
+ez: { property: instrument, type: MusicInstrument, props: { instrumentType: electronic } }
+ka: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard, "rdfs:label": piano } }
+kb: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard, "rdfs:label": organ } }
+kc: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard, "rdfs:label": harpsichord } }
+kd: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard, "rdfs:label": clavichord } }
+ke: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard, "rdfs:label": continuo } }
+kf: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard, "rdfs:label": celeste } }
+kn: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard } }
+ku: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard } }
+ky: { property: instrument, type: MusicInstrument, props: { instrumentType: "keyboard, ethnic" } }
+kz: { property: instrument, type: MusicInstrument, props: { instrumentType: keyboard } }
+pa: { property: instrument, type: MusicInstrument, props: { instrumentType: percussion, "rdfs:label": timpani } }
+pb: { property: instrument, type: MusicInstrument, props: { instrumentType: percussion, "rdfs:label": xylophone } }
+pc: { property: instrument, type: MusicInstrument, props: { instrumentType: percussion, "rdfs:label": marimba } }
+pd: { property: instrument, type: MusicInstrument, props: { instrumentType: percussion, "rdfs:label": drum } }
+pn: { property: instrument, type: MusicInstrument, props: { instrumentType: percussion } }
+pu: { property: instrument, type: MusicInstrument, props: { instrumentType: percussion } }
+py: { property: instrument, type: MusicInstrument, props: { instrumentType: "percussion, ethnic" } }
+pz: { property: instrument, type: MusicInstrument, props: { instrumentType: percussion } }
+sa: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed", "rdfs:label": violin } }
+sb: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed", "rdfs:label": viola } }
+sc: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed", "rdfs:label": violoncello } }
+sd: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed", "rdfs:label": double bass } }
+se: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed", "rdfs:label": viol } }
+sf: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed", "rdfs:label": viola d'amore } }
+sg: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed", "rdfs:label": viola da gamba } }
+sn: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed" } }
+su: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed" } }
+sy: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed, ethnic" } }
+sz: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, bowed" } }
+ta: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked", "rdfs:label": harp } }
+tb: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked", "rdfs:label": guitar } }
+tc: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked", "rdfs:label": lute } }
+td: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked", "rdfs:label": mandolin } }
+tn: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked" } }
+tu: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked" } }
+ty: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked, ethnic" } }
+tz: { property: instrument, type: MusicInstrument, props: { instrumentType: "string, plucked" } }
+wa: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": flute } }
+wb: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": oboe } }
+wc: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": clarinet } }
+wd: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": bassoon } }
+we: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": piccolo } }
+wf: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": English horn } }
+wg: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": bass clarinet } }
+wh: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": recorder } }
+wi: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind, "rdfs:label": saxophone } }
+wn: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind } }
+wu: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind } }
+wy: { property: instrument, type: MusicInstrument, props: { instrumentType: "woodwind, ethnic" } }
+wz: { property: instrument, type: MusicInstrument, props: { instrumentType: woodwind } }
+oa: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental, "rdfs:label": orchestra } }
+ob: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental, "rdfs:label": chamber orchestra } }
+oc: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental, "rdfs:label": string orchestra } }
+od: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental, "rdfs:label": band } }
+oe: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental, "rdfs:label": dance orchestra } }
+of: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental, "rdfs:label": brass band } }
+on: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental } }
+ou: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental } }
+oy: { property: ensemble, type: MusicEnsemble, props: { ensembleType: "instrumental, ethnic" } }
+oz: { property: ensemble, type: MusicEnsemble, props: { ensembleType: instrumental } }
+ca: { property: voice, type: MusicVoice, props: { voiceType: chorus, "rdfs:label": mixed chorus } }
+cb: { property: voice, type: MusicVoice, props: { voiceType: chorus, "rdfs:label": female chorus } }
+cc: { property: voice, type: MusicVoice, props: { voiceType: chorus, "rdfs:label": male chorus } }
+cd: { property: voice, type: MusicVoice, props: { voiceType: chorus, "rdfs:label": children chorus } }
+cn: { property: voice, type: MusicVoice, props: { voiceType: chorus } }
+cu: { property: voice, type: MusicVoice, props: { voiceType: chorus } }
+cy: { property: voice, type: MusicVoice, props: { voiceType: "chorus, ethnic" } }
+va: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": soprano } }
+vb: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": mezzo soprano } }
+vc: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": alto } }
+vd: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": tenor } }
+ve: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": baritone } }
+vf: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": bass } }
+vg: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": counter tenor } }
+vh: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": high voice } }
+vi: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": medium voice } }
+vj: { property: voice, type: MusicVoice, props: { voiceType: voice, "rdfs:label": low voice } }
+vn: { property: voice, type: MusicVoice, props: { voiceType: voice } }
+vu: { property: voice, type: MusicVoice, props: { voiceType: voice } }
+vy: { property: voice, type: MusicVoice, props: { voiceType: "voice, ethnic" } }

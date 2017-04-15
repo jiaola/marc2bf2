@@ -4,6 +4,8 @@ import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.shared.PrefixMapping;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 
 /**
  * Factory for creating BibFrame models
@@ -47,7 +49,9 @@ public class ModelFactory {
         // Register the namespace prefixes
         PrefixMapping map = PrefixMapping.Factory.create()
                 .setNsPrefix(BIB_FRAME.PREFIX, BIB_FRAME.getURI())
-                .setNsPrefix(BIB_FRAME_LC.PREFIX, BIB_FRAME_LC.getURI());
+                .setNsPrefix(BIB_FRAME_LC.PREFIX, BIB_FRAME_LC.getURI())
+                .setNsPrefix("rdfs", RDFS.getURI())
+                .setNsPrefix("rdf", RDF.getURI());
         model.setNsPrefixes(map);
         return model;
     }
