@@ -36,6 +36,26 @@ public class FormatUtils {
         return ymd;
     }
 
+    /**
+     * Format a 8 digit string to yyyy-mm-dd
+     * @param data
+     * @return
+     */
+    public static String formatDate8d(String data) {
+        return StringUtils.substring(data, 0, 4) +
+                "-" + StringUtils.substring(data, 4, 6) +
+                "-" + StringUtils.substring(data, 6, 8);
+
+    }
+
+    public static String formatDate6d(String data) {
+        String year = data.substring(0, 2);
+        year = Integer.valueOf(year) < 50 ? "20" + year : "19" + year;
+        String month = data.substring(2, 4);
+        String day = data.substring(4, 6);
+        return year + "-" + month + "-" + day;
+    }
+
     public static String chopPunctuation(String str) {
         return chopPunctuation(str, "[.;:/\\s]+$");
     }

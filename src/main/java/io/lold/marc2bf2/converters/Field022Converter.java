@@ -14,7 +14,7 @@ import org.marc4j.marc.VariableField;
 
 import java.util.List;
 
-public class Field022Converter extends FieldConverter {
+public class Field022Converter extends InstanceIdConverter {
     public Field022Converter(Model model, Record record) {
         super(model, record);
     }
@@ -28,31 +28,31 @@ public class Field022Converter extends FieldConverter {
         DataField df = (DataField) field;
         List<Subfield> subfields = df.getSubfields('l');
         for (Subfield sf: subfields) {
-            Resource r = model.createResource()
+            Resource resource = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.IssnL)
                     .addProperty(RDF.value, sf.getData());
-            Subfield sf2 = df.getSubfield('2');
-            Resource source = SubfieldUtils.mapSubfield2(model, sf2.getData());
-            r.addProperty(BIB_FRAME.source, source);
-            work.addProperty(BIB_FRAME.identifiedBy, r);
+            addSubfield2(df, resource);
+            work.addProperty(BIB_FRAME.identifiedBy, resource);
         }
 
         subfields = df.getSubfields('m');
         for (Subfield sf: subfields) {
-            Resource r = model.createResource()
+            Resource resource = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.IssnL)
                     .addProperty(RDF.value, sf.getData())
                     .addProperty(BIB_FRAME.status, model.createResource()
                             .addProperty(RDF.type, BIB_FRAME.Status)
                             .addProperty(RDFS.label, "canceled"));
-            Subfield sf2 = df.getSubfield('2');
-            Resource source = SubfieldUtils.mapSubfield2(model, sf2.getData());
-            r.addProperty(BIB_FRAME.source, source);
-            work.addProperty(BIB_FRAME.identifiedBy, r);
+            addSubfield2(df, resource);
+            work.addProperty(BIB_FRAME.identifiedBy, resource);
         }
 
-        // TODO: Implement
-
+        Resource instance = ModelUtils.getInstance(model, record);
+        List<Resource> resources = convert(field, BIB_FRAME.Issn);
+        for (Resource resource: resources) {
+            addSubfield2(df, resource);
+            instance.addProperty(BIB_FRAME.identifiedBy, resource);
+        }
         return model;
     }
 }

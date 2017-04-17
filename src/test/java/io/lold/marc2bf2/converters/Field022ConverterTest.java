@@ -54,7 +54,7 @@ public class Field022ConverterTest {
     }
 
     @Test
-    public void testConvert() throws Exception {
+    public void testConvertWork() throws Exception {
         List<DataField> fields = record.getDataFields();
         for (DataField field: fields) {
             if (field.getTag().equals("042")) {
@@ -74,6 +74,7 @@ public class Field022ConverterTest {
                                 , "  ?w bf:identifiedBy ?i ."
                                 , "  ?i rdf:value %1s ."
                                 , "  ?i bf:status ?s ."
+                                , "  ?i rdf:type bf:IssnL ."
                                 , "  ?s rdfs:label \"canceled\" ."
                                 , "}");
                         ResultSet results = TestUtils.sparql(String.format(q, sf.getData()), model);
@@ -91,6 +92,59 @@ public class Field022ConverterTest {
                                 , "WHERE { "
                                 , "  ?w rdf:type bf:Work ."
                                 , "  ?w bf:identifiedBy ?i ."
+                                , "  ?i rdf:type bf:IssnL ."
+                                , "  ?i rdf:value %1s ."
+                                , "}");
+                        ResultSet results = TestUtils.sparql(String.format(q, sf.getData()), model);
+                        assertTrue(results.hasNext());
+                    }
+                }
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+    @Test
+    public void testConvertInstance() throws Exception {
+        List<DataField> fields = record.getDataFields();
+        for (DataField field: fields) {
+            if (field.getTag().equals("042")) {
+                if (!field.getSubfields('a').isEmpty()) {
+                    model = converter.convert(field);
+                    model.write(System.out);
+                    List<Subfield> subfields = field.getSubfields('m');
+                    for (Subfield sf: subfields) {
+                        String q = String.join("\n"
+                                , "PREFIX bf: <" + BIB_FRAME.getURI() + ">"
+                                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                                , "PREFIX rdfs: <" + RDFS.getURI() + ">"
+                                , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
+                                , "SELECT ?w  "
+                                , "WHERE { "
+                                , "  ?w rdf:type bf:Instance ."
+                                , "  ?w bf:identifiedBy ?i ."
+                                , "  ?i rdf:value %1s ."
+                                , "  ?i bf:status ?s ."
+                                , "  ?i rdf:type bf:Issn ."
+                                , "  ?s rdfs:label \"canceled\" ."
+                                , "}");
+                        ResultSet results = TestUtils.sparql(String.format(q, sf.getData()), model);
+                        assertTrue(results.hasNext());
+                    }
+
+                    subfields = field.getSubfields('l');
+                    for (Subfield sf: subfields) {
+                        String q = String.join("\n"
+                                , "PREFIX bf: <" + BIB_FRAME.getURI() + ">"
+                                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                                , "PREFIX rdfs: <" + RDFS.getURI() + ">"
+                                , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
+                                , "SELECT ?w  "
+                                , "WHERE { "
+                                , "  ?w rdf:type bf:Instance ."
+                                , "  ?w bf:identifiedBy ?i ."
+                                , "  ?i rdf:type bf:Issn ."
                                 , "  ?i rdf:value %1s ."
                                 , "}");
                         ResultSet results = TestUtils.sparql(String.format(q, sf.getData()), model);

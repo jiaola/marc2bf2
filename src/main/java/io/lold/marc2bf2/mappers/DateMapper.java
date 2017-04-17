@@ -1,5 +1,6 @@
 package io.lold.marc2bf2.mappers;
 
+import io.lold.marc2bf2.utils.FormatUtils;
 import org.apache.jena.datatypes.xsd.impl.XSDDateType;
 import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
@@ -20,11 +21,8 @@ public class DateMapper extends Mapper {
         if (value.length() != 6) {
             return list;
         }
-        String year = value.substring(0, 2);
-        year = Integer.valueOf(year) < 50 ? "20" + year : "19" + year;
-        String month = value.substring(2, 4);
-        String day = value.substring(4, 6);
-        Literal literal = model.createTypedLiteral(year + "-" + month + "-" + day, new XSDDateType("date"));
+        String date = FormatUtils.formatDate6d(value);
+        Literal literal = model.createTypedLiteral(date, new XSDDateType("date"));
         list.add(literal);
         return list;
     }
