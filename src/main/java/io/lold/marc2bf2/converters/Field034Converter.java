@@ -45,10 +45,7 @@ public class Field034Converter extends FieldConverter {
             Resource cart = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Cartographic)
                     .addProperty(BIB_FRAME.coordinates, StringUtils.join(cList, " "));
-            List<Subfield> sf3s = df.getSubfields('3');
-            for (Subfield three: sf3s) {
-                cart.addProperty(BIB_FRAME_LC.appliesTo, SubfieldUtils.mapSubfield3(model, three.getData()));
-            }
+            addSubfield3(df, cart);
             work.addProperty(BIB_FRAME.cartographicAttributes, cart);
         }
 

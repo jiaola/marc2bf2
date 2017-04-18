@@ -103,10 +103,7 @@ public class Field033Converter extends FieldConverter {
             capture.addProperty(BIB_FRAME.place, place);
         }
 
-        List<Subfield> sf3s = df.getSubfields('3');
-        for (Subfield three: sf3s) {
-            capture.addProperty(BIB_FRAME_LC.appliesTo, SubfieldUtils.mapSubfield3(model, three.getData()));
-        }
+        addSubfield3(df, capture);
 
         return model;
     }

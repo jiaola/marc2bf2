@@ -56,4 +56,11 @@ public class SubfieldUtils {
                 .addProperty(RDFS.label, FormatUtils.chopPunctuation(value), lang);
         return source;
     }
+
+    public static Resource mapSubfield5(Model model, String value) {
+        Resource resource = model.createResource()
+                .addProperty(RDF.type, BIB_FRAME.Agent)
+                .addProperty(BIB_FRAME.code, value);
+        return resource;
+    }
 }

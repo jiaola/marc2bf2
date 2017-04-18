@@ -78,10 +78,4 @@ public abstract class InstanceIdConverter extends FieldConverter {
     }
 
 
-    protected void addSubfield2(DataField field, Resource resource) {
-        for (Subfield sf2: field.getSubfields('2')) {
-            Resource source = SubfieldUtils.mapSubfield2(model, sf2.getData());
-            resource.addProperty(BIB_FRAME.source, source);
-        }
-    }
 }
