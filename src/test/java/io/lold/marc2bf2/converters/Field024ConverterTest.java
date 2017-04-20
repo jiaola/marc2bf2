@@ -38,11 +38,11 @@ public class Field024ConverterTest {
     public void setUp() {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
-        model.createResource(ModelUtils.getUri(record, "Work"))
+        model.createResource(ModelUtils.buildUri(record, "Work"))
                 .addProperty(RDF.type, BIB_FRAME.Work)
                 .addProperty(BIB_FRAME.adminMetadata, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
-        model.createResource(ModelUtils.getUri(record, "Instance"))
+        model.createResource(ModelUtils.buildUri(record, "Instance"))
                 .addProperty(RDF.type, BIB_FRAME.Instance);
         converter = new Field024Converter(model, record);
     }

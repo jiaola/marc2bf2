@@ -15,7 +15,6 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
-import org.marc4j.marc.Subfield;
 
 import java.util.List;
 
@@ -39,7 +38,7 @@ public class Field035ConverterTest {
     public void setUp() {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
-        model.createResource(ModelUtils.getUri(record, "Work"))
+        model.createResource(ModelUtils.buildUri(record, "Work"))
                 .addProperty(RDF.type, BIB_FRAME.Work)
                 .addProperty(BIB_FRAME.adminMetadata, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.AdminMetadata));

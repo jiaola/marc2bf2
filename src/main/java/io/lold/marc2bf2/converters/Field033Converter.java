@@ -50,8 +50,7 @@ public class Field033Converter extends FieldConverter {
             capture.addProperty(BIB_FRAME.date,
                     model.createTypedLiteral(vdate, DataTypes.EDTF));
         } else if (df.getIndicator1() == '2') {
-            List<Subfield> sfs = df.getSubfields('a');
-            List<String> dates = sfs.stream().
+            List<String> dates = df.getSubfields('a').stream().
                     map(sf -> FormatUtils.formatEDTF(sf.getData()))
                     .collect(Collectors.toList());
             String vdate = StringUtils.join(dates, '/');

@@ -1,11 +1,8 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.ModelFactory;
-import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
-import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import io.lold.marc2bf2.vocabulary.DataTypes;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -34,24 +31,20 @@ public class Field047Converter extends FieldConverter {
         DataField df = (DataField) field;
         List<Subfield> sfas = df.getSubfields('a');
         for (Subfield a: sfas) {
+            Resource resource;
             if (df.getIndicator2() == ' ') {
                 String uri = ModelFactory.prefixMapping().getNsPrefixURI("marcmuscomp") + a.getData();
-                Resource gf = model.createResource(uri)
+                resource = model.createResource(uri)
                         .addProperty(RDF.type, BIB_FRAME.GenreForm)
                         .addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "marcmuscomp"));
             } else {
-                Resource gf = model.createResource()
+                resource = model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.GenreForm)
                         .addProperty(BIB_FRAME.code, a.getData());
-                Subfield two = df.getSubfield('2');
-                if (two != null) {
-                    gf.addProperty(BIB_FRAME.source, SubfieldUtils.mapSubfield2(model, two.getData()));
-                } else {
-                    logger.warn("TODO: Warning message");
-                }
+                addSubfield2(df, resource);
             }
+            work.addProperty(BIB_FRAME.genreForm, resource);
         }
-
         return model;
     }
 }

@@ -22,8 +22,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class Field017ConverterTest {
-    Field017Converter converter;
+public class Field060ConverterTest {
+    Field060Converter converter;
     private Model model;
 
     @Parameterized.Parameter
@@ -31,11 +31,11 @@ public class Field017ConverterTest {
 
     @Parameterized.Parameters
     public static Record[] records() {
-        return TestUtils.readTestRecords("ConvSpec-010-048/marc.xml");
+        return TestUtils.readTestRecords("ConvSpec-050-088/marc.xml");
     }
 
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
         model.createResource(ModelUtils.buildUri(record, "Work"))
@@ -44,7 +44,7 @@ public class Field017ConverterTest {
                         .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
         model.createResource(ModelUtils.buildUri(record, "Instance"))
                 .addProperty(RDF.type, BIB_FRAME.Instance);
-        converter = new Field017Converter(model, record);
+        converter = new Field060Converter(model, record);
     }
 
     @After
@@ -55,29 +55,60 @@ public class Field017ConverterTest {
     }
 
     @Test
-    public void testConvert() throws Exception {
+    public void testConvertWork() throws Exception {
         String q = String.join("\n"
                 , "PREFIX bf: <" + BIB_FRAME.getURI() + ">"
                 , "PREFIX rdf: <" + RDF.getURI() + ">"
                 , "PREFIX rdfs: <" + RDFS.getURI() + ">"
                 , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
-                , "SELECT ?w  "
+                , "SELECT ?x  "
                 , "WHERE { "
-                , "  ?w bf:identifiedBy ?a ."
-                , "  ?a rdf:type bf:CopyrightNumber ."
-                , "  ?a rdf:value \"JP732\" ."
-                , "  ?a bf:date \"1951-05-04\"^^<http://www.w3.org/2001/XMLSchema#date> "
+                , "  ?x rdf:type bf:ClassificationNlm ."
+                , "  ?x bf:source ?s ."
+                , "  ?s rdfs:label \"National Library of Medicine\" ."
+                , "  ?x bf:classificationPortion \"W 22 DC2.1\" ."
                 , "}");
         List<DataField> fields = record.getDataFields();
         for (DataField field: fields) {
-            if (field.getTag().equals("017") && field.getSubfield('d') != null) {
+            if (field.getTag().equals("060")) {
                 model = converter.convert(field);
                 model.write(System.out);
-                ResultSet rs = TestUtils.sparql(q, model);
-                assertTrue(rs.hasNext());
+                ResultSet results = TestUtils.sparql(q, model);
+                assertTrue(results.hasNext());
             } else {
                 assertEquals(model, converter.convert(field)); // model shouldn't be changed
             }
         }
     }
+
+    @Test
+    public void testConvertItem() throws Exception {
+        String q = String.join("\n"
+                , "PREFIX bf: <" + BIB_FRAME.getURI() + ">"
+                , "PREFIX rdf: <" + RDF.getURI() + ">"
+                , "PREFIX rdfs: <" + RDFS.getURI() + ">"
+                , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
+                , "SELECT ?x  "
+                , "WHERE { "
+                , "  ?x rdf:type bf:Item ."
+                , "  ?x bf:itemOf ?y . "
+                , "  ?y rdf:type bf:Instance ."
+                , "  ?y bf:hasItem ?x ."
+                , "  ?x bf:heldBy ?s ."
+                , "  ?s rdfs:label \"National Library of Medicine\" ."
+                , "}");
+        List<DataField> fields = record.getDataFields();
+        for (DataField field: fields) {
+            if (field.getTag().equals("060")) {
+                model = converter.convert(field);
+                model.write(System.out);
+                ResultSet results = TestUtils.sparql(q, model);
+                assertTrue(results.hasNext());
+            } else {
+                assertEquals(model, converter.convert(field)); // model shouldn't be changed
+            }
+        }
+    }
+
+
 }

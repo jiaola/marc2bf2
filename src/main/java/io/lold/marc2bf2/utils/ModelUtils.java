@@ -16,7 +16,7 @@ public class ModelUtils {
      * @return
      */
     public static Resource getWork(Model model, Record record) {
-        return model.getResource(getUri(record, "Work"));
+        return model.getResource(buildUri(record, "Work"));
     }
 
     /**
@@ -27,7 +27,7 @@ public class ModelUtils {
      * @return
      */
     public static Resource getInstance(Model model, Record record) {
-        return model.getResource(getUri(record, "Instance"));
+        return model.getResource(buildUri(record, "Instance"));
     }
 
     /**
@@ -42,16 +42,30 @@ public class ModelUtils {
     }
 
     /**
-     * Returns a URI for a work given a record.
+     * Returns a work or instance URI for a record
      * TODO: Override this
      *
      * @param record
      * @return
      */
-    public static String getUri(Record record, String type) {
+    public static String buildUri(Record record, String type) {
         //TODO: Set the prefix in a config file
         String prefix = "http://example.org/";
         return prefix + record.getControlNumber() + "#" + type;
+    }
+
+    /**
+     * Returns an URI for a record that requires an index. For example, it can build
+     * URI for items.
+     * TODO: Override this
+     *
+     * @param record
+     * @return
+     */
+    public static String buildUri(Record record, String type, int index) {
+        //TODO: Set the prefix in a config file
+        String prefix = "http://example.org/";
+        return prefix + record.getControlNumber() + "#" + type + "-" + index;
     }
 
     public static Resource createNote(Model model, String label) {
@@ -81,7 +95,7 @@ public class ModelUtils {
      * @param model
      * @return
      */
-    public static String getUri(String value, Model model) {
+    public static String buildUri(String value, Model model) {
         String[] values = value.trim().split(":");
         if (values.length == 1) {
             return BIB_FRAME.NAMESPACE + values[0].trim();

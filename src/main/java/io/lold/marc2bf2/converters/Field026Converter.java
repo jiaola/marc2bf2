@@ -26,9 +26,7 @@ public class Field026Converter extends FieldConverter {
         }
 
         DataField df = (DataField) field;
-        List<Subfield> sfs = df.getSubfields("abcd");
-        List<String> datas = sfs.stream().map(sf -> sf.getData().trim()).collect(Collectors.toList());
-        String joined = StringUtils.join(datas, " ");
+        String joined = concatSubfields(df, "abcd", " ");
 
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Fingerprint);

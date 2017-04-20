@@ -33,10 +33,10 @@ public class Marc2BibFrame2Converter {
         if (cnf == null) {
             // no identifier
         }
-        String workUri = ModelUtils.getUri(record, "Work");
+        String workUri = ModelUtils.buildUri(record, "Work");
         Resource work = model.createResource(workUri);
 
-        String instanceUri = ModelUtils.getUri(record, "Instance");
+        String instanceUri = ModelUtils.buildUri(record, "Instance");
         Resource instance = model.createResource(instanceUri);
 
         // Create AdminMetadata resource

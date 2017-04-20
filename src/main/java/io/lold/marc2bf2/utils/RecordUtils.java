@@ -163,4 +163,10 @@ public class RecordUtils {
         return null;
     }
 
+    public static String getSubfieldData(DataField field, char code) {
+        Subfield sf = field.getSubfield(code);
+        if (sf == null) return "";
+        else return sf.getData();
+    }
+
 }

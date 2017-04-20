@@ -39,7 +39,7 @@ public class Field033ConverterTest {
     public void setUp() {
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
         // create a mock work and adminmetadata
-        model.createResource(ModelUtils.getUri(record, "Work"))
+        model.createResource(ModelUtils.buildUri(record, "Work"))
                 .addProperty(RDF.type, BIB_FRAME.Work)
                 .addProperty(BIB_FRAME.adminMetadata, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
