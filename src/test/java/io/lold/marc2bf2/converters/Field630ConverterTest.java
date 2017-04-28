@@ -64,11 +64,11 @@ public class Field630ConverterTest {
                 , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
                 , "SELECT ?w  "
                 , "WHERE { "
-                , "  ?w bf:identifiedBy ?a ."
-                , "  ?a rdf:type bf:Identifier ."
-                , "  ?a rdf:value \"0002\" ."
+                , "  ?w bf:source ?a ."
+                , "  ?a rdf:type bf:Source ."
+                , "  ?a bf:code \"lcsh\" ."
                 , "  ?w bf:title ?t ."
-                , "  ?t bf:mainTitle \"The Encyclopedia of Latin American history and culture\" ."
+                , "  ?t bf:mainTitle \"Ukrainian weekly\" ."
                 , "}");
         List<DataField> fields = record.getDataFields();
         for (int i = 0; i < fields.size(); i++) {
