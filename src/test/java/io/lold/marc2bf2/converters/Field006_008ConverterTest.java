@@ -23,8 +23,8 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(Parameterized.class)
-public class Field006008ConverterTest {
-    private Field006008Converter converter;
+public class Field006_008ConverterTest {
+    private Field006_008Converter converter;
     private Model model;
 
     @Parameterized.Parameter
@@ -46,7 +46,7 @@ public class Field006008ConverterTest {
         model.createResource(ModelUtils.buildUri(record, "Instance"))
                 .addProperty(RDF.type, BIB_FRAME.Instance);
 
-        converter = new Field006008Converter(model, record);
+        converter = new Field006_008Converter(model, record);
     }
 
 

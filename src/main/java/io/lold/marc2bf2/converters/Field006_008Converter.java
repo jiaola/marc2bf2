@@ -7,7 +7,6 @@ import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.DataTypes;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.jena.datatypes.BaseDatatype;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
@@ -21,10 +20,10 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.*;
 
-public class Field006008Converter extends FieldConverter {
-    final static Logger logger = LoggerFactory.getLogger(Field006008Converter.class);
+public class Field006_008Converter extends FieldConverter {
+    final static Logger logger = LoggerFactory.getLogger(Field006_008Converter.class);
     protected Map<String, Map> mappings;
-    public Field006008Converter(Model model, Record record) throws Exception {
+    public Field006_008Converter(Model model, Record record) throws Exception {
         super(model, record);
         try {
             mappings = (Map<String, Map>) MappingsReader.readMappings("006_008");

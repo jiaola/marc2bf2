@@ -317,20 +317,22 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
     protected void addMads(DataField field, Resource resource, String label) {
         String tag = getTag(field);
         String lang = RecordUtils.getXmlLang(field, record);
-        String madsClass = null;
+        Resource madsClass = null;
         if (!field.getSubfields("vxyz").isEmpty()) {
-            madsClass = "ComplexSubject";
+            madsClass = MADS_RDF.ComplexSubject;
+        } else if ("630".equals(tag)) {
+            madsClass = MADS_RDF.Title;
         } else if (!field.getSubfields('t').isEmpty()) {
-            madsClass = "NameTitle";
+            madsClass = MADS_RDF.NameTitle;
         } else if ("600".equals(tag)) {
-            madsClass = "Name";
+            madsClass = MADS_RDF.Name;
         } else if ("610".equals(tag)) {
-            madsClass = "CorporateName";
+            madsClass = MADS_RDF.CorporateName;
         } else if ("611".equals(tag)) {
-            madsClass = "ConferenceName";
+            madsClass = MADS_RDF.ConferenceName;
         }
-        if (StringUtils.isNotBlank(madsClass)) {
-            resource.addProperty(RDF.type, model.createResource(ModelUtils.getUriWithNsPrefix("madsrdf", madsClass)));
+        if (madsClass != null) {
+            resource.addProperty(RDF.type, madsClass);
             String madsLabel = "";
             if (StringUtils.isNotBlank(label)) {
                 madsLabel += FormatUtils.chopPunctuation(label, ":,;/\\s");
