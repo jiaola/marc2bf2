@@ -97,7 +97,7 @@ public class LeaderConverter {
             String value = data.substring(pos, pos+1);
             Map<String, String> uris = (Map<String, String>) position.get("uris");
             if (uris.containsKey(value)) {
-                String uri = ModelFactory.prefixMapping().getNsPrefixURI((String) position.get("prefix")) + uris.get(value);
+                String uri = ModelUtils.getUriWithNsPrefix((String) position.get("prefix"), uris.get(value));
                 resource.addProperty(RDF.type, model.createResource(uri));
             }
         }

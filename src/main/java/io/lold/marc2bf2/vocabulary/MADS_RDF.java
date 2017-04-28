@@ -9,18 +9,27 @@ import org.apache.jena.rdf.model.Property;
  */
 public class MADS_RDF {
     private static final Model m = ModelFactory.createDefaultModel();
-    public static final java.lang.String NAMESPACE = "http://www.loc.gov/mads/rdf/v1#";
-    public static final java.lang.String PREFIX = "madsrdf";
+    public static final String NAMESPACE = "http://www.loc.gov/mads/rdf/v1#";
+    public static final String PREFIX = "madsrdf";
+
+    public static String getURI() {
+        return NAMESPACE;
+    }
 
     // ---- classes ----
 
 
     // ---- properties ----
+    public static final Property authoritativeLabel;
     public static final Property code;
     public static final Property hasTopMemberOfMADSScheme;
+    public static final Property isMemberofMADSScheme;
+
     
     static {
-        code = m.createProperty(MADS_RDF.NAMESPACE, "code");
-        hasTopMemberOfMADSScheme = m.createProperty(MADS_RDF.NAMESPACE, "hasTopMemberOfMADSScheme");
+        authoritativeLabel = m.createProperty(NAMESPACE, "authoritativeLabel");
+        code = m.createProperty(NAMESPACE, "code");
+        hasTopMemberOfMADSScheme = m.createProperty(NAMESPACE, "hasTopMemberOfMADSScheme");
+        isMemberofMADSScheme = m.createProperty(NAMESPACE, "isMemberofMADSScheme");
     }
 }

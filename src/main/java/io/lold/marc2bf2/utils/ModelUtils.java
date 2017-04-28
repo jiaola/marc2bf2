@@ -1,5 +1,6 @@
 package io.lold.marc2bf2.utils;
 
+import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
@@ -68,6 +69,20 @@ public class ModelUtils {
         return prefix + record.getControlNumber() + "#" + type + "-" + index;
     }
 
+    /**
+     * Returns an URI for a record that requires an index. For example, it can build
+     * URI for items.
+     * TODO: Override this
+     *
+     * @param record
+     * @return
+     */
+    public static String buildUri(Record record, String type, String tag, int index) {
+        //TODO: Set the prefix in a config file
+        String prefix = "http://example.org/";
+        return prefix + record.getControlNumber() + "#" + type + tag + "-" + index;
+    }
+
     public static Resource createNote(Model model, String label) {
         return model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Note)
@@ -122,6 +137,35 @@ public class ModelUtils {
         } else {
             String nsUri = model.getNsPrefixURI(values[0].trim());
             return model.createProperty(nsUri + values[1].trim());
+        }
+    }
+
+    public static String getUriWithNsPrefix(String prefix, String suffix) {
+        return ModelFactory.prefixMapping().getNsPrefixURI(prefix) + suffix;
+    }
+
+    public static String[] getMADSScheme(char ind2) {
+        if (ind2 == '0') {
+            return new String[] {"http://id.loc.gov/authorities/subjects"};
+        } else if (ind2 == '1') {
+            return new String[] {
+                    "http://id.loc.gov/authorities/subjects",
+                    "http://id.loc.gov/authorities/childrensSubjects"
+            };
+        } else {
+            return new String[] {};
+        }
+    }
+
+    public static String getSubjectThesaurusCode(char ind2) {
+        switch (ind2) {
+            case '0': return "lcsh";
+            case '1': return "lcshac";
+            case '2': return "mesh";
+            case '3': return "nal";
+            case '5': return "cash";
+            case '6': return "rvm";
+            default: return null;
         }
     }
 }

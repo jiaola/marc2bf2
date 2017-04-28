@@ -2,6 +2,7 @@ package io.lold.marc2bf2;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
+import io.lold.marc2bf2.vocabulary.MADS_RDF;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.shared.PrefixMapping;
 import org.apache.jena.vocabulary.RDF;
@@ -38,6 +39,7 @@ public class ModelFactory {
                     .setNsPrefix("marcauthen", "http://id.loc.gov/vocabulary/marcauthen/")
                     .setNsPrefix("marcmuscomp", "http://id.loc.gov/vocabulary/marcmuscomp/")
                     .setNsPrefix("organizations", "http://id.loc.gov/vocabulary/organizations/")
+                    .setNsPrefix("madsrdf", "http://www.loc.gov/mads/rdf/v1#")
                     .setNsPrefix("relators", "http://id.loc.gov/vocabulary/relators/");
         }
         return PREFIX_MAPPING;
@@ -50,6 +52,7 @@ public class ModelFactory {
         PrefixMapping map = PrefixMapping.Factory.create()
                 .setNsPrefix(BIB_FRAME.PREFIX, BIB_FRAME.getURI())
                 .setNsPrefix(BIB_FRAME_LC.PREFIX, BIB_FRAME_LC.getURI())
+                .setNsPrefix(MADS_RDF.PREFIX, MADS_RDF.getURI())
                 .setNsPrefix("rdfs", RDFS.getURI())
                 .setNsPrefix("rdf", RDF.getURI());
         model.setNsPrefixes(map);

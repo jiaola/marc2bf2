@@ -33,8 +33,8 @@ public class Field043Converter extends FieldConverter {
         for (int i = 0 ; i < sfs.size(); i++) {
             Subfield sf = sfs.get(i);
             if (sf.getCode() == 'a') {
-                String uri = ModelFactory.prefixMapping().getNsPrefixURI("geographicAreas")
-                        + FormatUtils.chopPunctuation(sf.getData(), "[-\\s]+$");
+                String uri = ModelUtils.getUriWithNsPrefix("geographicAreas",
+                        FormatUtils.chopPunctuation(sf.getData(), "[-\\s]+$"));
                 Resource gc = model.createResource(uri)
                         .addProperty(RDF.type, BIB_FRAME.GeographicCoverage);
                 work.addProperty(BIB_FRAME.geographicCoverage, gc);

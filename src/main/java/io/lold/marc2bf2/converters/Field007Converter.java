@@ -129,7 +129,7 @@ public class Field007Converter extends FieldConverter {
 
     private void addDefault(Map position, Resource resource) throws Exception {
         Map<String, String> defaultMap = (Map<String, String>) position.get("default");
-        String uri = ModelFactory.prefixMapping().getNsPrefixURI(defaultMap.get("prefix")) + defaultMap.get("uri");
+        String uri = ModelUtils.getUriWithNsPrefix(defaultMap.get("prefix"), defaultMap.get("uri"));
         Resource object = model.createResource(uri);
         object.addProperty(RDF.type, model.createResource(BIB_FRAME.NAMESPACE + defaultMap.get("type")));
         if (defaultMap.containsKey("label")) {

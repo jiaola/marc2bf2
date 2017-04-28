@@ -33,7 +33,7 @@ public class Field047Converter extends FieldConverter {
         for (Subfield a: sfas) {
             Resource resource;
             if (df.getIndicator2() == ' ') {
-                String uri = ModelFactory.prefixMapping().getNsPrefixURI("marcmuscomp") + a.getData();
+                String uri = ModelUtils.getUriWithNsPrefix("marcmuscomp", a.getData());
                 resource = model.createResource(uri)
                         .addProperty(RDF.type, BIB_FRAME.GenreForm)
                         .addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "marcmuscomp"));

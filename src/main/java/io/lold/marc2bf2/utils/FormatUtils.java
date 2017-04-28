@@ -17,8 +17,6 @@ import java.util.stream.Stream;
 public class FormatUtils {
     final static Logger logger = LoggerFactory.getLogger(FormatUtils.class);
 
-    private static Map<String, String> marcTimeMap = null;
-
     public static String formatEDTF(String date) {
         if (date.substring(0, 12).contains("-")) {
             date = date.replaceFirst("-", "X");
@@ -64,6 +62,15 @@ public class FormatUtils {
         return str.replaceAll(patterns, "");
     }
 
+    public static String chopParens(String str) {
+        return str.replaceAll("^\\(+|\\)+$", "");
+    }
+
+    public static String chopBrackets(String str) {
+        return str.replaceAll("^\\[+|]+$", "");
+    }
+
+    private static Map<String, String> marcTimeMap = null;
     public static String format045a(String data) throws MarcDataException {
         if (marcTimeMap == null) {
             marcTimeMap = Collections.unmodifiableMap(Stream.of(

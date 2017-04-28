@@ -6,6 +6,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
+import org.marc4j.marc.Subfield;
 
 public class SubfieldUtils {
     public static Resource mapSubfield0(Model model, String value) {
@@ -63,4 +64,5 @@ public class SubfieldUtils {
                 .addProperty(BIB_FRAME.code, value);
         return resource;
     }
+
 }

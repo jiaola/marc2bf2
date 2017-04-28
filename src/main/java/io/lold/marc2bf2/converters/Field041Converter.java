@@ -59,7 +59,7 @@ public class Field041Converter extends FieldConverter {
             if (df.getIndicator2() == ' ') { // marc language code
                 String[] langs = sf.getData().split("(?<=\\G.{3})");
                 for (String lang: langs) {
-                    String uri = ModelFactory.prefixMapping().getNsPrefixURI("languages") + lang;
+                    String uri = ModelUtils.getUriWithNsPrefix("languages", lang);
                     Resource language = model.createResource(uri)
                             .addProperty(RDF.type, BIB_FRAME.Language)
                             .addProperty(BIB_FRAME.source, model.createResource("http://id.loc.gov/vocabulary/languages")

@@ -62,7 +62,7 @@ public class Field082Converter extends FieldConverter {
                 resource.addProperty(BIB_FRAME.source, SubfieldUtils.mapSubfield2(model, q.getData()));
             }
             if (df.getIndicator2() == '0') {
-                String uri = ModelFactory.prefixMapping().getNsPrefixURI("organizations") + "dlc";
+                String uri = ModelUtils.getUriWithNsPrefix("organizations", "dlc");
                 resource.addProperty(BIB_FRAME.source, model.createResource(uri)
                         .addProperty(RDF.type, BIB_FRAME.Source));
             }

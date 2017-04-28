@@ -27,7 +27,7 @@ public class Field042Converter extends FieldConverter {
         DataField df = (DataField) field;
         List<Subfield> subfields = df.getSubfields('a');
         for (Subfield sf: subfields) {
-            Resource ml = model.createResource(ModelFactory.prefixMapping().getNsPrefixURI("marcauthen") + sf.getData())
+            Resource ml = model.createResource(ModelUtils.getUriWithNsPrefix("marcauthen", sf.getData()))
                     .addProperty(RDF.type, BIB_FRAME.DescriptionAuthentication);
             amd.addProperty(BIB_FRAME.descriptionAuthentication, ml);
         }

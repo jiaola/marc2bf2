@@ -4,7 +4,9 @@ import io.lold.marc2bf2.mappings.MappingsReader;
 import org.apache.commons.lang3.StringUtils;
 import org.marc4j.marc.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class RecordUtils {
     public enum Material {
@@ -163,10 +165,81 @@ public class RecordUtils {
         return null;
     }
 
+    /**
+     * List subfields after a subfield
+     * @param field
+     * @param subfield
+     * @param subfields
+     * @return
+     */
+    public static List<Subfield> lookAhead(DataField field, char subfield, String subfields) {
+        List<Subfield> list = new ArrayList<>();
+        List<Subfield> sfs = field.getSubfields();
+        boolean found = false;
+        for (Subfield sf: sfs) {
+            if (sf.getCode() == subfield) found = true;
+            if (!found) continue;
+            if (subfields.contains(String.valueOf(sf.getCode()))) {
+                list.add(sf);
+            }
+        }
+        return list;
+    }
+
     public static String getSubfieldData(DataField field, char code) {
         Subfield sf = field.getSubfield(code);
         if (sf == null) return "";
         else return sf.getData();
     }
 
+    public static String getSubfieldsAsString(DataField field, String subfields) {
+        List<Subfield> sfs = field.getSubfields(subfields);
+        List<String> values = sfs.stream().map(sf -> sf.getData()).collect(Collectors.toList());
+        return StringUtils.join(values, " ");
+    }
+
+    /**
+     * Returns the subfields as string before a specific subfield
+     * @param subfields
+     * @param before
+     * @return
+     */
+    public static String getSubfieldsAsStringBefore(DataField field, String subfields, char before) {
+        List<String> values = new ArrayList<>();
+        List<Subfield> sfs = field.getSubfields();
+        for (Subfield sf: sfs) {
+            if (sf.getCode() == before) return StringUtils.join(values, " ");
+            if (subfields.contains(String.valueOf(sf.getCode()))) {
+                values.add(sf.getData());
+            }
+        }
+        return StringUtils.join(values, " ");
+    }
+
+    /**
+     * Returns the subfields as string starting from a specific subfield (including the subfield)
+     * @param subfields
+     * @param after
+     * @return
+     */
+    public static String getSubfieldsAsStringAfterAnd(DataField field, String subfields, char after) {
+        List<String> values = new ArrayList<>();
+        List<Subfield> sfs = field.getSubfields();
+        boolean foundAfter = false;
+        for (Subfield sf: sfs) {
+            if (sf.getCode() == after) foundAfter = true;
+            if (!foundAfter) continue;
+            if (subfields.contains(String.valueOf(sf.getCode()))) {
+                values.add(sf.getData());
+            }
+        }
+        return StringUtils.join(values, " ");
+    }
+
+    public static String marcKey(DataField field) {
+        List<String> values = field.getSubfields().stream()
+                .map(sf -> "$" + sf.getCode() + sf.getData())
+                .collect(Collectors.toList());
+        return field.getTag() + field.getIndicator1() + field.getIndicator2() + StringUtils.join(values, "");
+    }
 }

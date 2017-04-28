@@ -44,7 +44,7 @@ public class Field050Converter extends FieldConverter {
                 Resource resource = model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.ClassificationLcc);
                 if (df.getIndicator2() == '0') {
-                    String uri = ModelFactory.prefixMapping().getNsPrefixURI("organizations") + "dlc";
+                    String uri = ModelUtils.getUriWithNsPrefix("organizations", "dlc");
                     resource.addProperty(BIB_FRAME.source, model.createResource(uri)
                             .addProperty(RDF.type, BIB_FRAME.Source));
                 }

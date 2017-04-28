@@ -32,7 +32,7 @@ public class Field044Converter extends FieldConverter {
             Subfield sf = sfs.get(i);
             Resource resource = null;
             if (sf.getCode() == 'a') {
-                String uri = ModelFactory.prefixMapping().getNsPrefixURI("countries") + sf.getData();
+                String uri = ModelUtils.getUriWithNsPrefix("countries", sf.getData());
                 resource = model.createResource(uri);
             } else if (sf.getCode() == 'c') {
                 resource = model.createResource()
