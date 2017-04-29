@@ -152,8 +152,8 @@ public abstract class FieldConverter {
 
     protected String concatSubfields(DataField field, String subfields, String separator) {
         List<Subfield> sfs = field.getSubfields(subfields);
-        List<String> datas = sfs.stream().map(sf -> sf.getData().trim()).collect(Collectors.toList());
-        return StringUtils.join(datas, separator);
+        List<String> values = sfs.stream().map(sf -> sf.getData().trim()).collect(Collectors.toList());
+        return StringUtils.join(values, separator);
     }
 
     protected List<Resource> contributionRole(List<Subfield> sfs, String lang) {

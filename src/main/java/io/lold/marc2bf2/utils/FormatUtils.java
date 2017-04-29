@@ -55,7 +55,7 @@ public class FormatUtils {
     }
 
     public static String chopPunctuation(String str) {
-        return chopPunctuation(str, "[.;:/\\s]+$");
+        return chopPunctuation(str, "[.;,:/\\s]+$");
     }
 
     public static String chopPunctuation(String str, String patterns) {

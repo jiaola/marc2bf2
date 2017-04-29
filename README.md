@@ -11,7 +11,7 @@ Progress:
 (*)    1203 ConvSpec-010-048.xsl
 (*)     546 ConvSpec-050-088.xsl
 (*)     885 ConvSpec-1XX,6XX,7XX,8XX-names.xsl
-     889 ConvSpec-200-247not240-Titles.xsl
+(*)     889 ConvSpec-200-247not240-Titles.xsl
 (*)     704 ConvSpec-240andX30-UnifTitle.xsl
      572 ConvSpec-250-270.xsl
      917 ConvSpec-3XX.xsl
