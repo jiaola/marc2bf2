@@ -18,18 +18,18 @@ public class FormatUtils {
     final static Logger logger = LoggerFactory.getLogger(FormatUtils.class);
 
     public static String formatEDTF(String date) {
-        if (date.substring(0, 12).contains("-")) {
-            date = date.replaceFirst("-", "X");
+        if (StringUtils.substring(date, 0, 12).contains("-")) {
+            date = date.replaceAll("-", "X");
         }
-        String ymd = date.substring(0, 4) + "-" + date.substring(4, 6);
-        if (!StringUtils.isBlank(date.substring(6, 8))) {
-            ymd += "-" + date.substring(6, 8);
+        String ymd = StringUtils.substring(date, 0, 4) + "-" + StringUtils.substring(date, 4, 6);
+        if (!StringUtils.isBlank(StringUtils.substring(date, 6, 8))) {
+            ymd += "-" + StringUtils.substring(date, 6, 8);
         }
-        if (!StringUtils.isBlank(date.substring(8, 12))) {
-            ymd += "T" + date.substring(8, 10) + ":" + date.substring(10, 12) + ":00";
+        if (!StringUtils.isBlank(StringUtils.substring(date, 8, 12))) {
+            ymd += "T" + StringUtils.substring(date, 8, 10) + ":" + StringUtils.substring(date, 10, 12) + ":00";
         }
-        if (!StringUtils.isBlank(date.substring(12, 17))) {
-            ymd += date.substring(12, 15) + ":" + date.substring(15, 17);
+        if (!StringUtils.isBlank(StringUtils.substring(date, 12, 17))) {
+            ymd += StringUtils.substring(date, 12, 15) + ":" + date.substring(15, 17);
         }
         return ymd;
     }
@@ -68,6 +68,9 @@ public class FormatUtils {
 
     public static String chopBrackets(String str) {
         return str.replaceAll("^\\[+|]+$", "");
+    }
+    public static String chopAngularBrackets(String str) {
+        return str.replaceAll("^<+|>+$", "");
     }
 
     private static Map<String, String> marcTimeMap = null;
