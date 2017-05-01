@@ -30,7 +30,7 @@ public class Field035Converter extends InstanceIdConverter {
             Resource resource = resources.get(i);
             Subfield sf = sfs.get(i);
             String label = StringUtils.substringBetween(sf.getData(), "(", ")");
-            resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, label));
+            resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, label));
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
         }
         return model;

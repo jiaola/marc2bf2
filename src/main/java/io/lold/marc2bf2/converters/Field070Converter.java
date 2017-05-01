@@ -36,7 +36,7 @@ public class Field070Converter extends FieldConverter {
         for (Subfield b: df.getSubfields('b')) {
             resource.addProperty(BIB_FRAME.itemPortion, createLiteral(b));
         }
-        resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "National Agricultural Library"));
+        resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "National Agricultural Library"));
 
         work.addProperty(BIB_FRAME.classification, resource);
 

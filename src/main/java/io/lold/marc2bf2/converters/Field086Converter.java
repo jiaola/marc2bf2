@@ -41,13 +41,13 @@ public class Field086Converter extends FieldConverter {
                     .addProperty(RDFS.label, sf.getData());
             if (sf.getCode() == 'z') {
                 resource.addProperty(BIB_FRAME.status,
-                        ModelUtils.createLabeledResource(model, "invalid", BIB_FRAME.Status));
+                        createLabeledResource(BIB_FRAME.Status, "invalid"));
             }
             if (df.getIndicator1() == '0') {
-                resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "sudocs"));
+                resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "sudocs"));
             } else if (df.getIndicator1() == '1') {
                 resource.addProperty(BIB_FRAME.source,
-                        ModelUtils.createSource(model, "Government of Canada Publications"));
+                        createLabeledResource(BIB_FRAME.Source,"Government of Canada Publications"));
             }
             for (Subfield two: df.getSubfields('2')) {
                 resource.addProperty(BIB_FRAME.source, model.createResource()

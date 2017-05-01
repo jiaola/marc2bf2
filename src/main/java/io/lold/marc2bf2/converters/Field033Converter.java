@@ -40,9 +40,9 @@ public class Field033Converter extends FieldConverter {
         Resource capture = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Capture);
         if (df.getIndicator2() == '1') {
-            capture.addProperty(BIB_FRAME.note, ModelUtils.createNote(model, "broadcast"));
+            capture.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, "broadcast"));
         } else if ("2".equals(df.getIndicator2())) {
-            capture.addProperty(BIB_FRAME.note, ModelUtils.createNote(model, "finding"));
+            capture.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, "finding"));
         }
 
         if (df.getIndicator1() == '0') {

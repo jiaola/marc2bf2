@@ -83,24 +83,6 @@ public class ModelUtils {
         return prefix + record.getControlNumber() + "#" + type + tag + "-" + index;
     }
 
-    public static Resource createNote(Model model, String label) {
-        return model.createResource()
-                .addProperty(RDF.type, BIB_FRAME.Note)
-                .addProperty(RDFS.label, label);
-    }
-
-    public static Resource createSource(Model model, String label) {
-        return model.createResource()
-                .addProperty(RDF.type, BIB_FRAME.Source)
-                .addProperty(RDFS.label, label);
-    }
-
-    public static Resource createLabeledResource(Model model, String label, Resource type) {
-        return model.createResource()
-                .addProperty(RDF.type, type)
-                .addProperty(RDFS.label, label);
-    }
-
     /**
      * Get a full URI given the abbreviated form. For example,
      * given bflc:encodingLevel, it returns

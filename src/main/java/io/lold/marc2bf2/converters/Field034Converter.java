@@ -66,7 +66,7 @@ public class Field034Converter extends FieldConverter {
                 if ("a".equals(a.getData())) {
                     Resource scale = model.createResource()
                             .addProperty(RDF.type, BIB_FRAME.Scale)
-                            .addProperty(BIB_FRAME.note, ModelUtils.createNote(model, "linear scale"));
+                            .addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, "linear scale"));
                     work.addProperty(BIB_FRAME.scale, scale);
                 }
             }
@@ -78,7 +78,7 @@ public class Field034Converter extends FieldConverter {
     private Resource createScale(String label, String data, List<Subfield> sf3s) {
         Resource scale = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Scale)
-                .addProperty(BIB_FRAME.note, ModelUtils.createNote(model, label))
+                .addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, label))
                 .addProperty(RDFS.label, data);
         for (Subfield three: sf3s) {
             scale.addProperty(BIB_FRAME_LC.appliesTo, SubfieldUtils.mapSubfield3(model, three.getData()));

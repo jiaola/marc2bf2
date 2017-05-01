@@ -14,7 +14,7 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-public class Field263Converter extends Field260Converter {
+public class Field263Converter extends FieldConverter {
     public Field263Converter(Model model, Record record) {
         super(model, record);
     }

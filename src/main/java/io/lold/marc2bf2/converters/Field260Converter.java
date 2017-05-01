@@ -33,7 +33,7 @@ public class Field260Converter extends NameTitleFieldConverter {
         if (!df.getSubfields("abc").isEmpty()) {
             Resource resource = buildProvisionActivity(df, lang);
             if (df.getIndicator1() == '3') {
-                Resource status = ModelUtils.createLabeledResource(model, "current", BIB_FRAME.Status);
+                Resource status = createLabeledResource(BIB_FRAME.Status, "current");
                 resource.addProperty(BIB_FRAME.status, model.createResource()
                         .addProperty(RDF.type, status));
             }

@@ -126,7 +126,7 @@ public class Field006_008Converter extends FieldConverter {
                 prov.addProperty(RDF.type, BIB_FRAME.Publication);
             } else if ("ik".contains(char6)) {
                 String label = char6.equals("i") ? "inclusive collection dates" : "bulk collection dates";
-                Resource note = ModelUtils.createNote(model, label);
+                Resource note = createLabeledResource(BIB_FRAME.note, label);
                 prov.addProperty(RDF.type, BIB_FRAME.Production)
                         .addProperty(BIB_FRAME.note, note);
             } else if (char6.equals("p")) {
@@ -140,10 +140,10 @@ public class Field006_008Converter extends FieldConverter {
             instance.addProperty(BIB_FRAME.provisionActivity, prov);
 
             if (char6.equals("c")) {
-                Resource note = ModelUtils.createNote(model, "Currently published");
+                Resource note = createLabeledResource(BIB_FRAME.Note, "Currently published");
                 instance.addProperty(BIB_FRAME.note, note);
             } else if (char6.equals("d")) {
-                Resource note = ModelUtils.createNote(model, "Ceased publication");
+                Resource note = createLabeledResource(BIB_FRAME.Note, "Ceased publication");
                 instance.addProperty(BIB_FRAME.note, note);
             } else if (char6.equals("p")) {
                 Resource p = model.createResource()

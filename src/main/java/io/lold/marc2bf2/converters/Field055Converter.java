@@ -44,7 +44,7 @@ public class Field055Converter extends FieldConverter {
             resource.addProperty(BIB_FRAME.itemPortion, createLiteral(lang, b));
         }
         if (df.getIndicator2() == '0' || df.getIndicator2() == '1' || df.getIndicator2() == '2') {
-            resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "Library and Archives Canada"));
+            resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "Library and Archives Canada"));
         }
 
         work.addProperty(BIB_FRAME.classification, resource);

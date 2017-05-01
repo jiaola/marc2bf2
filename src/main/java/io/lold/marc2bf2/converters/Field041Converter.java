@@ -91,7 +91,7 @@ public class Field041Converter extends FieldConverter {
         }
 
         if (df.getIndicator1() == '1') {
-            work.addProperty(BIB_FRAME.note, ModelUtils.createNote(model, "Includes translation"));
+            work.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, "Includes translation"));
         }
 
         return model;

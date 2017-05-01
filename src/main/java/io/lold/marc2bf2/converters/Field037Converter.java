@@ -34,7 +34,7 @@ public class Field037Converter extends FieldConverter {
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.AcquisitionSource);
         if (StringUtils.isNotBlank(acqSource)) {
-            resource.addProperty(BIB_FRAME.note, ModelUtils.createNote(model, acqSource));
+            resource.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, acqSource));
         }
 
         for (Subfield a: df.getSubfields('a')) {
@@ -50,11 +50,11 @@ public class Field037Converter extends FieldConverter {
         }
         for (Subfield f: df.getSubfields('f')) {
             resource.addProperty(BIB_FRAME.note,
-                    ModelUtils.createNote(model, f.getData()));
+                    createLabeledResource(BIB_FRAME.Note, f.getData()));
         }
         for (Subfield gn: df.getSubfields("gn")) {
             resource.addProperty(BIB_FRAME.note,
-                    ModelUtils.createNote(model, gn.getData()));
+                    createLabeledResource(BIB_FRAME.Note, gn.getData()));
         }
 
         addSubfield3(df, resource);

@@ -37,7 +37,7 @@ public class Field072Converter extends FieldConverter {
                 .addProperty(RDF.type, RDFS.Resource)
                 .addProperty(RDF.value, createLiteral(lang, subject));
         if (df.getIndicator2() == '0') {
-            resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "agricola"));
+            resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "agricola"));
         } else {
             addSubfield2(df, resource);
         }

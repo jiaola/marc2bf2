@@ -35,10 +35,10 @@ public abstract class InstanceIdConverter extends FieldConverter {
                     .addProperty(RDF.type, identifier)
                     .addProperty(RDF.value, vid);
             if (sf.getCode() == 'z') {
-                resource.addProperty(BIB_FRAME.status, ModelUtils.createLabeledResource(model, invalidLabel, BIB_FRAME.Status));
+                resource.addProperty(BIB_FRAME.status, createLabeledResource(BIB_FRAME.Status, invalidLabel));
             }
             if (sf.getCode() == 'y') {
-                resource.addProperty(BIB_FRAME.status, ModelUtils.createLabeledResource(model, "incorrect", BIB_FRAME.Status));
+                resource.addProperty(BIB_FRAME.status, createLabeledResource(BIB_FRAME.Status, "incorrect"));
             }
             for (Subfield c: df.getSubfields('c')) {
                 String value = FormatUtils.chopPunctuation(c.getData(), ":,;/\\s");
@@ -73,7 +73,7 @@ public abstract class InstanceIdConverter extends FieldConverter {
 
     public List<Resource> convertSubfieldB(DataField field) {
         return field.getSubfields('b').stream()
-                .map(b -> ModelUtils.createSource(model, FormatUtils.chopPunctuation(b.getData())))
+                .map(b -> createLabeledResource(BIB_FRAME.Source, FormatUtils.chopPunctuation(b.getData())))
                 .collect(Collectors.toList());
     }
 

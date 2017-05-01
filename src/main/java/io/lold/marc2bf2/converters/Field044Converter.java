@@ -37,7 +37,7 @@ public class Field044Converter extends FieldConverter {
             } else if (sf.getCode() == 'c') {
                 resource = model.createResource()
                         .addProperty(BIB_FRAME.code, sf.getData())
-                        .addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "ISO 3166"));
+                        .addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "ISO 3166"));
             } else if (sf.getCode() == 'b') {
                 resource = model.createResource()
                         .addProperty(BIB_FRAME.code, sf.getData());

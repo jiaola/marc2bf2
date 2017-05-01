@@ -23,7 +23,7 @@ public class Field074Converter extends InstanceIdConverter {
         Resource instance = ModelUtils.getInstance(model, record);
         List<Resource> resources = convert(field, BIB_FRAME.Identifier);
         for (Resource resource: resources) {
-            resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "US GPO"));
+            resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source,"US GPO"));
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
         }
         return model;

@@ -28,7 +28,7 @@ public class Field016Converter extends InstanceIdConverter {
         List<Resource> resources = convert(field, BIB_FRAME.Nbn);  //TODO: Missing bf:Nban
         for (Resource resource: resources) {
             if (df.getIndicator1() == ' ') {
-                resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "Library and Archives Canada"));
+                resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "Library and Archives Canada"));
             } else {
                 addSubfield2(df, resource);
             }

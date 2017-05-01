@@ -36,7 +36,7 @@ public class Field047Converter extends FieldConverter {
                 String uri = ModelUtils.getUriWithNsPrefix("marcmuscomp", a.getData());
                 resource = model.createResource(uri)
                         .addProperty(RDF.type, BIB_FRAME.GenreForm)
-                        .addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "marcmuscomp"));
+                        .addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "marcmuscomp"));
             } else {
                 resource = model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.GenreForm)

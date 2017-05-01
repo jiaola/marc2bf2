@@ -44,6 +44,10 @@ public abstract class FieldConverter {
         addSubfield0AndW(field.getSubfields('0'), resource);
     }
 
+    protected void addSubfield0(Subfield sf, Resource resource) {
+        addSubfield0AndW(Arrays.asList(sf), resource);
+    }
+
     protected void addSubfieldW(DataField field, Resource resource) {
         addSubfield0AndW(field.getSubfields('w'), resource);
     }
@@ -56,7 +60,7 @@ public abstract class FieldConverter {
                     .addProperty(RDF.type, BIB_FRAME.Identifier);
             if (parts.length == 2) {
                 identifier.addProperty(RDF.value, parts[1])
-                        .addProperty(BIB_FRAME.source, ModelUtils.createSource(model, parts[0]));
+                        .addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, parts[0]));
             } else if (parts.length == 1) {
                 identifier.addProperty(RDF.value, parts[0]);
             } else {
@@ -185,6 +189,18 @@ public abstract class FieldConverter {
         }
         return resources;
 
+    }
+
+    public Resource createLabeledResource(Resource type, String label) {
+        return model.createResource()
+                .addProperty(RDF.type, type)
+                .addProperty(RDFS.label, label);
+    }
+
+    public Resource createLabeledResource(Resource type, String label, String lang) {
+        return model.createResource()
+                .addProperty(RDF.type, type)
+                .addProperty(RDFS.label, createLiteral(lang, label));
     }
 
     protected List<Resource> contributionRoleCode(List<Subfield> sfs) {

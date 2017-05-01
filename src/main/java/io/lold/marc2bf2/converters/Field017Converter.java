@@ -36,7 +36,7 @@ public class Field017Converter extends InstanceIdConverter {
 
             for (Subfield i: df.getSubfields('i')) {
                 String value = FormatUtils.chopPunctuation(i.getData(), ":,;/\\s");
-                resource.addProperty(BIB_FRAME.note, ModelUtils.createLabeledResource(model, value, BIB_FRAME.Note));
+                resource.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, value));
             }
 
             for (Resource source: convertSubfieldB(df)) {

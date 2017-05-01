@@ -41,7 +41,7 @@ public class Field060Converter extends FieldConverter {
             resource.addProperty(BIB_FRAME.itemPortion, createLiteral(b));
         }
         if (df.getIndicator2() == '0') {
-            resource.addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "National Library of Medicine"));
+            resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "National Library of Medicine"));
         }
 
         work.addProperty(BIB_FRAME.classification, resource);
@@ -53,7 +53,7 @@ public class Field060Converter extends FieldConverter {
         Resource item = model.createResource(itemUri)
                 .addProperty(RDF.type, BIB_FRAME.Item)
                 .addProperty(BIB_FRAME.heldBy,
-                        ModelUtils.createLabeledResource(model, "National Library of Medicine", BIB_FRAME.Agent));
+                        createLabeledResource(BIB_FRAME.Agent, "National Library of Medicine"));
 
         instance.addProperty(BIB_FRAME.hasItem, item);
         item.addProperty(BIB_FRAME.itemOf, instance);

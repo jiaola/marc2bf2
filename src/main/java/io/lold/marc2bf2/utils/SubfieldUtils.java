@@ -14,12 +14,16 @@ public class SubfieldUtils {
             return model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Identifier)
                     .addProperty(RDF.value, value.substring(9))
-                    .addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "DE-101c"));
+                    .addProperty(BIB_FRAME.source, model.createResource()
+                            .addProperty(RDF.type, BIB_FRAME.Source)
+                            .addProperty(RDFS.label,  "DE-101c"));
         } else if (value.startsWith("(isni)")) {
             return model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Identifier)
                     .addProperty(RDF.value, value.substring(6))
-                    .addProperty(BIB_FRAME.source, ModelUtils.createSource(model, "isni"));
+                    .addProperty(BIB_FRAME.source, model.createResource()
+                            .addProperty(RDF.type, BIB_FRAME.Source)
+                            .addProperty(RDFS.label,  "isni"));
         } else if (value.startsWith("(uri)")) {
             String uri = value.substring(5);
             return model.createResource(uri)
