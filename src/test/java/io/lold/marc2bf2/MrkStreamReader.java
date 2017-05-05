@@ -137,7 +137,7 @@ public class MrkStreamReader implements MarcReader {
     }
 
     public Leader parseLineToLeader(String line) {
-        return this.getLeader(line.substring(6));
+        return this.getLeader(line.substring(7));
     }
 
     protected boolean isValidIndicator(char indicator) {

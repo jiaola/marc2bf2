@@ -77,8 +77,7 @@ public class ConverterStepdefs {
     }
 
     @When("^converted by a leader converter (.*)$")
-    public void leader_convert_step(String className) throws Exception {
-        Class<LeaderConverter> cls = (Class<LeaderConverter>) Class.forName(className);
+    public void leader_convert_step(Class cls) throws Exception {
         Constructor<LeaderConverter> ctor = cls.getDeclaredConstructor(Model.class, Record.class);
         LeaderConverter converter = ctor.newInstance(model, record);
         model = converter.convert(leader);

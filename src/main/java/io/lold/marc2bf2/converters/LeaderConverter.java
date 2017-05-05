@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.mappers.LeaderMapper;
 import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
