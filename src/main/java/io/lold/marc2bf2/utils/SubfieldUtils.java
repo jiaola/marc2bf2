@@ -2,11 +2,14 @@ package io.lold.marc2bf2.utils;
 
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.Subfield;
+
+import java.util.Arrays;
 
 public class SubfieldUtils {
     public static Resource mapSubfield0(Model model, String value) {
@@ -30,7 +33,19 @@ public class SubfieldUtils {
                     .addProperty(RDF.type, BIB_FRAME.Agent)
                     .addProperty(RDF.type, BIB_FRAME.Person);
         } else {
-            return null;
+            String[] parts = value.split("[()]");
+            parts = Arrays.stream(parts).filter(p -> StringUtils.isNotBlank(p)).toArray(String[]::new);
+            Resource identifier = model.createResource()
+                    .addProperty(RDF.type, BIB_FRAME.Identifier);
+            if (parts.length == 2) {
+                identifier.addProperty(RDF.value, parts[1])
+                        .addProperty(BIB_FRAME.source, model.createResource()
+                                .addProperty(RDF.type, BIB_FRAME.Source)
+                                .addProperty(RDFS.label, parts[0]));
+            } else if (parts.length == 1) {
+                identifier.addProperty(RDF.value, parts[0]);
+            }
+            return identifier;
         }
     }
 

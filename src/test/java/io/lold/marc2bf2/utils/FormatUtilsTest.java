@@ -9,4 +9,11 @@ public class FormatUtilsTest {
     public void testFormat045a() throws Exception {
         assertEquals("-02XX/096X", FormatUtils.format045a("d7n6"));
     }
+
+    @Test
+    public void testChopPunctuation() throws Exception {
+        String str = "ill. ;";
+        String newStr = FormatUtils.chopPunctuation(str);
+        assertEquals("ill", newStr);
+    }
 }

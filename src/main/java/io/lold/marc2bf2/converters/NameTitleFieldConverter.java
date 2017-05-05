@@ -353,17 +353,6 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
     }
 
     /**
-     * Get the tag of the field. For 880, it returns the value in $6
-     * @param field
-     * @return
-     */
-    protected String getTag(DataField field) {
-        return "880".equals(field.getTag()) ?
-                    StringUtils.substring(field.getSubfieldsAsString("6"), 0, 3) :
-                    field.getTag();
-    }
-
-    /**
      * Creates the name label from a field
      *
      * @param field
