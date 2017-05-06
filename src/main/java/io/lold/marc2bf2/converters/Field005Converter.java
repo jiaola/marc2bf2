@@ -38,9 +38,7 @@ public class Field005Converter extends FieldConverter {
             GregorianCalendar calendar = new GregorianCalendar();
             calendar.setTime(date);
             calendar.set(Calendar.MILLISECOND, 0);
-            //calendar.setTimeZone(TimeZone.getTimeZone("EST"));
-            Literal literal = model.createTypedLiteral(DateTimeUtils.calendarToXSDDateTimeString(calendar), XSDDatatype.XSDdateTime);
-            //Literal literal = model.createTypedLiteral(calendar);
+            Literal literal = model.createTypedLiteral(calendar);
             Resource amd = ModelUtils.getAdminMatadata(model, record);
             amd.addProperty(BIB_FRAME.changeDate, literal);
         } catch (ParseException ex) {}

@@ -6,5 +6,5 @@ Feature: 005 - DATE AND TIME OF LAST TRANSACTION
       | ?x a bf:Work            |
       | ?x bf:adminMetadata ?y  |
       | ?y a bf:AdminMetadata   |
-      | ?y bf:changeDate "2011-07-13T21:24:05-04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> |
+      | ?y bf:changeDate "2011-07-14T01:24:05Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> |
     Then I should find 1 match
