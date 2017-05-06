@@ -339,9 +339,9 @@ mappings:
   h:
     - position: 1
       type: Carrier
-      preperty: carrier
+      property: carrier
       prefix: carriers
-      uri: 
+      uris:
         a: ha
         b: hb
         c: hc
@@ -668,7 +668,7 @@ mappings:
         m: monaural
         q: quadraphonic, multichannel or surround
         s: stereophonic
-      uri:
+      uris:
         k: mix
         m: mon
         q: mul
@@ -869,7 +869,7 @@ mappings:
             s: she
             w: wax
         - property: emulsion
-          type: emulsion
+          type: Emulsion
           prefix: mmaterial
           labels:
             a: lacquer coating

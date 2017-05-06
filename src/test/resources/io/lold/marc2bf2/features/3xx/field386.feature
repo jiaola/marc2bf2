@@ -1,4 +1,4 @@
-Feature: MARC field 386 - CREATOR/CONTRIBUTOR CHARACTERISTICS
+Feature: 386 - CREATOR/CONTRIBUTOR CHARACTERISTICS
   Background:
     Given a marc field "=386  \\$3Other stuff$mGender group$ngen$aFemales$bf$2ericd"
     And a marc field "=386  \\$aYoungsters$baaa$0(DLC)dg2015060010"

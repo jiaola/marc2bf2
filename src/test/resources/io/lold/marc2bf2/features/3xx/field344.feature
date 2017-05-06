@@ -1,4 +1,4 @@
-Feature: MARC field 344 - SOUND CHARACTERISTICS
+Feature: 344 - SOUND CHARACTERISTICS
   Background:
     Given a marc field "=344  \\$3audio disc$adigital$boptical$gsurround$hDolby Digital 5.1$2rda"
     And a marc field "=344  \\$3record$aanalog$c78 rpm$dcoarse groove"

@@ -1,4 +1,4 @@
-Feature: MARC field 321 - FORMER PUBLICATION FREQ
+Feature: 321 - FORMER PUBLICATION FREQ
   Background:
     Given a marc field "=321  \\$aSemiannual,$b1981-1982"
     When converted by a field converter io.lold.marc2bf2.converters.Field310_321Converter

@@ -1,4 +1,4 @@
-Feature: MARC field 352 - DIGITAL GRAPHIC REPRESENTATION
+Feature: 352 - DIGITAL GRAPHIC REPRESENTATION
   Background:
     Given a marc field "=352  \\$aVector :$bPoint$c(13671),$bstring$c(20171) ;$qARC/INFO export."
     When converted by a field converter io.lold.marc2bf2.converters.Field352Converter

@@ -1,4 +1,4 @@
-Feature: MARC field 347 - DIGITAL FILE CHARACTERISTICS
+Feature: 347 - DIGITAL FILE CHARACTERISTICS
   Background:
     Given a marc field "=347  \\$3computer disc$aimage file$bJPEG$c182 KB$d3.1 megapixels$eregion 4$f32 kbps$2rda"
     When converted by a field converter io.lold.marc2bf2.converters.Field347Converter

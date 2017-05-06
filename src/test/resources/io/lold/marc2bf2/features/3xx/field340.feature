@@ -1,4 +1,4 @@
-Feature: MARC field 340 - PHYSICAL MEDIUM
+Feature: 340 - PHYSICAL MEDIUM
   Background:
     Given a marc field "=340  \\$3self-portrait$arice paper$b7" x 9"$ccolored inks$enone$hbetween entry for April 7 and April 19, 1843."
     And a marc field "=340  \\$3case files$aaperture cards$b9 x 19 cm.$dmicrofilm$f48x$iIbord Model 74 tape reader."

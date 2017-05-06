@@ -1,4 +1,4 @@
-Feature: MARC field 310 - CURRENT PUBLICATION FREQUENCY
+Feature: 310 - CURRENT PUBLICATION FREQUENCY
   Background:
     Given a marc field "=310  \\$aAnnual,$b1983-"
     When converted by a field converter io.lold.marc2bf2.converters.Field310_321Converter

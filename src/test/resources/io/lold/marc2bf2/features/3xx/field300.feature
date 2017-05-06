@@ -1,4 +1,4 @@
-Feature: MARC field 300 - PHYSICAL DESCRIPTION
+Feature: 300 - PHYSICAL DESCRIPTION
   Background:
     Given a marc field "=300  \\$3records$a1$fbox$g2 x 4 x 3 1/2 ft."
     And a marc field "=300  \\$a271 p. :$bill. ;$c21 cm. +$e1 answer book"

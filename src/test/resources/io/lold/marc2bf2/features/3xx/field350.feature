@@ -1,4 +1,4 @@
-Feature: MARC field 350 - PRICE
+Feature: 350 - PRICE
   Background:
     Given a marc field "=350  \\$a20.00"
     When converted by a field converter io.lold.marc2bf2.converters.Field350Converter

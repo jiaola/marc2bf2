@@ -1,4 +1,4 @@
-Feature: MARC field 383 - NUMERIC DESIGNATION OF MUSICAL WORK
+Feature: 383 - NUMERIC DESIGNATION OF MUSICAL WORK
   Background:
     Given a marc field "=383  \\$ano. 14,$bop. 27, no. 2"
     And a marc field "=383  \\$cF. I, 22-25$dFanna$2mlati"

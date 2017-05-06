@@ -1,4 +1,4 @@
-Feature: MARC field 346 - VIDEO CHARACTERISTICS
+Feature: 346 - VIDEO CHARACTERISTICS
   Background:
     Given a marc field "=346  \\$3videotape$aBeta$bPAL$2rda"
     When converted by a field converter io.lold.marc2bf2.converters.Field346Converter

@@ -64,7 +64,7 @@ public class MrkStreamWriter implements MarcWriter, Closeable {
         final StringBuilder recordStringBuilder = new StringBuilder();
 
         final Leader ldr = record.getLeader();
-        recordStringBuilder.append("=").append("LDR").append("  ").append(ldr.marshal());
+        recordStringBuilder.append("=").append("LDR").append("  ").append(ldr.marshal()).append("\n");
 
         for (final VariableField field : record.getVariableFields()) {
             recordStringBuilder.append("=").append(field.getTag()).append("  ");

@@ -1,4 +1,4 @@
-Feature: MARC field 306 - PLAYING TIME
+Feature: 306 - PLAYING TIME
   Background:
     Given a marc field "=306  \\$a002016"
     When converted by a field converter io.lold.marc2bf2.converters.Field306Converter

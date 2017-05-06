@@ -1,4 +1,4 @@
-Feature: MARC field 385 - AUDIENCE CHARACTERISTICS
+Feature: 385 - AUDIENCE CHARACTERISTICS
   Background:
     Given a marc field "=385  \\$3Nonsense$mAge group$nage$aChildren$bkid$2ws"
     And a marc field "=385  \\$aYoungsters$baaa$0(DLC)dg2015060010"

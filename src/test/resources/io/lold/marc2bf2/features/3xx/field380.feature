@@ -1,4 +1,4 @@
-Feature: MARC field 380 - FORM OF WORK
+Feature: 380 - FORM OF WORK
   Background:
     Given a marc field "=380  \\$aPlay"
     When converted by a field converter io.lold.marc2bf2.converters.Field380Converter

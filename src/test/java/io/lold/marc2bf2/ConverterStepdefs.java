@@ -20,17 +20,12 @@ import org.marc4j.marc.VariableField;
 import org.marc4j.marc.impl.RecordImpl;
 
 import java.lang.reflect.Constructor;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 public class ConverterStepdefs {
-    List<VariableField> fields;
-    Leader leader;
     Model model;
     Record record;
     String sparql = String.join("\n"
@@ -46,9 +41,14 @@ public class ConverterStepdefs {
 
     @Before
     public void setup() {
-        fields = new ArrayList<>();
         model = io.lold.marc2bf2.ModelFactory.createBfModel();
-        record = new RecordImpl();
+        record = new RecordImpl() {
+            @Override
+            public String getControlNumber() {
+                return "9999999999";
+            }
+        };
+
         model.createResource(ModelUtils.buildUri(record, "Work"))
                 .addProperty(RDF.type, BIB_FRAME.Work)
                 .addProperty(BIB_FRAME.adminMetadata, model.createResource()
@@ -57,21 +57,25 @@ public class ConverterStepdefs {
                 .addProperty(RDF.type, BIB_FRAME.Instance);
     }
 
+    @Given("^a marc record:$")
+    public void marc_record_step(String[] lines) throws Exception {
+    }
+
     @Given("^a marc field \"(.*)\"$")
     public void marc_field_step(String line) throws Exception {
-        fields.add(new MrkStreamReader().parseLineToVariableField(line));
+        record.addVariableField(new MrkStreamReader().parseLineToVariableField(line));
     }
 
     @Given("^a marc leader (.*)$")
     public void marc_leader_step(String line) throws Exception {
-        leader = new MrkStreamReader().parseLineToLeader(line);
+        record.setLeader(new MrkStreamReader().parseLineToLeader(line));
     }
 
     @When("^converted by a field converter (.*)$")
     public void field_convert_step(Class cls) throws Exception {
         Constructor<FieldConverter> ctor = cls.getDeclaredConstructor(Model.class, Record.class);
         FieldConverter converter = ctor.newInstance(model, record);
-        for (VariableField field: fields) {
+        for (VariableField field: record.getVariableFields()) {
             model = converter.convert(field);
         }
     }
@@ -80,7 +84,7 @@ public class ConverterStepdefs {
     public void leader_convert_step(Class cls) throws Exception {
         Constructor<LeaderConverter> ctor = cls.getDeclaredConstructor(Model.class, Record.class);
         LeaderConverter converter = ctor.newInstance(model, record);
-        model = converter.convert(leader);
+        model = converter.convert(record.getLeader());
     }
 
     @When("^I search with patterns:$")

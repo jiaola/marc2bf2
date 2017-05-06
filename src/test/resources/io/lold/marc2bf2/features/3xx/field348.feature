@@ -1,4 +1,4 @@
-Feature: MARC field 348 - FORMAT OF NOTATED MUSIC
+Feature: 348 - FORMAT OF NOTATED MUSIC
   Background:
     Given a marc field "=348  \\$3enclosed score$avocal score$bvoc$0(foo)12345$2foo"
     When converted by a field converter io.lold.marc2bf2.converters.Field348Converter

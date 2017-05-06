@@ -1,4 +1,4 @@
-Feature: MARC field 351 - ORGANIZATION AND ARRANGEMENT OF MATERIALS
+Feature: 351 - ORGANIZATION AND ARRANGEMENT OF MATERIALS
   Background:
     Given a marc field "=351  \\$3Records$cSeries;$aHierarchical;$bArranged by form of material."
     When converted by a field converter io.lold.marc2bf2.converters.Field351Converter

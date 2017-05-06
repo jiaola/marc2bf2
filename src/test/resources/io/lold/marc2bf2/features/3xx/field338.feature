@@ -1,4 +1,4 @@
-Feature: MARC field 338 - CARRIER TYPE
+Feature: 338 - CARRIER TYPE
   Background:
     Given a marc field "=338  \\$aaudio disc$bsd$0(uri)http://id.loc.gov/vocabulary/carriers/sd$2rdacarrier$3soundtrack"
     When converted by a field converter io.lold.marc2bf2.converters.Field336_337_338Converter

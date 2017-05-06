@@ -1,4 +1,4 @@
-Feature: MARC field 336 - CONTENT TYPE
+Feature: 336 - CONTENT TYPE
   Background:
     Given a marc field "=336  \\$aperformed music$bprm$0(uri)http://id.loc.gov/vocabulary/contentTypes/prm$2rdacontent$3record"
     When converted by a field converter io.lold.marc2bf2.converters.Field336_337_338Converter
