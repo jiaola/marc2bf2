@@ -37,6 +37,7 @@ public class Field005Converter extends FieldConverter {
             Date date = parser.parse(((ControlField)field).getData().substring(0, 14));
             GregorianCalendar calendar = new GregorianCalendar();
             calendar.setTime(date);
+            calendar.setTimeZone(TimeZone.getTimeZone("EST"));
             calendar.set(Calendar.MILLISECOND, 0);
             Literal literal = model.createTypedLiteral(calendar);
             Resource amd = ModelUtils.getAdminMatadata(model, record);
