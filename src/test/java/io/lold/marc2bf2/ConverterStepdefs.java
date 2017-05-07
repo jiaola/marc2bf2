@@ -9,6 +9,7 @@ import io.lold.marc2bf2.converters.LeaderConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
+import io.lold.marc2bf2.vocabulary.MADS_RDF;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Model;
@@ -33,6 +34,7 @@ public class ConverterStepdefs {
             , "PREFIX rdf: <" + RDF.getURI() + ">"
             , "PREFIX rdfs: <" + RDFS.getURI() + ">"
             , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
+            , "PREFIX madsrdf: <" + MADS_RDF.getURI() + ">"
             , "SELECT %1s "
             , "WHERE { "
             , " %2s "
@@ -75,8 +77,10 @@ public class ConverterStepdefs {
     public void field_convert_step(Class cls) throws Exception {
         Constructor<FieldConverter> ctor = cls.getDeclaredConstructor(Model.class, Record.class);
         FieldConverter converter = ctor.newInstance(model, record);
-        for (VariableField field: record.getVariableFields()) {
-            model = converter.convert(field);
+        List<VariableField> fields = record.getVariableFields();
+        for (int i = 0; i < fields.size(); i++) {
+            converter.setFieldIndex(i);
+            model = converter.convert(fields.get(i));
         }
     }
 

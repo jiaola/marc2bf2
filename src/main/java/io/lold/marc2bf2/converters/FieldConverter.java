@@ -22,6 +22,7 @@ import org.marc4j.marc.VariableField;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public abstract class FieldConverter {
@@ -166,10 +167,7 @@ public abstract class FieldConverter {
             String[] roles = sf.getData().split(",|\\sand|&amp;");
             for (String role: roles) {
                 if (StringUtils.isNotBlank(role)) {
-                    Resource resource = model.createResource()
-                            .addProperty(RDF.type, BIB_FRAME.Role)
-                            .addProperty(RDFS.label, createLiteral(lang, role));
-                    resources.add(resource);
+                    resources.add(createLabeledResource(BIB_FRAME.Role, role, lang));
                 }
             }
         }
@@ -248,5 +246,35 @@ public abstract class FieldConverter {
         return "880".equals(field.getTag()) ?
                 StringUtils.substring(field.getSubfieldsAsString("6"), 0, 3) :
                 field.getTag();
+    }
+
+    protected String generateFieldUri(DataField field, Resource resource) {
+        List<Subfield> subfields = field.getSubfields();
+        Subfield sf0orw = null;
+        if (field.getSubfield('t') != null) {
+            for (int i = 0; i < subfields.size(); i++) {
+                Subfield sf = subfields.get(i);
+                if (sf.getCode() == 't') {
+                    if ("Work".equals(resource.getLocalName())) {
+                        sf0orw = Optional.ofNullable(RecordUtils.lookBack(field, i, i, '0'))
+                                .orElse(RecordUtils.lookBack(field, i, i, 'w'));
+                    } else if ("Agent".equals(resource.getLocalName())) {
+                        sf0orw = Optional.ofNullable(RecordUtils.lookAhead(field, i, subfields.size(), '0'))
+                                .orElse(RecordUtils.lookAhead(field, i, subfields.size(), 'w'));
+                    }
+                }
+            }
+        } else {
+            sf0orw = Optional.ofNullable(field.getSubfield('0'))
+                    .orElse(field.getSubfield('w'));
+        }
+        if (sf0orw != null) {
+            if (sf0orw.getData().startsWith("(uri)")) {
+                return StringUtils.substringAfter(sf0orw.getData(), "(uri)");
+            } else if (sf0orw.getData().startsWith("http")) {
+                return sf0orw.getData();
+            }
+        }
+        return null;
     }
 }

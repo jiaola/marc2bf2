@@ -147,7 +147,7 @@ public class RecordUtils {
     }
 
     /**
-     * From the current index, look ahead for n more subfields
+     * From the current index, look for n more subfields
      * to find a subfield with certain code
      * @param field
      * @param i
@@ -165,6 +165,24 @@ public class RecordUtils {
         return null;
     }
 
+    /**
+     * From the current index, look backward for n more subfields
+     * to find a subfield with certain code
+     * @param field
+     * @param i
+     * @param code
+     * @return
+     */
+    public static Subfield lookBack(DataField field, int i, int n, char code) {
+        List<Subfield> subfieldList = field.getSubfields();
+        int j = 1;
+        while (j <= n && i-j >= 0) {
+            Subfield sf = subfieldList.get(i-j);
+            if (sf.getCode() == code) return sf;
+            j++;
+        }
+        return null;
+    }
     /**
      * List subfields after a subfield
      * @param field

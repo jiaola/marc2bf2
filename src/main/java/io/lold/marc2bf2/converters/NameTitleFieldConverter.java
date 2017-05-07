@@ -236,7 +236,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         List<Subfield> sf4s = field.getSubfields('4');
         List<Resource> roles = new ArrayList<>();
         String lang = RecordUtils.getXmlLang(field, record);
-        if (tag.endsWith("00") || tag.endsWith("10") && !sfes.isEmpty()) {
+        if ((tag.endsWith("00") || tag.endsWith("10")) && !sfes.isEmpty()) {
             roles = contributionRole(sfes, lang);
         } else if (tag.endsWith("11") && !sfjs.isEmpty()) {
             roles = contributionRole(sfjs, lang);
@@ -263,7 +263,8 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
      */
     protected Resource buildAgent(DataField field) {
         String lang = RecordUtils.getXmlLang(field, record);
-        String agentUri = ModelUtils.buildUri(record, "Agent", field.getTag(), fieldIndex);
+        String agentUri = Optional.ofNullable(generateFieldUri(field, BIB_FRAME.Agent))
+                .orElse(ModelUtils.buildUri(record, "Agent", field.getTag(), fieldIndex));
         Resource agent = model.createResource(agentUri)
                 .addProperty(RDF.type, BIB_FRAME.Agent);
         Resource agentType = getAgentType(field);
