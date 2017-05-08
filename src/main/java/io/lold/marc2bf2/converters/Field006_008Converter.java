@@ -61,7 +61,9 @@ public class Field006_008Converter extends FieldConverter {
         Map<String, Object> mapping = (Map<String, Object>) ((Map)mappings.get(tag)).get(mode);
         if (mapping == null) return;
 
-        RecordUtils.Material material = RecordUtils.getMaterialTypeFromLeader(record);
+        RecordUtils.Material material = "008".equals(tag) ?
+                RecordUtils.getMaterialTypeFromLeader(record) :
+                RecordUtils.getMaterialTypeFrom006(record);
         processMaterialType(data, resource, mapping, material.toString());
         processMaterialType(data, resource, mapping, "Default");
 
@@ -81,26 +83,56 @@ public class Field006_008Converter extends FieldConverter {
         if (tag.equals("008") && mode.equals("Instance")) {
             provision(data);
         }
+
+        // language
+        if (tag.equals("008") && mode.equals("Work")) {
+            String code = StringUtils.substring(data, 35, 38);
+            if (StringUtils.isNotBlank(code) && !"|||".equals(code)) {
+                String uri = ModelUtils.getUriWithNsPrefix("languages", code);
+                resource.addProperty(BIB_FRAME.language, model.createResource(uri)
+                        .addProperty(RDF.type, BIB_FRAME.Language));
+            }
+        }
     }
 
     private void provision(String data) {
         Resource instance = ModelUtils.getInstance(model, record);
         String char6 = data.substring(6, 7);
         String date = null;
+        String part1 = StringUtils.substring(data, 7, 11);
+        String part2 = StringUtils.substring(data, 11, 15);
         if (char6.equals("c")) {
-            date = data.substring(7, 11) + "/..";
+            if (StringUtils.isNotBlank(part1)) {
+                date = part1 + "/..";
+            }
         } else if ("dikmqu".contains(char6)) {
-            date = data.substring(7, 11) + "/" + data.substring(11, 15);
+            if (StringUtils.isNotBlank(part1) && StringUtils.isNotBlank(part2)) {
+                date = part1 + "/" + part2;
+            }
         } else if (char6.equals("e")) {
-            if (data.substring(13, 15).equals("  ")) {
-                date = data.substring(7, 11) + "-" + data.substring(11, 15);
+            if (StringUtils.isBlank(StringUtils.substring(data, 13, 15))) {
+                if (StringUtils.isNotBlank(part1) && StringUtils.isNotBlank(part2)) {
+                    date = part1 + "-" + part2;
+                }
             } else {
-                date = data.substring(7, 11) + "-" + data.substring(11, 13) + "-" + data.substring(13, 15);
+                if (StringUtils.isNotBlank(part1) && StringUtils.isNotBlank(part2)) {
+                    date = part1 + "-" + data.substring(11, 13) + "-" + data.substring(13, 15);
+                }
             }
         } else if ("prst".contains(char6)) {
-            date = data.substring(7, 11);
+            if (StringUtils.isNotBlank(part1)) {
+                date = part1;
+            }
+        } else if ("|".equals(char6)) {
+            if (StringUtils.isNotBlank(part1) && StringUtils.isNotBlank(part2)) {
+                date = part1 + "/" + part2;
+            } else if (StringUtils.isNotBlank(part1)) {
+                date = part1;
+            }
         }
-        date = date.replace('u', 'x').replace('U', 'X');
+        if (StringUtils.isNotBlank(date)) {
+            date = date.replace('u', 'x').replace('U', 'X');
+        }
         String place = data.substring(15, 18).trim();
 
         Resource country = null;

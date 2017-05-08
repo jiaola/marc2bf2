@@ -424,6 +424,8 @@ mappings:
         params: { noteType: "metadata entry convention" }
   Work:
     Book:
+      - position: 18
+        mapping: bioform
       - position: 22
         mapping: intendedAudience
       - position: 24

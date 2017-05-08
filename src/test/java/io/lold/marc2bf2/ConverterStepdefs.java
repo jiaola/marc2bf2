@@ -15,6 +15,7 @@ import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
+import org.apache.jena.vocabulary.XSD;
 import org.marc4j.marc.Leader;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;
@@ -35,6 +36,7 @@ public class ConverterStepdefs {
             , "PREFIX rdfs: <" + RDFS.getURI() + ">"
             , "PREFIX bflc: <" + BIB_FRAME_LC.getURI() + ">"
             , "PREFIX madsrdf: <" + MADS_RDF.getURI() + ">"
+            , "PREFIX xsd: <" + XSD.getURI() + ">"
             , "SELECT %1s "
             , "WHERE { "
             , " %2s "
@@ -109,7 +111,7 @@ public class ConverterStepdefs {
             }
         }
         String q = String.format(sparql, StringUtils.join(vars, " "), StringUtils.join(list, "\n"));
-        //System.out.println(q);
+        System.out.println(q);
         query = QueryFactory.create(q);
 
     }

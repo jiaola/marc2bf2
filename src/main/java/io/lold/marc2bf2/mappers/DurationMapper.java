@@ -36,8 +36,8 @@ public class DurationMapper extends DefaultMapper {
             return list;
         }
         Literal literal = StringUtils.isNumeric(value) ?
-                model.createTypedLiteral(label, new XSDDurationType()) :
-                model.createLiteral(value);
+                model.createTypedLiteral("P" + label + "M", new XSDDurationType()) :
+                model.createLiteral(label);
         list.add(literal);
         return list;
     }
