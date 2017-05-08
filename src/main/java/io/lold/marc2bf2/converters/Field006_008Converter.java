@@ -131,7 +131,7 @@ public class Field006_008Converter extends FieldConverter {
             }
         }
         if (StringUtils.isNotBlank(date)) {
-            date = date.replace('u', 'x').replace('U', 'X');
+            date = date.replace('u', 'X').replace('U', 'X');
         }
         String place = data.substring(15, 18).trim();
 
