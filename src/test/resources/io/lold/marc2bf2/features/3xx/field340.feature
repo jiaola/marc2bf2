@@ -52,10 +52,12 @@ Feature: 340 - PHYSICAL MEDIUM
     Then I should find 1 match
 
 
-  Scenario: $i creates a systemRequirement property of the Instance
+  Scenario: $i creates a systemRequirement/SystemRequirement property of the Instance
     When I search with patterns:
       | ?x a bf:Instance                                       |
-      | ?x bf:systemRequirement "Ibord Model 74 tape reader."  |
+      | ?x bf:systemRequirement ?y                             |
+      | ?y a bf:SystemRequirement                              |
+      | ?y rdfs:label "Ibord Model 74 tape reader."            |
     Then I should find 1 match
 
   Scenario: $j creates a generation property of the Instance
