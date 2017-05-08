@@ -28,3 +28,12 @@ wc: conf: read: Is a directory
      186 marc2bibframe2.xsl
      205 naco-normalize.xsl
 (*)     305 utils.xsl
+
+## Differences
+
+These are the differences from the LOC marc2bibframe2 tool 
+
+* In 008 converter, the duration is converted to the xsd:duration format: PXXXM instead of XXX.
+* in 006/008 converter, the labels are capitalized for some nodes. This is because the values are taken directly from 
+the vocabulary. And in the vocabularies, the preferred labels are capitalized. For example, see io.lold.marc2bf2.features.006_008.field006.feature
+

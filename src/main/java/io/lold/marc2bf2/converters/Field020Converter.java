@@ -20,7 +20,7 @@ public class Field020Converter extends InstanceIdConverter {
             return model;
         }
         Resource instance = ModelUtils.getInstance(model, record);
-        List<Resource> resources = convert(field, BIB_FRAME.Isbn);
+        List<Resource> resources = convert(field, BIB_FRAME.Isbn, "invalid", true);
         for (Resource resource: resources) {
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
         }

@@ -24,15 +24,15 @@ public class Field016Converter extends InstanceIdConverter {
         }
         DataField df = (DataField) field;
 
-        Resource instance = ModelUtils.getInstance(model, record);
-        List<Resource> resources = convert(field, BIB_FRAME.Nbn);  //TODO: Missing bf:Nban
+        Resource amd = ModelUtils.getAdminMatadata(model, record);
+        List<Resource> resources = convert(field, BIB_FRAME.Local);
         for (Resource resource: resources) {
             if (df.getIndicator1() == ' ') {
                 resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "Library and Archives Canada"));
             } else {
                 addSubfield2(df, resource);
             }
-            instance.addProperty(BIB_FRAME.identifiedBy, resource);
+            amd.addProperty(BIB_FRAME.identifiedBy, resource);
         }
 
         return model;

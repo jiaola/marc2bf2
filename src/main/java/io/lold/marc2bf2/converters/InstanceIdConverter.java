@@ -1,8 +1,6 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.utils.FormatUtils;
-import io.lold.marc2bf2.utils.ModelUtils;
-import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
@@ -41,11 +39,11 @@ public abstract class InstanceIdConverter extends FieldConverter {
                 resource.addProperty(BIB_FRAME.status, createLabeledResource(BIB_FRAME.Status, "incorrect"));
             }
             for (Subfield c: df.getSubfields('c')) {
-                String value = FormatUtils.chopPunctuation(c.getData(), ":,;/\\s");
+                String value = FormatUtils.chopPunctuation(c.getData(), "[:,;/\\s]+$");
                 resource.addProperty(BIB_FRAME.acquisitionTerms, value);
             }
             for (Subfield q: df.getSubfields('q')) {
-                String value = FormatUtils.chopPunctuation(q.getData(), ":,;/\\s");
+                String value = FormatUtils.chopPunctuation(q.getData(), "[:,;/\\s]+$");
                 resource.addProperty(BIB_FRAME.qualifier, value);
             }
 

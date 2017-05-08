@@ -48,7 +48,7 @@ public class Field022Converter extends InstanceIdConverter {
         }
 
         Resource instance = ModelUtils.getInstance(model, record);
-        List<Resource> resources = convert(field, BIB_FRAME.Issn);
+        List<Resource> resources = convert(field, BIB_FRAME.Issn, "canceled");
         for (Resource resource: resources) {
             addSubfield2(df, resource);
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
