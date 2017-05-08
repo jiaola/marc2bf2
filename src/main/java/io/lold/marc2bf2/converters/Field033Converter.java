@@ -1,6 +1,7 @@
 package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.utils.FormatUtils;
+import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
@@ -65,44 +66,36 @@ public class Field033Converter extends FieldConverter {
             }
         }
 
-        List<Subfield> sfbs = df.getSubfields('b');
-        List<Subfield> sfcs = df.getSubfields('c');
-        int size = sfbs.size();
-        if (sfbs.size() != sfcs.size()) {
-            logger.warn("$b not followed by $c");
-            size = Math.min(sfbs.size(), sfcs.size());
-        }
-        for (int i = 0; i < size; i++) {
-            Subfield b = sfbs.get(i);
-            Subfield c = sfcs.get(i);
-            Resource place = model.createResource()
-                    .addProperty(RDF.type, BIB_FRAME.Place)
-                    .addProperty(RDF.value, b.getData() + " " + c.getData())
-                    .addProperty(BIB_FRAME.source, model.createResource()
-                            .addProperty(RDF.type, BIB_FRAME.Source)
-                            .addProperty(RDFS.label, "lcc-g")
-                    );
-            capture.addProperty(BIB_FRAME.place, place);
-        }
+        List<Subfield> sfs = df.getSubfields();
+        for (int i = 0; i < sfs.size(); i++) {
+            Subfield sf = sfs.get(i);
+            if (sf.getCode() == 'b') {
+                Subfield sfc = RecordUtils.lookAhead(df, i, 1, 'c');
+                String value = sf.getData();
+                if (sfc != null) {
+                    value = value + " " + sfc.getData();
+                }
+                Resource place = model.createResource()
+                        .addProperty(RDF.type, BIB_FRAME.Place)
+                        .addProperty(RDF.value, value)
+                        .addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "lcc-g"));
+                capture.addProperty(BIB_FRAME.place, place);
+            } else if (sf.getCode() == 'p') {
+                Subfield two = RecordUtils.lookAhead(df, i, 1, '2');
+                Resource place = model.createResource()
+                        .addProperty(RDF.type, BIB_FRAME.Place)
+                        .addProperty(RDFS.label, sf.getData());
+                if (two != null) {
+                    place.addProperty(BIB_FRAME.source, SubfieldUtils.mapSubfield2(model, two.getData()));
+                }
+                capture.addProperty(BIB_FRAME.place, place);
+            }
 
-        List<Subfield> sfps = df.getSubfields('p');
-        List<Subfield> sf2s = df.getSubfields('2');
-        size = sfps.size();
-        if (sfps.size() != sf2s.size()) {
-            logger.warn("$b not followed by $c");
-            size = Math.min(sfps.size(), sf2s.size());
-        }
-        for (int i = 0; i < size; i++) {
-            Subfield p = sfps.get(i);
-            Subfield two = sf2s.get(i);
-            Resource place = model.createResource()
-                    .addProperty(RDF.type, BIB_FRAME.Place)
-                    .addProperty(RDF.value, p.getData())
-                    .addProperty(BIB_FRAME.source, SubfieldUtils.mapSubfield2(model, two.getData()));
-            capture.addProperty(BIB_FRAME.place, place);
         }
 
         addSubfield3(df, capture);
+
+        work.addProperty(BIB_FRAME.capture, capture);
 
         return model;
     }
