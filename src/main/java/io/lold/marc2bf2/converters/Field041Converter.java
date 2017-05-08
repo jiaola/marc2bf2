@@ -50,10 +50,9 @@ public class Field041Converter extends FieldConverter {
                 new SimpleEntry<>('n', "original libretto"))
                 .collect(Collectors.toMap((e) -> e.getKey(), (e) -> e.getValue())));
 
-        char[] subfields = {'a', 'b', 'd', 'e', 'f', 'g', 'h', 'j', 'k', 'm', 'n'};
-        for (char c: subfields) {
+        for (Subfield sf: df.getSubfields("abdefghjkmn")) {
             String part = null;
-            Subfield sf = df.getSubfield(c);
+            char c = sf.getCode();
             if (sf == null) continue;
             part = partMap.get(c);
             if (df.getIndicator2() == ' ') { // marc language code

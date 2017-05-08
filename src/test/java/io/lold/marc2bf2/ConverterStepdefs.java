@@ -126,7 +126,6 @@ public class ConverterStepdefs {
 
     @Then("^I should find (\\d+) (?:matches|match)$")
     public void check_result_step(int n) throws Exception {
-        //System.out.println(n);
         model.write(System.out);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);
         ResultSet results = qexec.execSelect();

@@ -5,11 +5,10 @@ Feature: 034 - CODED CARTOGRAPHIC MATHEMATICAL DATA
 
   Scenario: ind1 determines the type of dates represented by $a in the capture/Capture/date property of the Work
     When I search with patterns:
+      | ?y bf:date "1978-09-10T20:00:00-04:00/1978-09-14T20:00:00-04:00"^^<http://id.loc.gov/datatypes/edtf> |
       | ?x a bf:Work                         |
       | ?x bf:capture ?y                     |
       | ?y a bf:Capture                      |
-      | ?y bf:date ?z                        |
-      #| ?y bf:date "1978-09-10T20:00:00-04:00/1978-09-14T20:00:00-04:00"^^<http://id.loc.gov/datatypes/edtf> |
     Then I should find 1 match
 
   Scenario: ind2 generates a note property in the Capture
