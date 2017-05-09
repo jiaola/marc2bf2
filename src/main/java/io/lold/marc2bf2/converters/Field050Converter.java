@@ -91,7 +91,7 @@ public class Field050Converter extends FieldConverter {
                 str += " " + c.getData().trim();
             }
             item.addProperty(BIB_FRAME.shelfMark, model.createResource()
-                    .addProperty(RDF.type, BIB_FRAME.ShelfMark)
+                    .addProperty(RDF.type, BIB_FRAME.ShelfMarkLcc)
                     .addProperty(RDFS.label, FormatUtils.chopPunctuation(str)));
         }
         instance.addProperty(BIB_FRAME.hasItem, item);
