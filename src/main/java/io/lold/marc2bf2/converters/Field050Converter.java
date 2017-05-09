@@ -41,6 +41,9 @@ public class Field050Converter extends FieldConverter {
         for (int i = 0; i < sfs.size(); i++) {
             Subfield sf = sfs.get(i);
             if (sf.getCode() == 'a') {
+                if (!FormatUtils.isValidLCC(sf.getData())) {
+                    continue;
+                }
                 Resource resource = model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.ClassificationLcc);
                 if (df.getIndicator2() == '0') {
@@ -64,8 +67,13 @@ public class Field050Converter extends FieldConverter {
         Resource item = model.createResource(itemUri)
                 .addProperty(RDF.type, BIB_FRAME.Item);
 
+        Subfield sfa = df.getSubfield('a');
+        boolean validLcc = false;
+        if (sfa != null) {
+            validLcc = FormatUtils.isValidLCC(sfa.getData());
+        }
         Resource shelfMark = model.createResource()
-                .addProperty(RDF.type, BIB_FRAME.ShelfMark)
+                .addProperty(RDF.type, validLcc? BIB_FRAME.ShelfMarkLcc : BIB_FRAME.ShelfMark)
                 .addProperty(RDFS.label, buildShelfMarkLabel(df));
         if (df.getIndicator2() == '0') {
             shelfMark.addProperty(BIB_FRAME.source,

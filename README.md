@@ -29,6 +29,27 @@ wc: conf: read: Is a directory
      205 naco-normalize.xsl
 (*)     305 utils.xsl
 
+
+XSPEC files: 
+(*)     157 test/ConvSpec-001-007.xspec
+(*)      85 test/ConvSpec-006,008.xspec
+(*)     225 test/ConvSpec-010-048.xspec
+     120 test/ConvSpec-050-088.xspec
+(*)      43 test/ConvSpec-1XX,6XX,7XX,8XX-names.xspec
+     242 test/ConvSpec-200-247not240-Titles.xspec
+      56 test/ConvSpec-240andX30-UnifTitle.xspec
+     104 test/ConvSpec-250-270.xspec
+(*)     219 test/ConvSpec-3XX.xspec
+      97 test/ConvSpec-490-510-530to535-Links.xspec
+     276 test/ConvSpec-5XX.xspec
+      68 test/ConvSpec-648-662.xspec
+      39 test/ConvSpec-720+740to755.xspec
+      63 test/ConvSpec-760-788-Links.xspec
+      42 test/ConvSpec-841-887.xspec
+     122 test/ConvSpec-880.xspec
+      24 test/ConvSpec-LDR.xspec
+     798 test/marc2bibframe2.xspec
+    2780 total
 ## Differences
 
 These are the differences from the LOC marc2bibframe2 tool 

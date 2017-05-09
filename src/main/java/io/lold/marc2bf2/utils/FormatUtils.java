@@ -172,4 +172,14 @@ public class FormatUtils {
         }
         return date;
     }
+
+    /**
+     * Validates LCC call number
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isValidLCC(String str) {
+        return str.matches("^[A-Z]{1,3}\\d+.*");
+    }
 }
