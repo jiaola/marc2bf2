@@ -41,6 +41,7 @@ public class Field072Converter extends FieldConverter {
         } else {
             addSubfield2(df, resource);
         }
+        work.addProperty(BIB_FRAME.subject, resource);
 
         return model;
     }

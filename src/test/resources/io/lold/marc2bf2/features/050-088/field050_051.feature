@@ -1,4 +1,5 @@
 Feature: 050 - LIBRARY OF CONGRESS CALL NUMBER
+         051 - LIBRARY OF CONGRESS COPY, ISSUE, OFFPRINT STATEMENT
 
   Background:
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
