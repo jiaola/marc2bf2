@@ -37,7 +37,8 @@ public class Field245Converter extends FieldConverter {
 
         work.addProperty(BIB_FRAME.title, buildTitle(df, lang, label));
         for (Subfield sf: df.getSubfields("fg")) {
-            work.addProperty(BIB_FRAME.originDate, createLiteral(lang, sf.getData()));
+            String value = FormatUtils.chopPunctuation(sf.getData());
+            work.addProperty(BIB_FRAME.originDate, createLiteral(lang, value));
         }
         for (Subfield sf: df.getSubfields('h')) {
             String value = FormatUtils.chopPunctuation(FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData())));
@@ -74,8 +75,11 @@ public class Field245Converter extends FieldConverter {
         Resource title = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Title);
         if (StringUtils.isNotBlank(label)) {
-            title.addProperty(RDFS.label, createLiteral(lang, label))
-                    .addProperty(BIB_FRAME_LC.titleSortKey, label);
+            title.addProperty(RDFS.label, createLiteral(lang, label));
+        }
+        String sortKey = titleSortKeyWithIndicator2(df, label);
+        if (StringUtils.isNotBlank(sortKey)) {
+            title.addProperty(BIB_FRAME_LC.titleSortKey, sortKey);
         }
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());

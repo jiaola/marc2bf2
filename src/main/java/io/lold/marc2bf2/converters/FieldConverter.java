@@ -7,6 +7,7 @@ import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.jena.datatypes.RDFDatatype;
 import org.apache.jena.datatypes.xsd.impl.XSDDateType;
 import org.apache.jena.rdf.model.Literal;
@@ -274,6 +275,17 @@ public abstract class FieldConverter {
             } else if (sf0orw.getData().startsWith("http")) {
                 return sf0orw.getData();
             }
+        }
+        return null;
+    }
+
+    protected String titleSortKeyWithIndicator2(DataField field, String label) {
+        char ind2 = field.getIndicator2();
+        if (StringUtils.isNotBlank(label)) {
+            if (Character.isDigit(ind2)) {
+                label = StringUtils.substring(label, Character.getNumericValue(ind2));
+            }
+            return label;
         }
         return null;
     }

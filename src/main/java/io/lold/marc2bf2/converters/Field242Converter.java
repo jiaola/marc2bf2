@@ -33,10 +33,12 @@ public class Field242Converter extends FieldConverter {
                 .addProperty(BIB_FRAME.variantType, "translated");
         String lang = RecordUtils.getXmlLang(df, record);
         String label = concatSubfields(df, "abchnp", " ");
-        label = label.substring(0, label.length()-1);
         if (StringUtils.isNotBlank(label)) {
-            resource.addProperty(RDFS.label, createLiteral(lang, label))
-                    .addProperty(BIB_FRAME_LC.titleSortKey, label);
+            resource.addProperty(RDFS.label, createLiteral(lang, label));
+        }
+        String sortKey = titleSortKeyWithIndicator2(df, label);
+        if (StringUtils.isNotBlank(sortKey)) {
+            resource.addProperty(BIB_FRAME_LC.titleSortKey, sortKey);
         }
 
         for (Subfield sf: df.getSubfields('a')) {

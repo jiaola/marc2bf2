@@ -6,6 +6,7 @@ import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -34,8 +35,11 @@ public class Field222Converter extends FieldConverter {
         String lang = RecordUtils.getXmlLang(df, record);
         String label = concatSubfields(df, "ab", " ");
         if (StringUtils.isNotBlank(label)) {
-            resource.addProperty(RDFS.label, createLiteral(lang, label))
-                    .addProperty(BIB_FRAME_LC.titleSortKey, label);
+            resource.addProperty(RDFS.label, createLiteral(lang, label));
+        }
+        String sortKey = titleSortKeyWithIndicator2(df, label);
+        if (StringUtils.isNotBlank(sortKey)) {
+            resource.addProperty(BIB_FRAME_LC.titleSortKey, sortKey);
         }
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
