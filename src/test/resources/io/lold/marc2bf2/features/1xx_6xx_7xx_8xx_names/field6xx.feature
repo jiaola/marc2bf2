@@ -21,7 +21,7 @@ Feature: 6XX - NAMES - Subject Access Fields
       | ?x a bf:Agent                                                                            |
       | ?x madsrdf:authoritativeLabel "Nixon, Richard M. (Richard Milhouse), 1913---Psychology." |
       | ?x madsrdf:isMemberofMADSScheme <http://id.loc.gov/authorities/subjects>                 |
-    Then I should find 1 matches
+    Then I should find 1 match
 
   Scenario: ind2 creates a source property of the Agent
     When I search with patterns:

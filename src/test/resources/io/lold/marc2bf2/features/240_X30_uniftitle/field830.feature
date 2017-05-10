@@ -12,7 +12,7 @@ Feature: 830 - SERIES ADDED ENTRY - UNIFORM TITLE
       | ?y bf:title ?z                                 |
       | ?z a bf:Title                                  |
       | ?z bf:mainTitle "Nihon zenkoku panorama chizu" |
-    Then I should find 1 matches
+    Then I should find 1 match
 
   Scenario: $7 sets the rdf:type of the Work
     When I search with patterns:

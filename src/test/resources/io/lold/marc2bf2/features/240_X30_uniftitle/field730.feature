@@ -13,7 +13,7 @@ Feature: 730 - ADDED ENTRY - UNIFORM TITLE
       | ?y bf:title ?z          |
       | ?z a bf:Title           |
       | ?z bf:mainTitle "Bible" |
-    Then I should find 1 matches
+    Then I should find 1 match
 
   Scenario: ind2 != '2' becomes a relatedTo of the main Work
     When I search with patterns:
@@ -23,7 +23,7 @@ Feature: 730 - ADDED ENTRY - UNIFORM TITLE
       | ?y bf:title ?z             |
       | ?z a bf:Title              |
       | ?z bf:mainTitle "[Motets]" |
-    Then I should find 1 matches
+    Then I should find 1 match
 
   Scenario: $i becomes a bflc:relationship of the main Work
     When I search with patterns:
@@ -35,7 +35,7 @@ Feature: 730 - ADDED ENTRY - UNIFORM TITLE
       | ?z rdfs:label "Parody of (work)"               |
       | ?y bf:relatedTo ?w                             |
       | ?w a bf:Work                                   |
-    Then I should find 1 matches
+    Then I should find 1 match
 
   Scenario: $s becomes a version
     When I search with patterns:

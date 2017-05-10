@@ -60,7 +60,7 @@ Feature: 7XX - NAMES - Added Entry Fields
       | ?x bf:identifiedBy ?y                  |
       | ?y a bf:Identifier                     |
       | ?y rdf:value "0000000121358464"        |
-    Then I should find 1 matches
+    Then I should find 1 match
 
   Scenario: If there's a $t, and $0 is a URI, $0 becomes the rdf:about attribute of the bf:Agent or bf:Work
     When I search with patterns:
@@ -69,7 +69,7 @@ Feature: 7XX - NAMES - Added Entry Fields
       | ?y a bf:Contribution                                        |
       | ?y bf:agent <http://id.loc.gov/authorities/names/n81042545> |
       | <http://id.loc.gov/authorities/names/n81042545> a bf:Agent  |
-    Then I should find 1 matches
+    Then I should find 1 match
 
 
 
