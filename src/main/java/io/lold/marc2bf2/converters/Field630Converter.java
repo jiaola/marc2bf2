@@ -14,6 +14,7 @@ import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
 import java.util.List;
+import java.util.Optional;
 
 public class Field630Converter extends NameTitleFieldConverter {
     public Field630Converter(Model model, Record record) {
@@ -29,7 +30,7 @@ public class Field630Converter extends NameTitleFieldConverter {
         Resource work = ModelUtils.getWork(model, record);
 
         DataField df = (DataField) field;
-        String workUri = ModelUtils.buildUri(record, "Work", getTag(df), fieldIndex);
+        String workUri = buildNewWorkUri(df);
         Resource resource = model.createResource(workUri)
                 .addProperty(RDF.type, BIB_FRAME.Work);
         addMads(df, resource, titleLabel(df));

@@ -26,7 +26,7 @@ public class Field440_830Converter extends NameTitleFieldConverter {
 
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
-        String workUri = ModelUtils.buildUri(record, "Work", getTag(df), fieldIndex);
+        String workUri = buildNewWorkUri(df);
         Resource resource = model.createResource(workUri)
                 .addProperty(RDF.type, BIB_FRAME.Work);
 

@@ -218,7 +218,7 @@ public abstract class FieldConverter {
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME_LC.Relationship)
                 .addProperty(BIB_FRAME_LC.relation, model.createResource()
-                        .addProperty(RDF.type, RDFS.Resource)
+                        .addProperty(RDF.type, BIB_FRAME_LC.Relation)
                         .addProperty(RDFS.label, createLiteral(lang, label)));
         if (StringUtils.isNotBlank(relatedTo)) {
             resource.addProperty(BIB_FRAME.relatedTo, model.createResource(relatedTo));
@@ -264,17 +264,26 @@ public abstract class FieldConverter {
                                 .orElse(RecordUtils.lookAhead(field, i, subfields.size(), 'w'));
                     }
                 }
+                if (sf0orw != null) {
+                    return getUriFromSubfield0OrW(sf0orw);
+                }
             }
         } else {
-            sf0orw = Optional.ofNullable(field.getSubfield('0'))
-                    .orElse(field.getSubfield('w'));
-        }
-        if (sf0orw != null) {
-            if (sf0orw.getData().startsWith("(uri)")) {
-                return StringUtils.substringAfter(sf0orw.getData(), "(uri)");
-            } else if (sf0orw.getData().startsWith("http")) {
-                return sf0orw.getData();
+            for (Subfield sf: field.getSubfields("0w")) {
+                String value = getUriFromSubfield0OrW(sf);
+                if (StringUtils.isNotBlank(value)) {
+                    return value;
+                }
             }
+        }
+        return null;
+    }
+
+    protected String getUriFromSubfield0OrW(Subfield sf0orw) {
+        if (sf0orw.getData().startsWith("(uri)")) {
+            return StringUtils.substringAfter(sf0orw.getData(), "(uri)");
+        } else if (sf0orw.getData().startsWith("http")) {
+            return sf0orw.getData();
         }
         return null;
     }

@@ -162,7 +162,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         if (tag.startsWith("7") || tag.startsWith("8")) {
             for (Subfield sf: field.getSubfields('x')) {
                 resource.addProperty(BIB_FRAME.identifiedBy, model.createResource()
-                        .addProperty(RDF.type, BIB_FRAME.Isan)
+                        .addProperty(RDF.type, BIB_FRAME.Issn)
                         .addProperty(RDF.value, sf.getData()));
             }
         }
@@ -211,7 +211,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
 
         for (Subfield sf: field.getSubfields('p')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.partNumber, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.partName, createLiteral(lang, value));
         }
         return resource;
     }
@@ -469,4 +469,19 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         }
         resource.addProperty(marcKey, RecordUtils.marcKey(field));
     }
+
+    protected String buildNewWorkUri(DataField field) {
+        String workUri = null;
+        for (Subfield sf0orw: field.getSubfields("0w")) {
+            workUri = getUriFromSubfield0OrW(sf0orw);
+            if (StringUtils.isNotBlank(workUri)) {
+                break;
+            }
+        }
+        if (StringUtils.isBlank(workUri)) {
+            workUri = ModelUtils.buildUri(record, "Work", getTag(field), fieldIndex);
+        }
+        return workUri;
+    }
+
 }

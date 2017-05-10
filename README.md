@@ -36,7 +36,7 @@ XSPEC files:
 (*)     225 test/ConvSpec-010-048.xspec
 (*)     120 test/ConvSpec-050-088.xspec
 (*)      43 test/ConvSpec-1XX,6XX,7XX,8XX-names.xspec
-     242 test/ConvSpec-200-247not240-Titles.xspec
+(*)     242 test/ConvSpec-200-247not240-Titles.xspec
       56 test/ConvSpec-240andX30-UnifTitle.xspec
      104 test/ConvSpec-250-270.xspec
 (*)     219 test/ConvSpec-3XX.xspec
