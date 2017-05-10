@@ -33,7 +33,7 @@ public class Field260Converter extends NameTitleFieldConverter {
         if (!df.getSubfields("abc").isEmpty()) {
             Resource resource = buildProvisionActivity(df, lang);
             if (df.getIndicator1() == '3') {
-                resource.addProperty(BIB_FRAME.status, createLabeledResource(BIB_FRAME.Status, "current"));
+                resource.addProperty(BIB_FRAME.status, createLabeledResource(BIB_FRAME.Status, "current", lang));
             }
             addSubfield3(df, resource);
             String statement = concatSubfields(df, "abc", " ");
@@ -78,13 +78,13 @@ public class Field260Converter extends NameTitleFieldConverter {
                 .addProperty(RDF.type, BIB_FRAME.ProvisionActivity)
                 .addProperty(RDF.type, BIB_FRAME.Publication);
         for (Subfield sf: field.getSubfields('a')) {
-            String value = FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData()));
+            String value = FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData(), "[:,;/\\s]+$"));
             pa.addProperty(BIB_FRAME.place, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Place)
                     .addProperty(RDFS.label, createLiteral(lang, value)));
         }
         for (Subfield sf: field.getSubfields('b')) {
-            String value = FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData()));
+            String value = FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData(), "[:,;/\\s]+$"));
             pa.addProperty(BIB_FRAME.agent, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Agent)
                     .addProperty(RDFS.label, createLiteral(lang, value)));

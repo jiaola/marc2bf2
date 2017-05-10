@@ -32,10 +32,7 @@ public class Field264Converter extends Field260Converter {
             } else {
                 Resource resource = buildProvisionActivity(df, lang);
                 if (df.getIndicator1() == '3') {
-                    Resource status = createLabeledResource(BIB_FRAME.Status, "current");
-                    resource.addProperty(BIB_FRAME.status, model.createResource()
-                            .addProperty(RDF.type, BIB_FRAME.Status)
-                            .addProperty(RDFS.label, status));
+                    resource.addProperty(BIB_FRAME.status,createLabeledResource(BIB_FRAME.Status, "current"));
                 }
                 addSubfield3(df, resource);
                 instance.addProperty(BIB_FRAME.provisionActivity, resource)
