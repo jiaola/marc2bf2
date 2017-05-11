@@ -2,9 +2,7 @@ package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
-import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -41,11 +39,11 @@ public class Field084Converter extends FieldConverter {
             Resource resource = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Classification)
                     .addProperty(BIB_FRAME.classificationPortion,
-                            createLiteral(lang, a.getData()));
+                            createLiteral(a.getData(), lang));
             if (i == 0) {
                 for (Subfield b: df.getSubfields('b')) {
                     resource.addProperty(BIB_FRAME.itemPortion,
-                            createLiteral(lang, b.getData()));
+                            createLiteral(b.getData(), lang));
                 }
             }
             List<Subfield> sfqs = df.getSubfields('q');
@@ -55,7 +53,7 @@ public class Field084Converter extends FieldConverter {
                 for (Subfield q: sfqs) {
                     am.addProperty(BIB_FRAME.assigner, model.createResource()
                             .addProperty(RDF.type, BIB_FRAME.Agent)
-                            .addProperty(RDFS.label, createLiteral(lang, q.getData())));
+                            .addProperty(RDFS.label, createLiteral(q.getData(), lang)));
                 }
                 resource.addProperty(BIB_FRAME.adminMetadata, am);
             }

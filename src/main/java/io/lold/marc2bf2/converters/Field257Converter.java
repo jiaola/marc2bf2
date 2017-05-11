@@ -31,7 +31,7 @@ public class Field257Converter extends FieldConverter {
             String value = FormatUtils.chopPunctuation(sf.getData());
             Resource place = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Place)
-                    .addProperty(RDFS.label, createLiteral(lang, sf.getData()));
+                    .addProperty(RDFS.label, createLiteral(sf.getData(), lang));
             addSubfield2(df, place);
             instance.addProperty(BIB_FRAME.provisionActivity, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Production)

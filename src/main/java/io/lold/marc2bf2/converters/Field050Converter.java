@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
@@ -51,10 +50,10 @@ public class Field050Converter extends FieldConverter {
                     resource.addProperty(BIB_FRAME.source, model.createResource(uri)
                             .addProperty(RDF.type, BIB_FRAME.Source));
                 }
-                resource.addProperty(BIB_FRAME.classificationPortion, createLiteral(lang, sf));
+                resource.addProperty(BIB_FRAME.classificationPortion, createLiteral(sf, lang));
                 if (i == 0) {
                     Subfield b = RecordUtils.lookAhead(df, i, sfs.size(), 'b');
-                    resource.addProperty(BIB_FRAME.itemPortion, createLiteral(lang, b));
+                    resource.addProperty(BIB_FRAME.itemPortion, createLiteral(b, lang));
                 }
                 work.addProperty(BIB_FRAME.classification, resource);
             }

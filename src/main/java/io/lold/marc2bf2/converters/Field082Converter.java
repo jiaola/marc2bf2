@@ -1,15 +1,12 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
@@ -42,16 +39,16 @@ public class Field082Converter extends FieldConverter {
             Resource resource = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.ClassificationDdc)
                     .addProperty(BIB_FRAME.classificationPortion,
-                            createLiteral(lang, a.getData()));
+                            createLiteral(a.getData(), lang));
             if (i == 0) {
                 for (Subfield b: df.getSubfields('b')) {
                     resource.addProperty(BIB_FRAME.itemPortion,
-                            createLiteral(lang, b.getData()));
+                            createLiteral(b.getData(), lang));
                 }
             }
             for (Subfield two: df.getSubfields('2')) {
                 resource.addProperty(BIB_FRAME.edition,
-                        createLiteral(lang, two.getData()));
+                        createLiteral(two.getData(), lang));
             }
             if (df.getIndicator1() == '0') {
                 resource.addProperty(BIB_FRAME.edition, "full");

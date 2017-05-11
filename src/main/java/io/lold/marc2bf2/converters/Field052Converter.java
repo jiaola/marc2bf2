@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
@@ -16,7 +15,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.List;
-import java.util.Map;
 
 public class Field052Converter extends FieldConverter {
     final static Logger logger = LoggerFactory.getLogger(Field052Converter.class);
@@ -52,7 +50,7 @@ public class Field052Converter extends FieldConverter {
                 .addProperty(RDF.type, BIB_FRAME.Place)
                 .addProperty(RDF.value, place);
         for (Subfield d: df.getSubfields('d')) {
-            resource.addProperty(RDFS.label, createLiteral(lang, d));
+            resource.addProperty(RDFS.label, createLiteral(d, lang));
         }
         if (df.getIndicator1() == ' ') {
             String uri = ModelUtils.getUriWithNsPrefix("classSchemes", "lcc");

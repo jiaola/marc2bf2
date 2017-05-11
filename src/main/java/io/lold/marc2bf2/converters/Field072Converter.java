@@ -2,7 +2,6 @@ package io.lold.marc2bf2.converters;
 
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
-import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
@@ -10,7 +9,6 @@ import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
-import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,7 +33,7 @@ public class Field072Converter extends FieldConverter {
         String subject = concatSubfields(df, "ax", " ");
         Resource resource = model.createResource()
                 .addProperty(RDF.type, RDFS.Resource)
-                .addProperty(RDF.value, createLiteral(lang, subject));
+                .addProperty(RDF.value, createLiteral(subject, lang));
         if (df.getIndicator2() == '0') {
             resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, "agricola"));
         } else {

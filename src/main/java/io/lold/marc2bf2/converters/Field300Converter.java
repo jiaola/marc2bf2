@@ -31,7 +31,7 @@ public class Field300Converter extends FieldConverter {
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Extent);
         String extent = concatSubfields(df, "afg", " ");
-        resource.addProperty(RDFS.label, createLiteral(lang, extent));
+        resource.addProperty(RDFS.label, createLiteral(extent, lang));
         addSubfield3(df, resource);
         instance.addProperty(BIB_FRAME.extent, resource);
         for (Subfield sf: df.getSubfields("be")) {
@@ -41,13 +41,13 @@ public class Field300Converter extends FieldConverter {
                     "Physical details" : "Accompanying materials";
             note.addProperty(BIB_FRAME.noteType, noteType);
             String value = FormatUtils.chopPunctuation(sf.getData(), "[\\+;,:/\\s]+$");
-            note.addProperty(RDFS.label, createLiteral(lang, value));
+            note.addProperty(RDFS.label, createLiteral(value, lang));
             addSubfield3(df, note);
             instance.addProperty(BIB_FRAME.note, note);
         }
         for (Subfield sf: df.getSubfields('c')) {
             String value = FormatUtils.chopPunctuation(sf.getData(), "[\\+;,:/\\s]+$");
-            instance.addProperty(BIB_FRAME.dimensions, createLiteral(lang, value));
+            instance.addProperty(BIB_FRAME.dimensions, createLiteral(value, lang));
         }
 
         return model;

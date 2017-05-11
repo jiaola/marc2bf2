@@ -1,14 +1,11 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.math.NumberUtils;
-import org.apache.jena.datatypes.RDFDatatype;
 import org.apache.jena.datatypes.xsd.impl.XSDDateType;
 import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
@@ -140,17 +137,17 @@ public abstract class FieldConverter {
         }
     }
 
-    protected Literal createLiteral(String lang, Subfield subfield) {
+    protected Literal createLiteral(Subfield subfield, String lang) {
         return StringUtils.isBlank(lang) ?
                 model.createLiteral(subfield.getData(), lang) :
                 model.createLiteral(subfield.getData());
     }
 
     protected Literal createLiteral(Subfield subfield) {
-        return createLiteral(null, subfield);
+        return createLiteral(subfield, null);
     }
 
-    protected Literal createLiteral(String lang, String value) {
+    protected Literal createLiteral(String value, String lang) {
         return StringUtils.isBlank(lang) ?
                 model.createLiteral(value, lang) :
                 model.createLiteral(value);
@@ -199,7 +196,7 @@ public abstract class FieldConverter {
     public Resource createLabeledResource(Resource type, String label, String lang) {
         return model.createResource()
                 .addProperty(RDF.type, type)
-                .addProperty(RDFS.label, createLiteral(lang, label));
+                .addProperty(RDFS.label, createLiteral(label, lang));
     }
 
     protected List<Resource> contributionRoleCode(List<Subfield> sfs) {
@@ -219,7 +216,7 @@ public abstract class FieldConverter {
                 .addProperty(RDF.type, BIB_FRAME_LC.Relationship)
                 .addProperty(BIB_FRAME_LC.relation, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME_LC.Relation)
-                        .addProperty(RDFS.label, createLiteral(lang, label)));
+                        .addProperty(RDFS.label, createLiteral(label, lang)));
         if (StringUtils.isNotBlank(relatedTo)) {
             resource.addProperty(BIB_FRAME.relatedTo, model.createResource(relatedTo));
         }

@@ -31,7 +31,7 @@ public class Field255Converter extends FieldConverter {
             String value = FormatUtils.chopPunctuation(sf.getData());
             work.addProperty(BIB_FRAME.scale, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Scale)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Cartographic);
@@ -39,27 +39,27 @@ public class Field255Converter extends FieldConverter {
             String value = FormatUtils.chopPunctuation(sf.getData(), ":,;\\/\\s");
             resource.addProperty(BIB_FRAME.projection, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Projection)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: df.getSubfields('c')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-            resource.addProperty(BIB_FRAME.coordinates, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.coordinates, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('d')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-            resource.addProperty(BIB_FRAME.ascensionAndDeclination, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.ascensionAndDeclination, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('e')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-            resource.addProperty(BIB_FRAME.equinox, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.equinox, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('f')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.outerGRing, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.outerGRing, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('g')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-            resource.addProperty(BIB_FRAME.exclusionGRing, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.exclusionGRing, createLiteral(value, lang));
         }
 
         work.addProperty(BIB_FRAME.cartographicAttributes, resource);

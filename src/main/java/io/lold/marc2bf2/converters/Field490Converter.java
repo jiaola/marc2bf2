@@ -22,7 +22,6 @@ public class Field490Converter extends FieldConverter {
             return model;
         }
         DataField df = (DataField) field;
-        Resource work = ModelUtils.getWork(model, record);
         Resource instance = ModelUtils.getInstance(model, record);
 
         for (Subfield sf: df.getSubfields('a')) {

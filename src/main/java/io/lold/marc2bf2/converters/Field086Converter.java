@@ -52,7 +52,7 @@ public class Field086Converter extends FieldConverter {
             for (Subfield two: df.getSubfields('2')) {
                 resource.addProperty(BIB_FRAME.source, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.Source)
-                        .addProperty(RDFS.label, createLiteral(lang, two.getData())));
+                        .addProperty(RDFS.label, createLiteral(two.getData(), lang)));
             }
             instance.addProperty(BIB_FRAME.classification, resource);
         }

@@ -31,9 +31,9 @@ public class Field310_321Converter extends FieldConverter {
             Resource resource = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Frequency);
             String value = FormatUtils.chopPunctuation(sf.getData(), "[;,:/\\s]+$");
-            resource.addProperty(RDFS.label, createLiteral(lang, value));
+            resource.addProperty(RDFS.label, createLiteral(value, lang));
             for (Subfield sfb: df.getSubfields('b')) {
-                resource.addProperty(BIB_FRAME.date, createLiteral(lang, sfb.getData()));
+                resource.addProperty(BIB_FRAME.date, createLiteral(sfb.getData(), lang));
             }
             instance.addProperty(BIB_FRAME.frequency, resource);
         }

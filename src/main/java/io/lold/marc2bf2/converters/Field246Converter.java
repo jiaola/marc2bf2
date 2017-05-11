@@ -44,12 +44,12 @@ public class Field246Converter extends FieldConverter {
         String label = concatSubfields(df, "abgnp", " ");
         String lang = RecordUtils.getXmlLang(df, record);
         if (StringUtils.isNotBlank(label)) {
-            resource.addProperty(RDFS.label, createLiteral(lang, label))
+            resource.addProperty(RDFS.label, createLiteral(label, lang))
                     .addProperty(BIB_FRAME_LC.titleSortKey, label);
         }
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('b')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
@@ -57,15 +57,15 @@ public class Field246Converter extends FieldConverter {
         }
         for (Subfield sf: df.getSubfields('f')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.date, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.date, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('n')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.partNumber, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.partNumber, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('p')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.partName, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.partName, createLiteral(value, lang));
         }
         addSubfield5(df, resource);
         instance.addProperty(BIB_FRAME.title, resource);

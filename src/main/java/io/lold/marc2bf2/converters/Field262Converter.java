@@ -1,16 +1,12 @@
 package io.lold.marc2bf2.converters;
 
-import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
-import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
 public class Field262Converter extends Field260Converter {
@@ -31,7 +27,7 @@ public class Field262Converter extends Field260Converter {
             Resource resource = buildProvisionActivity(df, lang);
             String statement = concatSubfields(df, "abc", " ");
             instance.addProperty(BIB_FRAME.provisionActivity, resource)
-                    .addProperty(BIB_FRAME.provisionActivityStatement, createLiteral(lang, statement));
+                    .addProperty(BIB_FRAME.provisionActivityStatement, createLiteral(statement, lang));
 
         }
 

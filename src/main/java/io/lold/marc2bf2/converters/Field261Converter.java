@@ -35,17 +35,17 @@ public class Field261Converter extends NameTitleFieldConverter {
             String value = FormatUtils.chopPunctuation(sf.getData());
             pa.addProperty(BIB_FRAME.agent, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Agent)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: df.getSubfields('d')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            pa.addProperty(BIB_FRAME.date, createLiteral(lang, value));
+            pa.addProperty(BIB_FRAME.date, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('f')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             pa.addProperty(BIB_FRAME.place, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Place)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         instance.addProperty(BIB_FRAME.provisionActivity, pa);
         if (!df.getSubfields("abdf").isEmpty()) {
@@ -60,7 +60,7 @@ public class Field261Converter extends NameTitleFieldConverter {
                 String value = FormatUtils.chopPunctuation(sf.getData());
                 pa2.addProperty(BIB_FRAME.agent, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.Agent)
-                        .addProperty(RDFS.label, createLiteral(lang, value)));
+                        .addProperty(RDFS.label, createLiteral(value, lang)));
             }
             instance.addProperty(BIB_FRAME.provisionActivity, pa2);
         }

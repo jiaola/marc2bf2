@@ -13,8 +13,6 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-import java.text.Format;
-
 public class Field254Converter extends FieldConverter {
     public Field254Converter(Model model, Record record) {
         super(model, record);
@@ -34,7 +32,7 @@ public class Field254Converter extends FieldConverter {
             instance.addProperty(BIB_FRAME.note, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Note)
                     .addProperty(BIB_FRAME.noteType, "Musical presentation")
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
 
         return model;

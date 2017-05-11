@@ -32,40 +32,40 @@ public class Field245Converter extends FieldConverter {
         String label = record.getVariableFields(new String[]{"130", "240"}).isEmpty() ?
                 concatSubfields(df, "abfgknps", " ") : null;
         if (StringUtils.isNotBlank(label) && "245".equals(field.getTag())) {
-            work.addProperty(RDFS.label, createLiteral(lang, label));
+            work.addProperty(RDFS.label, createLiteral(label, lang));
         }
 
         work.addProperty(BIB_FRAME.title, buildTitle(df, lang, label));
         for (Subfield sf: df.getSubfields("fg")) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            work.addProperty(BIB_FRAME.originDate, createLiteral(lang, value));
+            work.addProperty(BIB_FRAME.originDate, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('h')) {
             String value = FormatUtils.chopPunctuation(FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData())));
             work.addProperty(BIB_FRAME.genreForm, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.GenreForm)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: df.getSubfields('s')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            work.addProperty(BIB_FRAME.version, createLiteral(lang, value));
+            work.addProperty(BIB_FRAME.version, createLiteral(value, lang));
         }
 
         Resource instance = ModelUtils.getInstance(model, record);
         label = concatSubfields(df, "abfgknps", " ");
         if (StringUtils.isNotBlank(label) && "245".equals(field.getTag())) {
-            instance.addProperty(RDFS.label, createLiteral(lang, label));
+            instance.addProperty(RDFS.label, createLiteral(label, lang));
         }
         instance.addProperty(BIB_FRAME.title, buildTitle(df, lang, label));
         for (Subfield sf: df.getSubfields('c')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            instance.addProperty(BIB_FRAME.responsibilityStatement, createLiteral(lang, value));
+            instance.addProperty(BIB_FRAME.responsibilityStatement, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('h')) {
             String value = FormatUtils.chopPunctuation(FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData())));
             instance.addProperty(BIB_FRAME.genreForm, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.GenreForm)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
 
         return model;
@@ -75,7 +75,7 @@ public class Field245Converter extends FieldConverter {
         Resource title = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Title);
         if (StringUtils.isNotBlank(label)) {
-            title.addProperty(RDFS.label, createLiteral(lang, label));
+            title.addProperty(RDFS.label, createLiteral(label, lang));
         }
         String sortKey = titleSortKeyWithIndicator2(df, label);
         if (StringUtils.isNotBlank(sortKey)) {
@@ -83,7 +83,7 @@ public class Field245Converter extends FieldConverter {
         }
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            title.addProperty(BIB_FRAME.mainTitle, createLiteral(lang, value));
+            title.addProperty(BIB_FRAME.mainTitle, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('b')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));

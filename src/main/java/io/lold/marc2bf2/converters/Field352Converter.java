@@ -44,7 +44,7 @@ public class Field352Converter extends Field344Converter {
                     Subfield sfc = sfs.get(i+1);
                     if (sfc.getCode() == 'c') {
                         String c = FormatUtils.chopParens(FormatUtils.chopPunctuation(sfc.getData()));
-                        resource.addProperty(BIB_FRAME.count, createLiteral(lang, c));
+                        resource.addProperty(BIB_FRAME.count, createLiteral(c, lang));
                     }
                 }
             }

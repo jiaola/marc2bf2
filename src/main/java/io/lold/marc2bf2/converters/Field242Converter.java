@@ -34,7 +34,7 @@ public class Field242Converter extends FieldConverter {
         String lang = RecordUtils.getXmlLang(df, record);
         String label = concatSubfields(df, "abchnp", " ");
         if (StringUtils.isNotBlank(label)) {
-            resource.addProperty(RDFS.label, createLiteral(lang, label));
+            resource.addProperty(RDFS.label, createLiteral(label, lang));
         }
         String sortKey = titleSortKeyWithIndicator2(df, label);
         if (StringUtils.isNotBlank(sortKey)) {
@@ -43,7 +43,7 @@ public class Field242Converter extends FieldConverter {
 
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('b')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));

@@ -53,7 +53,7 @@ public class Field336_337_338Converter extends FieldConverter {
                     Resource resource = model.createResource()
                             .addProperty(RDF.type, getRDAResource(field.getTag()));
                     String value = sf.getData();
-                    resource.addProperty(RDFS.label, createLiteral(lang, value));
+                    resource.addProperty(RDFS.label, createLiteral(value, lang));
                     if (i < sfs.size()-1 && sfs.get(i+1).getCode() == '0') {
                         addSubfield0(sfs.get(i+1), resource);
                     }
@@ -72,7 +72,7 @@ public class Field336_337_338Converter extends FieldConverter {
                         .addProperty(RDF.type, getRDAResource(field.getTag()));
                 if (i > 0 && sfs.get(i-1).getCode() == 'a') {
                     String value = sfs.get(i-1).getData();
-                    resource.addProperty(RDFS.label, createLiteral(lang, value));
+                    resource.addProperty(RDFS.label, createLiteral(value, lang));
                 }
                 if (i < sfs.size()-1 && sfs.get(i+1).getCode() == '0') {
                     addSubfield0(sfs.get(i+1), resource);

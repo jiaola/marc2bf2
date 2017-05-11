@@ -32,7 +32,7 @@ public class Field256Converter extends FieldConverter {
             instance.addProperty(BIB_FRAME.note, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Note)
                     .addProperty(BIB_FRAME.noteType, "Computer file characteristics")
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
 
         return model;

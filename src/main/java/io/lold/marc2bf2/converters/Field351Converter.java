@@ -32,17 +32,17 @@ public class Field351Converter extends FieldConverter {
         addSubfield3(df, resource);
         for (Subfield sf: df.getSubfields('c')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.hierarchicalLevel, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.hierarchicalLevel, createLiteral(value, lang));
         }
 
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.organization, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.organization, createLiteral(value, lang));
         }
 
         for (Subfield sf: df.getSubfields('b')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.pattern, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.pattern, createLiteral(value, lang));
         }
 
         work.addProperty(BIB_FRAME.arrangement, resource);

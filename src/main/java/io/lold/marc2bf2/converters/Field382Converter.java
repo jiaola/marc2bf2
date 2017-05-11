@@ -49,7 +49,7 @@ public class Field382Converter extends FieldConverter {
                     resource.addProperty(BIB_FRAME.status,
                             createLabeledResource(BIB_FRAME.Status, "alternative"));
                 }
-                resource.addProperty(RDFS.label, createLiteral(lang, sf.getData()));
+                resource.addProperty(RDFS.label, createLiteral(sf.getData(), lang));
             } else if (sf.getCode() == 'n' || sf.getCode() == 'e') {
                 if (resource != null)
                     resource.addProperty(BIB_FRAME.count, sf.getData());

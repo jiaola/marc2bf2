@@ -32,8 +32,8 @@ public class Field362Converter extends Field344Converter {
                 first = StringUtils.substringBefore(sfa.getData(), "-");
                 last = StringUtils.substringAfter(sfa.getData(), "-");
                 if (df.getIndicator1() == '0') {
-                    instance.addProperty(BIB_FRAME.firstIssue, createLiteral(lang, first));
-                    instance.addProperty(BIB_FRAME.lastIssue, createLiteral(lang, last));
+                    instance.addProperty(BIB_FRAME.firstIssue, createLiteral(first, lang));
+                    instance.addProperty(BIB_FRAME.lastIssue, createLiteral(last, lang));
                 }
             }
             if (df.getIndicator1() != '0') {

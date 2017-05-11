@@ -4,7 +4,6 @@ import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -13,8 +12,6 @@ import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
-
-import java.text.Format;
 
 public class Field260Converter extends NameTitleFieldConverter {
     public Field260Converter(Model model, Record record) {
@@ -38,7 +35,7 @@ public class Field260Converter extends NameTitleFieldConverter {
             addSubfield3(df, resource);
             String statement = concatSubfields(df, "abc", " ");
             instance.addProperty(BIB_FRAME.provisionActivity, resource)
-                    .addProperty(BIB_FRAME.provisionActivityStatement, createLiteral(lang, statement));
+                    .addProperty(BIB_FRAME.provisionActivityStatement, createLiteral(statement, lang));
         }
 
         if (!df.getSubfields("efg").isEmpty()) {
@@ -50,17 +47,17 @@ public class Field260Converter extends NameTitleFieldConverter {
                 String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
                 pa.addProperty(BIB_FRAME.place, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.Place)
-                        .addProperty(RDFS.label, createLiteral(lang, value)));
+                        .addProperty(RDFS.label, createLiteral(value, lang)));
             }
             for (Subfield sf: df.getSubfields('f')) {
                 String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
                 pa.addProperty(BIB_FRAME.agent, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME.Agent)
-                        .addProperty(RDFS.label, createLiteral(lang, value)));
+                        .addProperty(RDFS.label, createLiteral(value, lang)));
             }
             for (Subfield sf: df.getSubfields('g')) {
                 String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-                pa.addProperty(BIB_FRAME.date, createLiteral(lang, value));
+                pa.addProperty(BIB_FRAME.date, createLiteral(value, lang));
             }
             instance.addProperty(BIB_FRAME.provisionActivity, pa);
         }
@@ -81,17 +78,17 @@ public class Field260Converter extends NameTitleFieldConverter {
             String value = FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData(), "[:,;/\\s]+$"));
             pa.addProperty(BIB_FRAME.place, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Place)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: field.getSubfields('b')) {
             String value = FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData(), "[:,;/\\s]+$"));
             pa.addProperty(BIB_FRAME.agent, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Agent)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: field.getSubfields('c')) {
             String value = FormatUtils.chopBrackets(FormatUtils.chopPunctuation(sf.getData()));
-            pa.addProperty(BIB_FRAME.date, createLiteral(lang, value));
+            pa.addProperty(BIB_FRAME.date, createLiteral(value, lang));
         }
         return pa;
 

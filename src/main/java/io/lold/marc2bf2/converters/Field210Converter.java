@@ -36,12 +36,12 @@ public class Field210Converter extends FieldConverter {
         String lang = RecordUtils.getXmlLang(df, record);
         String label = concatSubfields(df, "ab", " ");
         if (StringUtils.isNotBlank(label)) {
-            resource.addProperty(RDFS.label, createLiteral(lang, label))
+            resource.addProperty(RDFS.label, createLiteral(label, lang))
                     .addProperty(BIB_FRAME_LC.titleSortKey, label);
         }
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(value, lang));
         }
         for (Subfield sf: df.getSubfields('b')) {
             String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));

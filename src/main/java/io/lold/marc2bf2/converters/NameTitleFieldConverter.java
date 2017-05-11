@@ -91,7 +91,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         String lang = RecordUtils.getXmlLang(field, record);
         String label = titleLabel(field);
         if (StringUtils.isNotBlank(label)) {
-            resource.addProperty(RDFS.label, createLiteral(lang, label));
+            resource.addProperty(RDFS.label, createLiteral(label, lang));
         }
 
         resource.addProperty(BIB_FRAME.title, buildUniformTitle(field, label, tag, lang));
@@ -107,12 +107,12 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         }
         for (Subfield sf: sfs) {
             String value = FormatUtils.chopPunctuation(FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData())));
-            resource.addProperty(BIB_FRAME.legalDate, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.legalDate, createLiteral(value, lang));
         }
 
         for (Subfield sf: field.getSubfields('f')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.originDate, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.originDate, createLiteral(value, lang));
         }
 
         if ("30".equals(tagcode) || "40".equals(tagcode)) {
@@ -124,40 +124,40 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
             String value = FormatUtils.chopPunctuation(sf.getData());
             resource.addProperty(BIB_FRAME.genreForm, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.GenreForm)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: field.getSubfields('h')) {
             String value = FormatUtils.chopPunctuation(FormatUtils.chopBrackets(FormatUtils.chopParens(sf.getData())));
             resource.addProperty(BIB_FRAME.genreForm, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.GenreForm)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: field.getSubfields('k')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.natureOfContent, createLiteral(lang, value))
+            resource.addProperty(BIB_FRAME.natureOfContent, createLiteral(value, lang))
                     .addProperty(BIB_FRAME.genreForm, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.GenreForm)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: field.getSubfields('l')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             resource.addProperty(BIB_FRAME.language, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Language)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: field.getSubfields('m')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             resource.addProperty(BIB_FRAME.musicMedium, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.MusicMedium)
-                    .addProperty(RDFS.label, createLiteral(lang, value)));
+                    .addProperty(RDFS.label, createLiteral(value, lang)));
         }
         for (Subfield sf: field.getSubfields("os")) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.version, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.version, createLiteral(value, lang));
         }
         for (Subfield sf: field.getSubfields('r')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.musicKey, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.musicKey, createLiteral(value, lang));
         }
         if (tag.startsWith("7") || tag.startsWith("8")) {
             for (Subfield sf: field.getSubfields('x')) {
@@ -199,19 +199,19 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         char sfcode = "30".equals(tagcode) || "40".equals(tagcode) ? 'a' : 't';
         for (Subfield sf: field.getSubfields(sfcode)) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.mainTitle, createLiteral(value, lang));
         }
         List<Subfield> sfs = "11".equals(tagcode) ?
                 RecordUtils.lookAhead(field, 't', "n") :
                 field.getSubfields('n');
         for (Subfield sf: sfs) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.partNumber, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.partNumber, createLiteral(value, lang));
         }
 
         for (Subfield sf: field.getSubfields('p')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(BIB_FRAME.partName, createLiteral(lang, value));
+            resource.addProperty(BIB_FRAME.partName, createLiteral(value, lang));
         }
         return resource;
     }
@@ -277,7 +277,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         String label = nameLabel(field);
         addNameMatchMarcKey(field, agent, label);
         if (StringUtils.isNotBlank(label)) {
-            agent.addProperty(RDFS.label, createLiteral(lang, label));
+            agent.addProperty(RDFS.label, createLiteral(label, lang));
         }
 
         // Only 6xx needs mads class (or 880 $6 6xx)
@@ -344,7 +344,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
             madsLabel += concatSubfields(field, "vxyz", "--");
             madsLabel = FormatUtils.chopPunctuation(madsLabel, "-\\s");
             if (StringUtils.isNotBlank(madsLabel)) {
-                resource.addProperty(MADS_RDF.authoritativeLabel, createLiteral(lang, madsLabel));
+                resource.addProperty(MADS_RDF.authoritativeLabel, createLiteral(madsLabel, lang));
             }
             String[] schemes = ModelUtils.getMADSScheme(field.getIndicator2());
             for (String scheme: schemes) {

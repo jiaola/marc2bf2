@@ -42,7 +42,7 @@ public class Field385_386Converter extends FieldConverter {
             Resource resource = "385".equals(getTag(df)) ?
                 model.createResource().addProperty(RDF.type, BIB_FRAME.IntendedAudience) :
                 model.createResource().addProperty(RDF.type, BIB_FRAME_LC.CreatorCharacteristic);
-            resource.addProperty(RDFS.label, createLiteral(lang, sf.getData()));
+            resource.addProperty(RDFS.label, createLiteral(sf.getData(), lang));
             Subfield sfb = RecordUtils.lookAhead(df, i, sfs.size(), 'b');
             if (sfb != null) {
                 resource.addProperty(BIB_FRAME.code, sfb.getData());

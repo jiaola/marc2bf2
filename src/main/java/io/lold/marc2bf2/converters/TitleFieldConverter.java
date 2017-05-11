@@ -48,7 +48,7 @@ public abstract class TitleFieldConverter extends FieldConverter {
         String lang = RecordUtils.getXmlLang(field, record);
         for (Subfield sf: field.getSubfields(subfield)) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            resource.addProperty(property, createLiteral(lang, value));
+            resource.addProperty(property, createLiteral(value, lang));
         }
     }
 }

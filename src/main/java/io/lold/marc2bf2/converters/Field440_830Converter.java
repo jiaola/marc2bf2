@@ -4,7 +4,6 @@ import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -35,7 +34,7 @@ public class Field440_830Converter extends NameTitleFieldConverter {
         String lang = RecordUtils.getXmlLang(df, record);
         for (Subfield sf: df.getSubfields('v')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
-            work.addProperty(BIB_FRAME.seriesEnumeration, createLiteral(lang, value));
+            work.addProperty(BIB_FRAME.seriesEnumeration, createLiteral(value, lang));
         }
         return model;
     }
