@@ -1,5 +1,6 @@
 package io.lold.marc2bf2.converters;
 
+import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.utils.SubfieldUtils;
@@ -294,5 +295,34 @@ public abstract class FieldConverter {
             return label;
         }
         return null;
+    }
+
+    protected Resource buildTitleFrom245(DataField df, String lang, String label) {
+        Resource title = model.createResource()
+                .addProperty(RDF.type, BIB_FRAME.Title);
+        if (StringUtils.isNotBlank(label)) {
+            title.addProperty(RDFS.label, createLiteral(label, lang));
+        }
+        String sortKey = titleSortKeyWithIndicator2(df, label);
+        if (StringUtils.isNotBlank(sortKey)) {
+            title.addProperty(BIB_FRAME_LC.titleSortKey, sortKey);
+        }
+        for (Subfield sf: df.getSubfields('a')) {
+            String value = FormatUtils.chopPunctuation(sf.getData());
+            title.addProperty(BIB_FRAME.mainTitle, createLiteral(value, lang));
+        }
+        for (Subfield sf: df.getSubfields('b')) {
+            String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
+            title.addProperty(BIB_FRAME.subtitle, value);
+        }
+        for (Subfield sf: df.getSubfields('n')) {
+            String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
+            title.addProperty(BIB_FRAME.partNumber, value);
+        }
+        for (Subfield sf: df.getSubfields('p')) {
+            String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
+            title.addProperty(BIB_FRAME.partName, value);
+        }
+        return title;
     }
 }

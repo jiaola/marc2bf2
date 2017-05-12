@@ -13,7 +13,7 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-public class Field530Converter extends FieldConverter {
+public class Field530Converter extends NameTitleFieldConverter {
     public Field530Converter(Model model, Record record) {
         super(model, record);
     }
@@ -39,8 +39,26 @@ public class Field530Converter extends FieldConverter {
         String instanceUri = ModelUtils.buildUri(record, "Instance", field.getTag(), fieldIndex);
         Resource instance = model.createResource(instanceUri)
                 .addProperty(RDF.type, BIB_FRAME.Instance);
-
+        VariableField f130 = record.getVariableField("130");
         String lang = RecordUtils.getXmlLang(field, record);
+        if (f130 != null) {
+            Resource title = buildUniformTitle((DataField) f130, titleLabel((DataField)f130), "130", lang);
+            instance.addProperty(BIB_FRAME.title, title);
+        } else {
+            VariableField f240 = record.getVariableField("240");
+            if (f240 != null) {
+                Resource title = buildUniformTitle((DataField) f240, titleLabel((DataField) f240), "240", lang);
+                instance.addProperty(BIB_FRAME.title, title);
+            } else {
+                VariableField f245 = record.getVariableField("245");
+                if (f245 != null) {
+                    String label = concatSubfields((DataField) f245, "abfgknps", " ");
+                    Resource title = buildTitleFrom245((DataField) f245, lang, label);
+                    instance.addProperty(BIB_FRAME.title, title);
+                }
+            }
+        }
+
         for (Subfield sf: field.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             instance.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, value, lang));

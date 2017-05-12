@@ -4,7 +4,6 @@ import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
@@ -35,7 +34,7 @@ public class Field245Converter extends FieldConverter {
             work.addProperty(RDFS.label, createLiteral(label, lang));
         }
 
-        work.addProperty(BIB_FRAME.title, buildTitle(df, lang, label));
+        work.addProperty(BIB_FRAME.title, buildTitleFrom245(df, lang, label));
         for (Subfield sf: df.getSubfields("fg")) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             work.addProperty(BIB_FRAME.originDate, createLiteral(value, lang));
@@ -56,7 +55,7 @@ public class Field245Converter extends FieldConverter {
         if (StringUtils.isNotBlank(label) && "245".equals(field.getTag())) {
             instance.addProperty(RDFS.label, createLiteral(label, lang));
         }
-        instance.addProperty(BIB_FRAME.title, buildTitle(df, lang, label));
+        instance.addProperty(BIB_FRAME.title, buildTitleFrom245(df, lang, label));
         for (Subfield sf: df.getSubfields('c')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             instance.addProperty(BIB_FRAME.responsibilityStatement, createLiteral(value, lang));
@@ -71,32 +70,4 @@ public class Field245Converter extends FieldConverter {
         return model;
     }
 
-    protected Resource buildTitle(DataField df, String lang, String label) {
-        Resource title = model.createResource()
-                .addProperty(RDF.type, BIB_FRAME.Title);
-        if (StringUtils.isNotBlank(label)) {
-            title.addProperty(RDFS.label, createLiteral(label, lang));
-        }
-        String sortKey = titleSortKeyWithIndicator2(df, label);
-        if (StringUtils.isNotBlank(sortKey)) {
-            title.addProperty(BIB_FRAME_LC.titleSortKey, sortKey);
-        }
-        for (Subfield sf: df.getSubfields('a')) {
-            String value = FormatUtils.chopPunctuation(sf.getData());
-            title.addProperty(BIB_FRAME.mainTitle, createLiteral(value, lang));
-        }
-        for (Subfield sf: df.getSubfields('b')) {
-            String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-            title.addProperty(BIB_FRAME.subtitle, value);
-        }
-        for (Subfield sf: df.getSubfields('n')) {
-            String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-            title.addProperty(BIB_FRAME.partNumber, value);
-        }
-        for (Subfield sf: df.getSubfields('p')) {
-            String value = FormatUtils.chopParens(FormatUtils.chopPunctuation(sf.getData()));
-            title.addProperty(BIB_FRAME.partName, value);
-        }
-        return title;
-    }
 }
