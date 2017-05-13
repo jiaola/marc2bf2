@@ -3,7 +3,7 @@ Feature: 072 - SUBJECT CATEGORY CODE
   Background:
     Given a marc field "=072  \0$aK800"
     And a marc field "=072  \7$aZ1$x.630$2mesh"
-    When converted by a field converter io.lold.marc2bf2.converters.Field072Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field072Converter
 
   Scenario: 072 creates a subject property of the Work
     When I search with patterns:

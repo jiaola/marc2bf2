@@ -3,7 +3,7 @@ Feature: 052 - GEOGRAPHIC CLASSIFICATION
   Background:
     Given a marc field "=052  \\$a4034$bR4$bR8"
     And a marc field "=052  1\$aBK$dMostar"
-    When converted by a field converter io.lold.marc2bf2.converters.Field052Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field052Converter
 
   Scenario: 052 creates a geographicCoverage/Place property of the Work
     When I search with patterns:

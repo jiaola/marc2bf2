@@ -2,7 +2,7 @@ Feature: 008 - CONTINUING RESOURCES - FIXED-LENGTH DATA ELEMENTS
   Background:
     Given a marc leader "=LDR  02579cas a2200577 a 4500"
     And a marc field "=008  911115d19692013iluwn pso     0   a0eng c"
-    When converted by a field converter io.lold.marc2bf2.converters.Field006_008Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field006_008.Field006_008Converter
 
   Scenario: pos 18 creates a frequency property of the Instance
     When I search with patterns:

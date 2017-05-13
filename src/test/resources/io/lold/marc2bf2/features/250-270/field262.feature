@@ -2,7 +2,7 @@ Feature: 262 - IMPRINT STATEMENT FOR SOUND RECORDINGS (Pre-AACR 2)
   
   Background:
     Given a marc field "=262  \\$aLouisville, KY.,$bLouisville Orchestra,$c[1967]$kLS 671."
-    When converted by a field converter io.lold.marc2bf2.converters.Field262Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field250to270.Field262Converter
 
   Scenario: 262 creates a provisionActivity/Production property of the Instance
     When I search with patterns:

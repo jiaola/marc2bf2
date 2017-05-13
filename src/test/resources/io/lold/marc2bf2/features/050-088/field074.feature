@@ -2,7 +2,7 @@ Feature: 074 - GPO ITEM NUMBER
 
   Background:
     Given a marc field "=074  \\$a1022-A$z1012-A"
-    When converted by a field converter io.lold.marc2bf2.converters.Field074Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field074Converter
 
   Scenario: 074 creates an identifiedBy/Identifier property of the Instance
             with a source labelled 'US GPO'

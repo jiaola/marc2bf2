@@ -2,7 +2,7 @@ Feature: 130 - MAIN ENTRY - UNIFORM TITLE
   
   Background:
     Given a marc field "=130  4\$aThe Encyclopedia of Latin American history and culture.$d(1952).$f[between 1775 and 1800].$gManuscripts, Latin.$hSound recording.$lFrench$mviolin, viola,$rD major.$oarr.$pO.T.$nBook 4.$kSelections.$0(ID)0001$w(ID)0002"
-    When converted by a field converter io.lold.marc2bf2.converters.Field130_240Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field240_X30.Field130_240Converter
 
   Scenario: Work rdfs:label generation
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 026 - FINGERPRINT IDENTIFIER
   Background: 
     Given a marc field "=026  \\$adete nkck$bvess lodo 3$cAnno Domini MDCXXXVI$d3$2fei$5UkCU"
     And a marc field "=026  \\$edete nkck vess lodo 3 Anno Domini MDCXXXVI 3$2fei$5UkCU"
-    When converted by a field converter io.lold.marc2bf2.converters.Field026Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field026Converter
 
   Scenario: $a $b $c $d create an identifiedBy/Fingerprint property of the Instance
     When I search with patterns:

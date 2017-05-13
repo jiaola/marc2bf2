@@ -2,7 +2,7 @@ Feature: 243 - COLLECTIVE UNIFORM TITLE
 
   Background:
     Given a marc field "=243  04$aThe Compleat works of William Shakespeare,$sAbridged.$kSelections"
-    When converted by a field converter io.lold.marc2bf2.converters.Field243Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field243Converter
 
   Scenario: @ind2 should create the appropriate titleSortKey
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 084 - OTHER CLASSIFICATION NUMBER
 
   Background:
     Given a marc field "=084  \\$aKB112.554$bU62 1980$qDE-101$2sdnb"
-    When converted by a field converter io.lold.marc2bf2.converters.Field084Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field084Converter
 
   Scenario: 084 creates a classification/Classification property of the Work
     When I search with patterns:

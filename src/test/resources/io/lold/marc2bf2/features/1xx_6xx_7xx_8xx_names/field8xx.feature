@@ -1,7 +1,7 @@
 Feature: 8XX - NAMES - Series Added Entry Fields
   Background:
     Given a marc field "=800  1\$aFernando, A. Denis N.$tResource maps of Sri Lanka ;$vpt. 2."
-    When converted by a field converter io.lold.marc2bf2.converters.Field8XXNameConverter
+    When converted by a field converter io.lold.marc2bf2.converters.field1XX_6XX_7XX_8XX.Field8XXNameConverter
 
   Scenario: 8XX creates a bf:hasSeries
     When I search with patterns:

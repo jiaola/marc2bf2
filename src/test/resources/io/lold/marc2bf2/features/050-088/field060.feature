@@ -2,7 +2,7 @@ Feature: 060 - NATIONAL LIBRARY OF MEDICINE CALL NUMBER
 
   Background:
     Given a marc field "=060  00$aW 22 DC2.1$bB8M"
-    When converted by a field converter io.lold.marc2bf2.converters.Field060Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field060Converter
 
   Scenario: 060 creates a classification/ClassificationNlm property of the Work
     When I search with patterns:

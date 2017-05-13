@@ -4,7 +4,7 @@ Feature: 7XX - NAMES - Added Entry Fields
     And a marc field "=700  12$aVoltaire,$d1694-1778.$tCorrespondence.$kSelections.$f1777."
     And a marc field "=700  1\$aHecht, Ben,$d1893-1964,$ewriting, direction, and production.$econception,$ecreative consulting.$uChemistry Dept., American University."
     And a marc field "=700  1\$aGalway, James.$4prf$4cnd$0http://id.loc.gov/authorities/names/n81042545"
-    When converted by a field converter io.lold.marc2bf2.converters.Field7XXNameConverter
+    When converted by a field converter io.lold.marc2bf2.converters.field1XX_6XX_7XX_8XX.Field7XXNameConverter
 
   Scenario: 7XX with $t, ind2 != 2 creates a bf:relatedTo
     When I search with patterns:

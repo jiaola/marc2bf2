@@ -2,7 +2,7 @@ Feature: 016 - NATIONAL BIBLIOGRAPHIC AGENCY CONTROL NUMBER
   Background: 
     Given a marc field "=016  \\$a 730032015  rev$z 89000298 "
     And a marc field "=016  7\$aPTBN000004618$2PoLiBN"
-    When converted by a field converter io.lold.marc2bf2.converters.Field016Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field016Converter
 
   Scenario: ind1=' ' creates a LAC source property of the Local
     When I search with patterns:

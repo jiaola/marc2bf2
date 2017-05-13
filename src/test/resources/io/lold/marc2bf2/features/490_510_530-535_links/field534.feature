@@ -5,7 +5,7 @@ Feature: 534 - ORIGINAL VERSION NOTE
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=534  \\$3vol. 2$pReprint. Originally published:$cBerlin :Eulenspiegel, c1978,$b1st ed.$aFrederick, John.$nunder title:$tLuck.$e1 art original : oil, col. ; 79 x 64 cm.$f(International series of monographs on electromagnetic waves ; v. 4).$kAmerican journal of theology & philosophy,$x0228-913X.$z0385061781 (v. 1)$mat scale 1:50,000."
     And a marc field "=535  1\$3Coal reports$aAmerican Mining Congress;$b1920 N St., NW, Washington, D.C. 20036;$d202-861-2800"
-    When converted by a field converter io.lold.marc2bf2.converters.Field534Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field490_510_530to535.Field534Converter
 
   Scenario: 534 creates a hasInstance/Instance property of the Work
             with a URI

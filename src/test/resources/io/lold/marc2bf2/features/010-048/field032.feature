@@ -1,7 +1,7 @@
 Feature: 032 - POSTAL REGISTRATION NUMBER
   Background: 
     Given a marc field "=032  \\$a686310$bUSPS"
-    When converted by a field converter io.lold.marc2bf2.converters.Field032Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field032Converter
 
   Scenario: $a creates an identifiedBy/PostalRegistration property of the Instance
     When I search with patterns:

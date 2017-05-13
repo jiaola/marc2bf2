@@ -2,7 +2,7 @@ Feature: 034 - CODED CARTOGRAPHIC MATHEMATICAL DATA
   Background: 
     Given a marc field "=034  1\$aa$b744000$c96000$dW1800000$eE1800000$fN0840000$gS0700000$3map"
     And a marc field "=034  0\$aa"
-    When converted by a field converter io.lold.marc2bf2.converters.Field034Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field034Converter
 
   Scenario: $a = 'a'  alone creates a scale property of the Work with a note 'Linear scale'
     When I search with patterns:

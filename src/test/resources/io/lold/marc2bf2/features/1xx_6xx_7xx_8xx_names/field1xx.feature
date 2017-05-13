@@ -1,7 +1,7 @@
 Feature: 1XX - NAMES - Main Entries
   Background:
     Given a marc field "=100  1\$aBeethoven, Ludwig van,$d1770-1827$c(Spirit)$0(DE-101c)310008891"
-    When converted by a field converter io.lold.marc2bf2.converters.Field1XXNameConverter
+    When converted by a field converter io.lold.marc2bf2.converters.field1XX_6XX_7XX_8XX.Field1XXNameConverter
 
   Scenario: 1XX creates a bflc:PrimaryContribution
     When I search with patterns:

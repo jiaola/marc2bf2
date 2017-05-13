@@ -1,7 +1,7 @@
 Feature: 027 - STANDARD TECHNICAL REPORT NUMBER
   Background: 
     Given a marc field "=027  \\$aMETPRO/CB/TR--74/216+PR.ENVR.WI$zMPC-387"
-    When converted by a field converter io.lold.marc2bf2.converters.Field027Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field027Converter
 
   Scenario: $a creates an identifiedBy/Strn property of the Instance
     When I search with patterns:

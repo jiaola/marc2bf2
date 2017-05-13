@@ -4,7 +4,7 @@ Feature: 242 - TRANSLATION OF TITLE BY CATALOGING AGENCY
     Given a marc field "=242  03$aLe Bureau$yfre"
     And a marc field "=242  14$aThe Office$yeng"
     And a marc field "=242  00$aAnnual report of the Minister of Supply and Service Canada under the Corporations and Labour Unions Returns Act.$nPart II,$pLabour unions =$bRapport annuel du ministre des Approvisionnements et services Canada présenté sous l'empire et des syndicates ouvriers.$nPartie II,$pSyndicats ouvriers."
-    When converted by a field converter io.lold.marc2bf2.converters.Field242Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field242Converter
   
   Scenario: multiple 242 should create title properties in Instance
     When I search with patterns:

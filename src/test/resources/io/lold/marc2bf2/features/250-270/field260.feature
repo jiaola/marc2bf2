@@ -2,7 +2,7 @@ Feature: 260 - PUBLICATION, DISTRIBUTION, ETC. (IMPRINT)
   
   Background:
     Given a marc field "=260  3\$31998-$aLondon ;$aUpton Snodsbury :$bArts Council of Great Britain,$c<1981- >$d12345$e(Twickenham :$fCTD Printers,$g1974)"
-    When converted by a field converter io.lold.marc2bf2.converters.Field260Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field250to270.Field260Converter
 
   Scenario: 260 creates a provisionActivity/Publication property of the Instance
     When I search with patterns:

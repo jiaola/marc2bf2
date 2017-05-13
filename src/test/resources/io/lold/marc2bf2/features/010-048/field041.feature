@@ -3,7 +3,7 @@ Feature: 041 - LANGUAGE CODE
   Background:
     Given a marc field "=041  1\$aeng$hgerswe"
     And a marc field "=041  07$aen$afr$git$2iso639-1"
-    When converted by a field converter io.lold.marc2bf2.converters.Field041Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field041Converter
 
   Scenario: 041 create language properties of the Work
     When I search with patterns:

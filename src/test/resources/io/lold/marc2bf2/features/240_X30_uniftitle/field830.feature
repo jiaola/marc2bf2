@@ -2,7 +2,7 @@ Feature: 830 - SERIES ADDED ENTRY - UNIFORM TITLE
   
   Background:
     Given a marc field "=830  \0$7ab$aNihon zenkoku panorama chizu ;$v1."
-    When converted by a field converter io.lold.marc2bf2.converters.Field440_830Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field240_X30.Field440_830Converter
 
   Scenario: 830 becomes a hasSeries of the main Work
     When I search with patterns:

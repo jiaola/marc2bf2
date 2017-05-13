@@ -2,7 +2,7 @@ Feature: 043 - GEOGRAPHIC AREA CODE
 
   Background:
     Given a marc field "=043  \\$as-bl---$bs-bl-ba$0(DE-101c)310008891$2BlRjBN$cus"
-    When converted by a field converter io.lold.marc2bf2.converters.Field043Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field043Converter
 
   Scenario: $a creates a geographicCoverage property of the Work
     When I search with patterns:

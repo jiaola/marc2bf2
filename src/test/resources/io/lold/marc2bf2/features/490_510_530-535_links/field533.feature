@@ -6,7 +6,7 @@ Feature: 533 - REPRODUCTION NOTE
     And a marc field "=245  10$aOle Lukøie /$cH.C. Andersen ; illustrationer af Otto Dickmeiss."
     And a marc field "=533  \\$3Correspondence files$aMicrofilm.$m1962-1965.$bMiddleton, Conn.,$cWesleyan University Archives,$d1973$e35 mm. negative.$f(Current periodical series : publication no. 2313).$nIssues for 1853-1856 on reel with: Journal of the American Temperance Union and the New York prohibitionist, v. 21, no. 7 (July 1857)-v. 24 (1860).$5ICU"
     And a marc field "=535  2\$3German notebook$aYale University Library, Department of Manuscripts and Archives;$bBox 1603A Yale Station, New Haven, CT 06520;$cUSA;$d203-436-4564$gctu"
-    When converted by a field converter io.lold.marc2bf2.converters.Field533Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field490_510_530to535.Field533Converter
 
   Scenario: 533 creates a hasInstance/Instance property of the Work with a URI
     When I search with patterns:

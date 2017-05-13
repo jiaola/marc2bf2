@@ -2,7 +2,7 @@ Feature: 040 - CATALOGING SOURCE
 
   Background:
     Given a marc field "=040  \\$aDNA$bfre$cCtY$dCtY$eNARS Staff Bulletin No. 16$eappm"
-    When converted by a field converter io.lold.marc2bf2.converters.Field040Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field040Converter
 
   Scenario: 040 creates a source property of the Work AdminMetadata
     When I search with patterns:

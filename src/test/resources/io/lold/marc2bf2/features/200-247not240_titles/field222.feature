@@ -3,7 +3,7 @@ Feature: 222 - KEY TITLE
   Background:
     Given a marc field "=222  \0$aIdler$b(London)"
     And a marc field "=222  \4$aThe Vagrant$b(London)"
-    When converted by a field converter io.lold.marc2bf2.converters.Field222Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field222Converter
   
   Scenario: multiple 222 should create title properties in Instance
     When I search with patterns:

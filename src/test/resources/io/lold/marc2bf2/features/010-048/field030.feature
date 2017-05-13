@@ -1,7 +1,7 @@
 Feature: 030 - CODEN DESIGNATION
   Background: 
     Given a marc field "=030  \\$aASIRAF$zASITAF"
-    When converted by a field converter io.lold.marc2bf2.converters.Field030Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field030Converter
 
   Scenario: $a creates an identifiedBy/Coden property of the Instance
     When I search with patterns:

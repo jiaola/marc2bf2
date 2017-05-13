@@ -6,7 +6,7 @@ Feature: 050 - LIBRARY OF CONGRESS CALL NUMBER
     And a marc field "=050  00$aZ7164.N3$bL34 no. 9$aZ7165.R42$aHC517.R42$a123.45"
     And a marc field "=051  \\$aQE75$b.G4$c2d set."
     And a marc field "=050  00$aAtlantic 1259"
-    When converted by a field converter io.lold.marc2bf2.converters.Field050Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field050Converter
 
   Scenario: 050 creates an Item
     When I search with patterns:

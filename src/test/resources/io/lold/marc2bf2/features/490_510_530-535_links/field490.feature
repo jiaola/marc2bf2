@@ -2,7 +2,7 @@ Feature: 490 - SERIES STATEMENT
   
   Background:
     Given a marc field "=490  1\$aMémoire du BRGM,$x0071-8246 ;$vno 123"
-    When converted by a field converter io.lold.marc2bf2.converters.Field490Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field490_510_530to535.Field490Converter
 
   Scenario: $a creates a seriesStatement property of the Instance
     When I search with patterns:
