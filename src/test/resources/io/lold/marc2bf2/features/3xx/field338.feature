@@ -1,7 +1,7 @@
 Feature: 338 - CARRIER TYPE
   Background:
     Given a marc field "=338  \\$aaudio disc$bsd$0(uri)http://id.loc.gov/vocabulary/carriers/sd$2rdacarrier$3soundtrack"
-    When converted by a field converter io.lold.marc2bf2.converters.field3xx.Field336_337_338Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field336_337_338Converter
 
   Scenario: 338 creates a carrier property of the Instance
     When I search with patterns:

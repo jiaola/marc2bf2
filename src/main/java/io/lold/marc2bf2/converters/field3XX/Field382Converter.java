@@ -1,4 +1,4 @@
-package io.lold.marc2bf2.converters.field3xx;
+package io.lold.marc2bf2.converters.field3XX;
 
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;

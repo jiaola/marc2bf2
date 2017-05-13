@@ -1,7 +1,7 @@
 Feature: 352 - DIGITAL GRAPHIC REPRESENTATION
   Background:
     Given a marc field "=352  \\$aVector :$bPoint$c(13671),$bstring$c(20171) ;$qARC/INFO export."
-    When converted by a field converter io.lold.marc2bf2.converters.field3xx.Field352Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field352Converter
 
   Scenario: $a creates a digitalCharacteristic/CartographicDataType property of the Instance
     When I search with patterns:
