@@ -1,7 +1,7 @@
 Feature: 500 - GENERAL NOTE
   Background:
     Given a marc field "=500  \\$3Some stuff$aFrom the papers of the Chase family.$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.Field500Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field500Converter
 
   Scenario: 500 creates a note property of the Instance
     When I search with patterns:

@@ -1,7 +1,7 @@
 Feature: 504 - BIBLIOGRAPHY, ETC. NOTE
   Background:
     Given a marc field "=504  \\$a"Literature cited": p. 67-68.$b19"
-    When converted by a field converter io.lold.marc2bf2.converters.Field504Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field504Converter
 
   Scenario: 504 creates a note/Note property of the Instance with noteType 'bibliography'
     When I search with patterns:
