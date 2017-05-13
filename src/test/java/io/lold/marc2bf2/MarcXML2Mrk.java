@@ -5,7 +5,7 @@ import org.marc4j.marc.Record;
 
 public class MarcXML2Mrk {
     public static void main(String[] args) {
-        String file = "ConvSpec-490-510-530to535-Links/marc.xml";
+        String file = "ConvSpec-5XX/marc.xml";
         Record[] records = TestUtils.readTestRecords(file);
         MrkStreamWriter writer = new MrkStreamWriter(System.out);
         //MarcXmlWriter writer = new MarcXmlWriter(System.out);
