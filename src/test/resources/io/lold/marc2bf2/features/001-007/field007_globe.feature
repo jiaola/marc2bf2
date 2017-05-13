@@ -2,7 +2,7 @@ Feature: 007 - GLOBE - PHYSICAL DESCRIPTION FIXED FIELD
   Background:
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=007  dc cef"
-    When converted by a field converter io.lold.marc2bf2.converters.Field007Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field001to007.Field007Converter
 
   Scenario: pos 0 = 'd' sets Work rdf:type to 'Cartography'
     When I search with patterns:

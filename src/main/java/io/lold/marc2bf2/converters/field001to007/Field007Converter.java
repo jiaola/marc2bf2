@@ -1,6 +1,6 @@
-package io.lold.marc2bf2.converters;
+package io.lold.marc2bf2.converters.field001to007;
 
-import io.lold.marc2bf2.ModelFactory;
+import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.mappers.Mapper;
 import io.lold.marc2bf2.mappings.MappingsReader;
 import io.lold.marc2bf2.utils.ModelUtils;

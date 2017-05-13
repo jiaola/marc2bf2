@@ -1,7 +1,7 @@
 Feature: 005 - DATE AND TIME OF LAST TRANSACTION
   Scenario: 005 should set the AdminMetadata changeDate property for the work
     Given a marc field "=005  20110713212405.0"
-    When converted by a field converter io.lold.marc2bf2.converters.Field005Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field001to007.Field005Converter
     When I search with patterns:
       | ?x a bf:Work            |
       | ?x bf:adminMetadata ?y  |

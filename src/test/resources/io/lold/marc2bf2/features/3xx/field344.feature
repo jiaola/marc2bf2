@@ -3,7 +3,7 @@ Feature: 344 - SOUND CHARACTERISTICS
     Given a marc field "=344  \\$3audio disc$adigital$boptical$gsurround$hDolby Digital 5.1$2rda"
     And a marc field "=344  \\$3record$aanalog$c78 rpm$dcoarse groove"
     And a marc field "=344  \\$3audio tape$aanalog$eedge track$f12 track"
-    When converted by a field converter io.lold.marc2bf2.converters.Field344Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3xx.Field344Converter
 
   Scenario: $a creates a soundCharacteristic/RecordingMethod property of the Instance
     When I search with patterns:

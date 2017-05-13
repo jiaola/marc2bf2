@@ -1,7 +1,7 @@
 Feature: 337 - MEDIA TYPE
   Background:
     Given a marc field "=337  \\$aaudio$bs$0(uri)http://id.loc.gov/vocabulary/mediaTypes/s$2rdamedia$3soundtrack"
-    When converted by a field converter io.lold.marc2bf2.converters.Field336_337_338Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3xx.Field336_337_338Converter
 
   Scenario: 337 creates a media property of the Instance
     When I search with patterns:

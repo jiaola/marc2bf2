@@ -2,7 +2,7 @@ Feature: 383 - NUMERIC DESIGNATION OF MUSICAL WORK
   Background:
     Given a marc field "=383  \\$ano. 14,$bop. 27, no. 2"
     And a marc field "=383  \\$cF. I, 22-25$dFanna$2mlati"
-    When converted by a field converter io.lold.marc2bf2.converters.Field383Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3xx.Field383Converter
 
   Scenario: $a creates a musicSerialNumber property of the Work
     When I search with patterns:

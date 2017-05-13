@@ -1,15 +1,11 @@
-package io.lold.marc2bf2.converters;
+package io.lold.marc2bf2.converters.field001to007;
 
+import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.jena.atlas.lib.DateTimeUtils;
-import org.apache.jena.datatypes.xsd.XSDDatatype;
-import org.apache.jena.datatypes.xsd.XSDDateTime;
 import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.sparql.util.NodeFactoryExtra;
-import org.apache.jena.sparql.util.Utils;
 import org.marc4j.marc.ControlField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;

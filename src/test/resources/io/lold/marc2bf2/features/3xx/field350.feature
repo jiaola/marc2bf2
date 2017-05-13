@@ -1,7 +1,7 @@
 Feature: 350 - PRICE
   Background:
     Given a marc field "=350  \\$a20.00"
-    When converted by a field converter io.lold.marc2bf2.converters.Field350Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3xx.Field350Converter
 
   Scenario: 350 creates an acquisitionSource/AcquisitionSource property of the Instance
     When I search with patterns:
