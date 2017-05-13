@@ -18,6 +18,7 @@ public class MADS_RDF {
     }
 
     // ---- classes ----
+    public static final Resource Address;
     public static final Resource Title;
     public static final Resource ComplexSubject;
     public static final Resource NameTitle;
@@ -33,6 +34,7 @@ public class MADS_RDF {
 
     
     static {
+        Address = m.createResource(NAMESPACE + "Address");
         ConferenceName = m.createResource(NAMESPACE + "ConferenceName");
         Name = m.createResource(NAMESPACE + "Name");
         Title = m.createResource(NAMESPACE + "Title");

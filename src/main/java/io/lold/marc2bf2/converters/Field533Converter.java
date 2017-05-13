@@ -6,16 +6,19 @@ import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
+import io.lold.marc2bf2.vocabulary.MADS_RDF;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.riot.system.IRIResolver;
 import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Field533Converter extends Field530Converter {
     public Field533Converter(Model model, Record record) {
@@ -89,8 +92,45 @@ public class Field533Converter extends Field530Converter {
             instance.addProperty(BIB_FRAME_LC.appliesTo, appliesTo);
         }
         addSubfield5(field, instance);
-
+        addItemFrom535(instance, '2');
         return instance;
     }
+
+    protected void addItemFrom535(Resource instance, char ind1) {
+        List<VariableField> fields = record.getVariableFields();
+        if (fields.size() > fieldIndex + 1) {
+            DataField field = (DataField) fields.get(fieldIndex+1);
+            if (field.getIndicator1() == ind1 && "535".equals(getTag(field))) {
+                Resource item = model.createResource()
+                        .addProperty(RDF.type, BIB_FRAME.Item);
+                List<Subfield> sfbcds = field.getSubfields("bcd");
+                List<String> values = sfbcds.stream().
+                        map(sf -> FormatUtils.chopPunctuation(sf.getData())).
+                        collect(Collectors.toList());
+                List<Subfield> sfabcs = field.getSubfields("abc");
+                String lang = RecordUtils.getXmlLang(field, record);
+                if (!sfabcs.isEmpty()) {
+                    Resource agent = model.createResource()
+                            .addProperty(RDF.type, BIB_FRAME.Agent);
+                    for (Subfield sf: field.getSubfields('a')) {
+                        String value = FormatUtils.chopPunctuation(sf.getData());
+                        agent.addProperty(RDFS.label, createLiteral(value, lang));
+                    }
+                    if (!values.isEmpty()) {
+                        agent.addProperty(BIB_FRAME.place, model.createResource()
+                                .addProperty(RDF.type, BIB_FRAME.Place)
+                                .addProperty(RDF.type, MADS_RDF.Address)
+                                .addProperty(RDFS.label, StringUtils.join(values, "; ")));
+                    }
+                    item.addProperty(BIB_FRAME.heldBy, agent);
+                }
+                addSubfield3(field, item);
+                item.addProperty(BIB_FRAME.itemOf, instance);
+                instance.addProperty(BIB_FRAME.hasItem, item);
+            }
+        }
+    }
+
+
 
 }
