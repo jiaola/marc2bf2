@@ -8,20 +8,22 @@ import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;
 
-public class Field501Converter extends Field500Converter {
-    public Field501Converter(Model model, Record record) {
+public class Field556Converter extends Field500Converter {
+    public Field556Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
     public Model convert(VariableField field) {
-        if (!field.getTag().equals("501")) {
+        DataField df = (DataField) field;
+        if (!"556".equals(getTag(df))) {
             return model;
         }
-        DataField df = (DataField) field;
+
         Resource instance = ModelUtils.getInstance(model, record);
-        Resource note = buildResource(df, BIB_FRAME.Note).addProperty(BIB_FRAME.noteType, "with");
+        Resource note = buildResource(df, BIB_FRAME.Note);
         instance.addProperty(BIB_FRAME.note, note);
         return model;
     }
+
 }

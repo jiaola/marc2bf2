@@ -17,23 +17,28 @@ public class Field500Converter extends FieldConverter {
 
     @Override
     public Model convert(VariableField field) {
-        if (!field.getTag().equals("500")) {
+        DataField df = (DataField) field;
+        if (!"500".equals(getTag(df))) {
             return model;
         }
-        DataField df = (DataField) field;
+
         Resource instance = ModelUtils.getInstance(model, record);
-        Resource note = buildNote(df);
+        Resource note = buildResource(df, BIB_FRAME.Note);
         instance.addProperty(BIB_FRAME.note, note);
         return model;
     }
 
-    protected Resource buildNote(DataField field) {
+    protected Resource buildResource(DataField field, Resource type) {
         String lang = RecordUtils.getXmlLang(field, record);
-        String label = concatSubfields(field, "a", " ");
-        Resource note = createLabeledResource(BIB_FRAME.Note, label, lang);
+        String label = buildLabel(field);
+        Resource note = createLabeledResource(type, label, lang);
         addSubfieldU(field, note);
         addSubfield3(field, note);
         addSubfield5(field, note);
         return note;
+    }
+
+    protected String buildLabel(DataField field) {
+        return concatSubfields(field, "a", " ");
     }
 }
