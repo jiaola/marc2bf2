@@ -53,8 +53,9 @@ public abstract class FieldConverter {
     }
 
     protected void addSubfield0AndW(List<Subfield> subfields, Resource resource) {
-        for (Subfield sf0: subfields) {
-            String[] parts = sf0.getData().split("[\\(\\)]");
+        for (Subfield sf: subfields) {
+            String data = sf.getData();
+            String[] parts = sf.getData().split("[\\(\\)]");
             parts = Arrays.stream(parts).filter(p -> StringUtils.isNotBlank(p)).toArray(String[]::new);
             Resource identifier = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Identifier);

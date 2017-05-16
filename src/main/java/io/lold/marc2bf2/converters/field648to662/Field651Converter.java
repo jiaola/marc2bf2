@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters.field648to662;
 
-import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
@@ -8,7 +7,9 @@ import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import io.lold.marc2bf2.vocabulary.MADS_RDF;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.jena.rdf.model.*;
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.DataField;
@@ -19,14 +20,14 @@ import org.marc4j.marc.VariableField;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Field650Converter extends Field648Converter {
-    public Field650Converter(Model model, Record record) {
+public class Field651Converter extends Field648Converter {
+    public Field651Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
     public Model convert(VariableField field) {
-        if (!field.getTag().equals("650")) {
+        if (!field.getTag().equals("651")) {
             return model;
         }
         DataField df = (DataField) field;
@@ -44,12 +45,12 @@ public class Field650Converter extends Field648Converter {
         }
 
         Resource madsClass = df.getSubfields("bcd").isEmpty() ?
-                MADS_RDF.Topic : MADS_RDF.ComplexSubject;
+                MADS_RDF.Geographic : MADS_RDF.ComplexSubject;
         Resource resource = model.createResource(uri)
-                .addProperty(RDF.type, BIB_FRAME.Topic)
+                .addProperty(RDF.type, BIB_FRAME.Place)
                 .addProperty(RDF.type, madsClass);
 
-        String label = concatSubfields(df, "abcdvxyz", "--");
+        String label = concatSubfields(df, "abvxyz", "--");
         if (StringUtils.isNotBlank(label)) {
             resource.addProperty(RDFS.label, createLiteral(label, lang));
             resource.addProperty(MADS_RDF.authoritativeLabel, createLiteral(label, lang));
@@ -67,11 +68,11 @@ public class Field650Converter extends Field648Converter {
                 String value = FormatUtils.chopPunctuation(sf.getData());
                 list.add(createComplexObject(MADS_RDF.GenreForm, MADS_RDF.authoritativeLabel, value, lang));
             }
-            for (Subfield sf: df.getSubfields("dy")) {
+            for (Subfield sf: df.getSubfields("y")) {
                 String value = FormatUtils.chopPunctuation(sf.getData());
                 list.add(createComplexObject(MADS_RDF.Temporal, MADS_RDF.authoritativeLabel, value, lang));
             }
-            for (Subfield sf: df.getSubfields("cz")) {
+            for (Subfield sf: df.getSubfields("z")) {
                 String value = FormatUtils.chopPunctuation(sf.getData());
                 list.add(createComplexObject(MADS_RDF.Geographic, MADS_RDF.authoritativeLabel, value, lang));
             }

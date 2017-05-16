@@ -57,6 +57,14 @@ public class Field648Converter extends FieldConverter {
         for (String scheme: ModelUtils.getMADSScheme(df.getIndicator2())) {
             resource.addProperty(MADS_RDF.isMemberofMADSScheme, model.createResource(scheme));
         }
+        addMadsClass(df, lang, madsClass, resource);
+        addSubfield0(df, resource);
+        addSourceCode(df, resource);
+        work.addProperty(BIB_FRAME.subject, resource);
+        return model;
+    }
+
+    protected void addMadsClass(DataField df, String lang, Resource madsClass, Resource resource) {
         if (MADS_RDF.ComplexSubject.equals(madsClass)) {
             RDFList list = model.createList();
             for (Subfield sf: df.getSubfields("ay")) {
@@ -77,10 +85,6 @@ public class Field648Converter extends FieldConverter {
             }
             resource.addProperty(MADS_RDF.componentList, list);
         }
-        addSubfield0(df, resource);
-        addSourceCode(df, resource);
-        work.addProperty(BIB_FRAME.subject, resource);
-        return model;
     }
 
     protected void addSourceCode(DataField field, Resource resource) {
