@@ -25,12 +25,17 @@ public class MADS_RDF {
     public static final Resource CorporateName;
     public static final Resource Name;
     public static final Resource ConferenceName;
+    public static final Resource Temporal;
+    public static final Resource GenreForm;
+    public static final Resource Topic;
+    public static final Resource Geographic;
 
     // ---- properties ----
     public static final Property authoritativeLabel;
     public static final Property code;
     public static final Property hasTopMemberOfMADSScheme;
     public static final Property isMemberofMADSScheme;
+    public static final Property componentList;
 
     
     static {
@@ -41,10 +46,15 @@ public class MADS_RDF {
         NameTitle = m.createResource(NAMESPACE + "NameTitle");
         CorporateName = m.createResource(NAMESPACE + "CorporateName");
         ComplexSubject = m.createResource(NAMESPACE + "ComplexSubject");
+        Temporal = m.createResource(NAMESPACE + "Temporal");
+        GenreForm = m.createResource(NAMESPACE + "GenreForm");
+        Topic = m.createResource(NAMESPACE + "Topic");
+        Geographic = m.createResource(NAMESPACE + "Geographic");
 
         authoritativeLabel = m.createProperty(NAMESPACE, "authoritativeLabel");
         code = m.createProperty(NAMESPACE, "code");
         hasTopMemberOfMADSScheme = m.createProperty(NAMESPACE, "hasTopMemberOfMADSScheme");
         isMemberofMADSScheme = m.createProperty(NAMESPACE, "isMemberofMADSScheme");
+        componentList = m.createProperty(NAMESPACE, "componentList");
     }
 }

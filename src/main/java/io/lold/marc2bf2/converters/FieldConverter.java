@@ -173,7 +173,7 @@ public abstract class FieldConverter {
         return resources;
     }
 
-    protected List<Resource> contributionRelationship(List<Subfield> sfs, String lang, String relatedTo) {
+    protected List<Resource> contributionRelationship(List<Subfield> sfs, String lang, Resource relatedTo) {
         List<Resource> resources = new ArrayList<>();
         for (Subfield sf: sfs) {
             String[] relationships = sf.getData().split(",|\\sand|&amp;");
@@ -212,26 +212,26 @@ public abstract class FieldConverter {
         return resources;
     }
 
-    protected Resource createRelationship(String label, String relatedTo, String lang) {
+    protected Resource createRelationship(String label, Resource relatedTo, String lang) {
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME_LC.Relationship)
                 .addProperty(BIB_FRAME_LC.relation, model.createResource()
                         .addProperty(RDF.type, BIB_FRAME_LC.Relation)
                         .addProperty(RDFS.label, createLiteral(label, lang)));
-        if (StringUtils.isNotBlank(relatedTo)) {
-            resource.addProperty(BIB_FRAME.relatedTo, model.createResource(relatedTo));
+        if (relatedTo != null) {
+            resource.addProperty(BIB_FRAME.relatedTo, relatedTo);
         }
         return resource;
     }
 
-    protected Resource createRelationship(String relator, String relatedTo) {
+    protected Resource createRelationship(String relator, Resource relatedTo) {
         String uri = ModelUtils.getUriWithNsPrefix("relators", relator);
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME_LC.Relationship)
                 .addProperty(BIB_FRAME_LC.relation, model.createResource(uri)
                         .addProperty(RDF.type, RDFS.Resource));
-        if (StringUtils.isNotBlank(relatedTo)) {
-            resource.addProperty(BIB_FRAME.relatedTo, model.createResource(relatedTo));
+        if (relatedTo != null) {
+            resource.addProperty(BIB_FRAME.relatedTo, relatedTo);
         }
         return resource;
     }

@@ -53,14 +53,14 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         List<Subfield> sfs = "11".equals(StringUtils.substring(tag, 1, 3)) ?
                 field.getSubfields('j') :
                 field.getSubfields('e');
-        String relatedToUri = ModelUtils.buildUri(record, "Work");
-        List<Resource> relationships = contributionRelationship(sfs, lang, relatedToUri);
+        Resource work = ModelUtils.getWork(model, record);
+        List<Resource> relationships = contributionRelationship(sfs, lang, work);
         for (Resource relationship: relationships) {
             resource.addProperty(BIB_FRAME_LC.relationship, relationship);
         }
         for (Subfield sf4: field.getSubfields('4')) {
             String relator = StringUtils.substring(sf4.getData(), 0, 3);
-            resource.addProperty(BIB_FRAME_LC.relationship, createRelationship(relator, relatedToUri));
+            resource.addProperty(BIB_FRAME_LC.relationship, createRelationship(relator, work));
         }
         resource.addProperty(BIB_FRAME.contribution, buildContribution(field));
         addUniformTitle(field, resource);
@@ -294,7 +294,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
                 List<Subfield> sfs = "11".equals(StringUtils.substring(tag, 1, 3)) ?
                     field.getSubfields('j') :
                     field.getSubfields('e');
-                List<Resource> relationships = contributionRelationship(sfs, lang, ModelUtils.buildUri(record, "Work"));
+                List<Resource> relationships = contributionRelationship(sfs, lang, ModelUtils.getWork(model, record));
                 for (Resource relationship: relationships) {
                     agent.addProperty(BIB_FRAME_LC.relationship, relationship);
                 }

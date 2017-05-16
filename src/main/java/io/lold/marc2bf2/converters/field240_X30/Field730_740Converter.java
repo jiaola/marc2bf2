@@ -40,7 +40,7 @@ public class Field730_740Converter extends NameTitleFieldConverter {
         }
         String lang = RecordUtils.getXmlLang(df, record);
         for (Subfield sf: df.getSubfields('i')) {
-            Resource relationship = createRelationship(FormatUtils.chopPunctuation(sf.getData()), work.getURI(), lang);
+            Resource relationship = createRelationship(FormatUtils.chopPunctuation(sf.getData()), resource, lang);
             work.addProperty(BIB_FRAME_LC.relationship, relationship);
         }
         return model;

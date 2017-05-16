@@ -33,8 +33,9 @@ Feature: 730 - ADDED ENTRY - UNIFORM TITLE
       | ?y bflc:relation ?z                            |
       | ?z a bflc:Relation                             |
       | ?z rdfs:label "Parody of (work)"               |
-      | ?y bf:relatedTo ?w                             |
-      | ?w a bf:Work                                   |
+      | ?y bf:relatedTo <http://example.org/9999999999#Work730-1> |
+      | <http://example.org/9999999999#Work730-1> a bf:Work       |
+
     Then I should find 1 match
 
   Scenario: $s becomes a version

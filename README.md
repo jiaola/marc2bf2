@@ -16,7 +16,7 @@ Progress:
 (*)     572 ConvSpec-250-270.xsl
 (*)     917 ConvSpec-3XX.xsl
 (*)     745 ConvSpec-490-510-530to535-Links.xsl
-     898 ConvSpec-5XX.xsl
+(*)     898 ConvSpec-5XX.xsl
      458 ConvSpec-648-662.xsl
      135 ConvSpec-720+740to755.xsl
      413 ConvSpec-760-788-Links.xsl
@@ -41,7 +41,7 @@ XSPEC files:
 (*)     104 test/ConvSpec-250-270.xspec
 (*)     219 test/ConvSpec-3XX.xspec
 (*)      97 test/ConvSpec-490-510-530to535-Links.xspec
-     276 test/ConvSpec-5XX.xspec
+(*)     276 test/ConvSpec-5XX.xspec
       68 test/ConvSpec-648-662.xspec
       39 test/ConvSpec-720+740to755.xspec
       63 test/ConvSpec-760-788-Links.xspec

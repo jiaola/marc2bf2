@@ -45,7 +45,7 @@ public class Field7XXNameConverter extends NameTitleFieldConverter {
             relatedToUri = ModelUtils.buildUri(record, "Agent", getTag(df), fieldIndex);
         }
         for (Subfield sfi: df.getSubfields('i')) {
-            work.addProperty(BIB_FRAME_LC.relationship, createRelationship(sfi.getData(), relatedToUri, lang));
+            work.addProperty(BIB_FRAME_LC.relationship, createRelationship(sfi.getData(), model.getResource(relatedToUri), lang));
         }
         return model;
     }
