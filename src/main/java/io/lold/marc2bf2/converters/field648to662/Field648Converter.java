@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters.field648to662;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
@@ -10,7 +9,7 @@ import io.lold.marc2bf2.vocabulary.MADS_RDF;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.RDFList;
+import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -18,6 +17,9 @@ import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Field648Converter extends FieldConverter {
     public Field648Converter(Model model, Record record) {
@@ -57,33 +59,41 @@ public class Field648Converter extends FieldConverter {
         for (String scheme: ModelUtils.getMADSScheme(df.getIndicator2())) {
             resource.addProperty(MADS_RDF.isMemberofMADSScheme, model.createResource(scheme));
         }
-        addMadsClass(df, lang, madsClass, resource);
+        if (MADS_RDF.ComplexSubject.equals(madsClass)) {
+            addComponentList(df, lang, resource, "avxyz");
+        }
         addSubfield0(df, resource);
         addSourceCode(df, resource);
         work.addProperty(BIB_FRAME.subject, resource);
         return model;
     }
 
-    protected void addMadsClass(DataField df, String lang, Resource madsClass, Resource resource) {
-        if (MADS_RDF.ComplexSubject.equals(madsClass)) {
-            RDFList list = model.createList();
-            for (Subfield sf: df.getSubfields("ay")) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(BIB_FRAME.Temporal, MADS_RDF.authoritativeLabel, value, lang));
+    protected void addComponentList(DataField df, String lang, Resource resource, String fields) {
+        List<Resource> list = new ArrayList<>();
+        for (Subfield sf: df.getSubfields(fields)) {
+            String value = FormatUtils.chopPunctuation(sf.getData());
+            Resource type = getComponentType(sf.getCode());
+            if (type != null) {
+                list.add(model.createResource()
+                        .addProperty(RDF.type, type)
+                        .addProperty(getComponentProperty(), createLiteral(value, lang)));
             }
-            for (Subfield sf: df.getSubfields('v')) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(MADS_RDF.GenreForm, MADS_RDF.authoritativeLabel, value, lang));
-            }
-            for (Subfield sf: df.getSubfields('x')) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(MADS_RDF.Topic, MADS_RDF.authoritativeLabel, value, lang));
-            }
-            for (Subfield sf: df.getSubfields('z')) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(MADS_RDF.Geographic, MADS_RDF.authoritativeLabel, value, lang));
-            }
-            resource.addProperty(MADS_RDF.componentList, list);
+        }
+        resource.addProperty(MADS_RDF.componentList, model.createList(list.toArray(new RDFNode[list.size()])));
+    }
+
+    protected Property getComponentProperty() {
+        return RDFS.label;
+    }
+
+    protected Resource getComponentType(char code) {
+        switch (code) {
+            case 'v': return MADS_RDF.GenreForm;
+            case 'x': return MADS_RDF.Topic;
+            case 'y': return MADS_RDF.Temporal;
+            case 'z': return MADS_RDF.Geographic;
+            case 'a': return MADS_RDF.Temporal;
+            default: return null;
         }
     }
 
@@ -103,13 +113,4 @@ public class Field648Converter extends FieldConverter {
             }
         }
     }
-
-
-    protected Resource createComplexObject(Resource type, Property property, String value, String lang) {
-        return model.createResource()
-                .addProperty(RDF.type, type)
-                .addProperty(property, createLiteral(value, lang));
-    }
-
-
 }

@@ -3,7 +3,6 @@ package io.lold.marc2bf2.converters.field648to662;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import io.lold.marc2bf2.vocabulary.MADS_RDF;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
@@ -15,65 +14,53 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-public class Field655Converter extends Field648Converter {
-    public Field655Converter(Model model, Record record) {
+public class Field656Converter extends Field648Converter {
+    public Field656Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
     public Model convert(VariableField field) {
-        DataField df = (DataField) field;
-        if (!"655".equals(getTag(df)) || df.getIndicator1() != ' ') {
+        if (!field.getTag().equals("656")) {
             return model;
         }
-
+        DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
         String uri = null;
+
         for (Subfield sf0orw: df.getSubfields("0w")) {
             uri = getUriFromSubfield0OrW(sf0orw);
             if (StringUtils.isNotBlank(uri)) {
                 break;
             }
         }
-        if (StringUtils.isBlank(uri)) {
-            uri = ModelUtils.buildUri(record, "GenreForm", getTag(df), fieldIndex);
-        }
+        Resource resource = StringUtils.isBlank(uri) ?
+                model.createResource() : model.createResource(uri);
+        resource.addProperty(RDF.type, BIB_FRAME.Topic)
+                .addProperty(RDF.type, MADS_RDF.ComplexSubject);
 
-        Resource madsClass = df.getSubfields("vxyz").isEmpty() ?
-                MADS_RDF.GenreForm : MADS_RDF.ComplexSubject;
-        Resource resource = model.createResource(uri)
-                .addProperty(RDF.type, BIB_FRAME.GenreForm)
-                .addProperty(RDF.type, madsClass);
-
-        String label = concatSubfields(df, "avxyz", "--");
+        String label = concatSubfields(df, "az", "--");
         if (StringUtils.isNotBlank(label)) {
             resource.addProperty(RDFS.label, createLiteral(label, lang));
-            resource.addProperty(MADS_RDF.authoritativeLabel, createLiteral(label, lang));
+            resource.addProperty(RDFS.label, createLiteral(label, lang));
         }
         for (String scheme: ModelUtils.getMADSScheme(df.getIndicator2())) {
             resource.addProperty(MADS_RDF.isMemberofMADSScheme, model.createResource(scheme));
         }
+        addComponentList(df, lang, resource, "akvxyz");
 
-        addComponentList(df, lang, resource, "avxyz");
-
-        for (Subfield sf: df.getSubfields('g')) {
-            resource.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, sf.getData(), lang));
-        }
-        for (Resource role: contributionRelationship(df.getSubfields('e'), lang, work)) {
-            resource.addProperty(BIB_FRAME_LC.relationship, role.addProperty(BIB_FRAME.relatedTo, work));
-        }
         addSubfield0(df, resource);
-        addSubfield5(df, resource);
-        addSourceCode(df, resource);
-
-        work.addProperty(BIB_FRAME.genreForm, resource);
+        addSubfield2(df, resource);
+        addSubfield3(df, resource);
+        work.addProperty(BIB_FRAME.subject, resource);
         return model;
     }
 
     @Override
     protected Resource getComponentType(char code) {
-        if (code == 'a') return MADS_RDF.GenreForm;
+        if (code == 'a') return MADS_RDF.Occupation;
+        else if (code == 'k') return MADS_RDF.GenreForm;
         else return super.getComponentType(code);
     }
 }

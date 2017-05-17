@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters.field648to662;
 
-import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
@@ -8,7 +7,6 @@ import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import io.lold.marc2bf2.vocabulary.MADS_RDF;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -16,9 +14,6 @@ import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Field651Converter extends Field648Converter {
     public Field651Converter(Model model, Record record) {
@@ -59,24 +54,7 @@ public class Field651Converter extends Field648Converter {
             resource.addProperty(MADS_RDF.isMemberofMADSScheme, model.createResource(scheme));
         }
         if (MADS_RDF.ComplexSubject.equals(madsClass)) {
-            List<Resource> list = new ArrayList<>();
-            for (Subfield sf: df.getSubfields("abx")) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(MADS_RDF.Topic, MADS_RDF.authoritativeLabel, value, lang));
-            }
-            for (Subfield sf: df.getSubfields('v')) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(MADS_RDF.GenreForm, MADS_RDF.authoritativeLabel, value, lang));
-            }
-            for (Subfield sf: df.getSubfields("y")) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(MADS_RDF.Temporal, MADS_RDF.authoritativeLabel, value, lang));
-            }
-            for (Subfield sf: df.getSubfields("z")) {
-                String value = FormatUtils.chopPunctuation(sf.getData());
-                list.add(createComplexObject(MADS_RDF.Geographic, MADS_RDF.authoritativeLabel, value, lang));
-            }
-            resource.addProperty(MADS_RDF.componentList, model.createList(list.toArray(new RDFNode[list.size()])));
+            addComponentList(df, lang, resource, "abvxyz");
         }
         for (Subfield sf: df.getSubfields('g')) {
             resource.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, sf.getData(), lang));
@@ -88,5 +66,14 @@ public class Field651Converter extends Field648Converter {
         addSourceCode(df, resource);
         work.addProperty(BIB_FRAME.subject, resource);
         return model;
+    }
+
+    @Override
+    protected Resource getComponentType(char code) {
+        switch (code) {
+            case 'a':
+            case 'b': return MADS_RDF.Geographic;
+            default: return super.getComponentType(code);
+        }
     }
 }
