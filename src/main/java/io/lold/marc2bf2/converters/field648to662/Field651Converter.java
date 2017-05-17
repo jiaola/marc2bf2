@@ -15,6 +15,8 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
+import java.util.List;
+
 public class Field651Converter extends Field648Converter {
     public Field651Converter(Model model, Record record) {
         super(model, record);
@@ -29,9 +31,11 @@ public class Field651Converter extends Field648Converter {
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
         String uri = null;
-        for (Subfield sf0orw: df.getSubfields("0w")) {
+        List<Subfield> sf0orws = df.getSubfields("0w");
+        for (Subfield sf0orw: sf0orws) {
             uri = getUriFromSubfield0OrW(sf0orw);
             if (StringUtils.isNotBlank(uri)) {
+                sf0orws.remove(sf0orw);
                 break;
             }
         }
@@ -62,7 +66,7 @@ public class Field651Converter extends Field648Converter {
         for (Resource role: contributionRelationship(df.getSubfields('e'), lang, work)) {
             resource.addProperty(BIB_FRAME_LC.relationship, role.addProperty(BIB_FRAME.relatedTo, work));
         }
-        addSubfield0(df, resource);
+        addSubfield0AndW(sf0orws, resource);
         addSourceCode(df, resource);
         work.addProperty(BIB_FRAME.subject, resource);
         return model;

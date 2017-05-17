@@ -35,9 +35,11 @@ public class Field648Converter extends FieldConverter {
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
         String uri = null;
-        for (Subfield sf0orw: df.getSubfields("0w")) {
+        List<Subfield> sf0orws = df.getSubfields("0w");
+        for (Subfield sf0orw: sf0orws) {
             uri = getUriFromSubfield0OrW(sf0orw);
             if (StringUtils.isNotBlank(uri)) {
+                sf0orws.remove(sf0orw);
                 break;
             }
         }
@@ -62,7 +64,7 @@ public class Field648Converter extends FieldConverter {
         if (MADS_RDF.ComplexSubject.equals(madsClass)) {
             addComponentList(df, lang, resource, "avxyz");
         }
-        addSubfield0(df, resource);
+        addSubfield0AndW(sf0orws, resource);
         addSourceCode(df, resource);
         work.addProperty(BIB_FRAME.subject, resource);
         return model;
