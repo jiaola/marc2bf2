@@ -1,7 +1,6 @@
 package io.lold.marc2bf2.converters.field010to048;
 
 import io.lold.marc2bf2.converters.InstanceIdConverter;
-import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
@@ -21,10 +20,7 @@ public class Field022Converter extends InstanceIdConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("022")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
         List<Subfield> subfields = df.getSubfields('l');
@@ -55,5 +51,9 @@ public class Field022Converter extends InstanceIdConverter {
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
         }
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "022".equals(field.getTag());
     }
 }

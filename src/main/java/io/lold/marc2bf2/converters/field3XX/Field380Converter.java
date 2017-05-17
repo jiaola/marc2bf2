@@ -17,10 +17,7 @@ public class Field380Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("380")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -32,5 +29,9 @@ public class Field380Converter extends FieldConverter {
             work.addProperty(BIB_FRAME.genreForm, resource);
         }
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "380".equals(field.getTag());
     }
 }

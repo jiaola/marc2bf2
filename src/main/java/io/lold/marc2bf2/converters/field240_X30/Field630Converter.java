@@ -15,7 +15,6 @@ import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
 import java.util.List;
-import java.util.Optional;
 
 public class Field630Converter extends NameTitleFieldConverter {
     public Field630Converter(Model model, Record record) {
@@ -23,11 +22,7 @@ public class Field630Converter extends NameTitleFieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"630".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
 
         DataField df = (DataField) field;
@@ -50,4 +45,8 @@ public class Field630Converter extends NameTitleFieldConverter {
         return model;
     }
 
+    @Override
+    public boolean checkField(VariableField field) {
+        return "630".equals(field.getTag());
+    }
 }

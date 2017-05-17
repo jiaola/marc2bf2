@@ -19,10 +19,7 @@ public class Field210Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("210")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
         Resource resource = model.createResource()
@@ -51,5 +48,10 @@ public class Field210Converter extends FieldConverter {
         addSubfield2(df, resource);
         instance.addProperty(BIB_FRAME.title, resource);
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "210".equals(field.getTag());
     }
 }

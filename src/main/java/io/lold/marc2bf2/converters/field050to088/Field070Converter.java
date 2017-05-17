@@ -21,11 +21,7 @@ public class Field070Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("070")) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -42,5 +38,9 @@ public class Field070Converter extends FieldConverter {
         work.addProperty(BIB_FRAME.classification, resource);
 
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "070".equals(field.getTag());
     }
 }

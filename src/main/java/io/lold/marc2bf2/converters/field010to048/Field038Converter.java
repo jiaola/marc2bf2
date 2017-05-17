@@ -20,10 +20,7 @@ public class Field038Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("038")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource amd = ModelUtils.getAdminMatadata(model, record);
         DataField df = (DataField) field;
         List<Subfield> subfields = df.getSubfields('a');
@@ -34,5 +31,10 @@ public class Field038Converter extends FieldConverter {
             amd.addProperty(BIB_FRAME_LC.metadataLicensor, ml);
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "038".equals(field.getTag());
     }
 }

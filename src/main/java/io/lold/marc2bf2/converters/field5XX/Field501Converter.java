@@ -14,14 +14,17 @@ public class Field501Converter extends Field500Converter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("501")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
         Resource note = buildResource(df, BIB_FRAME.Note).addProperty(BIB_FRAME.noteType, "with");
         instance.addProperty(BIB_FRAME.note, note);
         return model;
+    }
+
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "501".equals(field.getTag());
     }
 }

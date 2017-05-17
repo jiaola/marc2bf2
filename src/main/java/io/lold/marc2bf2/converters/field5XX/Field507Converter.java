@@ -17,10 +17,7 @@ public class Field507Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("507")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -33,4 +30,8 @@ public class Field507Converter extends FieldConverter {
         return model;
     }
 
+    @Override
+    public boolean checkField(VariableField field) {
+        return "507".equals(field.getTag());
+    }
 }

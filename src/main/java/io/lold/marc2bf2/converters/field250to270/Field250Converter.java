@@ -17,10 +17,7 @@ public class Field250Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("250")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
@@ -29,5 +26,10 @@ public class Field250Converter extends FieldConverter {
         instance.addProperty(BIB_FRAME.editionStatement, createLiteral(statment, lang));
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "250".equals(field.getTag());
     }
 }

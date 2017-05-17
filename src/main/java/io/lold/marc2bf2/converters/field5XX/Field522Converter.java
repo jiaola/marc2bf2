@@ -3,9 +3,7 @@ package io.lold.marc2bf2.converters.field5XX;
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
-import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.marc4j.marc.DataField;
@@ -19,10 +17,7 @@ public class Field522Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("522")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -33,5 +28,11 @@ public class Field522Converter extends FieldConverter {
         }
 
         return model;
+    }
+
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "522".equals(field.getTag());
     }
 }

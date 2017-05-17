@@ -23,10 +23,7 @@ public class Field005Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("005")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         SimpleDateFormat parser = new SimpleDateFormat("yyyyMMddHHmmss");
 
         try {
@@ -40,5 +37,10 @@ public class Field005Converter extends FieldConverter {
             amd.addProperty(BIB_FRAME.changeDate, literal);
         } catch (ParseException ex) {}
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "005".equals(field.getTag());
     }
 }

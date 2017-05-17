@@ -20,10 +20,7 @@ public class Field255Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("255")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -66,5 +63,10 @@ public class Field255Converter extends FieldConverter {
         work.addProperty(BIB_FRAME.cartographicAttributes, resource);
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "255".equals(field.getTag());
     }
 }

@@ -20,7 +20,7 @@ public class Field257Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
+    protected Model process(VariableField field) {
         if (!field.getTag().equals("257")) {
             return model;
         }
@@ -40,5 +40,10 @@ public class Field257Converter extends FieldConverter {
         }
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "257".equals(field.getTag());
     }
 }

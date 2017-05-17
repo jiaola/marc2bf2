@@ -15,15 +15,16 @@ public class Field1XXNameConverter extends NameTitleFieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"100".equals(field.getTag()) && !"110".equals(field.getTag()) && !"111".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         work.addProperty(BIB_FRAME.contribution, buildContribution((DataField) field));
         addUniformTitle((DataField)field, work);
         return model;
     }
 
+    @Override
+    public boolean checkField(VariableField field) {
+        String tag = field.getTag();
+        return "100".equals(tag) || "110".equals(tag) || "111".equals(tag);
+    }
 }

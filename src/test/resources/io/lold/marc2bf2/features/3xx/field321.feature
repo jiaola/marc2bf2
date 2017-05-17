@@ -1,7 +1,7 @@
 Feature: 321 - FORMER PUBLICATION FREQ
   Background:
     Given a marc field "=321  \\$aSemiannual,$b1981-1982"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field310_321Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field321Converter
 
   Scenario: 321 creates a frequency property of the Instance
     When I search with patterns:

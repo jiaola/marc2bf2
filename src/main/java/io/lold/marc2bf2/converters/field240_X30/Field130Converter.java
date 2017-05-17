@@ -8,20 +8,21 @@ import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;
 
-public class Field130_240Converter extends NameTitleFieldConverter {
-    public Field130_240Converter(Model model, Record record) {
+public class Field130Converter extends NameTitleFieldConverter {
+    public Field130Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"130".equals(field.getTag()) && !"240".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         addUniformTitle((DataField)field, work);
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "130".equals(field.getTag());
     }
 
 }

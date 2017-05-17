@@ -17,11 +17,7 @@ public class Field010Converter extends InstanceIdConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("010")) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
 
         Resource instance = ModelUtils.getInstance(model, record);
@@ -31,5 +27,10 @@ public class Field010Converter extends InstanceIdConverter {
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "010".equals(field.getTag());
     }
 }

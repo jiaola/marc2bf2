@@ -19,10 +19,7 @@ public class Field502Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("502")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -53,5 +50,11 @@ public class Field502Converter extends FieldConverter {
         }
         work.addProperty(BIB_FRAME.dissertation, resource);
         return model;
+    }
+
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "502".equals(field.getTag());
     }
 }

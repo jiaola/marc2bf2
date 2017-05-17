@@ -35,11 +35,7 @@ public class Field048Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("048")) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         if (df.getIndicator2() != ' ') {
             return model;
@@ -66,5 +62,10 @@ public class Field048Converter extends FieldConverter {
             }
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "048".equals(field.getTag());
     }
 }

@@ -20,10 +20,7 @@ public class Field300Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("300")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
@@ -52,5 +49,10 @@ public class Field300Converter extends FieldConverter {
         }
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "300".equals(field.getTag());
     }
 }

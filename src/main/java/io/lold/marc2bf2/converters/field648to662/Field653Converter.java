@@ -4,22 +4,12 @@ import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
-import io.lold.marc2bf2.vocabulary.MADS_RDF;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
-import org.apache.jena.vocabulary.RDF;
-import org.apache.jena.vocabulary.RDFS;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
-import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Field653Converter extends Field648Converter {
     public Field653Converter(Model model, Record record) {
@@ -27,10 +17,7 @@ public class Field653Converter extends Field648Converter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("653")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -51,5 +38,10 @@ public class Field653Converter extends Field648Converter {
         label = FormatUtils.chopPunctuation(label);
         work.addProperty(property, createLabeledResource(type, label, lang));
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "653".equals(field.getTag());
     }
 }

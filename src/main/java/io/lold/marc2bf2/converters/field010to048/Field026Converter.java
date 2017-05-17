@@ -18,11 +18,7 @@ public class Field026Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"026".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         String joined = concatSubfields(df, "abcd", " ");
 
@@ -41,5 +37,9 @@ public class Field026Converter extends FieldConverter {
         ModelUtils.getInstance(model, record)
                 .addProperty(BIB_FRAME.identifiedBy, resource);
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "026".equals(field.getTag());
     }
 }

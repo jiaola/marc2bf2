@@ -22,17 +22,13 @@ import java.util.List;
 /**
  * Handles RDA field 336, 337, 338
  */
-public class Field336_337_338Converter extends FieldConverter {
-    public Field336_337_338Converter(Model model, Record record) {
+public class Field336Converter extends FieldConverter {
+    public Field336Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"336".equals(field.getTag()) && !"337".equals(field.getTag()) && !"338".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         List<Resource> list = buildRDATypes((DataField) field);
         Resource node = "336".equals(field.getTag())?
                 ModelUtils.getWork(model, record) :
@@ -41,6 +37,11 @@ public class Field336_337_338Converter extends FieldConverter {
             node.addProperty(getRDAProperty(field.getTag()), resource);
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "336".equals(field.getTag());
     }
 
     protected List<Resource> buildRDATypes(DataField field) {

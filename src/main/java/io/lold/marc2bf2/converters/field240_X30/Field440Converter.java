@@ -13,17 +13,13 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-public class Field440_830Converter extends NameTitleFieldConverter {
-    public Field440_830Converter(Model model, Record record) {
+public class Field440Converter extends NameTitleFieldConverter {
+    public Field440Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"440".equals(field.getTag()) && !"830".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
         String workUri = buildNewWorkUri(df);
@@ -39,5 +35,8 @@ public class Field440_830Converter extends NameTitleFieldConverter {
         }
         return model;
     }
-
+    @Override
+    public boolean checkField(VariableField field) {
+        return "440".equals(field.getTag()) || "830".equals(field.getTag());
+    }
 }

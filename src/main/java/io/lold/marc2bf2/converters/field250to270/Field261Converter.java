@@ -20,10 +20,7 @@ public class Field261Converter extends NameTitleFieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("261")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -67,5 +64,8 @@ public class Field261Converter extends NameTitleFieldConverter {
         }
         return model;
     }
-
+    @Override
+    public boolean checkField(VariableField field) {
+        return "261".equals(field.getTag());
+    }
 }

@@ -5,7 +5,6 @@ import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
-import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;
 
@@ -17,10 +16,7 @@ public class Field074Converter extends InstanceIdConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"074".equals(field.getTag())) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource instance = ModelUtils.getInstance(model, record);
         List<Resource> resources = convert(field, BIB_FRAME.Identifier);
         for (Resource resource: resources) {
@@ -28,5 +24,9 @@ public class Field074Converter extends InstanceIdConverter {
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
         }
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "074".equals(field.getTag());
     }
 }

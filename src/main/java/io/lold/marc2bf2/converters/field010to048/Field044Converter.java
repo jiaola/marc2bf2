@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters.field010to048;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
@@ -22,11 +21,7 @@ public class Field044Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"044".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         List<Subfield> sfs = df.getSubfields();
         for (int i = 0; i < sfs.size(); i++) {
@@ -55,5 +50,10 @@ public class Field044Converter extends FieldConverter {
         }
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "044".equals(field.getTag());
     }
 }

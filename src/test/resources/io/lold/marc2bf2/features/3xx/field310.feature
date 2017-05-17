@@ -1,7 +1,7 @@
 Feature: 310 - CURRENT PUBLICATION FREQUENCY
   Background:
     Given a marc field "=310  \\$aAnnual,$b1983-"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field310_321Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field310Converter
 
   Scenario: 310 creates a frequency property of the Instance
     When I search with patterns:

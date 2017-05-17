@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters.field010to048;
 
-import io.lold.marc2bf2.ModelFactory;
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
@@ -20,10 +19,7 @@ public class Field042Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("042")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource amd = ModelUtils.getAdminMatadata(model, record);
         DataField df = (DataField) field;
         List<Subfield> subfields = df.getSubfields('a');
@@ -33,6 +29,11 @@ public class Field042Converter extends FieldConverter {
             amd.addProperty(BIB_FRAME.descriptionAuthentication, ml);
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "042".equals(field.getTag());
     }
 
 }

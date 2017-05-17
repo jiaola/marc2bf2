@@ -20,10 +20,7 @@ public class Field017Converter extends InstanceIdConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("017")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
 
         Resource instance = ModelUtils.getInstance(model, record);
@@ -48,5 +45,9 @@ public class Field017Converter extends InstanceIdConverter {
         }
 
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "017".equals(field.getTag());
     }
 }

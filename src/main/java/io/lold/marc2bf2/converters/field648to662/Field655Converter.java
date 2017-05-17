@@ -23,12 +23,8 @@ public class Field655Converter extends Field648Converter {
     }
 
     @Override
-    public Model convert(VariableField field) {
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
-        if (!"655".equals(getTag(df)) || df.getIndicator1() != ' ') {
-            return model;
-        }
-
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
         String uri = null;
@@ -73,6 +69,11 @@ public class Field655Converter extends Field648Converter {
 
         work.addProperty(BIB_FRAME.genreForm, resource);
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "655".equals(field.getTag()) && ((DataField)field).getIndicator1() == ' ';
     }
 
     @Override

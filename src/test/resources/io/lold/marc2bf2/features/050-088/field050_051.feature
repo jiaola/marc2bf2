@@ -13,7 +13,7 @@ Feature: 050 - LIBRARY OF CONGRESS CALL NUMBER
       | ?x a bf:Item |
     Then I should find matches
 
-  Scenario: 050 creates  a hasItem property of the Instance
+  Scenario: 050 creates a hasItem property of the Instance
     When I search with patterns:
       | ?x a bf:Instance  |
       | ?x bf:hasItem ?y  |

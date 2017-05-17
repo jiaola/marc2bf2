@@ -16,7 +16,6 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.apache.jena.vocabulary.XSD;
-import org.marc4j.marc.Leader;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;
 import org.marc4j.marc.impl.RecordImpl;

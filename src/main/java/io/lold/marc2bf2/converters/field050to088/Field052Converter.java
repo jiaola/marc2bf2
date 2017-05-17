@@ -25,11 +25,7 @@ public class Field052Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("052")) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String place = RecordUtils.getSubfieldData(df, 'a');
@@ -44,6 +40,11 @@ public class Field052Converter extends FieldConverter {
             }
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "052".equals(field.getTag());
     }
 
     private Resource createPlace(DataField df, String place, String lang) {

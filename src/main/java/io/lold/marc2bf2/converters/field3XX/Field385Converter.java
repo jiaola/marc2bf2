@@ -18,16 +18,13 @@ import org.marc4j.marc.VariableField;
 
 import java.util.List;
 
-public class Field385_386Converter extends FieldConverter {
-    public Field385_386Converter(Model model, Record record) {
+public class Field385Converter extends FieldConverter {
+    public Field385Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("385") && !field.getTag().equals("386")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -65,5 +62,10 @@ public class Field385_386Converter extends FieldConverter {
             work.addProperty(property, resource);
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "385".equals(field.getTag());
     }
 }

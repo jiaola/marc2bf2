@@ -14,16 +14,7 @@ public class Field556Converter extends Field500Converter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        DataField df = (DataField) field;
-        if (!"556".equals(getTag(df))) {
-            return model;
-        }
-
-        Resource instance = ModelUtils.getInstance(model, record);
-        Resource note = buildResource(df, BIB_FRAME.Note);
-        instance.addProperty(BIB_FRAME.note, note);
-        return model;
+    public boolean checkField(VariableField field) {
+        return "556".equals(field.getTag());
     }
-
 }

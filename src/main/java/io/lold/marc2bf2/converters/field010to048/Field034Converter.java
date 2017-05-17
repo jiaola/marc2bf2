@@ -28,10 +28,7 @@ public class Field034Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("034")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
 
@@ -74,6 +71,10 @@ public class Field034Converter extends FieldConverter {
         }
 
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "034".equals(field.getTag());
     }
 
     private Resource createScale(String label, String data, List<Subfield> sf3s) {

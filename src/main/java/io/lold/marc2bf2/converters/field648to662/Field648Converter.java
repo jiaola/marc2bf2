@@ -27,10 +27,7 @@ public class Field648Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("648")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -82,6 +79,11 @@ public class Field648Converter extends FieldConverter {
             }
         }
         resource.addProperty(MADS_RDF.componentList, model.createList(list.toArray(new RDFNode[list.size()])));
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "648".equals(field.getTag());
     }
 
     protected Property getComponentProperty() {

@@ -23,10 +23,7 @@ public class Field651Converter extends Field648Converter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("651")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -70,6 +67,11 @@ public class Field651Converter extends Field648Converter {
         addSourceCode(df, resource);
         work.addProperty(BIB_FRAME.subject, resource);
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "651".equals(field.getTag());
     }
 
     @Override

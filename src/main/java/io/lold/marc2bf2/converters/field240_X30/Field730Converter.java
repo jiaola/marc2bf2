@@ -6,7 +6,6 @@ import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -15,17 +14,13 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-public class Field730_740Converter extends NameTitleFieldConverter {
-    public Field730_740Converter(Model model, Record record) {
+public class Field730Converter extends NameTitleFieldConverter {
+    public Field730Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"730".equals(field.getTag()) && !"740".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
         String workUri = buildNewWorkUri(df);
@@ -46,4 +41,8 @@ public class Field730_740Converter extends NameTitleFieldConverter {
         return model;
     }
 
+    @Override
+    public boolean checkField(VariableField field) {
+        return "730".equals(field.getTag());
+    }
 }

@@ -20,10 +20,7 @@ public class Field040Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("040")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource amd = ModelUtils.getAdminMatadata(model, record);
         DataField df = (DataField) field;
 
@@ -66,6 +63,11 @@ public class Field040Converter extends FieldConverter {
             amd.addProperty(BIB_FRAME.descriptionConventions, dc.addProperty(RDF.type, BIB_FRAME.DescriptionConventions));
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "040".equals(field.getTag());
     }
 
     private Resource createSource(String value) {

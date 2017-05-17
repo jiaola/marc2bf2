@@ -2,7 +2,7 @@ Feature: 008 - VISUAL MATERIALS - FIXED-LENGTH DATA ELEMENTS
   Background:
     Given a marc leader "=LDR  03778cgm a22005057a 4500"
     And a marc field "=008  030311s2002    xxu161            mleng  "
-    When converted by a field converter io.lold.marc2bf2.converters.field006_008.Field006_008Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field006_008.Field008Converter
     
   Scenario: pos 18-21 create a duration property of the Work
     When I search with patterns:

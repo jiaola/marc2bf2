@@ -16,15 +16,17 @@ public class Field001Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("001")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         Resource resource = model.createResource().
                 addProperty(RDF.type, BIB_FRAME.Local).
                 addProperty(RDF.value, ((ControlField)field).getData());
         Resource amd = ModelUtils.getAdminMatadata(model, record);
         amd.addProperty(BIB_FRAME.identifiedBy, resource);
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "001".equals(field.getTag());
     }
 }

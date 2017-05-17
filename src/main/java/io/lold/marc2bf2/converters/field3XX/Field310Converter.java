@@ -14,13 +14,13 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-public class Field310_321Converter extends FieldConverter {
-    public Field310_321Converter(Model model, Record record) {
+public class Field310Converter extends FieldConverter {
+    public Field310Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
-    public Model convert(VariableField field) {
+    protected Model process(VariableField field) {
         if (!field.getTag().equals("310") && !field.getTag().equals("321")) {
             return model;
         }
@@ -40,5 +40,10 @@ public class Field310_321Converter extends FieldConverter {
         }
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "310".equals(field.getTag());
     }
 }

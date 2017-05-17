@@ -23,10 +23,7 @@ public class Field382Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("382")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -87,5 +84,10 @@ public class Field382Converter extends FieldConverter {
         }
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "382".equals(field.getTag());
     }
 }

@@ -19,11 +19,7 @@ public class Field8XXNameConverter extends NameTitleFieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"800".equals(field.getTag()) && !"810".equals(field.getTag()) && !"811".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
         String uri = ModelUtils.buildUri(record, "Work", getTag(df), fieldIndex);
@@ -40,5 +36,9 @@ public class Field8XXNameConverter extends NameTitleFieldConverter {
 
         return model;
     }
-
+    @Override
+    public boolean checkField(VariableField field) {
+        String tag = field.getTag();
+        return "800".equals(tag) || "810".equals(tag) || "811".equals(tag);
+    }
 }

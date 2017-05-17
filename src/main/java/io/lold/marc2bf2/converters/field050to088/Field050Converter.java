@@ -28,11 +28,7 @@ public class Field050Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("050")) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -98,6 +94,11 @@ public class Field050Converter extends FieldConverter {
         item.addProperty(BIB_FRAME.itemOf, instance);
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "050".equals(field.getTag());
     }
 
     protected String buildShelfMarkLabel(DataField field) {

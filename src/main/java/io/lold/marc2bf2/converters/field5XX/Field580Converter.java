@@ -18,10 +18,7 @@ public class Field580Converter extends NameTitleFieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("580")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         Resource note = model.createResource().addProperty(RDF.type, BIB_FRAME.Note);
@@ -30,5 +27,10 @@ public class Field580Converter extends NameTitleFieldConverter {
         }
         work.addProperty(BIB_FRAME.note, note);
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "580".equals(field.getTag());
     }
 }

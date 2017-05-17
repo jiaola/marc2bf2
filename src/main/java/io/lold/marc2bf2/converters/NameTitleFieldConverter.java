@@ -236,7 +236,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
         List<Subfield> sf4s = field.getSubfields('4');
         List<Resource> roles = new ArrayList<>();
         String lang = RecordUtils.getXmlLang(field, record);
-        if ((tag.endsWith("00") || tag.endsWith("10")) && !sfes.isEmpty()) {
+        if ((tag.endsWith("00") || tag.endsWith("10") || "720".equals(tag)) && !sfes.isEmpty()) {
             roles = contributionRole(sfes, lang);
         } else if (tag.endsWith("11") && !sfjs.isEmpty()) {
             roles = contributionRole(sfjs, lang);

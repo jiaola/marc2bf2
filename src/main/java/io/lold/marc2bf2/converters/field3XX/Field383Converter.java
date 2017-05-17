@@ -17,10 +17,7 @@ public class Field383Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("383")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -35,5 +32,10 @@ public class Field383Converter extends FieldConverter {
             work.addProperty(BIB_FRAME.musicThematicNumber, sf.getData());
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "383".equals(field.getTag());
     }
 }

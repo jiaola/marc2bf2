@@ -9,7 +9,6 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
-import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
 public class Field518Converter extends FieldConverter {
@@ -18,10 +17,7 @@ public class Field518Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("518")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String lang = RecordUtils.getXmlLang(df, record);
@@ -33,5 +29,11 @@ public class Field518Converter extends FieldConverter {
             work.addProperty(BIB_FRAME.capture, resource);
         }
         return model;
+    }
+
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "518".equals(field.getTag());
     }
 }

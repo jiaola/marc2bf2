@@ -15,16 +15,18 @@ public class Field6XXNameConverter extends NameTitleFieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"600".equals(field.getTag()) && !"610".equals(field.getTag()) && !"611".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
         Resource resource = !df.getSubfields('t').isEmpty() ? buildWork(df) : buildAgent(df);
         work.addProperty(BIB_FRAME.subject, resource);
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        String tag = field.getTag();
+        return "600".equals(tag) || "610".equals(tag) || "611".equals(tag);
     }
 
 }

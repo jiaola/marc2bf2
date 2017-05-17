@@ -20,10 +20,7 @@ public class Field534Converter extends Field533Converter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("534")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         Resource instance = ModelUtils.getInstance(model, record);
@@ -34,6 +31,11 @@ public class Field534Converter extends Field533Converter {
         instance.addProperty(BIB_FRAME.originalVersion, hasInstance);
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "534".equals(field.getTag());
     }
 
     @Override

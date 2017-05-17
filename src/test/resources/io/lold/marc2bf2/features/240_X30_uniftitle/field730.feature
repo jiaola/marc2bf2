@@ -3,7 +3,7 @@ Feature: 730 - ADDED ENTRY - UNIFORM TITLE
   Background:
     Given a marc field "=730  02$31980:$aBible.$pO.T.$pPsalms.$sCodex Sinaiticus."
     And a marc field "=730  0\$iParody of (work):$a[Motets].$hSound recording$x1234-5678$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field240_X30.Field730_740Converter
+    When converted by a field converter io.lold.marc2bf2.converters.field240_X30.Field730Converter
 
   Scenario: ind2='2' becomes a hasPart of the main Work
     When I search with patterns:

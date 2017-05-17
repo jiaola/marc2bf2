@@ -1,11 +1,8 @@
 package io.lold.marc2bf2.converters.field250to270;
 
 import io.lold.marc2bf2.converters.FieldConverter;
-import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
-import io.lold.marc2bf2.vocabulary.DataTypes;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.marc4j.marc.DataField;
@@ -19,10 +16,7 @@ public class Field265Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("265")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
@@ -32,5 +26,8 @@ public class Field265Converter extends FieldConverter {
 
         return model;
     }
-
+    @Override
+    public boolean checkField(VariableField field) {
+        return "265".equals(field.getTag());
+    }
 }

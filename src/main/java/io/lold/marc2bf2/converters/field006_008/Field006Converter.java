@@ -21,10 +21,10 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.*;
 
-public class Field006_008Converter extends FieldConverter {
-    final static Logger logger = LoggerFactory.getLogger(Field006_008Converter.class);
+public class Field006Converter extends FieldConverter {
+    final static Logger logger = LoggerFactory.getLogger(Field006Converter.class);
     protected Map<String, Map> mappings;
-    public Field006_008Converter(Model model, Record record) throws Exception {
+    public Field006Converter(Model model, Record record) throws Exception {
         super(model, record);
         try {
             mappings = (Map<String, Map>) MappingsReader.readMappings("006_008");
@@ -35,17 +35,19 @@ public class Field006_008Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
+    protected Model process(VariableField field) throws Exception {
         String tag = field.getTag();
-        if (!tag.equals("006") && !tag.equals("008")) {
-            return model;
-        }
         String data = ((ControlField) field).getData();
 
         convertInMode(data, tag, "AdminMetadata");
         convertInMode(data, tag, "Work");
         convertInMode(data, tag, "Instance");
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "006".equals(field.getTag());
     }
 
     public void convertInMode(String data, String tag, String mode) throws Exception {

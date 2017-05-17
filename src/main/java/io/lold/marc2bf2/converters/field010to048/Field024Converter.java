@@ -1,10 +1,8 @@
 package io.lold.marc2bf2.converters.field010to048;
 
 import io.lold.marc2bf2.converters.InstanceIdConverter;
-import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
-import org.apache.jena.datatypes.xsd.impl.XSDDateType;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDFS;
@@ -21,11 +19,7 @@ public class Field024Converter extends InstanceIdConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("024")) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
 
         Resource instance = ModelUtils.getInstance(model, record);
@@ -61,5 +55,9 @@ public class Field024Converter extends InstanceIdConverter {
         }
 
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "024".equals(field.getTag());
     }
 }

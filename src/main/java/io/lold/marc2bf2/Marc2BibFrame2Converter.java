@@ -29,7 +29,7 @@ public class Marc2BibFrame2Converter {
      * @param record
      * @return
      */
-    public Model convert(Record record) {
+    public Model convert(Record record) throws Exception {
         // One model per record
         Model model = ModelFactory.createBfModel();
         ControlField cnf = record.getControlNumberField();

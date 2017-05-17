@@ -34,13 +34,15 @@ public class Field007Converter extends FieldConverter {
     }
 
 
-    public Model convert(VariableField field) throws Exception{
-        if (!field.getTag().equals("007")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception{
         model = convertInMode(((ControlField)field).getData(), "Work");
         model = convertInMode(((ControlField)field).getData(), "Instance");
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "007".equals(field.getTag());
     }
 
     private Model convertInMode(String data, String mode) throws Exception {

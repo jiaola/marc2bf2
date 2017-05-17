@@ -19,10 +19,7 @@ public class Field351Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("351")) {
-            return model;
-        }
+    protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
@@ -49,5 +46,10 @@ public class Field351Converter extends FieldConverter {
         work.addProperty(BIB_FRAME.arrangement, resource);
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "351".equals(field.getTag());
     }
 }

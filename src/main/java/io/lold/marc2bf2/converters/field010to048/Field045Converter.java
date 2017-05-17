@@ -20,10 +20,7 @@ public class Field045Converter extends FieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("045")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
         List<Subfield> sfas = df.getSubfields('a');
@@ -46,5 +43,10 @@ public class Field045Converter extends FieldConverter {
         }
 
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        return "045".equals(field.getTag());
     }
 }

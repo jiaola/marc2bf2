@@ -34,10 +34,22 @@ public abstract class FieldConverter {
         this.record = record;
     }
 
-    public abstract Model convert(VariableField field) throws Exception;
+    public Model convert(VariableField field) throws Exception {
+        if (checkField(field)) {
+            return process(field);
+        } else {
+            return model;
+        }
+    }
+
+    protected abstract Model process(VariableField field) throws Exception;
 
     public void setFieldIndex (int index) {
         this.fieldIndex = index;
+    }
+
+    public boolean checkField(VariableField field) {
+        return true;
     }
 
     protected void addSubfield0(DataField field, Resource resource) {

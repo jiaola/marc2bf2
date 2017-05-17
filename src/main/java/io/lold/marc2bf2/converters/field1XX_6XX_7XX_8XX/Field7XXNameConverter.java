@@ -19,11 +19,7 @@ public class Field7XXNameConverter extends NameTitleFieldConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!"700".equals(field.getTag()) && !"710".equals(field.getTag()) && !"711".equals(field.getTag())) {
-            return model;
-        }
-
+    protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
         String lang = RecordUtils.getXmlLang(df, record);
@@ -48,6 +44,12 @@ public class Field7XXNameConverter extends NameTitleFieldConverter {
             work.addProperty(BIB_FRAME_LC.relationship, createRelationship(sfi.getData(), model.getResource(relatedToUri), lang));
         }
         return model;
+    }
+
+    @Override
+    public boolean checkField(VariableField field) {
+        String tag = field.getTag();
+        return "700".equals(tag) || "710".equals(tag) || "711".equals(tag);
     }
 
 }

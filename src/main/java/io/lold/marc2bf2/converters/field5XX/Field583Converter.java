@@ -12,22 +12,14 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-public class Field583Converter extends NameTitleFieldConverter {
+public class Field583Converter extends Field541Converter {
     public Field583Converter(Model model, Record record) {
         super(model, record);
     }
 
     @Override
-    public Model convert(VariableField field) {
-        if (!field.getTag().equals("583")) {
-            return model;
-        }
-        DataField df = (DataField) field;
-        Resource instance = ModelUtils.getInstance(model, record);
-
-        Resource item = buildItem(df).addProperty(BIB_FRAME.itemOf, instance);
-        instance.addProperty(BIB_FRAME.hasItem, item);
-        return model;
+    public boolean checkField(VariableField field) {
+        return "583".equals(field.getTag());
     }
 
     protected Resource buildItem(DataField field) {

@@ -16,15 +16,16 @@ public class Field027Converter extends InstanceIdConverter {
     }
 
     @Override
-    public Model convert(VariableField field) throws Exception {
-        if (!field.getTag().equals("027")) {
-            return model;
-        }
+    protected Model process(VariableField field) throws Exception {
         Resource instance = ModelUtils.getInstance(model, record);
         List<Resource> resources = convert(field, BIB_FRAME.Strn);
         for (Resource resource: resources) {
             instance.addProperty(BIB_FRAME.identifiedBy, resource);
         }
         return model;
+    }
+    @Override
+    public boolean checkField(VariableField field) {
+        return "027".equals(field.getTag());
     }
 }
