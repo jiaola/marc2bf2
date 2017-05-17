@@ -36,7 +36,7 @@ public class Field536Converter extends Field500Converter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
         Resource note = buildResource(df, BIB_FRAME.Note).addProperty(BIB_FRAME.noteType, "funding information");
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sf: df.getSubfields("bcdefgh")) {
             String value = sf.getData();
             if (codePrefix.containsKey(sf.getCode())) {

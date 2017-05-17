@@ -25,7 +25,7 @@ public class Field072Converter extends FieldConverter {
     protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         String subject = concatSubfields(df, "ax", " ");
         Resource resource = model.createResource()

@@ -22,7 +22,6 @@ public class Field7XXNameConverter extends NameTitleFieldConverter {
     protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
-        String lang = RecordUtils.getXmlLang(df, record);
         String relatedToUri;
         if (!df.getSubfields('t').isEmpty()) {
             String uri = ModelUtils.buildUri(record, "Work", getTag(df), fieldIndex);

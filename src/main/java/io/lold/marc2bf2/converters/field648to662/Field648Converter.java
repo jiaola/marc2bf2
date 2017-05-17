@@ -5,6 +5,7 @@ import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import io.lold.marc2bf2.vocabulary.MADS_RDF;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
@@ -30,7 +31,7 @@ public class Field648Converter extends FieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
         String uri = null;
         List<Subfield> sf0orws = df.getSubfields("0w");
         for (Subfield sf0orw: sf0orws) {
@@ -64,6 +65,7 @@ public class Field648Converter extends FieldConverter {
         addSubfield0AndW(sf0orws, resource);
         addSourceCode(df, resource);
         work.addProperty(BIB_FRAME.subject, resource);
+
         return model;
     }
 

@@ -20,7 +20,7 @@ public class Field518Converter extends FieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         String label = concatSubfields(df, "adop", " ");
         if (StringUtils.isNotBlank(label)) {

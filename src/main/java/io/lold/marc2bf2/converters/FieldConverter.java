@@ -28,13 +28,18 @@ public abstract class FieldConverter {
     protected Model model;
     protected Record record;
     protected int fieldIndex = 0;
+    protected String lang;
 
     public FieldConverter(Model model, Record record) {
         this.model = model;
         this.record = record;
+        this.lang = null;
     }
 
     public Model convert(VariableField field) throws Exception {
+        if (field instanceof DataField) {
+            this.lang = RecordUtils.getXmlLang((DataField) field, record);
+        }
         if (checkField(field)) {
             return process(field);
         } else {

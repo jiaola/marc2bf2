@@ -31,7 +31,7 @@ public class Field210Converter extends FieldConverter {
                     .addProperty(RDF.type, BIB_FRAME.Source)
                     .addProperty(RDF.value, "issnkey"));
         }
-        String lang = RecordUtils.getXmlLang(df, record);
+
         String label = concatSubfields(df, "ab", " ");
         if (StringUtils.isNotBlank(label)) {
             resource.addProperty(RDFS.label, createLiteral(label, lang))

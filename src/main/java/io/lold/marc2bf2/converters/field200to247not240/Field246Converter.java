@@ -40,7 +40,7 @@ public class Field246Converter extends FieldConverter {
             case '8': resource.addProperty(BIB_FRAME.variantType, "spine"); break;
         }
         String label = concatSubfields(df, "abgnp", " ");
-        String lang = RecordUtils.getXmlLang(df, record);
+
         if (StringUtils.isNotBlank(label)) {
             resource.addProperty(RDFS.label, createLiteral(label, lang))
                     .addProperty(BIB_FRAME_LC.titleSortKey, label);

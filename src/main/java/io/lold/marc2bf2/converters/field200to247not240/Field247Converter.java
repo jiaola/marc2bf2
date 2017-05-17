@@ -31,7 +31,7 @@ public class Field247Converter extends FieldConverter {
                 .addProperty(RDF.type, BIB_FRAME.VariantTitle);
 
         String label = concatSubfields(df, "abgnp", " ");
-        String lang = RecordUtils.getXmlLang(df, record);
+
         if (StringUtils.isNotBlank(label)) {
             resource.addProperty(RDFS.label, createLiteral(label, lang))
                     .addProperty(BIB_FRAME_LC.titleSortKey, label);

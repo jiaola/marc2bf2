@@ -20,7 +20,7 @@ public class Field653Converter extends Field648Converter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         Resource type;
         switch (df.getIndicator2()) {

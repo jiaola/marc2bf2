@@ -21,7 +21,7 @@ public class Field306Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sf: df.getSubfields('a')) {
             instance.addProperty(BIB_FRAME.duration, createLiteral(sf.getData(), lang));
         }

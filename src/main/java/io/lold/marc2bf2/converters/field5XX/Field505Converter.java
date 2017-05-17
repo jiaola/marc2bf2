@@ -20,7 +20,7 @@ public class Field505Converter extends FieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         String label = concatSubfields(df, "agrt", " ");
         if (StringUtils.isNotBlank(label)) {

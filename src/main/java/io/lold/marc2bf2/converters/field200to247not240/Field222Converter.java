@@ -29,7 +29,7 @@ public class Field222Converter extends FieldConverter {
                 .addProperty(RDF.type, BIB_FRAME.Title)
                 .addProperty(RDF.type, BIB_FRAME.VariantTitle)
                 .addProperty(RDF.type, BIB_FRAME.KeyTitle);
-        String lang = RecordUtils.getXmlLang(df, record);
+
         String label = concatSubfields(df, "ab", " ");
         if (StringUtils.isNotBlank(label)) {
             resource.addProperty(RDFS.label, createLiteral(label, lang));

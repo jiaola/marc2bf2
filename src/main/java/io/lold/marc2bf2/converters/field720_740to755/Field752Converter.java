@@ -32,7 +32,7 @@ public class Field752Converter extends Field662Converter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         String uri = null;
         List<Subfield> sf0orws = df.getSubfields("0w");

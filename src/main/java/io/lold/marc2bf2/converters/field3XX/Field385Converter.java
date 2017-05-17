@@ -32,7 +32,7 @@ public class Field385Converter extends FieldConverter {
                 BIB_FRAME.intendedAudience :
                 BIB_FRAME_LC.creatorCharacteristic;
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
         List<Subfield> sfs = df.getSubfields();
         for (int i = 0; i < sfs.size(); i++) {
             Subfield sf = sfs.get(i);

@@ -25,7 +25,7 @@ public class Field055Converter extends FieldConverter {
     protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.ClassificationLcc);

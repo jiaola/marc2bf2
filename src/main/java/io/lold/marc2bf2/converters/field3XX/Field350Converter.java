@@ -20,7 +20,7 @@ public class Field350Converter extends Field344Converter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sf: df.getSubfields('a')) {
             Resource resource = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.AcquisitionSource)

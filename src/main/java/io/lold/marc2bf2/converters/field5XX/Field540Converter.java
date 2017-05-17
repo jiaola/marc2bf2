@@ -22,7 +22,7 @@ public class Field540Converter extends Field500Converter {
         Resource instance = ModelUtils.getInstance(model, record);
         Resource resource = buildResource(df, BIB_FRAME.UsePolicy);
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sf: df.getSubfields('c')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             resource.addProperty(BIB_FRAME.source, createLabeledResource(BIB_FRAME.Source, value, lang));

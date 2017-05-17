@@ -29,7 +29,7 @@ public class Field052Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
         String place = RecordUtils.getSubfieldData(df, 'a');
-        String lang = RecordUtils.getXmlLang(df, record);
+
         List<Subfield> sfbs = df.getSubfields('b');
         if (sfbs.isEmpty()) {
             work.addProperty(BIB_FRAME.geographicCoverage, createPlace(df, place, lang));

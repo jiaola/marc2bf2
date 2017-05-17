@@ -23,7 +23,7 @@ public class Field261Converter extends NameTitleFieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         Resource pa = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.ProvisionActivity)

@@ -24,7 +24,7 @@ public class Field255Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             work.addProperty(BIB_FRAME.scale, model.createResource()

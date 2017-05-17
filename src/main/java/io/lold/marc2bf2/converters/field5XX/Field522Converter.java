@@ -20,7 +20,7 @@ public class Field522Converter extends FieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         for (Subfield sf: df.getSubfields('a')) {
             work.addProperty(BIB_FRAME.geographicCoverage,

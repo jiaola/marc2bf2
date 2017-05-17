@@ -32,7 +32,6 @@ public class Field050Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
-        String lang = RecordUtils.getXmlLang(df, record);
         List<Subfield> sfs = df.getSubfields('a');
         for (int i = 0; i < sfs.size(); i++) {
             Subfield sf = sfs.get(i);

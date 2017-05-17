@@ -28,7 +28,7 @@ public class Field8XXNameConverter extends NameTitleFieldConverter {
                 .addProperty(BIB_FRAME.contribution, buildContribution(df));
         addUniformTitle(df, seriesWork);
         work.addProperty(BIB_FRAME.hasSeries, seriesWork);
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sfv: df.getSubfields('v')) {
             String value = FormatUtils.chopPunctuation(sfv.getData());
             work.addProperty(BIB_FRAME.seriesEnumeration, createLiteral(value, lang));

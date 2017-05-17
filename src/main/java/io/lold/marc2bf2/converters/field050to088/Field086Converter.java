@@ -28,7 +28,7 @@ public class Field086Converter extends FieldConverter {
     protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         List<Subfield> sfs = df.getSubfields("az");
         for (int i = 0; i < sfs.size(); i++) {

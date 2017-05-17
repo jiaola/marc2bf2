@@ -25,7 +25,7 @@ public class Field546Converter extends FieldConverter {
         Resource work = ModelUtils.getWork(model, record);
         Resource note = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Note);
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             note.addProperty(RDFS.label, createLiteral(value, lang));

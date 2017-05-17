@@ -22,7 +22,7 @@ public class Field502Converter extends FieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Dissertation);

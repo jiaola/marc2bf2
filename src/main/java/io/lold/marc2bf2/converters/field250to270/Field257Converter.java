@@ -27,7 +27,7 @@ public class Field257Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
         for (Subfield sf: df.getSubfields('a')) {
             String value = FormatUtils.chopPunctuation(sf.getData());
             Resource place = model.createResource()

@@ -21,7 +21,7 @@ public class Field250Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
         String statment = FormatUtils.chopPunctuation(concatSubfields(df, "ab", " "));
         instance.addProperty(BIB_FRAME.editionStatement, createLiteral(statment, lang));
 

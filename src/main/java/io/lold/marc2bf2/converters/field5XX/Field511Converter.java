@@ -20,7 +20,7 @@ public class Field511Converter extends FieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         for (Subfield sf: df.getSubfields('a')) {
             String value = sf.getData();

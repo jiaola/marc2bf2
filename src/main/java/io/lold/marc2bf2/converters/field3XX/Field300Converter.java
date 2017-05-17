@@ -24,7 +24,7 @@ public class Field300Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Extent);

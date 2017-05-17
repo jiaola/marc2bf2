@@ -31,7 +31,7 @@ public class Field630Converter extends NameTitleFieldConverter {
                 .addProperty(RDF.type, BIB_FRAME.Work);
         addMads(df, resource, titleLabel(df));
         resource.addProperty(BIB_FRAME.source, buildSource(df));
-        String lang = RecordUtils.getXmlLang(df, record);
+
         List<Resource> relationships = contributionRelationship(df.getSubfields('e'), lang, work);
         for (Resource relationship: relationships) {
             resource.addProperty(BIB_FRAME_LC.relationship, relationship);

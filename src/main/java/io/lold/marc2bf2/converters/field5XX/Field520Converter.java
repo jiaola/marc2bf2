@@ -25,7 +25,7 @@ public class Field520Converter extends FieldConverter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         String label = concatSubfields(df, "ab", " ");
         if (StringUtils.isNotBlank(label)) {

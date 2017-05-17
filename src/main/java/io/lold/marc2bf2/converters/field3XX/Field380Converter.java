@@ -21,7 +21,7 @@ public class Field380Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
-        String lang = RecordUtils.getXmlLang(df, record);
+
 
         for (Subfield sf: df.getSubfields('a')) {
             Resource resource = createLabeledResource(BIB_FRAME.GenreForm, sf.getData(), lang);

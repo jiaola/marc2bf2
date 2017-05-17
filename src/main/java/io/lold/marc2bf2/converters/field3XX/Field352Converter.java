@@ -22,7 +22,7 @@ public class Field352Converter extends Field344Converter {
     protected Model process(VariableField field) {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
-        String lang = RecordUtils.getXmlLang(df, record);
+
         List<Subfield> sfs = df.getSubfields();
         for (int i = 0; i < sfs.size(); i++) {
             Subfield sf = sfs.get(i);
