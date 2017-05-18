@@ -1,6 +1,5 @@
 package io.lold.marc2bf2.converters.field760to788;
 
-import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
@@ -15,8 +14,8 @@ import org.marc4j.marc.VariableField;
 
 import java.util.List;
 
-public class Field760Converter extends FieldConverter {
-    public Field760Converter(Model model, Record record) {
+public class Field776Converter extends Field760Converter {
+    public Field776Converter(Model model, Record record) {
         super(model, record);
     }
 
@@ -24,20 +23,20 @@ public class Field760Converter extends FieldConverter {
     protected Model process(VariableField field) throws Exception {
         DataField df = (DataField) field;
 
-        Resource resource = createWork(df);
-        resource.addProperty(BIB_FRAME.hasInstance, createInstance(df).addProperty(BIB_FRAME.instanceOf, resource));
-
-        Resource instance = ModelUtils.getInstance(model, record);
-        instance.addProperty(BIB_FRAME.hasSeries, resource);
+        Resource resource = createInstance(df)
+                .addProperty(BIB_FRAME.instanceOf, ModelUtils.getWork(model, record));
+        ModelUtils.getInstance(model, record)
+                .addProperty(BIB_FRAME.otherPhysicalFormat, resource);
         return model;
     }
 
     @Override
     public boolean checkField(VariableField field) {
-        return "760".equals(field.getTag());
+        return "776".equals(field.getTag());
     }
 
-    public Resource createWork(DataField field) {
+
+    public Resource createInstance(DataField field) {
         String uri = null;
         List<Subfield> sf0orws = field.getSubfields("0w");
         for (Subfield sf0orw: sf0orws) {
@@ -48,10 +47,10 @@ public class Field760Converter extends FieldConverter {
             }
         }
         if (StringUtils.isBlank(uri)) {
-            uri = ModelUtils.buildUri(record, "Work", getTag(field), fieldIndex);
+            uri = ModelUtils.buildUri(record, "Instance", getTag(field), fieldIndex);
         }
         Resource resource = model.createResource(uri)
-                .addProperty(RDF.type, BIB_FRAME.Work);
+                .addProperty(RDF.type, BIB_FRAME.Instance);
 
         for (Subfield sf: field.getSubfields('a')) {
             resource.addProperty(BIB_FRAME.contribution, model.createResource()
@@ -72,24 +71,15 @@ public class Field760Converter extends FieldConverter {
             resource.addProperty(BIB_FRAME_LC.relationship, model.createResource()
                     .addProperty(RDF.type, BIB_FRAME_LC.Relationship)
                     .addProperty(BIB_FRAME_LC.relation, createLabeledResource(BIB_FRAME_LC.Relation, sf.getData(), lang))
-                    .addProperty(BIB_FRAME.relatedTo, ModelUtils.getWork(model, record)));
+                    .addProperty(BIB_FRAME.relatedTo, ModelUtils.getInstance(model, record)));
 
         }
         for (Subfield sf: field.getSubfields('s')) {
             resource.addProperty(BIB_FRAME.title, createLabeledResource(BIB_FRAME.Title, sf.getData(), lang));
         }
         for (Subfield sf: field.getSubfields('v')) {
-            resource.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, sf.getData(), lang));
+            resource.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Title, sf.getData(), lang));
         }
-        addSubfield0AndW(sf0orws, resource);
-        addSubfield3(field, resource);
-        return resource;
-    }
-
-    public Resource createInstance(DataField field) {
-        String uri = ModelUtils.buildUri(record, "Instance", field.getTag(), fieldIndex);
-        Resource resource = model.createResource(uri)
-                .addProperty(RDF.type, BIB_FRAME.Instance);
         for (Subfield sf: field.getSubfields('b')) {
             resource.addProperty(BIB_FRAME.editionStatement, createLiteral(sf.getData(), lang));
         }
@@ -133,12 +123,9 @@ public class Field760Converter extends FieldConverter {
         for (Subfield sf: field.getSubfields('z')) {
             resource.addProperty(BIB_FRAME.identifiedBy, createIdentifier(BIB_FRAME.Isbn, sf.getData()));
         }
+        addSubfield0AndW(sf0orws, resource);
+        addSubfield3(field, resource);
         return resource;
     }
 
-    protected Resource createIdentifier(Resource type, String value) {
-        return model.createResource()
-                .addProperty(RDF.type, type)
-                .addProperty(RDF.value, value);
-    }
 }
