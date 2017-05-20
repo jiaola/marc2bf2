@@ -1,7 +1,7 @@
 Feature: 556 - INFORMATION ABOUT DOCUMENTATION NOTE
   Background:
     Given a marc field "=556  \\$aBASIC reference. 3rd ed. Boca Raton, Fl. : IBM, c1984. (Personal computer hardware reference library); 6361132."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field556Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field556Converter
 
   Scenario: 556 creates a note property of the Instance
     When I search with patterns:

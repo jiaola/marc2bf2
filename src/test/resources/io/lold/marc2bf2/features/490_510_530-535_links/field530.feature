@@ -4,7 +4,7 @@ Feature: 530 - ADDITIONAL PHYSICAL FORM AVAILABLE NOTE
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=245  10$aOle Lukøie /$cH.C. Andersen ; illustrationer af Otto Dickmeiss."
     And a marc field "=530  \\$3Dispatches from U.S. consuls in Batavia, Java, Netherlands East Indies, 1818-1906$aAvailable in microfilm;$bNational Archives;$dM449;$cStanding order account required.$uhttp://www.bartleby.com/99/index.html"
-    When converted by a field converter io.lold.marc2bf2.converters.field490_510_530to535.Field530Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field530Converter
 
   Scenario: 530 creates a hasInstance/Instance property of the Work with a URI and a title property
     When I search with patterns:

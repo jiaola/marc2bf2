@@ -1,7 +1,7 @@
 Feature: 351 - ORGANIZATION AND ARRANGEMENT OF MATERIALS
   Background:
     Given a marc field "=351  \\$3Records$cSeries;$aHierarchical;$bArranged by form of material."
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field351Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field351Converter
 
   Scenario: 351 creates an arrangement/Arrangement property of the Work
     When I search with patterns:

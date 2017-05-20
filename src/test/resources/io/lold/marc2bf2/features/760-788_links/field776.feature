@@ -2,7 +2,7 @@ Feature: 776 - ADDITIONAL PHYSICAL FORM ENTRY
   
   Background:
     Given a marc field "=776  0\$cOriginal$w(DLC)   24020326 "
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field776Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field776Converter
 
   Scenario: 776 creates an otherPhysicalFormat property of the Work
     When I search with patterns:

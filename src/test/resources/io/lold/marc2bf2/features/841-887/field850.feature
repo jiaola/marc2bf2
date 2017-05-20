@@ -3,7 +3,7 @@ Feature: 850 - HOLDING INSTITUTION
   Background:
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=850  \\$aAAP$aCU$aDLC$aUniversity of Upper Toothache"
-    When converted by a field converter io.lold.marc2bf2.converters.field841to887.Field850Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field850Converter
 
   Scenario: 850 $a create Items of the Instance, with itemOf created
     When I search with patterns:

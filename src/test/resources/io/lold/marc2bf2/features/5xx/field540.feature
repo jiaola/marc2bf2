@@ -1,7 +1,7 @@
 Feature: 540 - TERMS GOVERNING USE AND REPRODUCTION NOTE
   Background:
     Given a marc field "=540  \\$3Diaries$aPhotocopying prohibited;$c50 Stat.88;$dExecutor of estate.$uhttp://lcweb.loc.gov/rr/print/195_copr.html$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field540Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field540Converter
 
   Scenario: 540 creates a usageAndAccessPolicy/UsePolicy property of the Instance
     When I search with patterns:

@@ -3,7 +3,7 @@ Feature: 850 - LOCATION
   Background:
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=852  \\$aCSf$bSci$uhttp://hdl.loc.gov/loc.pnp/pp.print$e10, rue du Général Camou$e75007 Paris$nfr$x1-54 on order in Microfiche$zSigned by author"
-    When converted by a field converter io.lold.marc2bf2.converters.field841to887.Field852Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field852Converter
 
   Scenario: 852 creates an Item of the Instance
     When I search with patterns:

@@ -3,7 +3,7 @@ Feature: 047 - FORM OF MUSICAL COMPOSITION CODE
   Background:
     Given a marc field "=047  \\$aor$act"
     And a marc field "=047  \7$argg$2iamlmf"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field047Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field047Converter
 
   Scenario: 047 creates a genreForm property of the Work
     When I search with patterns:

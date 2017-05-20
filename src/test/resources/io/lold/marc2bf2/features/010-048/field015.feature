@@ -1,7 +1,7 @@
 Feature: 015 - NATIONAL BIBLIOGRAPHY NUMBER
   Background: 
     Given a marc field "=015  \\$a06,A29,1122$qpbk$z05,N51,1204$2dnb"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field015Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field015Converter
 
   Scenario: $a creates an identifiedBy/Nbn property of the Instance
     When I search with patterns:

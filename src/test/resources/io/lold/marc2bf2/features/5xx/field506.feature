@@ -1,7 +1,7 @@
 Feature: 506 - RESTRICTIONS ON ACCESS NOTE
   Background:
     Given a marc field "=506  \\$3Office files of Under Secretary$aRestricted access;$cWritten permission required;$bDonor;$dMembers of donor's family;$eTitle 50, chapter 401, U.S.C.$fPreview only$uhttps://www.gnu.org/licenses/gpl-3.0.txt$5MH"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field506Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field506Converter
 
   Scenario: 506 creates a usageAndAccessPolicy/UsageAndAccessPolicy property of the Instance
     When I search with patterns:

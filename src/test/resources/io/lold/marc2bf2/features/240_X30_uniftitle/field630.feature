@@ -2,7 +2,7 @@ Feature: 630 - SUBJECT ADDED ENTRY - UNIFORM TITLE
   
   Background:
     Given a marc field "=630  00$aUkrainian weekly$edepicted.$vIndexes$vPeriodicals$0(uri)http://example.org/9999#Work"
-    When converted by a field converter io.lold.marc2bf2.converters.field240_X30.Field630Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field630Converter
 
   Scenario: 630 creates a new Work entry
     When I search with patterns:

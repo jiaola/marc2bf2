@@ -1,7 +1,7 @@
 Feature: 507 - SCALE NOTE FOR GRAPHIC MATERIAL
   Background:
     Given a marc field "=507  \\$aScale 1:500,000;$b1 in. equals 8 miles."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field507Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field507Converter
 
   Scenario: 507 creates a scale property of the Instance
     When I search with patterns:

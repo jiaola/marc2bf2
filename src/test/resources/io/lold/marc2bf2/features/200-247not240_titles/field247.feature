@@ -3,7 +3,7 @@ Feature: 247 - FORMER TITLE
     Given a marc field "=247  10$aEverywoman's magazine$fv. 1-24, Jan. 1948-57."
     And a marc field "=247  00$aDistribution of the principal kinds of soil :$borders, suborders, and great groups : National Soil Survey Classification of 1967."
     And a marc field "=247  00$aArchives for meteorology, geophysics, and bioclimatology.$nSerie A,$pMeteorology and geophysics$g(varies slightly)$x1234-5678"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field247Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field247Converter
 
   Scenario: multi 247s should create title properties in Instance
     When I search with patterns:

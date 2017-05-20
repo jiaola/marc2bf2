@@ -2,7 +2,7 @@ Feature: 261 - IMPRINT STATEMENT FOR FILMS (Pre-AACR 1 Revised)
   
   Background:
     Given a marc field "=261  \\$aProduzioni europee associate.$fRome;$aArturo Gonzalez,$fMadrid;$aConstantin Film,$fMunich.$eMade by D.C. Chipperfield.$bReleased in the U.S. by United Artists Corp.,$d1957."
-    When converted by a field converter io.lold.marc2bf2.converters.field250to270.Field261Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field261Converter
 
   Scenario: 261 creates a provisionActivity/Production property of the Instance
     When I search with patterns:

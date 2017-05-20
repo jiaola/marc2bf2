@@ -3,7 +3,7 @@ Feature: 082 - DEWEY DECIMAL CLASSIFICATION NUMBER
   Background:
     Given a marc field "=082  00$a975.5/4252/00222$bWor$222"
     And a marc field "=082  04$a004$222/ger$qDE-101b"
-    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field082Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field082Converter
 
   Scenario: 082 creates a classification/ClassificationDdc property of the Work
     When I search with patterns:

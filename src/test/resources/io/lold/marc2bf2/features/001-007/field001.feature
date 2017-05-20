@@ -1,7 +1,7 @@
 Feature: 001 - CONTROL NUMBER
   Scenario: 001 should set the AdminMetadata identifiedBy property for the work
     Given a marc field "=001  13600108"
-    When converted by a field converter io.lold.marc2bf2.converters.field001to007.Field001Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field001Converter
     When I search with patterns:
       | ?x a bf:Work            |
       | ?x bf:adminMetadata ?y  |

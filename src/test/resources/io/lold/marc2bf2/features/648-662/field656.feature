@@ -2,7 +2,7 @@ Feature: 656 - INDEX TERM--OCCUPATION
 
   Background:
     Given a marc field "=656  \7$aChauffeurs$zFrance.$2someCode"
-    When converted by a field converter io.lold.marc2bf2.converters.field648to662.Field656Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field656Converter
 
   Scenario: 656 creates a subject/Topic property of the Work
             with rdf:type of madsrdf:ComplexSubject

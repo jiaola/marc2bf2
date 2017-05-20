@@ -1,7 +1,7 @@
 Feature: 520 - SUMMARY, ETC.
   Background:
     Given a marc field "=520  4\$3Some other part$aContains swear words, sex scenes and violence,$bbut otherwise it's ok.$cCentral County Library$uhttp://www.mpaa.org$2mpaa"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field520Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field520Converter
 
   Scenario: 520 creates a summary/Summary property of the Work
     When I search with patterns:

@@ -1,7 +1,7 @@
 Feature: 580 - LINKING ENTRY COMPLEXITY NOTE
   Background:
     Given a marc field "=580  \\$aForms part of the Frances Benjamin Johnston Collection."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field580Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field580Converter
 
   Scenario: 561 creates a custodialHistory property of an Item
     When I search with patterns:

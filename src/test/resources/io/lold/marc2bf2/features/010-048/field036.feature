@@ -1,7 +1,7 @@
 Feature: 036 - ORIGINAL STUDY NUMBER FOR COMPUTER DATA FILES
   Background: 
     Given a marc field "=036  \\$aCNRS 84115$bCentre national de la recherche scientifique."
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field036Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field036Converter
 
   Scenario: $a creates an identifiedBy/StudyNumber property of the Instance
     When I search with patterns:

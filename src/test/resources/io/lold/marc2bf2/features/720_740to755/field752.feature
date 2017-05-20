@@ -2,7 +2,7 @@ Feature: 752 - ADDED ENTRY--HIERARCHICAL PLACE NAME
   
   Background:
     Given a marc field "=752  \\$aEngland$dLondon$epublication place.$4pup$2tgn"
-    When converted by a field converter io.lold.marc2bf2.converters.field720_740to755.Field752Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field752Converter
 
   Scenario: 752 creates a place/Place property of the Work
             with a madsrdf:HierarchicalGeopgraphic Class

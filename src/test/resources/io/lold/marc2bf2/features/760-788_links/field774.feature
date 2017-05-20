@@ -2,7 +2,7 @@ Feature: 774 - CONSTITUENT UNIT ENTRY
   
   Background:
     Given a marc field "=774  0\$oNYDA.1993.010.00132.$n[DIAPimage]$hfile on disc$m240 x 760px$tView SE from Mill Brook Houses on rooftop on Cypress Ave. Between 136th St. and 137th St.,$d93/05"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field774Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field774Converter
 
   Scenario: 774 creates a hasPart property of the Work
     When I search with patterns:

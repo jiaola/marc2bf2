@@ -2,7 +2,7 @@ Feature: 382 - MEDIUM OF PERFORMANCE
   Background:
     Given a marc field "=382  \\$3Nach Bach$apiano$n1$vplayed on altered piano$pbaritone horn$n2$dsynthesizer$n1$s2$vpiano is prominent, but not all other instruments are not identified$2lcmpt"
     And a marc field "=382  \\$3Stuff$bflute$n1$aorchestra$e1$r1$t1$2lcmpt"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field382Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field382Converter
 
   Scenario: $a creates a musicMedium property of the Work
     When I search with patterns:

@@ -1,7 +1,7 @@
 Feature: 536 - FUNDING INFORMATION NOTE
   Background:
     Given a marc field "=536  \\$aSponsored by the U.S. Air Force$bN00014-68-A-0245-0007$cEF-77-C-01-2556$d910 3450$e601101F$f1LIR$g5H$hWUAFGLILIR5H01"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field536Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field536Converter
 
   Scenario: 536 creates a note/Note property of the Instance with noteType 'funding information'
     When I search with patterns:

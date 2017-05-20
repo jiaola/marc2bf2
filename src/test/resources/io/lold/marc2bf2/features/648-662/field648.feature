@@ -2,7 +2,7 @@ Feature: 648 - SUBJECT ADDED ENTRY--CHRONOLOGICAL TERM
   
   Background:
     Given a marc field "=648  \7$a1900-1999$2fast"
-    When converted by a field converter io.lold.marc2bf2.converters.field648to662.Field648Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field648Converter
 
   Scenario: 648 creates a subject/Temporal property of the Work
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 773 - HOST ITEM ENTRY
   
   Background:
     Given a marc field "=773  0\$3Pamphlet$tEntomologists' monthly magazine$pENTOMOL MON MAG$kWonders of man series.$dWallingford : Gem Publishing Company$q24:B:9<235$x0013-8908$yFNMMA"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field773Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field773Converter
 
   Scenario: 773 creates a partOf property of the Work
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 264 - PRODUCTION, PUBLICATIRON, DISTRIBUTION, MANUFACTURE, AND COPYRIGH
   
   Background:
     Given a marc field "=264  31$31981-$aWashington :$bU.S. G.P.O.,$c1981-"
-    When converted by a field converter io.lold.marc2bf2.converters.field250to270.Field264Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field264Converter
 
   Scenario: 264 creates a provisionActivity or copyrightDate property of the Instance
             with resource class determined by ind2

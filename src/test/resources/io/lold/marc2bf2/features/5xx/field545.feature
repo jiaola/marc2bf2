@@ -1,7 +1,7 @@
 Feature: 545 - BIOGRAPHICAL OR HISTORICAL DATA
   Background:
     Given a marc field "=545  0\$aAuthor and reformer.$bBorn Harriet Elizabeth Beecher.$uhttps://www.harrietbeecherstowecenter.org/hbs/"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field545Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field545Converter
     
   Scenario: 545 creates a note/Note property of the Instance with noteType from ind1
     When I search with patterns:

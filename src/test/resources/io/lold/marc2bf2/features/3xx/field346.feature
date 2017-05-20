@@ -1,7 +1,7 @@
 Feature: 346 - VIDEO CHARACTERISTICS
   Background:
     Given a marc field "=346  \\$3videotape$aBeta$bPAL$2rda"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field346Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field346Converter
 
   Scenario: $a creates a videoCharacteristic/VideoFormat property of the Instance
     When I search with patterns:

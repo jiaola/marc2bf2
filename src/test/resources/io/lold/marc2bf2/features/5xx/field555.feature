@@ -1,7 +1,7 @@
 Feature: 555 - CUMULATIVE INDEX/FINDING AIDS NOTE
   Background:
     Given a marc field "=555  0\$3Claims settled under Treaty of Washington, May 8, 1871$aPreliminary inventory prepared in 1962;$bAvailable in NARS central search room.$uhttp://hdl.loc.gov/loc.mss/eadmss.ms996001"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field555Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field555Converter
 
   Scenario: 555 creates a note/Note property of the Instance with noteType from ind1
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 765 - ORIGINAL LANGUAGE ENTRY
   
   Background:
     Given a marc field "=765  0\$cOriginal$tAstrofizicheskie issledovaniíà$w(DLC)   78648457 $w(OCoLC)4798581"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field765Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field765Converter
 
   Scenario: 765 creates a translationOf property of the Work
     When I search with patterns:

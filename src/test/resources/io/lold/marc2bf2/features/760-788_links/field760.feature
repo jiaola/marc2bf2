@@ -2,7 +2,7 @@ Feature: 760 - MRAIN SERIES ENTRY
   
   Background:
     Given a marc field "=760  0\$aUnited States. Geological Survey.$tWater supply papers"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field760Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field760Converter
 
   Scenario: 760 creates a hasSeries property of the Instance
     When I search with patterns:

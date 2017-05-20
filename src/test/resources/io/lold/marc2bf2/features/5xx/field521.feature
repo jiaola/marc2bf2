@@ -1,7 +1,7 @@
 Feature: 521 - TARGET AUDIENCE NOTE
   Background:
     Given a marc field "=521  2\$3Puzzles$aK-3.$a4-6.$bFollett Library Book Co."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field521Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field521Converter
 
   Scenario: $a creates an intendedAudience/IntendedAudience property of the Instance
     When I search with patterns:

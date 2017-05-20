@@ -2,7 +2,7 @@ Feature: 653 - INDEX TERM--UNCONTROLLED
 
   Background:
     Given a marc field "=653  \\$aMan$aEye$aDiseases"
-    When converted by a field converter io.lold.marc2bf2.converters.field648to662.Field653Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field653Converter
 
   Scenario: 653 creates a subject/Topic property of the Work
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 055 - CLASSIFICATION NUMBERS ASSIGNED IN CANADA
 
   Background:
     Given a marc field "=055  00$aF5050 .2$bT5"
-    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field055Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field055Converter
 
   Scenario: 055 creates a classification/ClassificationLcc property of the Work
     When I search with patterns:

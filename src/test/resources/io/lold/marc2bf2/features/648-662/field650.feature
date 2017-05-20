@@ -2,7 +2,7 @@ Feature: 650 - SUBJECT ADDED ENTRY--TOPICAL TERM
   
   Background:
     Given a marc field "=650  \0$aCaracas$bBolivar Statue$cFar away$dLong ago$edepicted$gMiscellania$xHistory"
-    When converted by a field converter io.lold.marc2bf2.converters.field648to662.Field650Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field650Converter
 
   Scenario: 650 creates a subject/Topic property of the Work
     When I search with patterns:

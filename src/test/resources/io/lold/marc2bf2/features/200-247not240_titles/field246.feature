@@ -3,7 +3,7 @@ Feature: 246 - VARYING FORM OF TITLE
   Scenario: multi 246s should create title properties in Instance
     Given a marc field "=246  31$aModerne Probleme der Pharmakopsychiatrie"
     And a marc field "=246  31$aProblèmes actuels de pharmacopsychiatrie"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance              |
       | ?x bf:title ?y                |
@@ -12,7 +12,7 @@ Feature: 246 - VARYING FORM OF TITLE
   Scenario: @ind2='1' should create a ParallelTitle
     Given a marc field "=246  31$aModerne Probleme der Pharmakopsychiatrie"
     And a marc field "=246  31$aProblèmes actuels de pharmacopsychiatrie"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance              |
       | ?x bf:title ?y                |
@@ -22,7 +22,7 @@ Feature: 246 - VARYING FORM OF TITLE
 
   Scenario: @ind2 != '1' should become the variantType
     Given a marc field "=246  30$aZeitschrift für analytische Chemie$fJuli 1976-"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance              |
       | ?x bf:title ?y                |
@@ -33,7 +33,7 @@ Feature: 246 - VARYING FORM OF TITLE
   Scenario: $abgnp in record order creates a rdfs:label for Title
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=246  31$aArchives for meteorology, geophysics, and bioclimatology :$ban engrossing read.$nSerie A,$pMeteorology and geophysics$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance               |
       | ?x bf:title ?y                 |
@@ -44,7 +44,7 @@ Feature: 246 - VARYING FORM OF TITLE
   Scenario: $a becomes the mainTitle
     Given a marc field "=246  31$aModerne Probleme der Pharmakopsychiatrie"
     And a marc field "=246  31$aProblèmes actuels de pharmacopsychiatrie"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance              |
       | ?x bf:title ?y                |
@@ -54,7 +54,7 @@ Feature: 246 - VARYING FORM OF TITLE
 
   Scenario: $b becomes the subtitle
     Given a marc field "=246  2\$aAmerican Library Association bulletin$ban engrossing read"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance              |
       | ?x bf:title ?y                |
@@ -64,7 +64,7 @@ Feature: 246 - VARYING FORM OF TITLE
 
   Scenario: $f becomes the date
     Given a marc field "=246  30$aZeitschrift für analytische Chemie$fJuli 1976-"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance              |
       | ?x bf:title ?y                |
@@ -74,7 +74,7 @@ Feature: 246 - VARYING FORM OF TITLE
 
   Scenario: $n becomes a partNumber
     Given a marc field "=246  31$aArchives for meteorology, geophysics, and bioclimatology :$ban engrossing read.$nSerie A,$pMeteorology and geophysics$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance              |
       | ?x bf:title ?y                |
@@ -84,7 +84,7 @@ Feature: 246 - VARYING FORM OF TITLE
 
   Scenario: $p becomes a partName
     Given a marc field "=246  31$aArchives for meteorology, geophysics, and bioclimatology :$ban engrossing read.$nSerie A,$pMeteorology and geophysics$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance                             |
       | ?x bf:title ?y                               |
@@ -94,7 +94,7 @@ Feature: 246 - VARYING FORM OF TITLE
 
   Scenario: $5 becomes the applicableInstitution
     Given a marc field "=246  31$aArchives for meteorology, geophysics, and bioclimatology :$ban engrossing read.$nSerie A,$pMeteorology and geophysics$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field246Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field246Converter
     When I search with patterns:
       | ?x a bf:Instance                             |
       | ?x bf:title ?y                               |

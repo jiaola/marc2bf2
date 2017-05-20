@@ -2,7 +2,7 @@ Feature: 386 - CREATOR/CONTRIBUTOR CHARACTERISTICS
   Background:
     Given a marc field "=386  \\$3Other stuff$mGender group$ngen$aFemales$bf$2ericd"
     And a marc field "=386  \\$aYoungsters$baaa$0(DLC)dg2015060010"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field386Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field386Converter
 
   Scenario: $a creates an bflc:creatorCharacteristic property of the Work
     When I search with patterns:

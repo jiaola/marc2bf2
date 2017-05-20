@@ -1,7 +1,7 @@
 Feature: 508 - CREATION/PRODUCTION CREDITS NOTE
   Background:
     Given a marc field "=508  \\$aMusic, Michael Fishbein ; camera, George Mo."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field508Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field508Converter
 
   Scenario: 508 creates a credits property of the Work
     When I search with patterns:

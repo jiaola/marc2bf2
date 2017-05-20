@@ -2,7 +2,7 @@ Feature: 720 - ADDED ENTRY--UNCONTROLLED NAME
   
   Background:
     Given a marc field "=720  1\$aTheodore K. Hepburn$einventor"
-    When converted by a field converter io.lold.marc2bf2.converters.field720_740to755.Field720Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field720Converter
 
   Scenario: 720 creates a contribution/Contribution/agent/Agent property of the Work
     When I search with patterns:

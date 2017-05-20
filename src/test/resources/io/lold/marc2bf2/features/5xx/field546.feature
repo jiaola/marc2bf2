@@ -1,7 +1,7 @@
 Feature: 546 - LANGUAGE NOTE
   Background:
     Given a marc field "=546  \\$3Marriage certificate$aGerman;$bFraktur."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field546Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field546Converter
 
   Scenario: 546 creates a language/Language/note/Note property of the Work
     When I search with patterns:

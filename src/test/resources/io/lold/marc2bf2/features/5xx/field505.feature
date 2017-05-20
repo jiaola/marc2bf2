@@ -1,7 +1,7 @@
 Feature: 505 - FORMATTED CONTENTS NOTE
   Background:
     Given a marc field "=505  00$aQuatrain II (16:35) --$tWater ways$g(1:57) /$rby Stephen Paulus."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field505Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field505Converter
 
   Scenario: 505 creates a tableOfContents/TableOfContents property of the Instance
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 786 - DATA SOURCE ENTRY
   
   Background:
     Given a marc field "=786  0\$aUnited States. Defense Mapping Agency.$tReno, NV-CA west digital terrain elevation data$vData for reformatting to DEM format"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field786Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field786Converter
 
   Scenario: 786 creates a dataSource property of the WorkK
     When I search with patterns:

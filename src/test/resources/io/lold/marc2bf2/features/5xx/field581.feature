@@ -1,7 +1,7 @@
 Feature: 581 - PUBLICATIONS ABOUT DESCRIBED MATERIALS NOTE
   Background:
     Given a marc field "=581  \\$3Preliminary reports$aReproduction: Antiques, June 1952, p. 76.$z1234567890"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field581Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field581Converter
 
   Scenario: 581 creates a note/Note property of the Instance with noteType 'related material'
     When I search with patterns:

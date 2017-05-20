@@ -2,7 +2,7 @@ Feature: 780 - PRECEEDING ENTRY
   
   Background:
     Given a marc field "=780  05$aAmerican Society of International Law.$sPublications.$tProceedings$g1971$uMPC-387$z0491001304"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field780Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field780Converter
 
   Scenario: 780 creates a property of the Work determined by ind2
     When I search with patterns:

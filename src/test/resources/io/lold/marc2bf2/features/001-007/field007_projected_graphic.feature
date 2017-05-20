@@ -2,7 +2,7 @@ Feature: 007 - PROJECTED GRAPHIC - PHYSICAL DESCRIPTION FIXED FIELD
   Background:
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=007  gs cjbdjd"
-    When converted by a field converter io.lold.marc2bf2.converters.field001to007.Field007Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field007Converter
 
   Scenario: pos 0 = 'g' sets Work rdf:type to 'StillImage'
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 510 - CITATION/REFERENCES NOTE
 
   Background:
     Given a marc field "=510  4\$aIndex Medicus,$x0019-3879,$cp. 10, 50, and iii,$bv1n1, 1984-"
-    When converted by a field converter io.lold.marc2bf2.converters.field490_510_530to535.Field510Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field510Converter
 
   Scenario: 510 creates a bflc:indexOf/Instance property of the Instance
     When I search with patterns:

@@ -1,7 +1,7 @@
 Feature: 585 - EXHIBITIONS NOTE
   Background:
     Given a marc field "=585  \\$3Color lithographs$aExhibited: "Le Brun à Versailles," sponsored by the Cabinet des dessins, Musée du Louvre, 1985-1986.$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field585Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field585Converter
 
   Scenario: 585 creates a note/Note property of the Instance with noteType 'exhibition'
     When I search with patterns:

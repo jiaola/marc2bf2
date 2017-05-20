@@ -1,7 +1,7 @@
 Feature: 034 - CODED CARTOGRAPHIC MATHEMATICAL DATA 
   Background: 
     Given a marc field "=033  21$3Horse$a197809102000-0400$a197809142000-0400$b6714$cR7$b6714$cV4$pMinneapolis City Hall-Hennepin County Courthouse (Minneapolis, Minn.)$2lcsh"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field033Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field033Converter
 
   Scenario: ind1 determines the type of dates represented by $a in the capture/Capture/date property of the Work
     When I search with patterns:

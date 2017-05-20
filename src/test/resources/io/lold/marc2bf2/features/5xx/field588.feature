@@ -1,7 +1,7 @@
 Feature: 588 - SOURCE OF DESCRIPTION NOTE
   Background:
     Given a marc field "=588  \\$aPublication to be resumed by F&W Publications, Inc.in Oct. 2009.$5EZB"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field588Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field588Converter
 
   Scenario: 588 creates a note/Note property of the Instance with noteType 'award'
     When I search with patterns:

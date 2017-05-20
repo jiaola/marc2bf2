@@ -2,7 +2,7 @@ Feature: 088 - REPORT NUMBER
 
   Background:
     Given a marc field "=088  \\$aNASA-RP-1124-REV-3$zNASA-RP-1124-REV-2"
-    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field088Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field088Converter
   
   Scenario: 088 creates an identifiedBy/ReportNumber property of the Instance
     When I search with patterns:

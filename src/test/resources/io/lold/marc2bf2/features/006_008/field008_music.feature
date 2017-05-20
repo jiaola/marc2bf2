@@ -2,7 +2,7 @@ Feature: 008 - MUSIC - FIXED-LENGTH DATA ELEMENTS
   Background:
     Given a marc leader "=LDR  01478cjm a22002653a 4500"
     And a marc field "=008  070511s2001    tnuhya   ab    bd   zxx  "
-    When converted by a field converter io.lold.marc2bf2.converters.field006_008.Field008Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field008Converter
 
   Scenario: pos 18-19 creates a genreForm property of the Work
     When I search with patterns:

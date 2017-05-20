@@ -1,9 +1,9 @@
 package io.lold.marc2bf2;
 
-import io.lold.marc2bf2.converters.field001to007.Field001Converter;
-import io.lold.marc2bf2.converters.field001to007.Field003Converter;
-import io.lold.marc2bf2.converters.field001to007.Field005Converter;
-import io.lold.marc2bf2.converters.field001to007.Field007Converter;
+import io.lold.marc2bf2.converters.impls.Field001Converter;
+import io.lold.marc2bf2.converters.impls.Field003Converter;
+import io.lold.marc2bf2.converters.impls.Field005Converter;
+import io.lold.marc2bf2.converters.impls.Field007Converter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;

@@ -1,7 +1,7 @@
 Feature: 538 - SYSTEM DETAILS NOTE
   Background:
     Given a marc field "=538  \\$3v.1-49(1927-1975)$aMaster and use copy. Digital Master created according to Benchmark for Faithful Digital Reproductions of Monographs and Serials, Version 1. Digital Library Federation, December 2002.$uhttp://www.diglib.org/standards/bmarkfin.htm$5NIC"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field538Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field538Converter
 
   Scenario: 538 creates a systemRequirement/SystemRequirement property of the Instance
     When I search with patterns:

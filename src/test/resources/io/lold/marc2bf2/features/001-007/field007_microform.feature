@@ -2,7 +2,7 @@ Feature: 007 - MICROFORM - PHYSICAL DESCRIPTION FIXED FIELD
   Background:
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=007  he bmb024baca"
-    When converted by a field converter io.lold.marc2bf2.converters.field001to007.Field007Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field007Converter
 
   Scenario: pos 0 = 'h' creates a media property of the Instance
             and sets the rdfs:label property of the Media

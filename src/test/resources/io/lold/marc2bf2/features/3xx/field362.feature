@@ -2,7 +2,7 @@ Feature: 362 - DATES OF PUBLICATION AND/OR SEQUENTIAL DESIGNATION
   Background:
     Given a marc field "=362  0\$aVol. 1, no. 1 (Apr. 1983)-v. 1, no. 3 (June 1983)"
     And a marc field "=362  1\$a3 issues in vol. 1, ceased with 3 (1983)"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field362Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field362Converter
 
   Scenario: ind1=0 creates a firstIssue/lastIssue property of the Instance
     When I search with patterns:

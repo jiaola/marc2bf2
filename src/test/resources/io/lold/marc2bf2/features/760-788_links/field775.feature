@@ -2,7 +2,7 @@ Feature: 775 - OTHER EDITION ENTRY
   
   Background:
     Given a marc field "=775  0\$tCuba economic news$bHavana ed.$fcu$x0590-2932$eeng$w(OCoLC)2259984"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field775Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field775Converter
 
   Scenario: 775 creates an otherEdition property of the Work
     When I search with patterns:

@@ -7,7 +7,7 @@ Feature: 024 - OTHER STANDARD IDENTIFIER
     And a marc field "=024  4\$a8756-2324(198603/04)65:2L.4:QTP:1-P"
     And a marc field "=024  7\$a0A3200912B4A1057$2istc"
     And a marc field "=024  8\$a12345678"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field024Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field024Converter
 
   Scenario: ind 1 determines the class of Identifier for the identifiedBy property
     When I search with patterns:

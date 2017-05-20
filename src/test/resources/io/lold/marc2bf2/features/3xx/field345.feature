@@ -1,7 +1,7 @@
 Feature: 345 - PROJECTION CHARACTERISTICS OF MOVING IMAGE
   Background:
     Given a marc field "=345  \\$3filmstrip$aCinerama$b24 fps$2rda"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field345Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field345Converter
 
   Scenario: $a creates a projectionCharacteristic/PresentationFormat property of the Instance
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 753 - SYSTEM DETAILS ACCESS TO COMPUTER FILES
   
   Background:
     Given a marc field "=753  \\$aIBM PC$bPascal$cDOS 1.1"
-    When converted by a field converter io.lold.marc2bf2.converters.field720_740to755.Field753Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field753Converter
 
   Scenario: $a creates a systemRequirement/bflc:MachineModel property of the Instance
     When I search with patterns:

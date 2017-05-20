@@ -2,7 +2,7 @@ Feature: 655 - INDEX TERM--GENRE/FORM
 
   Background:
     Given a marc field "=655  \2$aFestschrift."
-    When converted by a field converter io.lold.marc2bf2.converters.field648to662.Field655Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field655Converter
 
   Scenario: 655 creates a genreForm/GenreForm property of the Work
             with a class from MADSRDF

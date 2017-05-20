@@ -1,7 +1,7 @@
 Feature: 035 - SYSTEM CONTROL NUMBER
   Background: 
     Given a marc field "=035  \\$a(OCoLC)814782$z(OCoLC)7374506"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field035Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field035Converter
 
   Scenario: $a creates an identifiedBy/Local property of the Instance
             and value in parens creates a source property of the Local

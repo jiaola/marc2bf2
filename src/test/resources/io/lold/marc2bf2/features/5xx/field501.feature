@@ -1,7 +1,7 @@
 Feature: 501 - WITH NOTE
   Background:
     Given a marc field "=501  \\$aWith: The reformed school / John Dury. London : Printed for R. Wasnothe, [1850]$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field501Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field501Converter
   Scenario: 501 creates a note/Note property of the Instance with noteType 'with'
     When I search with patterns:
       | ?x a bf:Instance       |

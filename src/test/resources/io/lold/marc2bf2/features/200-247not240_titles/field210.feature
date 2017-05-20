@@ -4,7 +4,7 @@ Feature: 210 - ABBREVIATED TITLE
     Given a marc field "=210  10$aActa Cytol$2DNLM"
     And a marc field "=210  10$aActa Cytol."
     And a marc field "=210  0\$aIdler$b(Lond.)"
-    When converted by a field converter io.lold.marc2bf2.converters.field200to247not240.Field210Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field210Converter
   
   Scenario: multiple 210s should create title properties in Instance
     When I search with patterns:

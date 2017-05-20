@@ -1,7 +1,7 @@
 Feature: 550 - ISSUING BODY NOTE
   Background:
     Given a marc field "=550  \\$aVols. for 1972- issued with: Bureau de recherches géologiques et minières."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field550Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field550Converter
 
   Scenario: 550 creates a note/Note property of the Instance with noteType 'issuing body'
     When I search with patterns:

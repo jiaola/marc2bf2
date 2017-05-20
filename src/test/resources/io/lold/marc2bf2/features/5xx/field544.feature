@@ -1,7 +1,7 @@
 Feature: 544 - LOCATION OF OTHER ARCHIVAL MATERIALS NOTE
   Background:
     Given a marc field "=544  \\$3Flamingo statues$dBurt Barnes papers;$eAlso located at;$aState Historical Society of Wisconsin."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field544Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field544Converter
 
   Scenario: 544 creates a note/Note property of the Instance with noteType 'related material'
     When I search with patterns:

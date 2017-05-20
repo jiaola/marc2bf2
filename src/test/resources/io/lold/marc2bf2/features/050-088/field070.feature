@@ -2,7 +2,7 @@ Feature: 070 - NATIONAL AGRICULTURAL LIBRARY CALL NUMBER
 
   Background:
     Given a marc field "=070  0\$aHD3492.H8$bL3"
-    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field070Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field070Converter
 
   Scenario: 070 creates a classification/Classification property of the Work
             with a source property

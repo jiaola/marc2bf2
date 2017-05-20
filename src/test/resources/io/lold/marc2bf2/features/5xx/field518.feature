@@ -2,7 +2,7 @@ Feature: 518 - DATE/TIME AND PLACE OF AN EVENT NOTE
   Background:
     Given a marc field "=518  \\$aFound on March 5, 1975, in Richmond, Tex."
     And a marc field "=518  \\$3Part of the work$oFilmed on location$pRome and Venice$d1976 January through June."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field518Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field518Converter
 
   Scenario: 518 creates a capture/Capture property of the Work
     When I search with patterns:

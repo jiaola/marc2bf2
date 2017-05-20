@@ -1,7 +1,7 @@
 Feature: 516 - TYPE OF COMPUTER FILE OR DATA NOTE
   Background:
     Given a marc field "=516  \\$aComputer programs."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field516Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field516Converter
 
   Scenario: 516 creates a note/Note property of the Instance with noteType 'type of computer data'
     When I search with patterns:

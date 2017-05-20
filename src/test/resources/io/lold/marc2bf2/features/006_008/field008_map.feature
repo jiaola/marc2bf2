@@ -2,7 +2,7 @@ Feature: 008 - MAPS - FIXED-LENGTH DATA ELEMENTS
   Background:
     Given a marc leader "=LDR  01354cem a2200325   4500"
     And a marc field "=008  830317s1977    pl ab  bk e  f    epeng  "
-    When converted by a field converter io.lold.marc2bf2.converters.field006_008.Field008Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field008Converter
 
   Scenario: pos 18-21 create cartographicAttributes properties of the Instance
     When I search with patterns:

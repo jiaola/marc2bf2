@@ -2,7 +2,7 @@ Feature: 037 - SOURCE OF ACQUISITION
   Background: 
     Given a marc field "=037  3\$32014$aFSWEC-77/0420$bNational Technical Information Service, Springfield, VA 22161$fMagnetic tape$gASCII recording mode; available with no internal labels or with ANSI standard labels; logical record length is 1024 bytes; block size is a multiple of 1024 up to 31744 bytes; 1600 or 6250 characters per inch.$nAvailable only without color$cUSD175.00$5Uk"
     And a marc field "=037  \\$aFOO_FSWEC-77/0420$bNational Technical Information Service, Springfield, VA 22161$fStone tablet$5Uk"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field037Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field037Converter
 
   Scenario: 037 creates an acquisitionSource property of the Instance
     When I search with patterns:

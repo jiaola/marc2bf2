@@ -2,7 +2,7 @@ Feature: 255 - CARTOGRAPHIC MATHEMATICAL DATA
   
   Background:
     Given a marc field "=255  \\$aScale [ca. 1:500,000] ;$bConic proj.$c(E 72°--E 148°/N 13°--N 18°).$d(RA 0 hr. to 24 hr./Decl. +90° to -90° ;$eeq. 1980).$f-113.628304 -113.498001 47.009300 46.087225$g-113.628304 -113.498001 47.009300 46.087225"
-    When converted by a field converter io.lold.marc2bf2.converters.field250to270.Field255Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field255Converter
 
   Scenario: 255 creates a cartographicAttributes/Cartographic property of the Work
     When I search with patterns:

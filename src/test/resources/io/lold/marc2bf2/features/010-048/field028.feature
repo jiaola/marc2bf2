@@ -1,7 +1,7 @@
 Feature: 028 - PUBLISHER NUMBER
   Background: 
     Given a marc field "=028  02$a440 073 033-9$bDeutsche Grammophon$q(disc 1)"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field028Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field028Converter
 
   Scenario: ind1 determines the class of Identifier for the identifiedBy property of the Instance
     When I search with patterns:

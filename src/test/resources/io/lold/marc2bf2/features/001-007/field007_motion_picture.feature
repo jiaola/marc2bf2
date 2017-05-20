@@ -2,7 +2,7 @@ Feature: 007 - MOTION PICTURE - PHYSICAL DESCRIPTION FIXED FIELD
   Background:
     Given a marc leader "=LDR  00000nam a2200000 a 4500"
     And a marc field "=007  mr caaadmaartauac198606"
-    When converted by a field converter io.lold.marc2bf2.converters.field001to007.Field007Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field007Converter
 
   Scenario: pos 0 = 'm' sets Instance rdf:type to 'MovingImage'
             and creates a genreForm property of the Work

@@ -1,7 +1,7 @@
 Feature: 563 - BINDING INFORMATION
   Background:
     Given a marc field "=563  \\$aLate 16th century blind-tooled centrepiece binding, dark brown calf."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field563Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field563Converter
 
   Scenario: 563 creates a note/Note property of an Item with noteType 'binding'
     When I search with patterns:

@@ -1,7 +1,7 @@
 Feature: 515 - NUMBERING PECULIARITIES NOTE
   Background:
     Given a marc field "=515  \\$aIssued in parts."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field515Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field515Converter
 
   Scenario: 515 creates a note/Note property of the Instance with noteType 'issuance information'
     When I search with patterns:

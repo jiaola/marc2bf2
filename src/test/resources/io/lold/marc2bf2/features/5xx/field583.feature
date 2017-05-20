@@ -1,7 +1,7 @@
 Feature: 583 - ACTION NOTE
   Background:
     Given a marc field "=583  \\$adowngraded$c19910110$hJoe Smith$kThomas Swing$lmutilated$uhttp://karamelik.eastlib.ufl.edu/cgi-bin/conserve/rara.pl$zInstitute for Museum and Library Services grant$2pda"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field583Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field583Converter
 
   Scenario: 583 creates a note/Note property of an Item with a noteType 'action'
     When I search with patterns:

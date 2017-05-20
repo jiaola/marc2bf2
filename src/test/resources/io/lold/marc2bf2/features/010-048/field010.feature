@@ -1,7 +1,7 @@
 Feature: 010 - LIBRARY OF CONGRESS CONTROL NUMBER
   Background: 
     Given a marc field "=010  \\$a  2004436018$z  2004436017"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field010Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field010Converter
 
   Scenario: $a creates an identifiedBy/Lccn property of the Instance
     When I search with patterns:

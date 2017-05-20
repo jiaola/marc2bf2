@@ -1,7 +1,7 @@
 Feature: 513 - TYPE OF REPORT AND PERIOD COVERED NOTE
   Background:
     Given a marc field "=513  \\$aQuarterly technical progress report;$bJan.-Apr. 1, 1977."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field513Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field513Converter
 
   Scenario: 513 creates a note/Note property of the Instance with noteType 'report type'
     When I search with patterns:

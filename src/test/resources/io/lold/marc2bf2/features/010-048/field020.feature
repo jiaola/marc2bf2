@@ -2,7 +2,7 @@ Feature: 020 - INTERNATIONAL STANDARD BOOK NUMBER
   Background: 
     Given a marc field "=020  \\$a0877790086 :$c10.00"
     And a marc field "=020  \\$a0877790019$qblack leather$z0877780116 :$c14.00"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field020Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field020Converter
 
   Scenario: 020 creates identifiedBy/Isbn properties of the Instance
     When I search with patterns:

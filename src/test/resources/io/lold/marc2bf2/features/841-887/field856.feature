@@ -5,7 +5,7 @@ Feature: 856 - ELECTRONIC LOCATION AND ACCESS
     And a marc field "=856  41$uhttp://www.jstor.org/journals/0277903x.html"
     And a marc field "=856  40$uhttp://www.ref.oclc.org:2000$zAddress for accessing the journal using authorization number and password through OCLC FirstSearch Electronic Collections Online. Subscription to online journal required for access to abstracts and full text"
     And a marc field "=856  42$3Finding aid$uhttp://www.loc.gov/ammem/ead/jackson.sgm"
-    When converted by a field converter io.lold.marc2bf2.converters.field841to887.Field856Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field856Converter
 
   Scenario: If Instance is Electronic, 856 creates an Item of the Instance
     When I search with patterns:

@@ -2,7 +2,7 @@ Feature: 385 - AUDIENCE CHARACTERISTICS
   Background:
     Given a marc field "=385  \\$3Nonsense$mAge group$nage$aChildren$bkid$2ws"
     And a marc field "=385  \\$aYoungsters$baaa$0(DLC)dg2015060010"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field385Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field385Converter
 
   Scenario: $a creates an intendedAudience property of the Work
     When I search with patterns:

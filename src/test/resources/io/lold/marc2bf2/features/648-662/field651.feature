@@ -2,7 +2,7 @@ Feature: 651 - SUBJECT ADDED ENTRY--GEOGRAPHIC NAME
   
   Background:
     Given a marc field "=651  \0$aKenwood (Chicago, Ill.)$0http://id.loc.gov/authorities/names/n97057532"
-    When converted by a field converter io.lold.marc2bf2.converters.field648to662.Field651Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field651Converter
 
   Scenario: 651 creates a subject/Place property of the Work
             with a Class from MADSRDF

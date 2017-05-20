@@ -2,7 +2,7 @@ Feature: 787 - OTHER RELATIONSHIP ENTRY
   
   Background:
     Given a marc field "=787  18$iRelated source work$o(istc)0A3200912B4A1057"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field787Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field787Converter
 
   Scenario: 787 creates a relatedTo property of the WorkK
     When I search with patterns:

@@ -1,7 +1,7 @@
 Feature: 336 - CONTENT TYPE
   Background:
     Given a marc field "=336  \\$aperformed music$bprm$0(uri)http://id.loc.gov/vocabulary/contentTypes/prm$2rdacontent$3record"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field336Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field336Converter
 
   Scenario: 336 creates a content property of the Work
     When I search with patterns:

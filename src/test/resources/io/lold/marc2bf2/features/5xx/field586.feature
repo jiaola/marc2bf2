@@ -1,7 +1,7 @@
 Feature: 586 - AWARDS NOTE
   Background:
     Given a marc field "=586  \\$3Accompanying material$aNational Book Award, 1981"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field586Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field586Converter
 
   Scenario: 586 creates a note/Note property of the Instance with noteType 'award'
     When I search with patterns:

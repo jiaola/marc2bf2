@@ -2,7 +2,7 @@ Feature: 048 - NUMBER OF MUSICAL INSTRUMENTS OR VOICES CODE
 
   Background:
     Given a marc field "=048  \\$bva02$bvc01$bvd01$bvf01$aca04$aoc"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field048Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field048Converter
   
   Scenario: 048 $a creates an instrument, ensemble, or voice property of the Work
     When I search with patterns:

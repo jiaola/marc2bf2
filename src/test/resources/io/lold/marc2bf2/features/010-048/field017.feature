@@ -2,7 +2,7 @@ Feature: 017 - COPYRIGHT OR LEGAL DEPOSIT NUMBER
   Background: 
     Given a marc field "=017  \8$iSuppl. reg.:$aJP732$bU.S. Copyright Office$d19510504"
     And a marc field "=017  \\$aM44120-2006 $bU.S. Copyright Office$zM444120-2006"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field017Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field017Converter
 
   Scenario: $a creates an identifiedBy/CopyrightNumber property of the Instance
     When I search with patterns:

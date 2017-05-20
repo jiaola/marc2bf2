@@ -3,7 +3,7 @@ Feature: 340 - PHYSICAL MEDIUM
     Given a marc field "=340  \\$3self-portrait$arice paper$b7" x 9"$ccolored inks$enone$hbetween entry for April 7 and April 19, 1843."
     And a marc field "=340  \\$3case files$aaperture cards$b9 x 19 cm.$dmicrofilm$f48x$iIbord Model 74 tape reader."
     And a marc field "=340  \\$joriginal$kdouble-sided$mfolio$ngiant print (36 point)$opositive$2rda"
-    When converted by a field converter io.lold.marc2bf2.converters.field3XX.Field340Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field340Converter
 
   Scenario: $a creates a baseMaterial property of the Instance
     When I search with patterns:

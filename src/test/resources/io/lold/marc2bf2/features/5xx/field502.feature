@@ -2,7 +2,7 @@ Feature: 502 - DISSERTATION NOTE
   Background:
     Given a marc field "=502  \\$aKarl Schmidt's thesis (doctoral)--Ludwig-Maximilians-Universität, Munich, 1965."
     And a marc field "=502  \\$gKarl Schmidt's thesis$bDoctoral$cLudwig-Maximilians-Universität, Munich$d1965$oU 58.4033."
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field502Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field502Converter
 
   Scenario: 502 creates a dissertation/Dissertation property of the Work
     When I search with patterns:

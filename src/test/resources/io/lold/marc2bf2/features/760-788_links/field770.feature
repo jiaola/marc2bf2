@@ -2,7 +2,7 @@ Feature: 770 - SUPPLEMENT / SPECIAL ISSUE ENTRY
   
   Background:
     Given a marc field "=770  0\$tJournal of cellular biochemistry. Supplement$rAPA 3011$x0733-1959"
-    When converted by a field converter io.lold.marc2bf2.converters.field760to788.Field770Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field770Converter
 
   Scenario: 770 creates a supplement property of the Work
     When I search with patterns:

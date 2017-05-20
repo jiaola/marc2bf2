@@ -1,7 +1,7 @@
 Feature: 541 - IMMEDIATE SOURCE OF ACQUISITION NOTE
   Background:
     Given a marc field "=541  \\$3Materials scheduled for permanent retention$n25$oreels of microfilm$aU.S. Department of Transportation;$cTransfer under schedule;$d1980/01/10.$5DLC"
-    When converted by a field converter io.lold.marc2bf2.converters.field5XX.Field541Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field541Converter
 
   Scenario: 541 creates a new Item with an immediateAcquisition/ImmediateAcquisition property
     When I search with patterns:

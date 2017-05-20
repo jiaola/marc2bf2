@@ -3,7 +3,7 @@ Feature: 086 - GOVERNMENT DOCUMENT CLASSIFICATION NUMBER
   Background:
     Given a marc field "=086  0\$aA 1.1:$zA 1.1/3:984"
     And a marc field "=086  \\$aHEU/G74.3C49$2ordocs"
-    When converted by a field converter io.lold.marc2bf2.converters.field050to088.Field086Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field086Converter
 
   Scenario: 086 creates a classification/Classification property of the Instance
     When I search with patterns:

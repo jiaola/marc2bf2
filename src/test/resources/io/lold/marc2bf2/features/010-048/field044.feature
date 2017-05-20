@@ -2,7 +2,7 @@ Feature: 044 - COUNTRY OF PUBLISHING/PRODUCING ENTITY CODE
 
   Background:
     Given a marc field "=044  \\$aat$bxna$2ausmarc$cau"
-    When converted by a field converter io.lold.marc2bf2.converters.field010to048.Field044Converter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field044Converter
 
   Scenario: $a creates a place property of the Instance
     When I search with patterns:
