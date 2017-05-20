@@ -58,6 +58,9 @@ public class BIB_FRAME_LC {
     public static final Property title40MarcKey;
     public static final Property titleSortKey;
 
+    //TODO: This needs to be added to the official ontology
+    public static final Property locator;
+
     static {
         AppliesTo = m.createResource(NAMESPACE + "AppliesTo");
         EncodingLevel = m.createResource(NAMESPACE + "EncodingLevel");
@@ -101,6 +104,8 @@ public class BIB_FRAME_LC {
         title30MarcKey = m.createProperty(NAMESPACE, "title30MarcKey");
         title40MarcKey = m.createProperty(NAMESPACE, "title40MarcKey");
         titleSortKey = m.createProperty(NAMESPACE, "titleSortKey");
+
+        locator = m.createProperty(NAMESPACE, "locator");
     }
 
 }

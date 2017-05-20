@@ -25,7 +25,6 @@ public class Field245Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
-
         String label = record.getVariableFields(new String[]{"130", "240"}).isEmpty() ?
                 concatSubfields(df, "abfgknps", " ") : null;
         if (StringUtils.isNotBlank(label) && "245".equals(field.getTag())) {
