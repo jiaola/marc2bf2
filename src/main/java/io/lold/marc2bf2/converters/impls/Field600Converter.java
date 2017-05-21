@@ -1,4 +1,4 @@
-package io.lold.marc2bf2.converters.field1XX_6XX_7XX_8XX;
+package io.lold.marc2bf2.converters.impls;
 
 import io.lold.marc2bf2.converters.NameTitleFieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
@@ -9,8 +9,8 @@ import org.marc4j.marc.DataField;
 import org.marc4j.marc.Record;
 import org.marc4j.marc.VariableField;
 
-public class Field6XXNameConverter extends NameTitleFieldConverter {
-    public Field6XXNameConverter(Model model, Record record) {
+public class Field600Converter extends NameTitleFieldConverter {
+    public Field600Converter(Model model, Record record) {
         super(model, record);
     }
 
@@ -25,8 +25,6 @@ public class Field6XXNameConverter extends NameTitleFieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        String tag = field.getTag();
-        return "600".equals(tag) || "610".equals(tag) || "611".equals(tag);
+        return "600".equals(getTag(field));
     }
-
 }

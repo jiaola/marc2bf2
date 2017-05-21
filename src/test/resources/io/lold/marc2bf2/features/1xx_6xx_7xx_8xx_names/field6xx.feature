@@ -2,7 +2,7 @@ Feature: 6XX - NAMES - Subject Access Fields
   Background:
     Given a marc field "=600  10$aNixon, Richard M.$q(Richard Milhouse),$d1913-$xPsychology."
     And a marc field "=600  10$aBellamy, Edward,$b1850-1898.$tLooking backward, 2000-1887."
-    When converted by a field converter io.lold.marc2bf2.converters.field1XX_6XX_7XX_8XX.Field6XXNameConverter
+    When converted by a field converter io.lold.marc2bf2.converters.impls.Field600Converter
 
   Scenario: 600,610,611 without $t creates a subject/Agent property of the Work
             also has a Class from MADSRDF

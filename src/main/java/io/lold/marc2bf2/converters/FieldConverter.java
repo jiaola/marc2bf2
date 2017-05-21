@@ -13,10 +13,7 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
-import org.marc4j.marc.DataField;
-import org.marc4j.marc.Record;
-import org.marc4j.marc.Subfield;
-import org.marc4j.marc.VariableField;
+import org.marc4j.marc.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -259,10 +256,14 @@ public abstract class FieldConverter {
      * @param field
      * @return
      */
-    protected String getTag(DataField field) {
-        return "880".equals(field.getTag()) ?
-                StringUtils.substring(field.getSubfieldsAsString("6"), 0, 3) :
-                field.getTag();
+    protected String getTag(VariableField field) {
+        if (field instanceof ControlField) {
+            return field.getTag();
+        } else {
+            return "880".equals(field.getTag()) ?
+                    StringUtils.substring(((DataField)field).getSubfieldsAsString("6"), 0, 3) :
+                    field.getTag();
+        }
     }
 
     protected String generateFieldUri(DataField field, Resource resource) {
