@@ -165,8 +165,8 @@ public abstract class FieldConverter {
 
     protected Literal createLiteral(String value, String lang) {
         return StringUtils.isBlank(lang) ?
-                model.createLiteral(value, lang) :
-                model.createLiteral(value);
+                model.createLiteral(value):
+                model.createLiteral(value, lang);
     }
 
     protected String concatSubfields(DataField field, String subfields, String separator) {

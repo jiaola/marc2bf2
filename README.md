@@ -1,6 +1,7 @@
 marc2bf2 - MARC to BibFrame Converter
  
 marc2bf2 is a Java based tool for converting MARC records to [BibFrame2](https://www.loc.gov/bibframe/docs/bibframe2-model.html). 
+It's a java port of the Library of Congress XSLT based conversion tool [marc2bibframe2](https://github.com/lcnetdev/marc2bibframe2). 
 
 [![Build Status](https://travis-ci.com/jiaola/marc2bf2.svg?token=PecqmC3tkGmvJLxUwkq6&branch=master)](https://travis-ci.com/jiaola/marc2bf2)
 
@@ -20,11 +21,10 @@ Progress:
 (*)     458 ConvSpec-648-662.xsl
 (*)     135 ConvSpec-720+740to755.xsl
 (*)     413 ConvSpec-760-788-Links.xsl
-     222 ConvSpec-841-887.xsl
-     509 ConvSpec-880.xsl
+(*)     222 ConvSpec-841-887.xsl
+(*)     509 ConvSpec-880.xsl
 (*)     172 ConvSpec-ControlSubfields.xsl
 (*)     164 ConvSpec-LDR.xsl
-wc: conf: read: Is a directory
      186 marc2bibframe2.xsl
      205 naco-normalize.xsl
 (*)     305 utils.xsl
@@ -45,8 +45,8 @@ XSPEC files:
 (*)      68 test/ConvSpec-648-662.xspec
 (*)      39 test/ConvSpec-720+740to755.xspec
 (*)      63 test/ConvSpec-760-788-Links.xspec
-      42 test/ConvSpec-841-887.xspec
-     122 test/ConvSpec-880.xspec
+(*)      42 test/ConvSpec-841-887.xspec
+(*)     122 test/ConvSpec-880.xspec
 (*)      24 test/ConvSpec-LDR.xspec
      798 test/marc2bibframe2.xspec
     2780 total

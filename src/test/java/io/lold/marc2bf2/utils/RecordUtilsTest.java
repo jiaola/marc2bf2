@@ -17,7 +17,7 @@ public class RecordUtilsTest {
 
     @Parameterized.Parameters
     public static Record[] records() {
-        return TestUtils.readTestRecords("ConvSpec-880/marc-lang.xml");
+        return TestUtils.readTestRecords("marc-lang.xml");
     }
 
     @Test
