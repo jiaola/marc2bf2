@@ -26,7 +26,7 @@ public class Field774Converter extends Field760Converter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "774".equals(field.getTag());
+        return "774".equals(getTag(field));
     }
 
 }

@@ -25,7 +25,6 @@ public class Field055Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
-
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.ClassificationLcc);
         for (Subfield a: df.getSubfields('a')) {
@@ -45,6 +44,6 @@ public class Field055Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "055".equals(field.getTag());
+        return "055".equals(getTag(field));
     }
 }

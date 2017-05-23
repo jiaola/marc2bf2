@@ -67,7 +67,7 @@ public class Field040Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "040".equals(field.getTag());
+        return "040".equals(getTag(field));
     }
 
     private Resource createSource(String value) {

@@ -42,7 +42,7 @@ public class Field007Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "007".equals(field.getTag());
+        return "007".equals(getTag(field));
     }
 
     private Model convertInMode(String data, String mode) throws Exception {

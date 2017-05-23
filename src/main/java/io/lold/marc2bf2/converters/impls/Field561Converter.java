@@ -17,7 +17,7 @@ public class Field561Converter extends Field541Converter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "561".equals(field.getTag());
+        return "561".equals(getTag(field));
     }
 
     protected Resource buildItem(DataField field) {

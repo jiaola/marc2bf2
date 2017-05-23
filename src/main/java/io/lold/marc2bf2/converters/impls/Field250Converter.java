@@ -30,6 +30,6 @@ public class Field250Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "250".equals(field.getTag());
+        return "250".equals(getTag(field));
     }
 }

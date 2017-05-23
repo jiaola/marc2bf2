@@ -21,15 +21,10 @@ public class Field257Converter extends FieldConverter {
 
     @Override
     protected Model process(VariableField field) {
-        if (!field.getTag().equals("257")) {
-            return model;
-        }
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-
         for (Subfield sf: df.getSubfields('a')) {
-            String value = FormatUtils.chopPunctuation(sf.getData());
             Resource place = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Place)
                     .addProperty(RDFS.label, createLiteral(sf.getData(), lang));
@@ -44,6 +39,6 @@ public class Field257Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "257".equals(field.getTag());
+        return "257".equals(getTag(field));
     }
 }

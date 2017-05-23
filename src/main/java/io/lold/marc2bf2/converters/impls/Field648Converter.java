@@ -85,7 +85,7 @@ public class Field648Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "648".equals(field.getTag());
+        return "648".equals(getTag(field));
     }
 
     protected Property getComponentProperty() {

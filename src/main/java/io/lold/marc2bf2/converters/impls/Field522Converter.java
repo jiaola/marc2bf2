@@ -33,6 +33,6 @@ public class Field522Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "522".equals(field.getTag());
+        return "522".equals(getTag(field));
     }
 }

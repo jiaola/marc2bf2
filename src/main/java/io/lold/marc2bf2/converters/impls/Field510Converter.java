@@ -5,6 +5,7 @@ import io.lold.marc2bf2.utils.FormatUtils;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
@@ -45,12 +46,12 @@ public class Field510Converter extends FieldConverter {
                     .addProperty(RDF.value, value));
         }
 
-        //TODO: Confirm the property is bf:indexOf
-        instance.addProperty(BIB_FRAME.indexOf, resource);
+        //TODO: Confirm the property is bflc:indexedIn
+        instance.addProperty(BIB_FRAME_LC.indexedIn, resource);
         return model;
     }
     @Override
     public boolean checkField(VariableField field) {
-        return "510".equals(field.getTag());
+        return "510".equals(getTag(field));
     }
 }

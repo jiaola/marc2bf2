@@ -28,7 +28,8 @@ public class Field247Converter extends FieldConverter {
 
         Resource resource = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Title)
-                .addProperty(RDF.type, BIB_FRAME.VariantTitle);
+                .addProperty(RDF.type, BIB_FRAME.VariantTitle)
+                .addProperty(BIB_FRAME.variantType, "former");
 
         String label = concatSubfields(df, "abgnp", " ");
 
@@ -71,6 +72,6 @@ public class Field247Converter extends FieldConverter {
     }
     @Override
     public boolean checkField(VariableField field) {
-        return "247".equals(field.getTag());
+        return "247".equals(getTag(field));
     }
 }

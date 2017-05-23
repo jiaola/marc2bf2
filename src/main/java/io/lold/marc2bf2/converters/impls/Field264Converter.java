@@ -18,7 +18,6 @@ public class Field264Converter extends Field260Converter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-
         if (!df.getSubfields("abc").isEmpty()) {
             String statement = concatSubfields(df, "abc", " ");
             if (df.getIndicator2() == '4') {
@@ -39,6 +38,6 @@ public class Field264Converter extends Field260Converter {
     }
     @Override
     public boolean checkField(VariableField field) {
-        return "264".equals(field.getTag());
+        return "264".equals(getTag(field));
     }
 }

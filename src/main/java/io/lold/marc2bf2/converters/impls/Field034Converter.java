@@ -74,7 +74,7 @@ public class Field034Converter extends FieldConverter {
     }
     @Override
     public boolean checkField(VariableField field) {
-        return "034".equals(field.getTag());
+        return "034".equals(getTag(field));
     }
 
     private Resource createScale(String label, String data, List<Subfield> sf3s) {

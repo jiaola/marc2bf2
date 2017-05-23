@@ -60,6 +60,7 @@ public class BIB_FRAME_LC {
 
     //TODO: This needs to be added to the official ontology
     public static final Property locator;
+    public static final Property indexedIn;
 
     static {
         AppliesTo = m.createResource(NAMESPACE + "AppliesTo");
@@ -106,6 +107,7 @@ public class BIB_FRAME_LC {
         titleSortKey = m.createProperty(NAMESPACE, "titleSortKey");
 
         locator = m.createProperty(NAMESPACE, "locator");
+        indexedIn = m.createProperty(NAMESPACE, "indexedIn");
     }
 
 }

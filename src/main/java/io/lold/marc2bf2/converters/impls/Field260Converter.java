@@ -24,7 +24,6 @@ public class Field260Converter extends NameTitleFieldConverter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-
         if (!df.getSubfields("abc").isEmpty()) {
             Resource resource = buildProvisionActivity(df, lang);
             if (df.getIndicator1() == '3') {
@@ -94,6 +93,6 @@ public class Field260Converter extends NameTitleFieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "260".equals(field.getTag());
+        return "260".equals(getTag(field));
     }
 }

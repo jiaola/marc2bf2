@@ -24,7 +24,6 @@ public class Field261Converter extends NameTitleFieldConverter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-
         Resource pa = model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.ProvisionActivity)
                 .addProperty(RDF.type, BIB_FRAME.Production);
@@ -66,6 +65,6 @@ public class Field261Converter extends NameTitleFieldConverter {
     }
     @Override
     public boolean checkField(VariableField field) {
-        return "261".equals(field.getTag());
+        return "261".equals(getTag(field));
     }
 }

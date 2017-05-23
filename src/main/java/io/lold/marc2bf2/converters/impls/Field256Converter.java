@@ -38,6 +38,6 @@ public class Field256Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "256".equals(field.getTag());
+        return "256".equals(getTag(field));
     }
 }

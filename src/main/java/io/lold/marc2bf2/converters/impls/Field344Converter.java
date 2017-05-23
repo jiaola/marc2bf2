@@ -36,7 +36,7 @@ public class Field344Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "344".equals(field.getTag());
+        return "344".equals(getTag(field));
     }
 
     protected void processSubfield(Resource instance, DataField field, char code, Property property, Resource type) {

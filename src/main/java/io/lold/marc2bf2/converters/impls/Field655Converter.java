@@ -72,7 +72,12 @@ public class Field655Converter extends Field648Converter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "655".equals(field.getTag()) && ((DataField)field).getIndicator1() == ' ';
+        if ("655".equals(field.getTag())) {
+            return ((DataField)field).getIndicator1() == ' ';
+        } else if ("655".equals(getTag(field))) {
+            return true;
+        }
+        return false;
     }
 
     @Override

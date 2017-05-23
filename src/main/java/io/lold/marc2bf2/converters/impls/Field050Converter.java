@@ -97,7 +97,7 @@ public class Field050Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "050".equals(field.getTag());
+        return "050".equals(getTag(field));
     }
 
     protected String buildShelfMarkLabel(DataField field) {

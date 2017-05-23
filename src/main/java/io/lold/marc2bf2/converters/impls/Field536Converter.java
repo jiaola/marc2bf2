@@ -50,6 +50,6 @@ public class Field536Converter extends Field500Converter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "536".equals(field.getTag());
+        return "536".equals(getTag(field));
     }
 }

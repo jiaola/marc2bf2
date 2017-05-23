@@ -34,7 +34,7 @@ public class Field760Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "760".equals(field.getTag());
+        return "760".equals(getTag(field));
     }
 
     public Resource createWork(DataField field) {

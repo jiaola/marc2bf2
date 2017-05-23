@@ -44,7 +44,7 @@ public class Field052Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "052".equals(field.getTag());
+        return "052".equals(getTag(field));
     }
 
     private Resource createPlace(DataField df, String place, String lang) {

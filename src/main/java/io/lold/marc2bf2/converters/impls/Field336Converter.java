@@ -30,18 +30,16 @@ public class Field336Converter extends FieldConverter {
     @Override
     protected Model process(VariableField field) throws Exception {
         List<Resource> list = buildRDATypes((DataField) field);
-        Resource node = "336".equals(field.getTag())?
-                ModelUtils.getWork(model, record) :
-                ModelUtils.getInstance(model, record);
+        Resource work = ModelUtils.getWork(model, record);
         for (Resource resource: list) {
-            node.addProperty(getRDAProperty(field.getTag()), resource);
+            work.addProperty(getRDAProperty(getTag(field)), resource);
         }
         return model;
     }
 
     @Override
     public boolean checkField(VariableField field) {
-        return "336".equals(field.getTag());
+        return "336".equals(getTag(field));
     }
 
     protected List<Resource> buildRDATypes(DataField field) {
@@ -53,7 +51,7 @@ public class Field336Converter extends FieldConverter {
             if (sf.getCode() == 'a') {
                 if (i < sfs.size()-1 && sfs.get(i+1).getCode() != 'b') {
                     Resource resource = model.createResource()
-                            .addProperty(RDF.type, getRDAResource(field.getTag()));
+                            .addProperty(RDF.type, getRDAResource(getTag(field)));
                     String value = sf.getData();
                     resource.addProperty(RDFS.label, createLiteral(value, lang));
                     if (i < sfs.size()-1 && sfs.get(i+1).getCode() == '0') {
@@ -71,7 +69,7 @@ public class Field336Converter extends FieldConverter {
                 }
             } else if (sf.getCode() == 'b') {
                 Resource resource = model.createResource(getUriWithPrefix(getTag(field), sf.getData()))
-                        .addProperty(RDF.type, getRDAResource(field.getTag()));
+                        .addProperty(RDF.type, getRDAResource(getTag(field)));
                 if (i > 0 && sfs.get(i-1).getCode() == 'a') {
                     String value = sfs.get(i-1).getData();
                     resource.addProperty(RDFS.label, createLiteral(value, lang));
@@ -88,30 +86,15 @@ public class Field336Converter extends FieldConverter {
     }
 
     protected Resource getRDAResource(String tag) {
-        switch (tag) {
-            case "336": return BIB_FRAME.Content;
-            case "337": return BIB_FRAME.Media;
-            case "338": return BIB_FRAME.Carrier;
-            default: return null;
-        }
+        return BIB_FRAME.Content;
     }
 
     protected Property getRDAProperty(String tag) {
-        switch (tag) {
-            case "336": return BIB_FRAME.content;
-            case "337": return BIB_FRAME.media;
-            case "338": return BIB_FRAME.carrier;
-            default: return null;
-        }
+        return BIB_FRAME.content;
     }
 
     protected String getUriWithPrefix(String tag, String value) {
-        switch (tag) {
-            case "336": return ModelUtils.getUriWithNsPrefix("contentType", value);
-            case "337": return ModelUtils.getUriWithNsPrefix("mediaType", value);
-            case "338": return ModelUtils.getUriWithNsPrefix("carrier", value);
-            default: return null;
-        }
+        return ModelUtils.getUriWithNsPrefix("contentType", value);
     }
 
 }

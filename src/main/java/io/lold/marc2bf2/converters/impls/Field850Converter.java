@@ -40,7 +40,7 @@ public class Field850Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "850".equals(field.getTag());
+        return "850".equals(getTag(field));
     }
 
     protected Resource createItem(DataField field, Subfield sf, int index) {

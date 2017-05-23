@@ -35,7 +35,7 @@ public class Field530Converter extends NameTitleFieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "530".equals(field.getTag());
+        return "530".equals(getTag(field));
     }
 
     protected Resource hasInstance(DataField field) {

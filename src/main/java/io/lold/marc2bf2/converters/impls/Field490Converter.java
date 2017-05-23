@@ -42,6 +42,6 @@ public class Field490Converter extends FieldConverter {
     }
     @Override
     public boolean checkField(VariableField field) {
-        return "490".equals(field.getTag());
+        return "490".equals(getTag(field));
     }
 }

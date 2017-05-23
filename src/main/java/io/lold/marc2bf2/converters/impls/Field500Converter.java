@@ -26,7 +26,7 @@ public class Field500Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "500".equals(field.getTag());
+        return "500".equals(getTag(field));
     }
 
     protected Resource buildResource(DataField field, Resource type) {

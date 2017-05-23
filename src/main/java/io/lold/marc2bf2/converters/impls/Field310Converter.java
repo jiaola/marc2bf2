@@ -21,9 +21,6 @@ public class Field310Converter extends FieldConverter {
 
     @Override
     protected Model process(VariableField field) {
-        if (!field.getTag().equals("310") && !field.getTag().equals("321")) {
-            return model;
-        }
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
@@ -44,6 +41,6 @@ public class Field310Converter extends FieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "310".equals(field.getTag());
+        return "310".equals(getTag(field));
     }
 }

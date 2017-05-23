@@ -26,6 +26,6 @@ public class Field025Converter extends InstanceIdConverter {
     }
     @Override
     public boolean checkField(VariableField field) {
-        return "025".equals(field.getTag());
+        return "025".equals(getTag(field));
     }
 }

@@ -31,6 +31,6 @@ public class Field580Converter extends NameTitleFieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "580".equals(field.getTag());
+        return "580".equals(getTag(field));
     }
 }

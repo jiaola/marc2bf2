@@ -22,7 +22,7 @@ public class Field130Converter extends NameTitleFieldConverter {
 
     @Override
     public boolean checkField(VariableField field) {
-        return "130".equals(field.getTag());
+        return "130".equals(getTag(field));
     }
 
 }

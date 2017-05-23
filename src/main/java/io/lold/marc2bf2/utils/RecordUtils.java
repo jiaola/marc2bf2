@@ -126,10 +126,9 @@ public class RecordUtils {
 
     public static String getXmlLang(DataField field, Record record) {
         Subfield sf = field.getSubfield('6');
-        if (sf == null) {
-            return null;
-        }
+        if (sf == null) return null;
         ControlField f008 = (ControlField) record.getVariableField("008");
+        if (f008 == null) return null;
         String lang008 = f008.getData().substring(35, 38);
         String lang = MappingsReader.getLanguageMapping().get(lang008);
         String[] vscript = sf.getData().split("/");
