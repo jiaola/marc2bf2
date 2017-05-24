@@ -110,14 +110,11 @@ public class ConverterStepdefs {
             }
         }
         String q = String.format(sparql, StringUtils.join(vars, " "), StringUtils.join(list, "\n"));
-        System.out.println(q);
         query = QueryFactory.create(q);
-
     }
 
     @Then("^I should find matches$")
     public void check_result_step() throws Exception {
-        model.write(System.out);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);
         ResultSet results = qexec.execSelect();
         assertTrue(results.hasNext());
@@ -125,7 +122,6 @@ public class ConverterStepdefs {
 
     @Then("^I should find (\\d+) (?:matches|match)$")
     public void check_result_step(int n) throws Exception {
-        model.write(System.out);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);
         ResultSet results = qexec.execSelect();
         int i = 0;
