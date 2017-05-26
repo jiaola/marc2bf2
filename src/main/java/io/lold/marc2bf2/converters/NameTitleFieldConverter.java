@@ -244,7 +244,7 @@ public abstract class NameTitleFieldConverter extends FieldConverter {
             roles = contributionRoleCode(sf4s);
         } else {
             String uri = ModelUtils.getUriWithNsPrefix("relators", "ctb");
-            resource.addProperty(BIB_FRAME.role, model.createResource(uri));
+            resource.addProperty(BIB_FRAME.role, model.createResource(uri).addProperty(RDF.type, BIB_FRAME.Role));
         }
         for (Resource role: roles) {
             resource.addProperty(BIB_FRAME.role, role);

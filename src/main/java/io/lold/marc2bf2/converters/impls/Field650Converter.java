@@ -40,7 +40,7 @@ public class Field650Converter extends Field648Converter {
             uri = ModelUtils.buildUri(record, "Topic", getTag(df), fieldIndex);
         }
 
-        Resource madsClass = df.getSubfields("bcd").isEmpty() ?
+        Resource madsClass =  df.getSubfields("bcdvxyz").isEmpty() ?
                 MADS_RDF.Topic : MADS_RDF.ComplexSubject;
         Resource resource = model.createResource(uri)
                 .addProperty(RDF.type, BIB_FRAME.Topic)

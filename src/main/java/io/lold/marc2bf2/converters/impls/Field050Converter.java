@@ -49,7 +49,9 @@ public class Field050Converter extends FieldConverter {
                 resource.addProperty(BIB_FRAME.classificationPortion, createLiteral(sf, lang));
                 if (i == 0) {
                     Subfield b = RecordUtils.lookAhead(df, i, sfs.size(), 'b');
-                    resource.addProperty(BIB_FRAME.itemPortion, createLiteral(b, lang));
+                    if (b != null) {
+                        resource.addProperty(BIB_FRAME.itemPortion, createLiteral(b, lang));
+                    }
                 }
                 work.addProperty(BIB_FRAME.classification, resource);
             }

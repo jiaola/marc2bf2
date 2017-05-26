@@ -1,20 +1,22 @@
 package io.lold.marc2bf2;
 
+import io.lold.marc2bf2.converters.FieldConverter;
+import io.lold.marc2bf2.converters.LeaderConverter;
 import io.lold.marc2bf2.converters.impls.Field001Converter;
 import io.lold.marc2bf2.converters.impls.Field003Converter;
 import io.lold.marc2bf2.converters.impls.Field005Converter;
 import io.lold.marc2bf2.converters.impls.Field007Converter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
-import org.marc4j.marc.ControlField;
-import org.marc4j.marc.Record;
-import org.marc4j.marc.VariableField;
+import org.marc4j.marc.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Constructor;
 import java.util.List;
 
 public class Marc2BibFrame2Converter {
@@ -29,48 +31,42 @@ public class Marc2BibFrame2Converter {
      * @param record
      * @return
      */
-    public Model convert(Record record) throws Exception {
-        // One model per record
-        Model model = ModelFactory.createBfModel();
-        ControlField cnf = record.getControlNumberField();
-        if (cnf == null) {
-            // no identifier
-        }
-        String workUri = ModelUtils.buildUri(record, "Work");
-        Resource work = model.createResource(workUri);
-
+    public Model convert(Record record, Model model) throws Exception {
         String instanceUri = ModelUtils.buildUri(record, "Instance");
-        Resource instance = model.createResource(instanceUri);
+        Resource instance = model.createResource(instanceUri)
+                .addProperty(RDF.type, BIB_FRAME.Instance);
 
-        // Create AdminMetadata resource
-        Resource amd = model.createResource()
-                .addProperty(RDF.type, BIB_FRAME.AdminMetadata);
+        String workUri = ModelUtils.buildUri(record, "Work");
+        Resource work = model.createResource(workUri)
+                .addProperty(BIB_FRAME.adminMetadata, model.createResource()
+                        .addProperty(RDF.type, BIB_FRAME.AdminMetadata));
+        work.addProperty(BIB_FRAME.hasInstance, instance.addProperty(BIB_FRAME.instanceOf, work));
 
-        work = work.addProperty(BIB_FRAME.adminMetadata, amd);
-
+        LeaderConverter leaderConverter = new LeaderConverter(model, record);
+        model = leaderConverter.convert(record.getLeader());
         List<VariableField> fields = record.getVariableFields();
-        for (VariableField field: fields) {
-            if (field.getTag().equals("001")) {
-                model = new Field001Converter(model, record).convert(field);
-            } else if (field.getTag().equals("003")) {
-                model = new Field003Converter(model, record).convert(field);
-            } else if (field.getTag().equals("005")) {
-                model = new Field005Converter(model, record).convert(field);
-            } else if (field.getTag().equals("007")) {
-                Field007Converter converter = null;
-                try {
-                    converter = new Field007Converter(model, record);
-                    model = converter.convert(field);
-                } catch (Exception ex) {
-                    logger.error("Failed to create Field007Converter", ex);
-                }
-
+        for (int i = 0; i < fields.size(); i++) {
+            VariableField field = fields.get(i);
+            String tag = "880".equals(field.getTag()) ?
+                    StringUtils.substring(((DataField)field).getSubfieldsAsString("6"), 0, 3) :
+                    field.getTag();
+            if ("535".equals(tag)) continue;
+            String className = "io.lold.marc2bf2.converters.impls.Field" + tag + "Converter";
+            try {
+                Class clazz = Class.forName(className);
+                Constructor<FieldConverter> cons =  clazz.getConstructor(Model.class, Record.class);
+                FieldConverter converter = cons.newInstance(model, record);
+                converter.setFieldIndex(i);
+                model = converter.convert(field);
+            } catch (ClassNotFoundException ex) {
+                logger.warn("Converter for field " + field.getTag() + " can't be found: " + className);
+            } catch (NoSuchMethodException nsme) {
+                logger.error("Converter doesn't have the correct constructor: " + className);
+            } catch (Exception ex) {
+                logger.error("Can't create a new instance of converter for field " +field.getTag(), ex);
             }
         }
-
-        // Keep this line at the end; Otherwise Jena won't use bf:Work as the root tag in RDF/XML.
         work.addProperty(RDF.type, BIB_FRAME.Work);
-        instance.addProperty(RDF.type, BIB_FRAME.Instance);
         return model;
     }
 }

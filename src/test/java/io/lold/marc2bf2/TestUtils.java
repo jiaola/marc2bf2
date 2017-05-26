@@ -1,6 +1,5 @@
 package io.lold.marc2bf2;
 
-import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.RDF;
@@ -10,8 +9,6 @@ import org.marc4j.marc.Record;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-
-import static org.junit.Assert.assertTrue;
 
 public class TestUtils {
     public static Record[] readTestRecords(String file) {

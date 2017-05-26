@@ -17,8 +17,11 @@ public class Field100Converter extends NameTitleFieldConverter {
     @Override
     protected Model process(VariableField field) throws Exception {
         Resource work = ModelUtils.getWork(model, record);
-        work.addProperty(BIB_FRAME.contribution, buildContribution((DataField) field));
-        addUniformTitle((DataField)field, work);
+        DataField df = (DataField) field;
+        work.addProperty(BIB_FRAME.contribution, buildContribution(df));
+        if (df.getSubfield('t') != null) {
+            addUniformTitle(df, work);
+        }
         return model;
     }
 
