@@ -36,7 +36,7 @@ mappings:
       w: law
       y: yea
       z: tre
-      "2": off
+      "2": "off"
       "5": cal
       "6": cgn
   illustrativeContent:
