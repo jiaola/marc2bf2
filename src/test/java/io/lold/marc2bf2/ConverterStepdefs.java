@@ -76,8 +76,8 @@ public class ConverterStepdefs {
 
     @When("^converted by a field converter (.*)$")
     public void field_convert_step(Class cls) throws Exception {
-        Constructor<FieldConverter> ctor = cls.getDeclaredConstructor(Model.class, Record.class);
-        FieldConverter converter = ctor.newInstance(model, record);
+        Constructor ctor = cls.getDeclaredConstructor(Model.class, Record.class);
+        FieldConverter converter = (FieldConverter) ctor.newInstance(model, record);
         List<VariableField> fields = record.getVariableFields();
         for (int i = 0; i < fields.size(); i++) {
             converter.setFieldIndex(i);
@@ -87,8 +87,8 @@ public class ConverterStepdefs {
 
     @When("^converted by a leader converter (.*)$")
     public void leader_convert_step(Class cls) throws Exception {
-        Constructor<LeaderConverter> ctor = cls.getDeclaredConstructor(Model.class, Record.class);
-        LeaderConverter converter = ctor.newInstance(model, record);
+        Constructor ctor = cls.getDeclaredConstructor(Model.class, Record.class);
+        LeaderConverter converter = (LeaderConverter) ctor.newInstance(model, record);
         model = converter.convert(record.getLeader());
     }
 

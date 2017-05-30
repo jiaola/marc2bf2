@@ -14,8 +14,6 @@ import org.marc4j.marc.VariableField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
-
 public class Field086Converter extends FieldConverter {
     final static Logger logger = LoggerFactory.getLogger(Field086Converter.class);
 
@@ -28,10 +26,7 @@ public class Field086Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource instance = ModelUtils.getInstance(model, record);
 
-
-        List<Subfield> sfs = df.getSubfields("az");
-        for (int i = 0; i < sfs.size(); i++) {
-            Subfield sf = sfs.get(i);
+        for (Subfield sf: df.getSubfields("az")) {
             Resource resource = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Classification)
                     .addProperty(RDFS.label, sf.getData());

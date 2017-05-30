@@ -34,20 +34,13 @@ public class VocabularyReader {
                     String label = sIter.nextStatement().getLiteral().getString();
                     map.put("label", label);
                 }
-
-                sIter = resource.listProperties(MADS_RDF.code);
-                String code = null;
-                if (sIter.hasNext()) {
-                    code = sIter.nextStatement().getLiteral().getString();
-                    map.put("code", code);
-                }
                 map.put("uri", resource.getURI());
-                if (code != null && !code.isEmpty()) {
+                sIter = resource.listProperties(MADS_RDF.code);
+                while (sIter.hasNext()) {
+                    String code = sIter.nextStatement().getLiteral().getString();
                     vocabulary.put(code, map);
                 }
-
             }
-
             vocMapping.put(type, vocabulary);
             model.close();
         }

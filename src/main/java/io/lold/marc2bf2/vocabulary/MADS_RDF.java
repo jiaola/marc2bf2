@@ -5,9 +5,6 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 
-/**
- * Created by djiao on 3/16/17.
- */
 public class MADS_RDF {
     private static final Model m = ModelFactory.createDefaultModel();
     public static final String NAMESPACE = "http://www.loc.gov/mads/rdf/v1#";

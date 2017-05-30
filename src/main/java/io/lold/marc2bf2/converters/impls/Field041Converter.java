@@ -15,12 +15,6 @@ import org.marc4j.marc.VariableField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static java.util.AbstractMap.SimpleEntry;
-import java.util.Collections;
-import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class Field041Converter extends FieldConverter {
     final static Logger logger = LoggerFactory.getLogger(Field041Converter.class);
 
@@ -34,24 +28,9 @@ public class Field041Converter extends FieldConverter {
         Resource work = ModelUtils.getWork(model, record);
         DataField df = (DataField) field;
 
-        Map<Character, String> partMap = Collections.unmodifiableMap(Stream.of(
-                new SimpleEntry<>('b', "summary"),
-                new SimpleEntry<>('d', "sung or spoken text"),
-                new SimpleEntry<>('e', "libretto"),
-                new SimpleEntry<>('f', "table of contents"),
-                new SimpleEntry<>('g', "accompanying material"),
-                new SimpleEntry<>('h', "original"),
-                new SimpleEntry<>('j', "subtitles or captions"),
-                new SimpleEntry<>('k', "intermediate translations"),
-                new SimpleEntry<>('m', "original accompanying materials"),
-                new SimpleEntry<>('n', "original libretto"))
-                .collect(Collectors.toMap((e) -> e.getKey(), (e) -> e.getValue())));
-
         for (Subfield sf: df.getSubfields("abdefghjkmn")) {
-            String part = null;
             char c = sf.getCode();
-            if (sf == null) continue;
-            part = partMap.get(c);
+            String part = getPart(c);
             if (df.getIndicator2() == ' ') { // marc language code
                 String[] langs = sf.getData().split("(?<=\\G.{3})");
                 for (String lang: langs) {
@@ -96,5 +75,21 @@ public class Field041Converter extends FieldConverter {
     @Override
     public boolean checkField(VariableField field) {
         return "041".equals(getTag(field));
+    }
+    
+    protected String getPart(char code) {
+        switch (code) {
+            case 'b': return "summary";
+            case 'd': return "sung or spoken text";
+            case 'e': return "libretto";
+            case 'f': return "table of contents";
+            case 'g': return "accompanying material";
+            case 'h': return "original";
+            case 'j': return "subtitles or captions";
+            case 'k': return "intermediate translations";
+            case 'm': return "original accompanying materials";
+            case 'n': return "original libretto";
+            default : return null;
+        }
     }
 }

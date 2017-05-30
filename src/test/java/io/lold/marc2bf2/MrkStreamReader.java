@@ -3,15 +3,12 @@ package io.lold.marc2bf2;
 import org.apache.commons.lang3.StringUtils;
 import org.marc4j.MarcException;
 import org.marc4j.MarcReader;
-import org.marc4j.Mrk8StreamWriter;
-import org.marc4j.converter.CharConverter;
 import org.marc4j.marc.*;
 
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
-import java.util.regex.Pattern;
 
 public class MrkStreamReader implements MarcReader {
     private final Scanner input;

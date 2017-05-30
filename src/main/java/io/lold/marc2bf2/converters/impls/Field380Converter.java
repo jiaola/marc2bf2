@@ -2,7 +2,6 @@ package io.lold.marc2bf2.converters.impls;
 
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
-import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;

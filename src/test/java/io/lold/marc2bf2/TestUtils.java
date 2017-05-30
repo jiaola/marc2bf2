@@ -59,7 +59,7 @@ public class TestUtils {
         return false;
     }
 
-    public static ResultSet sparql(String q, Model model) {;
+    public static ResultSet sparql(String q, Model model) {
         Query query = QueryFactory.create(q);
         QueryExecution qexec = QueryExecutionFactory.create(query, model);
         ResultSet results = qexec.execSelect() ;

@@ -27,7 +27,7 @@ public class Field536Converter extends Field500Converter {
                 new AbstractMap.SimpleEntry<>('f', "Project"),
                 new AbstractMap.SimpleEntry<>('g', "Task"),
                 new AbstractMap.SimpleEntry<>('h', "Work unit"))
-                .collect(Collectors.toMap((e) -> e.getKey(), (e) -> e.getValue())));
+                .collect(Collectors.toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue)));
     }
 
     @Override

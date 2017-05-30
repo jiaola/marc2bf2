@@ -7,7 +7,6 @@ import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
-import org.marc4j.marc.Subfield;
 
 import java.util.Arrays;
 
@@ -34,7 +33,7 @@ public class SubfieldUtils {
                     .addProperty(RDF.type, BIB_FRAME.Person);
         } else {
             String[] parts = value.split("[()]");
-            parts = Arrays.stream(parts).filter(p -> StringUtils.isNotBlank(p)).toArray(String[]::new);
+            parts = Arrays.stream(parts).filter(StringUtils::isNotBlank).toArray(String[]::new);
             Resource identifier = model.createResource()
                     .addProperty(RDF.type, BIB_FRAME.Identifier);
             if (parts.length == 2) {
@@ -50,38 +49,33 @@ public class SubfieldUtils {
     }
 
     public static Resource mapSubfield2(Model model, String value) {
-        Resource source = model.createResource()
+        return model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Source)
                 .addProperty(RDFS.label, value);
-        return source;
     }
 
     public static Resource mapSubfield2(Model model, String value, String lang) {
-        Resource source = model.createResource()
+        return model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Source)
                 .addProperty(RDFS.label, value, lang);
-        return source;
     }
 
     public static Resource mapSubfield3(Model model, String value) {
-        Resource source = model.createResource()
+        return model.createResource()
                 .addProperty(RDF.type, BIB_FRAME_LC.AppliesTo)
                 .addProperty(RDFS.label, FormatUtils.chopPunctuation(value));
-        return source;
     }
 
     public static Resource mapSubfield3(Model model, String value, String lang) {
-        Resource source = model.createResource()
+        return model.createResource()
                 .addProperty(RDF.type, BIB_FRAME_LC.AppliesTo)
                 .addProperty(RDFS.label, FormatUtils.chopPunctuation(value), lang);
-        return source;
     }
 
     public static Resource mapSubfield5(Model model, String value) {
-        Resource resource = model.createResource()
+        return model.createResource()
                 .addProperty(RDF.type, BIB_FRAME.Agent)
                 .addProperty(BIB_FRAME.code, value);
-        return resource;
     }
 
 }

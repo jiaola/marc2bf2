@@ -38,7 +38,7 @@ public class DefaultMapper extends Mapper {
                 int index = code.indexOf(':');
                 if (index > 0) {
                     vocName = code.substring(0, index);
-                    code = uri.substring(index + 1);
+                    code = code.substring(index + 1);
                 }
                 Map vocabulary = VocabularyReader.getVocabulary(vocName);
                 Map<String, String> vocMap = (Map<String, String>) vocabulary.get(code);

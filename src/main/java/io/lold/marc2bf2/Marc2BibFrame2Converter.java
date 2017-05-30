@@ -2,10 +2,6 @@ package io.lold.marc2bf2;
 
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.converters.LeaderConverter;
-import io.lold.marc2bf2.converters.impls.Field001Converter;
-import io.lold.marc2bf2.converters.impls.Field003Converter;
-import io.lold.marc2bf2.converters.impls.Field005Converter;
-import io.lold.marc2bf2.converters.impls.Field007Converter;
 import io.lold.marc2bf2.utils.ModelUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import org.apache.commons.lang3.StringUtils;
@@ -48,22 +44,30 @@ public class Marc2BibFrame2Converter {
         for (int i = 0; i < fields.size(); i++) {
             VariableField field = fields.get(i);
             String tag = "880".equals(field.getTag()) ?
-                    StringUtils.substring(((DataField)field).getSubfieldsAsString("6"), 0, 3) :
+                    StringUtils.substring(((DataField) field).getSubfieldsAsString("6"), 0, 3) :
                     field.getTag();
             if ("535".equals(tag)) continue;
             String className = "io.lold.marc2bf2.converters.impls.Field" + tag + "Converter";
+            FieldConverter converter = null;
             try {
                 Class clazz = Class.forName(className);
-                Constructor<FieldConverter> cons =  clazz.getConstructor(Model.class, Record.class);
-                FieldConverter converter = cons.newInstance(model, record);
+                Constructor<FieldConverter> cons = clazz.getConstructor(Model.class, Record.class);
+                converter = cons.newInstance(model, record);
                 converter.setFieldIndex(i);
-                model = converter.convert(field);
             } catch (ClassNotFoundException ex) {
-                logger.warn("Converter for field " + field.getTag() + " can't be found: " + className);
+                //logger.warn("Converter for field " + field.getTag() + " can't be found: " + className);
             } catch (NoSuchMethodException nsme) {
                 logger.error("Converter doesn't have the correct constructor: " + className);
             } catch (Exception ex) {
-                logger.error("Can't create a new instance of converter for field " +field.getTag(), ex);
+                logger.error("Can't create a new instance of converter for field " + field.getTag(), ex);
+            }
+            if (converter != null) {
+                try {
+                    model = converter.convert(field);
+                } catch (Exception ex) {
+                    logger.error("Can't convert field " + field.getTag() + " in record " + record.getControlNumber());
+                    ex.printStackTrace();
+                }
             }
         }
         work.addProperty(RDF.type, BIB_FRAME.Work);

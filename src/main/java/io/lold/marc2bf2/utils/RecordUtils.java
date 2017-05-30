@@ -132,7 +132,7 @@ public class RecordUtils {
         String lang008 = f008.getData().substring(35, 38);
         String lang = MappingsReader.getLanguageMapping().get(lang008);
         String[] vscript = sf.getData().split("/");
-        if (vscript.length < 1) return null;
+        if (vscript.length < 2) return null;
 
         if (vscript[1].equals("(3")) return lang + "-arab";
         else if (vscript[1].equals("(B")) return lang + "-latn";
@@ -211,7 +211,7 @@ public class RecordUtils {
 
     public static String getSubfieldsAsString(DataField field, String subfields) {
         List<Subfield> sfs = field.getSubfields(subfields);
-        List<String> values = sfs.stream().map(sf -> sf.getData()).collect(Collectors.toList());
+        List<String> values = sfs.stream().map(Subfield::getData).collect(Collectors.toList());
         return StringUtils.join(values, " ");
     }
 

@@ -1,8 +1,6 @@
 package io.lold.marc2bf2;
 
 import cucumber.deps.difflib.StringUtills;
-import io.lold.marc2bf2.utils.ModelUtils;
-import org.apache.jena.base.Sys;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.ResourceUtils;
 import org.apache.jena.vocabulary.RDF;
@@ -13,7 +11,6 @@ import org.marc4j.marc.Record;
 
 import java.io.InputStream;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -132,5 +129,15 @@ public class Marc2BibFrame2ConverterTest {
         int numOfTriplesExpected = expected.listStatements().toList().size();
 
         assertEquals(numOfTriplesExpected, numOfTriples);
+    }
+
+    @Test
+    public void testBGCRecord() throws Exception {
+        Record[] records = TestUtils.readTestRecords("bgc.xml");
+        Model model = ModelFactory.createBfModel();
+        for (Record record: records) {
+            model = converter.convert(record, model);
+        }
+        model.write(System.out);
     }
 }

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><marcxml:collection xmlns:marcxml="http://www.loc.gov/MARC21/slim">
+    <marcxml:record>
+        <marcxml:leader>01401nam  2200337 u 4500</marcxml:leader>
+        <marcxml:controlfield tag="001">ocm00000000-b1123</marcxml:controlfield>
+        <marcxml:controlfield tag="003">CStRLIN</marcxml:controlfield>
+        <marcxml:controlfield tag="005">20000803081311.0</marcxml:controlfield>
+        <marcxml:controlfield tag="008">000803s1976    ru a     b    000 0 rus u</marcxml:controlfield>
+        <marcxml:datafield tag="010" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">77508953</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="040" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">DLC</marcxml:subfield>
+            <marcxml:subfield code="d">NNMM</marcxml:subfield>
+            <marcxml:subfield code="d">CStRLIN</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="041" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">ruseng</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="043" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">e-it</marcxml:subfield>
+            <marcxml:subfield code="a">e-ur</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="045" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">s v</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="090" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">NK4315</marcxml:subfield>
+            <marcxml:subfield code="b">.K8 1976</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="100" ind1="1" ind2=" ">
+            <marcxml:subfield code="a">Kube, AlÊ¹fred Nikolaevich</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="245" ind1="1" ind2="0">
+            <marcxml:subfield code="a">ItalÊ¹iÍ¡anskaiÍ¡a maiÌ&#134;olika XV-XVIII vekov =</marcxml:subfield>
+            <marcxml:subfield code="b">Italian majolica, XV-XVIII centuries : sobranie Gosudarstvennogo EÌ&#135;rmitazha : [alÊ¹bom] /</marcxml:subfield>
+            <marcxml:subfield code="c">A. N. Kube ; pod redaktÍ¡sieiÌ&#134; O.EÌ&#135;. MikhaiÌ&#134;lovoiÌ&#134; i EÌ&#135;. A. LapkovskoiÌ&#134;]</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="260" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Moskva :</marcxml:subfield>
+            <marcxml:subfield code="b">Iskusstvo,</marcxml:subfield>
+            <marcxml:subfield code="c">1976</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="300" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">62, [15] p. :</marcxml:subfield>
+            <marcxml:subfield code="b">col. front., ill., 106 col. plates (6 double) ;</marcxml:subfield>
+            <marcxml:subfield code="c">35 cm</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="500" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">English and Russian</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="500" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Descriptive letterpress on verso facing plates</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="504" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">Bibliography: p. 68-71</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="590" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">BGCFOLIO</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="610" ind1="2" ind2="0">
+            <marcxml:subfield code="a">GosudarstvennyiÌ&#134; EÌ&#135;rmitazh (Russia)</marcxml:subfield>
+            <marcxml:subfield code="x">Catalogs</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="650" ind1=" " ind2="0">
+            <marcxml:subfield code="a">Majolica, Italian</marcxml:subfield>
+            <marcxml:subfield code="z">Russia</marcxml:subfield>
+            <marcxml:subfield code="z">Leningrad</marcxml:subfield>
+            <marcxml:subfield code="x">Catalogs</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="700" ind1="1" ind2=" ">
+            <marcxml:subfield code="a">MikhaiÌ&#134;lov, O. EÌ&#135;</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="710" ind1="2" ind2=" ">
+            <marcxml:subfield code="a">GosudarstvennyiÌ&#134; EÌ&#135;rmitazh (Russia)</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="740" ind1="0" ind2=" ">
+            <marcxml:subfield code="a">Italian majolica, XV-XVIII centuries</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="907" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">.b12153357</marcxml:subfield>
+            <marcxml:subfield code="b">09-30-16</marcxml:subfield>
+            <marcxml:subfield code="c">08-03-00</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="998" ind1=" " ind2=" ">
+            <marcxml:subfield code="a">decor</marcxml:subfield>
+            <marcxml:subfield code="b">08-03-00</marcxml:subfield>
+            <marcxml:subfield code="c">m</marcxml:subfield>
+            <marcxml:subfield code="d">a</marcxml:subfield>
+            <marcxml:subfield code="e">-</marcxml:subfield>
+            <marcxml:subfield code="f">rus</marcxml:subfield>
+            <marcxml:subfield code="g">   </marcxml:subfield>
+            <marcxml:subfield code="h">0</marcxml:subfield>
+            <marcxml:subfield code="i">1</marcxml:subfield>
+        </marcxml:datafield>
+        <marcxml:datafield tag="945" ind1=" " ind2=" ">
+            <marcxml:subfield code="e">  -  -  </marcxml:subfield>
+            <marcxml:subfield code="g">1</marcxml:subfield>
+            <marcxml:subfield code="h">0</marcxml:subfield>
+            <marcxml:subfield code="i">35131003172113</marcxml:subfield>
+            <marcxml:subfield code="j">  -  -  </marcxml:subfield>
+            <marcxml:subfield code="k">  -  -  </marcxml:subfield>
+            <marcxml:subfield code="l">dstks</marcxml:subfield>
+            <marcxml:subfield code="n">Kamkin</marcxml:subfield>
+            <marcxml:subfield code="o">-</marcxml:subfield>
+            <marcxml:subfield code="p">$0.00</marcxml:subfield>
+            <marcxml:subfield code="q"> </marcxml:subfield>
+            <marcxml:subfield code="r"> </marcxml:subfield>
+            <marcxml:subfield code="s">-</marcxml:subfield>
+            <marcxml:subfield code="t">16</marcxml:subfield>
+            <marcxml:subfield code="u">0</marcxml:subfield>
+            <marcxml:subfield code="v">0</marcxml:subfield>
+            <marcxml:subfield code="w">0</marcxml:subfield>
+            <marcxml:subfield code="y">.i12523434</marcxml:subfield>
+            <marcxml:subfield code="z">08-03-00</marcxml:subfield>
+        </marcxml:datafield>
+    </marcxml:record>
+</marcxml:collection>

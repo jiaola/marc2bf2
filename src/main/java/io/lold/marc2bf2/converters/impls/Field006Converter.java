@@ -52,22 +52,28 @@ public class Field006Converter extends FieldConverter {
 
     public void convertInMode(String data, String tag, String mode) throws Exception {
         Resource resource;
-        if (mode.equals("Work")) {
-            resource = ModelUtils.getWork(model, record);
-        } else if (mode.equals("AdminMetadata")) {
-            resource = ModelUtils.getAdminMatadata(model, record);
-        } else if (mode.equals("Instance")) {
-            resource = ModelUtils.getInstance(model, record);
-        } else {
-            return;
+        switch (mode) {
+            case "Work":
+                resource = ModelUtils.getWork(model, record);
+                break;
+            case "AdminMetadata":
+                resource = ModelUtils.getAdminMatadata(model, record);
+                break;
+            case "Instance":
+                resource = ModelUtils.getInstance(model, record);
+                break;
+            default:
+                return;
         }
-        Map<String, Object> mapping = (Map<String, Object>) ((Map)mappings.get(tag)).get(mode);
+        Map<String, Object> mapping = (Map<String, Object>) mappings.get(tag).get(mode);
         if (mapping == null) return;
 
         RecordUtils.Material material = "008".equals(tag) ?
                 RecordUtils.getMaterialTypeFromLeader(record) :
                 RecordUtils.getMaterialTypeFrom006(record);
-        processMaterialType(data, resource, mapping, material.toString());
+        if (material != null) {
+            processMaterialType(data, resource, mapping, material.toString());
+        }
         processMaterialType(data, resource, mapping, "Default");
 
         if (tag.equals("008") && mode.equals("Instance") && RecordUtils.isBookByLeader(record)) {
@@ -174,24 +180,33 @@ public class Field006Converter extends FieldConverter {
             }
             instance.addProperty(BIB_FRAME.provisionActivity, prov);
 
-            if (char6.equals("c")) {
-                Resource note = createLabeledResource(BIB_FRAME.Note, "Currently published");
-                instance.addProperty(BIB_FRAME.note, note);
-            } else if (char6.equals("d")) {
-                Resource note = createLabeledResource(BIB_FRAME.Note, "Ceased publication");
-                instance.addProperty(BIB_FRAME.note, note);
-            } else if (char6.equals("p")) {
-                Resource p = model.createResource()
-                        .addProperty(RDF.type, BIB_FRAME.ProvisionActivity)
-                        .addProperty(RDF.type, BIB_FRAME.Production);
-                String date2 = data.substring(11, 15).replace('u', 'x').replace('U', 'X');
-                p.addProperty(BIB_FRAME.date,
-                        model.createTypedLiteral(date2, DataTypes.EDTF));
-                instance.addProperty(BIB_FRAME.provisionActivity, p);
-            } else if (char6.equals("t")) {
-                String date2 = data.substring(11, 15).replace('u', 'x').replace('U', 'X');
-                instance.addProperty(BIB_FRAME.copyrightDate,
-                        model.createTypedLiteral(date2, DataTypes.EDTF));
+            switch (char6) {
+                case "c": {
+                    Resource note = createLabeledResource(BIB_FRAME.Note, "Currently published");
+                    instance.addProperty(BIB_FRAME.note, note);
+                    break;
+                }
+                case "d": {
+                    Resource note = createLabeledResource(BIB_FRAME.Note, "Ceased publication");
+                    instance.addProperty(BIB_FRAME.note, note);
+                    break;
+                }
+                case "p": {
+                    Resource p = model.createResource()
+                            .addProperty(RDF.type, BIB_FRAME.ProvisionActivity)
+                            .addProperty(RDF.type, BIB_FRAME.Production);
+                    String date2 = data.substring(11, 15).replace('u', 'x').replace('U', 'X');
+                    p.addProperty(BIB_FRAME.date,
+                            model.createTypedLiteral(date2, DataTypes.EDTF));
+                    instance.addProperty(BIB_FRAME.provisionActivity, p);
+                    break;
+                }
+                case "t": {
+                    String date2 = data.substring(11, 15).replace('u', 'x').replace('U', 'X');
+                    instance.addProperty(BIB_FRAME.copyrightDate,
+                            model.createTypedLiteral(date2, DataTypes.EDTF));
+                    break;
+                }
             }
         }
     }

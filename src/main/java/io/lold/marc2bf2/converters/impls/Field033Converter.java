@@ -38,7 +38,7 @@ public class Field033Converter extends FieldConverter {
                 .addProperty(RDF.type, BIB_FRAME.Capture);
         if (df.getIndicator2() == '1') {
             capture.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, "broadcast"));
-        } else if ("2".equals(df.getIndicator2())) {
+        } else if (df.getIndicator2() == '2') {
             capture.addProperty(BIB_FRAME.note, createLabeledResource(BIB_FRAME.Note, "finding"));
         }
 

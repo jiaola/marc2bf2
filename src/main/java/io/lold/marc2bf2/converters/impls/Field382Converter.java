@@ -2,7 +2,6 @@ package io.lold.marc2bf2.converters.impls;
 
 import io.lold.marc2bf2.converters.FieldConverter;
 import io.lold.marc2bf2.utils.ModelUtils;
-import io.lold.marc2bf2.utils.RecordUtils;
 import io.lold.marc2bf2.utils.SubfieldUtils;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME;
 import io.lold.marc2bf2.vocabulary.BIB_FRAME_LC;
@@ -15,8 +14,6 @@ import org.marc4j.marc.Record;
 import org.marc4j.marc.Subfield;
 import org.marc4j.marc.VariableField;
 
-import java.util.List;
-
 public class Field382Converter extends FieldConverter {
     public Field382Converter(Model model, Record record) {
         super(model, record);
@@ -27,13 +24,8 @@ public class Field382Converter extends FieldConverter {
         DataField df = (DataField) field;
         Resource work = ModelUtils.getWork(model, record);
 
-
-
-        List<Subfield> subfields = df.getSubfields();
-
         Resource resource = null;
-        for (int i = 0; i < subfields.size(); i++) {
-            Subfield sf = subfields.get(i);
+        for (Subfield sf: df.getSubfields()) {
             if ("abdp".contains(String.valueOf(sf.getCode()))) {
                 if (resource != null) {
                     work.addProperty(BIB_FRAME.musicMedium, resource);

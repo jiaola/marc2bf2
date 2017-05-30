@@ -5,8 +5,6 @@ import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
 import org.apache.jena.rdf.model.Resource;
 
-import java.util.Collection;
-
 public class BIB_FRAME {
     private static final Model m = ModelFactory.createDefaultModel();
     public static final String NAMESPACE = "http://id.loc.gov/ontologies/bibframe/";

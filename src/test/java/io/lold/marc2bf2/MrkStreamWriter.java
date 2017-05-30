@@ -3,8 +3,6 @@ package io.lold.marc2bf2;
 import java.io.Closeable;
 import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.nio.CharBuffer;
-import java.nio.charset.CharacterCodingException;
 import java.nio.charset.CharsetEncoder;
 import java.nio.charset.StandardCharsets;
 

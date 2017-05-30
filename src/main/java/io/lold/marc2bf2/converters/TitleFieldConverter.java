@@ -22,7 +22,7 @@ public abstract class TitleFieldConverter extends FieldConverter {
     }
 
     protected void addSubfield(DataField field, char subfield, Resource resource) {
-        Property property = null;
+        Property property;
         if (subfield == 'a') {
             property = BIB_FRAME.mainTitle;
         } else if (subfield == 'b') {
