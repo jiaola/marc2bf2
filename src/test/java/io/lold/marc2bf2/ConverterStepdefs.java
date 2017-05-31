@@ -80,8 +80,7 @@ public class ConverterStepdefs {
         FieldConverter converter = (FieldConverter) ctor.newInstance(model, record);
         List<VariableField> fields = record.getVariableFields();
         for (int i = 0; i < fields.size(); i++) {
-            converter.setFieldIndex(i);
-            model = converter.convert(fields.get(i));
+            model = converter.convert(fields.get(i), i);
         }
     }
 

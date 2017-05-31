@@ -25,7 +25,7 @@ public class Field880Converter extends FieldConverter {
             Class clazz = Class.forName(className);
             Constructor<FieldConverter> cons =  clazz.getConstructor(Model.class, Record.class);
             FieldConverter converter = cons.newInstance(model, record);
-            return converter.convert(field);
+            return converter.convert(field, fieldIndex);
         } catch (ClassNotFoundException ex) {
             logger.error("Converter for field 880$6" + getTag(field) + " can't be found: " + className);
         } catch (NoSuchMethodException nsme) {

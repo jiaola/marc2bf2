@@ -33,7 +33,8 @@ public abstract class FieldConverter {
         this.lang = null;
     }
 
-    public Model convert(VariableField field) throws Exception {
+    public Model convert(VariableField field, int fieldIndex) throws Exception {
+        this.fieldIndex = fieldIndex;
         if (field instanceof DataField) {
             this.lang = RecordUtils.getXmlLang((DataField) field, record);
         }
@@ -45,10 +46,6 @@ public abstract class FieldConverter {
     }
 
     protected abstract Model process(VariableField field) throws Exception;
-
-    public void setFieldIndex (int index) {
-        this.fieldIndex = index;
-    }
 
     public boolean checkField(VariableField field) {
         return true;

@@ -53,7 +53,6 @@ public class Marc2BibFrame2Converter {
                 Class clazz = Class.forName(className);
                 Constructor<FieldConverter> cons = clazz.getConstructor(Model.class, Record.class);
                 converter = cons.newInstance(model, record);
-                converter.setFieldIndex(i);
             } catch (ClassNotFoundException ex) {
                 //logger.warn("Converter for field " + field.getTag() + " can't be found: " + className);
             } catch (NoSuchMethodException nsme) {
@@ -63,7 +62,7 @@ public class Marc2BibFrame2Converter {
             }
             if (converter != null) {
                 try {
-                    model = converter.convert(field);
+                    model = converter.convert(field, i);
                 } catch (Exception ex) {
                     logger.error("Can't convert field " + field.getTag() + " in record " + record.getControlNumber());
                     ex.printStackTrace();
